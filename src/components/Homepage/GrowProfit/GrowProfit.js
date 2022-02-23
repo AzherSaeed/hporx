@@ -1,21 +1,20 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 import GrowProfitSlick from './GrowProfitSlick'
-import { GrowProfitContainer, GrowProfitHeading, GrowProfitSubHeading } from './StyledGrowProfit'
+import { GrowProfitMainContainer, } from './StyledGrowProfit'
 
 const GrowProfit = () => {
     return (
-        <Container fluid >
-        <GrowProfitContainer>
-            <GrowProfitHeading>
+        <div>
+        <GrowProfitMainContainer>
+            <h2>
                 Grow profit, Profit From You Grow
-            </GrowProfitHeading>
-            <GrowProfitSubHeading>
+            </h2>
+            <p>
                 Turn Key Profits
-            </GrowProfitSubHeading>
+            </p>
             <GrowProfitSlick/>
-        </GrowProfitContainer>
-        </Container>
+        </GrowProfitMainContainer>
+        </div>
     )
 }
 

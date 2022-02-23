@@ -1,13 +1,14 @@
 import React from 'react'
 import belowprofit from '../../../assets/belowGrowProfit.svg'
-import { BelowGrowProfitContainer, BelowGrowProfitImg, BelowGrowProfitImgContainer } from './StyledBelowProfit'
+import { BelowGrowProfitMainContainer, BelowGrowProfitImg, BelowGrowProfitImgContainer } from './StyledBelowProfit'
 const BelowGrowProfit = () => {
   return (
-    <BelowGrowProfitContainer>
+    <BelowGrowProfitMainContainer>
+      <h2>Controlled Environment Agriculture Manufacturers</h2>
         <BelowGrowProfitImgContainer>
         <BelowGrowProfitImg src={belowprofit} alt={belowprofit}/>
         </BelowGrowProfitImgContainer>
-    </BelowGrowProfitContainer>
+    </BelowGrowProfitMainContainer>
   )
 }
 

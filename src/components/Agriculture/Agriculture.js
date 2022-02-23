@@ -1,17 +1,17 @@
 import React from 'react'
 import AgricultureImgSection from './AgricultureImgSection'
-import { AgricultureContainer, AgricultureHeading, AgricultureSubHeading } from './StyledAgriculture'
+import { AgricultureMainContainer} from './StyledAgriculture'
 const Agriculture = () => {
     return (
-        <AgricultureContainer>
-            <AgricultureHeading>
+        <AgricultureMainContainer>
+            <h2>
                 Contained Environment Agriculture Grow
-            </AgricultureHeading>
-            <AgricultureSubHeading>
+            </h2>
+            <p>
                 You can grow profit, profit from you grow
-            </AgricultureSubHeading>
+            </p>
             <AgricultureImgSection />
-        </AgricultureContainer>
+        </AgricultureMainContainer>
     )
 }
 

@@ -1,31 +1,43 @@
 import styled from "styled-components"
 import GrowProfitBack from '../../../assets/growProfitBack.svg';
 
-export const GrowProfitContainer = styled.div`
+export const GrowProfitMainContainer = styled.div`
  text-align: center;
 margin-top: 7rem;
-`
-export const GrowProfitHeading = styled.h3`
-font-size: 3.5rem;
+h2{
+  font-size: 3.5rem;
 margin-top: 3rem;
+}
+p{
+  font-size: 1.5rem;
+}
+.grow-profit-slick  .slick-next {
+    right: 4rem;
+    z-index: 1;
+}
+.grow-profit-slick  .slick-prev {
+    left: 2.1rem;
+    z-index:1;
+}
+.grow-profit-slick .slick-prev:before, .grow-profit-slick .slick-next:before {
+    font-size: 4rem !important; 
+}
 `
-export const GrowProfitSubHeading = styled.p`
-font-size: 1.5rem;
-`
+
 export const GrowProfitImgsContainer = styled.div`
 `
 export const GrowProfitImg = styled.img`
 `
 export const GrowProfitSlickContainer = styled.div`
 background-image:linear-gradient(to right, rgba(126, 213, 111, 0.753) , rgba(40, 180, 133, 0.753)), url(${GrowProfitBack}) ;
-  background-color: #cccccc;
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
 margin-top: 3rem;
 position: relative;
+
 .overlay{
-    position: absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;

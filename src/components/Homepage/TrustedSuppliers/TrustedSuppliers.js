@@ -2,31 +2,30 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import trustedSupplier1 from '../../../assets/trustedSupplier1.svg'
 import trustedSupplier2 from '../../../assets/trustedSupplier2.svg'
 import trustedSupplier3 from '../../../assets/trustedSupplier3.svg'
 import trustedSupplier4 from '../../../assets/trustedSupplier4.svg'
 import { TrustedSuppliersImg, TrustedSuppliersImgContainer, TrustedSuppliersMain } from './StyeldTrustedSuppliers';
-import { Container } from 'react-bootstrap';
 
 
 
 const TrustedSuppliers = () => {
+    const trustedSuppliersImgs = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier2, trustedSupplier3, trustedSupplier4,trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier2, trustedSupplier3, trustedSupplier4,]
 
     var settings = {
-        arrows: true,
+        arrows: false,
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 7,
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToShow: 7,
+                    slidesToScroll: 1,
                     infinite: false,
                     dots: false
                 }
@@ -34,15 +33,15 @@ const TrustedSuppliers = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
                     initialSlide: 1
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             }
@@ -50,32 +49,16 @@ const TrustedSuppliers = () => {
     };
     return (
         <TrustedSuppliersMain>
-            <Container>
-                <Slider {...settings} className='portable-slick'>
-                    <div>
+            <Slider {...settings} className='trusted-suppliers-slick'>
+                {trustedSuppliersImgs.map((supplierImg, index) => (
+                    <div key={index}>
                         <TrustedSuppliersImgContainer>
-                            <TrustedSuppliersImg src={trustedSupplier1} alt={trustedSupplier1} />
+                            <TrustedSuppliersImg src={supplierImg} alt={supplierImg} />
                         </TrustedSuppliersImgContainer>
                     </div>
-                    <div>
-                        <TrustedSuppliersImgContainer>
-                            <TrustedSuppliersImg src={trustedSupplier2} alt={trustedSupplier2} />
-                        </TrustedSuppliersImgContainer>
-                    </div>
-                    <div>
-                        <TrustedSuppliersImgContainer>
-                            <TrustedSuppliersImg src={trustedSupplier3} alt={trustedSupplier3} />
-                        </TrustedSuppliersImgContainer>
-                    </div>
-                    <div>
-                        <TrustedSuppliersImgContainer>
-                            <TrustedSuppliersImg src={trustedSupplier4} alt={trustedSupplier4} />
-                        </TrustedSuppliersImgContainer>
-                    </div>
-
-                </Slider>
-            </Container>
-
+                ))
+                }
+            </Slider>
         </TrustedSuppliersMain>
     )
 }

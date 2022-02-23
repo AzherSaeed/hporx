@@ -15,15 +15,15 @@ const InhalateSlick = () => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 3,
+          slidesToShow: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: false,
           arrows: true,
@@ -49,7 +49,7 @@ const InhalateSlick = () => {
     ]
   };
   return (
-    <div>
+    <div className='slick-main-div'>
       <Slider {...settings} className='inhalate-slick'>
         <InhalatedImgContainer>
           <InhalteImg src={inhalte1} alt={inhalte1} />
