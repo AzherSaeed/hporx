@@ -18,14 +18,14 @@ import Vaporize from './Vaporize/Vaporize'
 const Homepage = () => {
   return (
     <>
-    {/* <Header/> */}
-    {/* <Inhalate/> */}
-    {/* <Vaporize/>*/}
-    {/* <Portable/>  */}
-     {/* <Chillum/> */}
-    {/* <Cutivation/> */}
+    <Header/>
+    <Inhalate/>
+    <Vaporize/>
+    <Portable/> 
+     <Chillum/>
+    <Cutivation/>
     <Agriculture/>
-   {/* <GrowProfit/>
+   <GrowProfit/>
     <BelowGrowProfit/>
     <TrustedSuppliers/>
     <Prescribe/>
@@ -33,7 +33,7 @@ const Homepage = () => {
     <MedicinesSlick/>
     <MedicineSmallSlick/>
     <Statistics/>
-    <SubscribeNewsletter/> */}
+    <SubscribeNewsletter/>
     </>
   )
 }
