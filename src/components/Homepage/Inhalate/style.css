@@ -1,0 +1,26 @@
+.inhalate-slick  .slick-prev {
+    left: -15px !important;
+    z-index: 1;    
+  }
+  .inhalate-slick .slick-prev:before {
+    content: '' !important;
+    background-image: url(../../../assets/left-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+  
+  .inhalate-slick .slick-next {
+    right: 10px !important;
+    z-index: 1;
+  }
+
+  .inhalate-slick .slick-next:before {
+    content: '' !important;
+    background-image: url(../../../assets/right-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
