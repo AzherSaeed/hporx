@@ -1,17 +1,24 @@
 import React from 'react'
-import { ViewMoreBtn } from '../Globals/Globals'
+import { Container } from 'react-bootstrap'
+import { ViewMoreBtn } from '../../Globals/Globals'
 import InhalateSlick from './InhalateSlick'
-import {InhalateMainContainer } from './StyledInhalate'
+import {InhalateButtonContainer, InhalateMainContainer, InhalateTextContainer } from './StyledInhalate'
 
 
 const Inhalate = () => {
     return (
+        <Container>
         <InhalateMainContainer>
+            <InhalateTextContainer>
             <h3>Inhalate</h3>
             <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
+            </InhalateTextContainer>
             <InhalateSlick />
-            <ViewMoreBtn>view more</ViewMoreBtn>
+            <InhalateButtonContainer>
+            <ViewMoreBtn>View More</ViewMoreBtn>
+            </InhalateButtonContainer>
         </InhalateMainContainer>
+</Container>
     )
 }
 

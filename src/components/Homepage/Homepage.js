@@ -1,9 +1,8 @@
 import React from 'react'
-import Agriculture from '../Agriculture/Agriculture'
-import Inhalate from '../Inhalete/Inhalate'
+import Agriculture from './Agriculture/Agriculture'
 import BelowGrowProfit from './BelowGrowProfit/BelowGrowProfit'
 import Chillum from './Chillums/Chillums'
-import Cutivation from './Cutivation/Cutivation'
+import Cutivation from './Cultivation/Cultivation'
 import GrowProfit from './GrowProfit/GrowProfit'
 import Header from './Header/Header'
 import MedicinesSlick from './Medicines Slick/MedicinesSlick'
@@ -14,26 +13,31 @@ import Statistics from './Statistics/Statistics'
 import SubscribeNewsletter from './SubscribeNewsletter/SubscribeNewsletter'
 import TrustedSuppliers from './TrustedSuppliers/TrustedSuppliers'
 import Vaporize from './Vaporize/Vaporize'
+import Footer from './Footer/Footer'
+import FashionDiscount from './FashionDiscount/FashionDiscount'
+import Inhalate from './Inhalate/Inhalate'
 
 const Homepage = () => {
   return (
     <>
-    {/* <Header/>
-    <Inhalate/>
-    <Vaporize/>
-    <Portable/> 
+      <Header/>
+      <Inhalate/>
+      <Portable/> 
+      <Vaporize/>
      <Chillum/>
-    <Cutivation/> */}
-    {/* <Agriculture/> */}
-    {/* <GrowProfit/> */}
-    {/* <BelowGrowProfit/> */}
-   {/* <TrustedSuppliers/> */}
-    <Prescribe/>
-     {/*<MedicinesSlick/>
-    <MedicinesSlick/>
-    <MedicineSmallSlick/>
-    <Statistics/>
-    <SubscribeNewsletter/> */}
+      <Cutivation/> 
+      <Agriculture/>
+      <GrowProfit/>
+      <BelowGrowProfit/>
+      <TrustedSuppliers/>
+      <Prescribe/>
+      <MedicinesSlick/>
+      <MedicinesSlick/>
+      <MedicineSmallSlick/> 
+      <Statistics/>
+      <SubscribeNewsletter/>
+      <FashionDiscount/>
+      <Footer/>
     </>
   )
 }

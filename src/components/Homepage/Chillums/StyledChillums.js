@@ -27,7 +27,9 @@ p{
 font-size: 1.5rem;
 }
 `
+export const ChillumImgContainer = styled.div`
 
+`
 export const ChillumImg = styled.img`
 
 `

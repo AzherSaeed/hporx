@@ -37,6 +37,7 @@ const Statistics = () => {
     return (
         <StatisticsMainContainer>
             <Container>
+            <h1>Statistics</h1>
                 <Row className='gap-3'>
                     {
                         cards.map((data, index) => {
@@ -45,7 +46,7 @@ const Statistics = () => {
                                 p1,
                                 p2 } = data;
                             return (
-                                <Col xs={12} sm={5} md={3} lg={2} key={index}>
+                                <Col lg={2} md={3} sm={5} xs={12}   key={index}>
                                     <Card className='card-container'>
                                         <Card.Body>
                                             <StatisticsImgContainer>

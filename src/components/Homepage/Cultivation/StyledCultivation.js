@@ -1,27 +1,34 @@
 import styled from "styled-components";
 
-export const PortableMainContainer = styled.div`
+export const CultivationMainContainer = styled.div`
 margin-top: 12rem;
-.portable-slick .slick-prev:before, .portable-slick .slick-next:before {
+text-align: center;
+h3{
+font-size: 3.5rem;
+}
+p{
+    font-size: 1.6rem;
+}
+.cultivation-slick .slick-prev:before, .cultivation-slick .slick-next:before {
     font-size: 3.5rem !important; 
     color: white !important;
     opacity: 1;
     text-shadow: 0px 2px 6px rgb(0 0 0 / 50%);
     
 }
-    .portable-slick  .slick-next {
-    right:14rem;
+    .cultivation-slick  .slick-next {
+    right:5rem;
     z-index: 1;
     
 }
 @media screen and (max-width: 480px) {
-    .portable-slick  .slick-next {
+    .cultivation-slick  .slick-next {
     right:6rem;
     z-index: 1;
 }
 }
-.portable-slick  .slick-prev {
-    left: -1rem;
+.cultivation-slick  .slick-prev {
+    left: 1rem;
     z-index:1;   
 }
 h2{
@@ -35,7 +42,7 @@ p{
 
 }
 `
-export const PortableMiniImgContainer = styled.div`
+export const CultivationImgContainer = styled.div`
 position:relative;
 transition: .5s ease;
 
@@ -56,15 +63,12 @@ transition: .5s ease;
     }
 
 `
-export const PortableSlickMain = styled.div`
 
-`
-
-export const PortableImg1 = styled.img`
+export const CultivationImg1 = styled.img`
 height:100%;
 object-fit:cover;
 `
 
-export const PortableMiniImg = styled.img`
+export const CultivationiImg = styled.img`
 margin-top: 2rem;
 `

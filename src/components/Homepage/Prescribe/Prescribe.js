@@ -7,7 +7,7 @@ import prescribe from '../../../assets/prescribe.svg'
 import prescribe1 from '../../../assets/prescribe1.svg'
 import prescribe2 from '../../../assets/prescribe2.svg'
 import prescribe3 from '../../../assets/prescribe3.svg'
-import { ShopNowBtn } from '../../Globals/Globals'
+import { ShopNowBtn, ViewMoreBtn } from '../../Globals/Globals'
 import {PrescribeImg, PrescribeImgContainer, PrescribeButton } from './StyledPrescribe';
 
 
@@ -56,9 +56,9 @@ const Prescribe = () => {
 
 
     return (
-        <>
+        <div className='prescribe-slick'>
             <Container>
-                <Slider {...settings} >
+                <Slider {...settings} className='prescribe-slick'>
                     {
                         prescribeImgs1.map((img, index) => (
                             <PrescribeImgContainer>
@@ -74,14 +74,12 @@ const Prescribe = () => {
 
                         ))
                     }
-                    <div className='main-div'>
-                        <div className='inner-div'>
-
+                    <div className='main-div mt-4'>
                         <h3>Prescribe</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fugiat officiis libero et eaque repellat? Distinctio nulla consequuntur placeat eum nesciunt velit qui deleniti aliquid?</p>
-                        <PrescribeButton>CONSULTATION</PrescribeButton>
-                        <PrescribeButton className='ms-2'>View more</PrescribeButton>
-                        </div>
+                        <ViewMoreBtn>CONSULTATION</ViewMoreBtn>
+                        <ViewMoreBtn className='ms-2'>View more</ViewMoreBtn>
+                       
                     </div>
                 </Slider>
             </Container>
@@ -111,7 +109,7 @@ const Prescribe = () => {
                 </Container>
             </div>
 
-        </ >
+        </div >
     )
 }
 

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const ViewMoreBtn = styled.button`
+
+
+
+
 padding: 0.5rem 2rem;
 border: 1px solid black;
 color: black;

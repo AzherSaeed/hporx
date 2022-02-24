@@ -1,12 +1,12 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
-import portables1 from '../../../assets/portables1.svg'
-import portables2 from '../../../assets/portables2.svg'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { PortableMiniImg, PortableMiniImgContainer, PortableSlickMain } from './PortableStyles';
-import { AddToCartBtn, PriceBtn} from '../../Globals/Globals';
+import {Row } from 'react-bootstrap'
+import portables1 from '../../../assets/portables1.svg'
+import portables2 from '../../../assets/portables2.svg'
+import { PortableSlickMain } from './PortableStyles';
+import PortableCard from './PortableCard';
 
 
 const PortableSlick = () => {
@@ -49,68 +49,18 @@ const PortableSlick = () => {
   return (
     <PortableSlickMain>
       <Slider {...settings} className='portable-slick'>
-      
-      <div>
+        <div>
           <Row className='d-flex align-items-center'>
-            <Col  xs={5}>
-              
-                <PortableMiniImgContainer>
-                  <div className='inner-overlay'>
-                    <div className='mb-3'>
-                    <PriceBtn>$540</PriceBtn>
-                    </div>
-                    <AddToCartBtn>Add to Cart</AddToCartBtn>
-                  </div>
-                  <PortableMiniImg src={portables1} alt='portable-img1' />
-
-                </PortableMiniImgContainer>
-             
-            </Col>
-            <Col  xs={5} >
-            <PortableMiniImgContainer>
-                  <div className='inner-overlay'>
-                    <div className='mb-3'>
-                    <PriceBtn>$540</PriceBtn>
-                    </div>
-                    <AddToCartBtn>Add to Cart</AddToCartBtn>
-                  </div>
-                  <PortableMiniImg src={portables2} alt='portable-img2' />
-
-                </PortableMiniImgContainer>
-            </Col>
+            <PortableCard img={portables1} />
+            <PortableCard img={portables2} />
           </Row>
         </div>
         <div>
           <Row className='d-flex align-items-center'>
-            <Col  xs={5}>
-              
-                <PortableMiniImgContainer>
-                  <div className='inner-overlay'>
-                    <div className='mb-3'>
-                    <PriceBtn>$540</PriceBtn>
-                    </div>
-                    <AddToCartBtn>Add to Cart</AddToCartBtn>
-                  </div>
-                  <PortableMiniImg src={portables1} alt='portable-img1' />
-
-                </PortableMiniImgContainer>
-             
-            </Col>
-            <Col  xs={5} >
-            <PortableMiniImgContainer>
-                  <div className='inner-overlay'>
-                    <div className='mb-3'>
-                    <PriceBtn>$540</PriceBtn>
-                    </div>
-                    <AddToCartBtn>Add to Cart</AddToCartBtn>
-                  </div>
-                  <PortableMiniImg src={portables2} alt='portable-img2' />
-
-                </PortableMiniImgContainer>
-            </Col>
+            <PortableCard img={portables1} />
+            <PortableCard img={portables2} />
           </Row>
         </div>
-
 
       </Slider>
     </PortableSlickMain>

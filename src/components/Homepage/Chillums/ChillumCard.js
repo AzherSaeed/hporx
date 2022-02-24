@@ -1,19 +1,20 @@
 import React from 'react'
-import { InhalatedImgContainer, InhalteImg } from '../../Inhalete/StyledInhalate'
+// import { InhalatedImgContainer, InhalteImg } from '../../Inhalate/StyledInhalate'
 
 import { ShopNowBtn } from '../../Globals/Globals'
+import { ChillumImg,  ChillumImgContainer } from './StyledChillums'
 const ChillumCard = ({img}) => {
     return (
-        <InhalatedImgContainer>
-            <InhalteImg src={img} alt={img} />
+        <ChillumImgContainer>
+            <ChillumImg src={img} alt={img} />
             <div className="overlay">
             </div>
             <div className='inner-overlay'>
-                <h3>CHILLUMS</h3>
+                {/* <h3>CHILLUMS</h3>
                 <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque  aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
-                <ShopNowBtn>Quick Shop</ShopNowBtn>
+                <ShopNowBtn>Quick Shop</ShopNowBtn> */}
             </div>
-        </InhalatedImgContainer>
+        </ChillumImgContainer>
     )
 }
 
