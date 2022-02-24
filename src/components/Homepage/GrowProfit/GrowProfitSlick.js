@@ -44,7 +44,6 @@ const GrowProfitSlick = () => {
     return (
 
         <Slider {...settings} className='grow-profit-slick'>
-
             <GrowProfitCard />
             <GrowProfitCard />
             <GrowProfitCard />

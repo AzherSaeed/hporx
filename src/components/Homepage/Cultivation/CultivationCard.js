@@ -1,13 +1,21 @@
 import React from 'react'
 import { CultivationiImg, CultivationImgContainer } from './StyledCultivation';
 import { AddToCartBtn} from '../../Globals/Globals';
-const CultivationCard = ({ img }) => {
+const CultivationCard = ({ heading,description,img }) => {
     return (
         <CultivationImgContainer>
             <div className='inner-overlay'>
                 <AddToCartBtn>Add to Cart</AddToCartBtn>
             </div>
-            <CultivationiImg src={img} alt={img} />
+            <CultivationiImg className='img-fluid' src={img} alt={img} />
+            <div className='product-description'>
+            <h3>
+            {heading}
+            </h3>
+            <p>
+            {description}
+            </p>
+            </div>
         </CultivationImgContainer>
     )
 }

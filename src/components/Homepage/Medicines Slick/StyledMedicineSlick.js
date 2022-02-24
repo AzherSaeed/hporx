@@ -31,7 +31,11 @@ export const MedicineImgContainer = styled.div`
   }
   &:hover .inner-overlay,
   &:hover .overlay {
-    opacity: 1;
+    opacity: 0;
   }
 `;
-export const MedicineImg = styled.img``;
+export const MedicineImg = styled.img`
+width: 23.6rem;
+height: 23.3rem;
+
+`;

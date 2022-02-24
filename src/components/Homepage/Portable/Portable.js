@@ -1,27 +1,33 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { PortableImg1, PortableMainContainer } from './PortableStyles'
-
-import portables from '../../../assets/portable.svg'
+import { PortableImg1, PortableImg1Container, PortableMainContainer, PortableMoreBtn } from './PortableStyles'
+import portable from '../../../assets/portable.svg'
 import PortableSlick from './PortableSlick'
-import { ViewMoreBtn } from '../../Globals/Globals'
+import {PrimaryHeading } from '../../Globals/Globals'
+import PlayBtn from '../../Globals/PlayBtn'
 
 
 const Portable = () => {
     return (
         <PortableMainContainer>
-            <Container>
-                <Row className='d-flex  justify-content-between '>
-                    <Col xs={12} md={4}>
-                        <PortableImg1 src={portables} />
-                    </Col>
-                    <Col xs={12} md={8}>
-                        <h2>Portable</h2>
-                        <p>You can take it with you!</p>
+            <Container >
+                <Row>
+                    <Col xs={12} md={6}>
+                        <PrimaryHeading>Portable</PrimaryHeading>
+                        <p>"You can take it with you"</p>
                         <p className='mini-title'>Under Legal prescription</p>
-                        <ViewMoreBtn>View More</ViewMoreBtn>
+                        <PortableMoreBtn>View More</PortableMoreBtn>
                         <PortableSlick />
                     </Col>
+                    <Col xs={12} md={6}>
+                        <PortableImg1Container>
+                            <div className='inner-overlay'>
+                                <PlayBtn/>
+                            </div>
+                            <PortableImg1 className='img-fluid' src={portable} alt={portable} />
+                        </PortableImg1Container>
+                    </Col>
+
                 </Row>
             </Container>
         </PortableMainContainer>

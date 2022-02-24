@@ -2,13 +2,14 @@ import React from 'react'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {Container} from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import prescribe from '../../../assets/prescribe.svg'
 import prescribe1 from '../../../assets/prescribe1.svg'
 import prescribe2 from '../../../assets/prescribe2.svg'
 import prescribe3 from '../../../assets/prescribe3.svg'
-import { ShopNowBtn, ViewMoreBtn } from '../../Globals/Globals'
-import {PrescribeImg, PrescribeImgContainer, PrescribeButton } from './StyledPrescribe';
+import { PrimaryHeading, ShopNowBtn, ViewMoreBtn } from '../../Globals/Globals'
+import { PrescribeImg, PrescribeImgContainer, PrescribeButton } from './StyledPrescribe';
+import PrescribeCard from './PrescribeCard';
 
 
 const Prescribe = () => {
@@ -56,60 +57,32 @@ const Prescribe = () => {
 
 
     return (
-        <div className='prescribe-slick'>
-            <Container>
-                <Slider {...settings} className='prescribe-slick'>
-                    {
-                        prescribeImgs1.map((img, index) => (
-                            <PrescribeImgContainer>
-                                <div className="overlay">
-                                </div>
-                                <div className='inner-overlay'>
-                                    <h3>About</h3>
-                                    <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
-                                    <ShopNowBtn>Appointment</ShopNowBtn>
-                                </div>
-                                <PrescribeImg src={img} alt={img} />
-                            </PrescribeImgContainer>
+        <Container>
+            <Slider {...settings} className='prescribe-slick'>
+                {
+                    prescribeImgs1.map((img, index) => (
+                        <PrescribeCard img={img} />
+                    ))
+                }
+                <div className='main-div'>
+                    <PrimaryHeading>Prescribe</PrimaryHeading>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fugiat officiis libero et eaque repellat? Distinctio nulla consequuntur placeat eum nesciunt velit qui deleniti aliquid?</p>
+                    <ViewMoreBtn>CONSULTATION</ViewMoreBtn>
+                    <ViewMoreBtn className='ms-2'>View more</ViewMoreBtn>
+                </div>
+            </Slider>
 
+            <div className='mt-4'>
+
+                <Slider {...settings}>
+                    {
+                        prescribeImgs2.map((img, index) => (
+                            <PrescribeCard img={img} />
                         ))
                     }
-                    <div className='main-div mt-4'>
-                        <h3>Prescribe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fugiat officiis libero et eaque repellat? Distinctio nulla consequuntur placeat eum nesciunt velit qui deleniti aliquid?</p>
-                        <ViewMoreBtn>CONSULTATION</ViewMoreBtn>
-                        <ViewMoreBtn className='ms-2'>View more</ViewMoreBtn>
-                       
-                    </div>
                 </Slider>
-            </Container>
-            <div className='mt-4'>
-                <Container>
-                    <Slider {...settings}>
-                        {
-                            prescribeImgs2.map((img, index) => (
-
-                                <PrescribeImgContainer>
-                                    <div className="overlay">
-                                    </div>
-                                    <div className='inner-overlay'>
-                                        <h3>About</h3>
-                                        <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
-                                        <ShopNowBtn>Appointment</ShopNowBtn>
-                                    </div>
-                                    <PrescribeImg src={img} alt={img} />
-                                </PrescribeImgContainer>
-
-                            ))
-
-                        }
-
-                    </Slider>
-
-                </Container>
             </div>
-
-        </div >
+        </Container>
     )
 }
 

@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { PrimarySubHeading, TertiaryHeading } from "../../Globals/Globals";
 
 export const ChillumMainContainer = styled.div`
 text-align: center;
-margin-top: 8rem;
+margin-top: 9rem;
 .chillum-slick  .slick-next {
-    right: 4rem;
+    right: 0rem;
     z-index: 1;
 }
 .chillum-slick  .slick-prev {
-    left: 2.1rem;
+    left: 0rem;
     z-index:1;
 }
 .chillum-slick .slick-prev:before, .chillum-slick .slick-next:before {
@@ -18,14 +19,12 @@ margin-top: 8rem;
 `
 export const ChillumSlickContainer = styled.div`
 margin-top: 5rem;
-h3{
-    font-size: 4rem;
 
-}
-p{
-    margin-top: 3rem;
-font-size: 1.5rem;
-}
+
+`
+export const ChillumSubHeading=styled(TertiaryHeading)`
+margin-top:2px;
+padding: 0 2rem;
 `
 export const ChillumImgContainer = styled.div`
 

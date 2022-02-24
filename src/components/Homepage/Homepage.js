@@ -16,28 +16,30 @@ import Vaporize from './Vaporize/Vaporize'
 import Footer from './Footer/Footer'
 import FashionDiscount from './FashionDiscount/FashionDiscount'
 import Inhalate from './Inhalate/Inhalate'
+import { PlayBtnContainer } from '../Globals/Globals'
 
 const Homepage = () => {
   return (
     <>
-      <Header/>
-      <Inhalate/>
-      <Portable/> 
-      <Vaporize/>
-     <Chillum/>
-      <Cutivation/> 
-      <Agriculture/>
+    <PlayBtnContainer/>
+      {/* <Header/> */}
+       <Inhalate/>
+     <Vaporize/>
+      <Portable/>  
+       <Chillum/>
+     <Cutivation/> 
+       <Agriculture/>
       <GrowProfit/>
-      <BelowGrowProfit/>
-      <TrustedSuppliers/>
-      <Prescribe/>
+      {/* <BelowGrowProfit/>
+      <TrustedSuppliers/> */}
+      {/* <Prescribe/> */}
       <MedicinesSlick/>
       <MedicinesSlick/>
-      <MedicineSmallSlick/> 
+     {/* <MedicineSmallSlick/> 
       <Statistics/>
       <SubscribeNewsletter/>
       <FashionDiscount/>
-      <Footer/>
+      <Footer/> */}
     </>
   )
 }

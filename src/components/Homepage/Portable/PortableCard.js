@@ -4,7 +4,7 @@ import { PortableMiniImg, PortableMiniImgContainer} from './PortableStyles';
 import { AddToCartBtn, PriceBtn} from '../../Globals/Globals';
 const PortableCard = ({img}) => {
   return (
-      <Col  xs={5}>
+      <Col  xs={6}>
           <PortableMiniImgContainer>
             <div className='inner-overlay'>
               <div className='mb-3'>

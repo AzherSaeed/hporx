@@ -1,30 +1,24 @@
 import styled from "styled-components";
 
 export const PrescribeMainContainer = styled.div`
-  h3 {
-    font-size: 3.8rem;
-  }
-  p {
-    font-size: 1.7rem;
-  }
+.prescribe-slick{
   .main-div {
-    display: flex;
-    min-height: 49.7rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 5rem 1rem;
+    p {
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 400;
+line-height: 2.8rem;
+letter-spacing: 0em;
+color:#828282;
+background-color: red;
   }
-  .slick-main-div {
-    min-height: 20rem;
   }
-  .prescribe-slick {
-    padding: 5rem 0;
-  }
-`;
+}
+ 
+  
+`
 
 export const PrescribeImgContainer = styled.div`
-  padding-right:1rem;
   position: relative;
   .overlay {
     position: absolute;
@@ -62,4 +56,6 @@ export const PrescribeImgContainer = styled.div`
   }
 `;
 
-export const PrescribeImg = styled.img``;
+export const PrescribeImg = styled.img`
+
+`;
