@@ -17,29 +17,36 @@ import Footer from './Footer/Footer'
 import FashionDiscount from './FashionDiscount/FashionDiscount'
 import Inhalate from './Inhalate/Inhalate'
 import { PlayBtnContainer } from '../Globals/Globals'
+import Testimonials from './Testimonials/Testimonials'
 
 const Homepage = () => {
   return (
     <>
-    <PlayBtnContainer/>
+    
+
+   {/* <PlayBtnContainer/> */}
       {/* <Header/> */}
-       <Inhalate/>
-     <Vaporize/>
+       {/* <Inhalate/> */}
+     {/* <Vaporize/>
       <Portable/>  
        <Chillum/>
      <Cutivation/> 
        <Agriculture/>
-      <GrowProfit/>
+      <GrowProfit/> */}
       {/* <BelowGrowProfit/>
       <TrustedSuppliers/> */}
       {/* <Prescribe/> */}
-      <MedicinesSlick/>
-      <MedicinesSlick/>
+      {/* <MedicinesSlick/>
+      <MedicinesSlick/> */}
      {/* <MedicineSmallSlick/> 
       <Statistics/>
       <SubscribeNewsletter/>
       <FashionDiscount/>
       <Footer/> */}
+      
+      <Testimonials/>
+
+
     </>
   )
 }
