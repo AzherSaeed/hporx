@@ -1,18 +1,9 @@
 import styled from "styled-components";
+import { TertiaryHeadingMedium, ViewMoreBtn } from "../../Globals/Globals";
 
 export const PrescribeMainContainer = styled.div`
 .prescribe-slick{
-  .main-div {
-    p {
-font-size: 1.6rem;
-font-style: normal;
-font-weight: 400;
-line-height: 2.8rem;
-letter-spacing: 0em;
-color:#828282;
 background-color: red;
-  }
-  }
 }
  
   
@@ -24,8 +15,8 @@ export const PrescribeImgContainer = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 1rem;
+    left: 1rem;
+    right: 0.5rem;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
@@ -58,4 +49,19 @@ export const PrescribeImgContainer = styled.div`
 
 export const PrescribeImg = styled.img`
 
+height: 
+35rem
 `;
+
+export const ConsultDarkBtn=styled(ViewMoreBtn)`
+background: #242424;
+color: #FFFFFF;
+`
+export const PrescribeSlickMain=styled.div`
+.marketplace-slick{
+.slick-list {
+  margin: 0 -2.5rem;
+  
+}
+ }
+`

@@ -2,12 +2,11 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import mensFashionDiscount from '../../../assets/mensFashionDiscount.svg'
 import { Container } from 'react-bootstrap';
 import { FashionDiscountImg, FashionDiscountImgContainer, FashionDiscountMainContainer } from './StyledFashionDiscount';
 
-const FashionDiscount = () => {
-    const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount,mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
+const FashionDiscount = ({imgs}) => {
+   
     var settings = {
         dots: false,
         arrows:false,
@@ -46,9 +45,9 @@ const FashionDiscount = () => {
     return (
         <Container>
             <FashionDiscountMainContainer>
-                <Slider {...settings} className='cutivation-slick'>
+                <Slider {...settings} className='fashion-slick'>
                     {
-                        fashionDiscountImgs.map((img,index) => (
+                        imgs.map((img,index) => (
                             <FashionDiscountImgContainer key={index}>
                                 <FashionDiscountImg src={img} alt={img} />
                             </FashionDiscountImgContainer>

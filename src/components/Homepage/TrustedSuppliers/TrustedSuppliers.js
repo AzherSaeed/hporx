@@ -2,17 +2,13 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import trustedSupplier2 from '../../../assets/trustedSupplier2.svg'
-import trustedSupplier3 from '../../../assets/trustedSupplier3.svg'
-import trustedSupplier4 from '../../../assets/trustedSupplier4.svg'
-import trustedSupplier5 from '../../../assets/trustedSupplier5.svg'
-import trustedSupplier6 from '../../../assets/trustedSupplier6.svg'
+
 import { TrustedSuppliersImg, TrustedSuppliersImgContainer,TrustedSuppliersMainContainer } from './StyeldTrustedSuppliers';
 
 
 
-const TrustedSuppliers = () => {
-    const trustedSuppliersImgs = [trustedSupplier2, trustedSupplier3, trustedSupplier4,trustedSupplier5,trustedSupplier6, trustedSupplier2, trustedSupplier3, trustedSupplier4,trustedSupplier5,trustedSupplier6,]
+const TrustedSuppliers = ({imgs,head}) => {
+    
 
     var settings = {
         arrows: false,
@@ -51,9 +47,9 @@ const TrustedSuppliers = () => {
     };
     return (
         <TrustedSuppliersMainContainer>
-            <h3>Trusted International Brands</h3>
+            <h3>{head}</h3>
             <Slider {...settings} className='trusted-suppliers-slick'>
-                {trustedSuppliersImgs.map((supplierImg, index) => (
+                {imgs.map((supplierImg, index) => (
                     <div key={index}>
                         <TrustedSuppliersImgContainer>
                             <TrustedSuppliersImg src={supplierImg} alt={supplierImg} />

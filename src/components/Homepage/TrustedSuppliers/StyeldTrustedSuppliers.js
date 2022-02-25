@@ -21,6 +21,6 @@ padding: 2rem;
 margin-top: 4.3rem;
 `
 export const TrustedSuppliersImg = styled.img`
-height: 5.4rem;
+height: 7rem;
 object-fit: contain;
 `

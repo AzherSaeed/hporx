@@ -16,7 +16,12 @@ font-style: normal;
 font-weight: 500;
 line-height: 4.8rem;
 letter-spacing: 0em;
-
+`
+export const SubHeadingSecondary = styled.h2`  
+font-size: 2.4rem;
+font-weight: 500;
+line-height: 3.6rem;
+letter-spacing: 0em;
 
 `
 export const TertiaryHeading = styled.h3`
@@ -24,6 +29,31 @@ font-size: 1.8rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.7rem;
+letter-spacing: 0em;
+color: #828282;
+`
+export const TertiaryHeadSecondary = styled.h3`
+font-size: 1.8rem;
+font-style: normal;
+font-weight: 500;
+line-height: 2.4rem;
+letter-spacing: 0em;
+color: #828282;
+opacity: 0.8;
+`
+export const TertiaryHeadingMedium = styled.h3`
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 400;
+line-height: 2.8rem;
+letter-spacing: 0em;
+
+`
+export const TertiaryHeadingSmall = styled.h3`
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 400;
+line-height: 2.4rem;
 letter-spacing: 0em;
 color: #828282;
 `

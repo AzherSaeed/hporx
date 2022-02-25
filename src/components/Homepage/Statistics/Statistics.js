@@ -6,62 +6,87 @@ import static2 from '../../../assets/static2.svg'
 import static3 from '../../../assets/static3.svg'
 import static4 from '../../../assets/static4.svg'
 import static5 from '../../../assets/static5.svg'
+import { BsFillStarFill } from "react-icons/bs";
 
 const Statistics = () => {
     const cards = [{
         image: static1,
-        revenue: '$167Billion',
+        revenue: '4.2',
+        mini: 'Trillion',
+
+
         p1: 'Medical marijuana',
         p2: 'Industry Valuation',
     }, {
         image: static2,
         revenue: '67',
+        mini: '',
         p1: 'Awarded Licenses in',
         p2: 'fourtenses in fourtenn status',
     }, {
         image: static3,
         revenue: '4,781',
+        mini: '',
+
         p1: 'Thousand ft2 of',
         p2: 'cultivation space builtv',
     }, {
         image: static4,
         revenue: '150t',
+        mini: '',
+
         p1: 'Tons od solids',
         p2: 'produced',
     }, {
         image: static5,
-        revenue: '397%',
+        revenue: '400%',
+        mini: '',
+
         p1: 'Perfect Growth in the',
         p2: ' last tow years',
     },]
     return (
         <StatisticsMainContainer>
             <Container>
-            <h1>Statistics</h1>
-                <Row className='gap-3'>
+                <h1>Statistics</h1>
+                <Row className=' p-0 '>
                     {
                         cards.map((data, index) => {
                             const { image,
                                 revenue,
                                 p1,
-                                p2 } = data;
+                                p2, mini } = data;
                             return (
-                                <Col lg={2} md={3} sm={5} xs={12}   key={index}>
+                                <div className='p-3 col-lg col-md-4 col-sm-6 col-xs-12' key={index}>
+
                                     <Card className='card-container'>
-                                        <Card.Body>
-                                            <StatisticsImgContainer>
-                                                <StatisticsImg src={image} alt={image} />
-                                            </StatisticsImgContainer>
-                                            <StatisticsTextContainer>
-                                            <Card.Title className='fs-2'>{revenue}</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">{p1}</Card.Subtitle>
-                                            <Card.Text>
+
+                                        <StatisticsImgContainer>
+
+                                            <StatisticsImg src={image} alt={image} />
+                                        </StatisticsImgContainer>
+                                        <StatisticsTextContainer>
+                                            <div className="d-flex justify-content-center">
+                                                <h3 >{revenue}
+
+                                                </h3>
+                                                <div className='d-flex flex-column'>
+                                                    <span className='icon' > {
+                                                        index === 0 ? <BsFillStarFill color='red'  /> : null
+                                                    }</span>
+                                                    <span className='mini'>{mini}</span>
+                                                </div>
+
+                                            </div>
+                                            <p className="mb-2">{p1}</p>
+                                            <p class>
                                                 {p2}
-                                            </Card.Text>
-                                            </StatisticsTextContainer>
-                                        </Card.Body>
+                                            </p>
+                                        </StatisticsTextContainer>
+
                                     </Card>
-                                </Col>
+
+                                </div>
                             )
                         }
                         )
