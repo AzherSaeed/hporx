@@ -16,7 +16,6 @@ import Vaporize from './Vaporize/Vaporize'
 import Footer from './Footer/Footer'
 import FashionDiscount from './FashionDiscount/FashionDiscount'
 import Inhalate from './Inhalate/Inhalate'
-import { PlayBtnContainer } from '../Globals/Globals'
 import Marketplace from '../MarketPlace/Marketplace'
 import Diaganose from './Diagnose/Diaganose'
 import EMultiVendor from './EMultiVendor/EMultiVendor'
@@ -52,48 +51,66 @@ import hygie6 from '../../assets/hygie6.svg'
 import hygie7 from '../../assets/hygie7.svg'
 import hygie8 from '../../assets/hygie8.svg'
 import hygie9 from '../../assets/hygie9.svg'
+import aboveCopyright1 from '../../assets/aboveCopyright1.svg';
+import aboveCopyright2 from '../../assets/aboveCopyright2.svg';
+import aboveCopyright3 from '../../assets/aboveCopyright3.svg';
+import aboveCopyright4 from '../../assets/aboveCopyright4.svg';
+import aboveCopyright5 from '../../assets/aboveCopyright5.svg';
+import aboveCopyright6 from '../../assets/aboveCopyright6.svg';
+import aboveCopyright7 from '../../assets/aboveCopyright7.svg';
+import aboveCopyright8 from '../../assets/aboveCopyright8.svg';
+import FeatureMarketPlace from './FeatureMarketplace/FeatureMarketPlace'
+import SSL from './SSL/SSL'
+import Terms from '../Terms/Terms'
+import Testimonials from './Testimonials/Testimonials'
 
-
-
-
+const styles = { 
+  margin:'1rem 2rem',
+  border: 'none',
+  borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+  padding:' 0 2rem'
+}
 const Homepage = () => {
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
   const giftImgs = [giftCard, giftCard, giftCard, giftCard, giftCard, giftCard]
-  const trustedSuppliers=[trustedSupplier2,trustedSupplier3,trustedSupplier4,trustedSupplier5,trustedSupplier6,trustedSupplier6]
-  const trustedOrganizations=[interOrg1,interOrg2,interOrg3,interOrg4,interOrg5,interOrg1]
-  const followUsImgs=[{img:followUs1,title:'Twitter'},{img:followUs2,title:'Facbook'},{img:followUs3,title:'Youtube'},{img:followUs4,title:'TencentQQ'},{img:followUs5,title:'Vkontakte'},{img:followUs6,title:'Messenger'},{img:followUs7,title:'Instagram'},{img:followUs8,title:'LinkedIn'},]
-  const hygieImgs=[{img:hygie1,title:'Europe'},{img:hygie2,title:'USA'},{img:hygie3,title:'Canada'},{img:hygie4,title:'Qatar'},{img:hygie5,title:'Dubai'},{img:hygie6,title:'Spain'},{img:hygie7,title:'Qatar'},{img:hygie8,title:'Spain'},{img:hygie9,title:'Dubai'}]
+  const trustedSuppliers = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6]
+  const trustedOrganizations = [interOrg1, interOrg2, interOrg3, interOrg4, interOrg5, interOrg1]
+  const followUsImgs = [{ img: followUs1, title: 'Twitter' }, { img: followUs2, title: 'Facbook' }, { img: followUs3, title: 'Youtube' }, { img: followUs4, title: 'TencentQQ' }, { img: followUs5, title: 'Vkontakte' }, { img: followUs6, title: 'Messenger' }, { img: followUs7, title: 'Instagram' }, { img: followUs8, title: 'LinkedIn' },]
+  const hygieImgs = [{ img: hygie1, title: 'Europe' }, { img: hygie2, title: 'USA' }, { img: hygie3, title: 'Canada' }, { img: hygie4, title: 'Qatar' }, { img: hygie5, title: 'Dubai' }, { img: hygie6, title: 'Spain' }, { img: hygie7, title: 'Qatar' }, { img: hygie8, title: 'Spain' }, { img: hygie9, title: 'Dubai' }]
+  const aboveCopyrightImgs = [aboveCopyright1, aboveCopyright2, aboveCopyright3, aboveCopyright6, aboveCopyright4, aboveCopyright5, aboveCopyright7, aboveCopyright8,]
   return (
     <>
-      <PlayBtnContainer />
-      {/* <Header/> */}
-      {/* <Inhalate/>
-     <Vaporize/>
-      <Portable/>  
-       <Chillum/>
-     <Cutivation/> 
-       <Agriculture/>
-      <GrowProfit/>
-       <BelowGrowProfit/>
-      <TrustedSuppliers/>  */}
-      {/* <Prescribe/> */}
-      {/* <MedicinesSlick/>
-      <MedicinesSlick/> */}
-      {/*
-      <SubscribeNewsletter/>
-    */}
-      {/* <EMultiVendor/> */}
-      {/* <Diaganose/>
-    <MedicineSmallSlick/> 
-  <Marketplace/> */}
-      {/* <Footer/>  */}
-      {/* <Locate/> */}
-      {/* <FashionDiscount imgs={fashionDiscountImgs}/>
-  <FashionDiscount  imgs={giftImgs}/> */}
-      {/* <Statistics />
-      <TrustedSuppliers imgs={trustedSuppliers} head='Trusted International Brands'/>
-      <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations'/> */}
-      {/* <FollowUs imgs={followUsImgs} head='Follow Us' imgs1={hygieImgs}  head1='Hygieia Apothecary' /> */}
+      <Header />
+      <Inhalate />
+      <Vaporize />
+      <Portable />
+      <Chillum />
+      <Cutivation />
+      <Agriculture />
+      <GrowProfit />
+      <BelowGrowProfit />
+      <TrustedSuppliers imgs={trustedSuppliers} head='Trusted International Brands' />
+      <Diaganose />
+      <Prescribe />
+      <MedicinesSlick />
+      <MedicinesSlick />
+      <MedicineSmallSlick />
+      <Marketplace />
+      <FeatureMarketPlace />
+      <FashionDiscount imgs={giftImgs} />
+      <EMultiVendor />
+      <Testimonials />
+      <Locate />
+      <Statistics />
+      <SubscribeNewsletter />
+      <FashionDiscount imgs={fashionDiscountImgs} />
+      <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations' />
+      <FollowUs imgs={followUsImgs} head='Follow Us' imgs1={hygieImgs} head1='Hygieia Apothecary' />
+      <Footer />
+      <SSL />
+      <hr style={styles} />
+      <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
+      <Terms />
     </>
   )
 }

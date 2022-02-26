@@ -10,7 +10,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 7.2rem;
 letter-spacing: 0em;
-
+opacity: 0.8;
 }
 p{
 font-size: 1.8rem;
@@ -19,6 +19,7 @@ font-weight: 500;
 line-height: 2.7rem;
 letter-spacing: 0em;
 color: #333333;
+opacity: 0.8;
 }
 
 
@@ -39,6 +40,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 2.7rem;
 letter-spacing: 0em;
+
 
 }
 `
@@ -81,7 +83,7 @@ letter-spacing: 0em;
 }
 .diagnose-slick{
     .slick-list {
-  margin: 0 -2rem;
+  margin: 0 2rem;
 }
 }
 `

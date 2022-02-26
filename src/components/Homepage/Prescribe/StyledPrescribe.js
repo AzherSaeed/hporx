@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import { TertiaryHeadingMedium, ViewMoreBtn } from "../../Globals/Globals";
+import { ViewMoreBtn } from "../../Globals/Globals";
 
 export const PrescribeMainContainer = styled.div`
-.prescribe-slick{
-background-color: red;
-}
- 
-  
+margin-top: 7.5rem;
+
 `
 
 export const PrescribeImgContainer = styled.div`
@@ -16,7 +13,7 @@ export const PrescribeImgContainer = styled.div`
     top: 0;
     bottom: 0;
     left: 1rem;
-    right: 0.5rem;
+    right: 1rem;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
@@ -48,20 +45,37 @@ export const PrescribeImgContainer = styled.div`
 `;
 
 export const PrescribeImg = styled.img`
+height: 35rem;
 
-height: 
-35rem
 `;
 
-export const ConsultDarkBtn=styled(ViewMoreBtn)`
+
+export const ConsultDarkBtn = styled(ViewMoreBtn)`
 background: #242424;
 color: #FFFFFF;
 `
-export const PrescribeSlickMain=styled.div`
-.marketplace-slick{
-.slick-list {
-  margin: 0 -2.5rem;
-  
+export const PrescribeSlickMain = styled.div`
+.prescribe-slick{
+  .text-container{
+    padding: 0 3rem;
+    .prescribe-btns{
+      margin-top: 3.5rem;
+      .prescribe-btn2{
+          margin-left: 1rem;
+        }
+      @media only screen and (max-width: 1200px) {
+        .prescribe-btn2{
+          margin-top: 1rem;
+          margin-left: 1rem;
+        }
 }
- }
+
+    
+    }
+  }
+  .slick-list {
+  margin: 0 -10px;
+}
+}
+
 `

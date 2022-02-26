@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MedicineContainerMain = styled.div`
-  margin-top: 3rem;
+  margin-top: 3.4rem;
 `;
 export const MedicineImgContainer = styled.div`
   position: relative;
@@ -35,7 +35,7 @@ export const MedicineImgContainer = styled.div`
   }
 `;
 export const MedicineImg = styled.img`
-width: 23.6rem;
-height: 23.3rem;
+width: 30rem;
+height: 32rem;
 
 `;

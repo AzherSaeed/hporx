@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const LocateMainContainer = styled.div`
 text-align: center;
+margin-top: 9rem;
+
 h3{
  margin-top: 1.6rem;
 font-size: 2.8rem;
@@ -15,6 +17,7 @@ text-align: start;
 
 }
 p{
+  margin-top: 1.6rem;
 font-size: 1.8rem;
 font-style: normal;
 font-weight: 400;

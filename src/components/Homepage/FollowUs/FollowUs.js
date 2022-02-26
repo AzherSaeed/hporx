@@ -7,9 +7,7 @@ import { FollowUsImg, FollowUsImgContainer, FollowUsMain, MainContainerFollowUs 
 import { Col, Container, Row } from 'react-bootstrap';
 
 
-
 const FollowUs = ({ imgs, head, imgs1, head1 }) => {
-
   var settings = {
     arrows: false,
     dots: false,
@@ -47,10 +45,8 @@ const FollowUs = ({ imgs, head, imgs1, head1 }) => {
   };
   return (
     <MainContainerFollowUs>
-
-      <Container>
+     <Container>
         <Row>
-
           <Col lg={6}>
             <FollowUsMain>
               <h3>{head}</h3>
@@ -65,7 +61,6 @@ const FollowUs = ({ imgs, head, imgs1, head1 }) => {
 
                     </FollowUsImgContainer>
                   )
-
                 }
                 )
                 }

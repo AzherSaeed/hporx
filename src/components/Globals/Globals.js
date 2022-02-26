@@ -23,6 +23,7 @@ font-weight: 500;
 line-height: 3.6rem;
 letter-spacing: 0em;
 
+
 `
 export const TertiaryHeading = styled.h3`
 font-size: 1.8rem;
@@ -31,6 +32,7 @@ font-weight: 400;
 line-height: 2.7rem;
 letter-spacing: 0em;
 color: #828282;
+margin: 0;
 `
 export const TertiaryHeadSecondary = styled.h3`
 font-size: 1.8rem;
@@ -40,6 +42,7 @@ line-height: 2.4rem;
 letter-spacing: 0em;
 color: #828282;
 opacity: 0.8;
+margin: 0;
 `
 export const TertiaryHeadingMedium = styled.h3`
 font-size: 1.6rem;
@@ -47,6 +50,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 2.8rem;
 letter-spacing: 0em;
+margin: 0;
 
 `
 export const TertiaryHeadingSmall = styled.h3`
@@ -56,6 +60,7 @@ font-weight: 400;
 line-height: 2.4rem;
 letter-spacing: 0em;
 color: #828282;
+margin: 0;
 `
 
 export const ViewMoreBtn = styled.button`

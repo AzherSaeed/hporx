@@ -7,6 +7,7 @@ import static3 from '../../../assets/static3.svg'
 import static4 from '../../../assets/static4.svg'
 import static5 from '../../../assets/static5.svg'
 import { BsFillStarFill } from "react-icons/bs";
+import { PrimaryHeading } from '../../Globals/Globals'
 
 const Statistics = () => {
     const cards = [{
@@ -48,7 +49,7 @@ const Statistics = () => {
     return (
         <StatisticsMainContainer>
             <Container>
-                <h1>Statistics</h1>
+                <PrimaryHeading>Statistics</PrimaryHeading>
                 <Row className=' p-0 '>
                     {
                         cards.map((data, index) => {

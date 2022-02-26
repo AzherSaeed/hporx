@@ -3,7 +3,8 @@ import followUs from '../../../assets/followUs.svg'
 
 export const MainContainerFollowUs = styled.div`
 background-image: url(${followUs}) ;
-height: 50vh;
+height: 100%;
+background-size: cover;
   background-repeat: no-repeat;
 
 `

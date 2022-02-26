@@ -3,12 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import { TrustedSuppliersImg, TrustedSuppliersImgContainer,TrustedSuppliersMainContainer } from './StyeldTrustedSuppliers';
+import { TrustedSuppliersImg, TrustedSuppliersImgContainer, TrustedSuppliersMainContainer } from './StyeldTrustedSuppliers';
+import { Container } from 'react-bootstrap';
 
 
 
-const TrustedSuppliers = ({imgs,head}) => {
-    
+const TrustedSuppliers = ({ imgs, head }) => {
+
 
     var settings = {
         arrows: false,
@@ -46,19 +47,21 @@ const TrustedSuppliers = ({imgs,head}) => {
         ]
     };
     return (
-        <TrustedSuppliersMainContainer>
-            <h3>{head}</h3>
-            <Slider {...settings} className='trusted-suppliers-slick'>
-                {imgs.map((supplierImg, index) => (
-                    <div key={index}>
-                        <TrustedSuppliersImgContainer>
-                            <TrustedSuppliersImg src={supplierImg} alt={supplierImg} />
-                        </TrustedSuppliersImgContainer>
-                    </div>
-                ))
-                }
-            </Slider>
-        </TrustedSuppliersMainContainer>
+        <Container>
+            <TrustedSuppliersMainContainer>
+                <h3>{head}</h3>
+                <Slider {...settings} className='trusted-suppliers-slick'>
+                    {imgs.map((supplierImg, index) => (
+                        <div key={index}>
+                            <TrustedSuppliersImgContainer>
+                                <TrustedSuppliersImg src={supplierImg} alt={supplierImg} />
+                            </TrustedSuppliersImgContainer>
+                        </div>
+                    ))
+                    }
+                </Slider>
+            </TrustedSuppliersMainContainer>
+        </Container>
     )
 }
 

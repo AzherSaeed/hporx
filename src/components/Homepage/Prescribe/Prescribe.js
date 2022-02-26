@@ -8,8 +8,8 @@ import prescribe01 from '../../../assets/prescribe01.svg'
 import prescribe1 from '../../../assets/prescribe1.svg'
 import prescribe2 from '../../../assets/prescribe2.svg'
 import prescribe3 from '../../../assets/prescribe3.svg'
-import { PrimaryHeading, ShopNowBtn, TertiaryHeadingMedium, ViewMoreBtn } from '../../Globals/Globals'
-import { PrescribeImg, PrescribeImgContainer, PrescribeButton, ConsultDarkBtn, PrescribeSlickMain } from './StyledPrescribe';
+import { PrimaryHeading,TertiaryHeadingMedium, ViewMoreBtn } from '../../Globals/Globals'
+import {ConsultDarkBtn, PrescribeSlickMain, PrescribeMainContainer } from './StyledPrescribe';
 import PrescribeCard from './PrescribeCard';
 
 
@@ -37,7 +37,7 @@ const Prescribe = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -58,37 +58,37 @@ const Prescribe = () => {
 
 
     return (
+        <PrescribeMainContainer>
         <PrescribeSlickMain>
-           
-<Container>
-
+            <Container>
                 <Slider {...settings} className='prescribe-slick'>
                     {
                         prescribeImgs1.map((img, index) => (
                             <PrescribeCard key={index} img={img} />
                         ))
                     }
-                    <div className='main-div'>
+                    <div className='text-container'>
                         <PrimaryHeading>Prescribe</PrimaryHeading>
-                        <TertiaryHeadingMedium>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fugiat officiis libero et eaque repellat? Distinctio nulla consequuntur placeat eum nesciunt velit qui deleniti aliquid?</TertiaryHeadingMedium>
-                        <ConsultDarkBtn>CONSULTATION</ConsultDarkBtn>
-                        <ViewMoreBtn className='ms-2'>View more</ViewMoreBtn>
+                        <TertiaryHeadingMedium>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</TertiaryHeadingMedium>
+                        <div className='prescribe-btns'>
+                        <ConsultDarkBtn >CONSULTATION</ConsultDarkBtn>
+                        <ViewMoreBtn  className='prescribe-btn2'>View more</ViewMoreBtn>
+                        </div>
                     </div>
                 </Slider>
 
                 <div className='mt-4'>
-
                     <Slider {...settings} className='prescribe-slick'>
                         {
                             prescribeImgs2.map((img, index) => (
                                 <PrescribeCard key={index} img={img} />
-                                ))
-                            }
+                            ))
+                        }
                     </Slider>
                 </div>
-           
-                            </Container>
+            </Container>
         </PrescribeSlickMain>
+        </PrescribeMainContainer>
     )
 }
 

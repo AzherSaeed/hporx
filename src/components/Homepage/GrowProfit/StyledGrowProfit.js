@@ -3,7 +3,11 @@ import GrowProfitBack from '../../../assets/growProfitBack.svg';
 import { PrimaryHeading, SubHeading, ViewMoreBtn } from "../../Globals/Globals";
 
 export const GrowProfitMainContainer = styled.div`
- 
+ .grow-profit-width{
+   max-width: 1440px;
+   margin: 0 auto;
+   
+ }
 margin-top: 11.2rem;
 p{
   margin-top: 1.1rem;
@@ -77,7 +81,11 @@ export const GrowProfitSlickContainer = styled.div`
 .text-container{
   margin-left: 7.5rem;
 }
-
+@media only screen and (max-width: 768px) {
+ .text-container{
+    margin-left: 0;
+  }
+}
 .overlay{
   position: absolute;
   top: 0;

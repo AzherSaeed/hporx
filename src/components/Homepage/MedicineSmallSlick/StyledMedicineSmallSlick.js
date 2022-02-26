@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SmallMedicineContainerMain = styled.div`
 margin-top:3rem;
-padding: 4rem 0;
+padding: 3rem 0 0;
 
 `
 export const MedicineSmallImgContainer = styled.div`

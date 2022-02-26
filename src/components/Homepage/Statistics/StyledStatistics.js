@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StatisticsMainContainer = styled.div`
-margin-top: 3rem;
+margin-top: 5.6rem;
 
 .card-container{
     position: relative;
