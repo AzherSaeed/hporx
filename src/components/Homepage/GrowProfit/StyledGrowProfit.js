@@ -34,7 +34,6 @@ background-image:linear-gradient(to right, rgba(126, 213, 111, 0.753) , rgba(40,
   height: 100vh;
   background-size: cover;
 margin-top: 3rem;
-position: relative;
 
 .overlay{
   position: absolute;

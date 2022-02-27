@@ -1,0 +1,263 @@
+
+.header-section{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #08ee8e;
+
+}
+
+.header-section .top-marquee{
+    height: 3rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.37);
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #FFFFFF;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+
+}
+
+
+/*On Scroll Down*/
+
+.header-section .second-bar.shrink{
+/*now make attractive*/
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+
+
+/*On Scroll Down*/
+
+
+
+
+.header-section .top-marquee marquee span{
+    padding: 0 3rem;
+}
+
+
+
+
+
+
+.header-section .second-bar{
+    height: 6rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+
+    display: flex;
+    align-items: center;
+
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.header-section .second-bar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-section .second-bar .content .icons{
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.header-section .second-bar .content .icons .count{
+    position: relative;
+}
+
+.header-section .second-bar .content .icons .count span{
+    position: absolute;
+    top: 1px;
+    right: -2px;
+    background: #0A472E;
+    height: 14.3px;
+    width: 14.3px;
+    border-radius: 50%;
+
+
+}
+
+.header-section .second-bar .content .icons .count span p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.header-section .second-bar .content .icons img:hover{
+    cursor: pointer;
+}
+
+
+
+/*Navbar*/
+
+
+
+.third-bar.sticky{
+    position: absolute;
+    top: 33%;
+    left: 0;
+    right: 0;
+    
+    
+
+
+}
+
+
+
+.third-bar .navbar{
+    padding-left: 2px;
+
+}
+
+.third-bar .navbar ul{
+    margin: 0;
+    display: flex;
+    gap: 37px;
+    padding-left: 0;
+}
+
+.third-bar .navbar ul li{
+    position: relative;
+    float: left;
+
+
+    display: flex;
+
+}
+
+
+
+.third-bar .navbar ul li a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    padding: 16px 0;
+    display: block;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.third-bar .navbar ul li a:hover{
+    background: transparent;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/*****Sub Menus Starts*****/
+.third-bar .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 120%;
+    padding: 0 4px;
+    margin: 0 2px;
+    display: none;
+
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 2px;
+    
+
+
+
+
+}
+
+.third-bar .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+
+.third-bar .navbar ul li ul li ul{
+    left: 100%;
+    top: 0;
+}
+
+.third-bar .navbar ul li:focus-within > ul,
+.third-bar .navbar ul li:hover > ul{
+    display: initial;
+}
+
+
+
+/*****Sub Menus Ends*****/
+
+
+
+/*Navbar Ends*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px){
+    html{
+    font-size: 55%;
+    }
+}

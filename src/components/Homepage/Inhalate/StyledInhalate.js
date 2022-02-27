@@ -22,7 +22,6 @@ export const InhalateMainContainer = styled.div`
   }
 `;
 export const InhalateTextContainer = styled.div`
-  
   padding: 3rem 4rem;
 `;
 export const InhalatedImgContainer = styled.div`
@@ -35,6 +34,7 @@ export const InhalatedImgContainer = styled.div`
     bottom: 0;
     left: 1rem;
     right: 1rem;
+
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
@@ -52,11 +52,37 @@ export const InhalatedImgContainer = styled.div`
     opacity: 0;
     padding: 0 2rem;
 
-    h3{
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       color: white;
-    }
-    p{
-      color: white;
+
+      img {
+        width: 10%;
+        height: 10%;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 71px;
+        color: white;
+      }
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: white;
+        padding: 0 2rem;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 100px;
+      }
     }
   }
   &:hover .inner-overlay,

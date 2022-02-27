@@ -16,10 +16,12 @@ import Vaporize from './Vaporize/Vaporize'
 import Footer from './Footer/Footer'
 import FashionDiscount from './FashionDiscount/FashionDiscount'
 import Inhalate from './Inhalate/Inhalate'
+import SubBar from './Navbar/SubBar';
 
 const Homepage = () => {
   return (
     <>
+    {/* <SubBar/> */}
       <Header/>
       <Inhalate/>
       <Portable/> 
