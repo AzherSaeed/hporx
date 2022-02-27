@@ -1,4 +1,5 @@
 import React from 'react'
+import { PrimaryHeading, TertiaryHeading } from '../../Globals/Globals'
 import CultivationSlick from './CultivationSlick'
 import { CultivationMainContainer } from './StyledCultivation'
 
@@ -6,9 +7,9 @@ import { CultivationMainContainer } from './StyledCultivation'
 const Cutivation = () => {
     return (
         <CultivationMainContainer>
-            <h3>Cutivation</h3>
+            <PrimaryHeading>Cutivation</PrimaryHeading>
             <p>Home Grow</p>
-            <p className='tertiary-heading'>Grow your dose privately at home</p>
+            <TertiaryHeading>Grow your dose privately at home</TertiaryHeading>
             <CultivationSlick />
         </CultivationMainContainer>
     )

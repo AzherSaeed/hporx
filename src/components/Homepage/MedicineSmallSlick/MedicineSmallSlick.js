@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import medicSlide1 from '../../../assets/medicslide1.svg'
-import medicSlide2 from '../../../assets/medicslide2.svg'
 import medicSlide3 from '../../../assets/medicslide3.svg'
 import medicSlide4 from '../../../assets/medicslide4.svg'
 import medicSlide5 from '../../../assets/medicslide5.svg'
@@ -14,7 +13,7 @@ import { MedicineSmallImg, MedicineSmallImgContainer, SmallMedicineContainerMain
 
 
 const MedicineSmallSlick = () => {
-    const medicSlides = [medicSlide1, medicSlide2, medicSlide3, medicSlide4, medicSlide5, medicSlide6,medicSlide1, medicSlide2, medicSlide3, medicSlide4, medicSlide5, medicSlide6]
+    const medicSlides = [medicSlide1, medicSlide3, medicSlide4, medicSlide5, medicSlide6,medicSlide1, medicSlide3, medicSlide4, medicSlide5, medicSlide6]
 
     var settings = {
         arrows: true,

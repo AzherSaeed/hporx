@@ -1,7 +1,11 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import FooterSection from './FooterSection'
-import { FooterMainContainer } from './StyledFooter'
+import { FooterImg, FooterImg1, FooterMainContainer } from './StyledFooter'
+import './Footer.css';
+import usa from '../../../assets/usa.png'
+import mail from '../../../assets/mail.png'
+import footerLogo from '../../../assets/footer-logo.png'
 
 const Footer = () => {
     const company = ['About Us', 'Jobs', 'Data Protection', 'Privacy Policy', 'Cookie Policy', 'FAQ', 'FAQ', 'Career Opportunities', 'Investment Opportunities']
@@ -46,7 +50,7 @@ const Footer = () => {
 
         'Tax N° NL 862241133B01'
     ]
-    const callRegistered = ['World Trade Center Barcelona Muelle de Barcelona Moll de Barcelona, s/n, 08039 Barcelona, Spain']
+    const callCenter = ['World Trade Center Barcelona Muelle de Barcelona Moll de Barcelona s/n, 08039 Barcelona Spain']
     const aToZ = ['Apparel',
         'Beauty',
         'Care',
@@ -97,48 +101,79 @@ const Footer = () => {
         <FooterMainContainer>
             <Container>
                 <Row>
-                    <Col lg={2} md={4} sm={6} xs={12}>
+                    <Col md={2} sm={6}  xs={12}>
                         <FooterSection links={tradingAddress} heading={'TRADING ADDRESS'} />
                         <FooterSection links={registeredAddress} heading={'REGISTERED ADDRESS'} />
-                        <FooterSection links={callRegistered} heading={'CALL REGISTERED'} />
+                        <ul class="list-unstyled footer-ul">
+                            <li>
+                                <p>
+                                    World Trade Center Barcelona
+                                    Muelle de Barcelona
+                                    Moll de Barcelona, s/n,
+                                    08039 Barcelona, Spain
+                                </p>
+                            </li>
+                            <li class="mb-1">
+                                <span>
+                                    <FooterImg className='img-fluid'  src={usa} alt={usa} /><span class="footer-span">+1 (213) 370
+                                        0873</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <FooterImg  className='img-fluid' src={usa} alt={mail}/>
+                                    <span class="footer-span">
+                                        +31 938 022
+                                        780</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <FooterImg className='img-fluid' src={mail} alt={mail} /><span
+                                        class="footer-span">assist@hporx.com</span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div>
+                            <FooterImg1 src={footerLogo} alt="footer-logo" />
+                        </div>
                     </Col>
-                    <Col lg={10}>
+                    <Col md={10}>
                         <Row>
-                            <Col lg={3} md={4} sm={6} xs={12}>
+                            <div className='sm-12 col-md' >
                                 <FooterSection links={company} heading={'Company'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={marketplace} heading={'MARKETPLACE'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={medical} heading={'Medical'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={advertising} heading={'ADVERTISING'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={community} heading={'COMMUNITY'} />
-                            </Col>
-
-                            <Col lg={3} md={4} sm={6} xs={12}>
+                            </div>
+                        </Row>
+                        <Row>
+                            <div className='sm-12 col-md' >
                                 <FooterSection links={aToZ} heading={'A to Z SITE INDEX'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={partners} heading={'PARTNERS'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={services} heading={'SERVICES'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={affiliates} heading={'AFFILIATES'} />
-                            </Col>
-                            <Col lg={2} md={4} sm={6} xs={12}>
+                            </div>
+                            <div className='sm-12 col-md'>
                                 <FooterSection links={helpCenter} heading={'HELP CENTER'} />
-                            </Col>
+                            </div>
                         </Row>
                     </Col>
-
-
                 </Row>
             </Container>
         </FooterMainContainer>

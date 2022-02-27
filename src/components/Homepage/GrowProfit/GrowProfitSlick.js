@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GrowProfitCard from './GrowProfitCard';
+import { Container } from 'react-bootstrap';
 
 
 const GrowProfitSlick = () => {
@@ -42,13 +43,13 @@ const GrowProfitSlick = () => {
         ]
     };
     return (
-
-        <Slider {...settings} className='grow-profit-slick'>
-
-            <GrowProfitCard />
-            <GrowProfitCard />
-            <GrowProfitCard />
-        </Slider>
+        <div className='grow-profit-width'>
+            <Slider {...settings} className='grow-profit-slick'>
+                <GrowProfitCard />
+                <GrowProfitCard />
+                <GrowProfitCard />
+            </Slider>
+        </div>
 
 
     )

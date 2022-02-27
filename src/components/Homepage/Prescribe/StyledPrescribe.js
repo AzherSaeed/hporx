@@ -1,36 +1,18 @@
 import styled from "styled-components";
+import { ViewMoreBtn } from "../../Globals/Globals";
 
 export const PrescribeMainContainer = styled.div`
-  h3 {
-    font-size: 3.8rem;
-  }
-  p {
-    font-size: 1.7rem;
-  }
-  .main-div {
-    display: flex;
-    min-height: 49.7rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 5rem 1rem;
-  }
-  .slick-main-div {
-    min-height: 20rem;
-  }
-  .prescribe-slick {
-    padding: 5rem 0;
-  }
-`;
+margin-top: 7.5rem;
+
+`
 
 export const PrescribeImgContainer = styled.div`
-  padding-right:1rem;
   position: relative;
   .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 1rem;
     right: 1rem;
     opacity: 0;
     transition: 0.5s ease;
@@ -62,4 +44,38 @@ export const PrescribeImgContainer = styled.div`
   }
 `;
 
-export const PrescribeImg = styled.img``;
+export const PrescribeImg = styled.img`
+height: 35rem;
+
+`;
+
+
+export const ConsultDarkBtn = styled(ViewMoreBtn)`
+background: #242424;
+color: #FFFFFF;
+`
+export const PrescribeSlickMain = styled.div`
+.prescribe-slick{
+  .text-container{
+    padding: 0 3rem;
+    .prescribe-btns{
+      margin-top: 3.5rem;
+      .prescribe-btn2{
+          margin-left: 1rem;
+        }
+      @media only screen and (max-width: 1200px) {
+        .prescribe-btn2{
+          margin-top: 1rem;
+          margin-left: 1rem;
+        }
+}
+
+    
+    }
+  }
+  .slick-list {
+  margin: 0 -10px;
+}
+}
+
+`

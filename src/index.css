@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  outline: none;
 }
 
 html {
@@ -21,7 +22,6 @@ img {
   height: auto;
 }
 
-
 .hero-text-container {
   position: absolute;
   top: 50%;
@@ -29,11 +29,18 @@ img {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  
 }
 
-
-
+@media screen and (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1290px !important;
+  }
+}
 @media screen and (max-width: 786px) {
   html {
     font-size: 52%;
