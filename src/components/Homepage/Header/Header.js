@@ -2,7 +2,6 @@ import React from 'react';
 import playIcon from '../../../assets/play-btn.svg'
 import {StyledHero,HeroHeading,HeroButton,HeroPlayIcon} from './StyledHeader';
 import NavBar from '../Navbar/NavBar';
-import SideNav from '../Navbar/SideNav';
 const Header = () => {
     return (
         <StyledHero>
