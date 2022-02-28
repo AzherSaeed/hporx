@@ -67,11 +67,11 @@ import Testimonials from './Testimonials/Testimonials'
 import SubBar from './Navbar/SubBar';
 import Quote from './Quote/Quote';
 
-const styles = { 
-  margin:'1rem 2rem',
+const styles = {
+  margin: '1rem 2rem',
   border: 'none',
   borderTop: '1px solid rgba(0, 0, 0, 0.1)',
-  padding:' 0 2rem'
+  padding: ' 0 2rem'
 }
 const Homepage = () => {
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]

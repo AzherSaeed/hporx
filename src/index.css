@@ -43,6 +43,10 @@ img {
     max-width: 1290px !important;
   }
 }
+.box{
+  height: 11rem;
+  background: #F0F0F0;
+}
 @media screen and (max-width: 786px) {
   html {
     font-size: 52%;

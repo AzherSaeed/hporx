@@ -73,7 +73,7 @@ const Statistics = () => {
                                                 </h3>
                                                 <div className='d-flex flex-column ml-5'>
                                                     <span className='icon' > {
-                                                        index === 0 ? <BsFillStarFill color='red'  /> : null
+                                                        index === 0 ? <BsFillStarFill   /> : null
                                                     }</span>
                                                     <span className='mini'>{mini}</span>
                                                 </div>
