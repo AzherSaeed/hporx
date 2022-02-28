@@ -19,6 +19,7 @@ function Testimonials() {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -52,7 +53,7 @@ function Testimonials() {
  <h1 >Testimonilas</h1>
           <p className='text-design'> Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. </p>
       <div className='container p-5 '>
-        <Slider {...settings} className='trusted-suppliers-slick'>
+        <Slider {...settings} className='home-testimonial-slider'>
           {imgs.map((img, index) => (
             <div key={index}>
               <Card className='Card' >

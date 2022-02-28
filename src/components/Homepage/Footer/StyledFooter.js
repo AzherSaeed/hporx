@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const FooterMainContainer = styled.div`
 font-style: normal;
 padding: 8.8rem 2rem;
+
+ul{
+    padding-left: 0;
+
+}
 h4{
 font-size: 2rem;
 font-weight: 500;

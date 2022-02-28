@@ -9,11 +9,16 @@ font-weight: 500;
 line-height: 45px;
 letter-spacing: 0em;
 color: #242424;
+
+@media screen and (max-width : 775px){
+    font-size: 20px;
+line-height: 35px;
+}
 }
 margin-top: 3.1rem;
 .trusted-suppliers-slick{
-    padding:3rem;
-    background-color: #F7F7F7;
+    padding:3rem 0;
+    /* background-color: #F7F7F7; */
 }
 `
 export const TrustedSuppliersImgContainer = styled.div`

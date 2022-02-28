@@ -14,7 +14,7 @@ letter-spacing: 0em;
 color: #333333;
 opacity: 0.8;
 text-align: start;
-
+padding: 0 5rem;
 }
 p{
   margin-top: 1.6rem;

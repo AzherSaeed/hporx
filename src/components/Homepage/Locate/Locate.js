@@ -3,9 +3,9 @@ import { Container } from 'react-bootstrap'
 import { PrimaryHeading } from '../../Globals/Globals'
 import { LocateImg, LocateMainContainer } from './StylesLocate'
 import map from '../../../assets/map.svg'
-const Locate = () => {
+const Locate = ({id}) => {
   return (
-    <LocateMainContainer>
+    <LocateMainContainer id={id}>
       <Container>
         <PrimaryHeading>LOCATE</PrimaryHeading>
         <h3>DOCTORS, ASSOCIATIONS, CANNABIS CLUBS, CAFES, DISPENSARIES AND LAWYERS</h3>

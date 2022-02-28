@@ -9,7 +9,7 @@ const StyledHero = styled.div`
   background-size: cover;
 `
 const HeroHeading = styled.h3`
-margin-top: 5rem;
+margin-top: 4rem;
  font-size: 8.5rem;
   font-weight: 400;
   line-height: 11.3rem;
@@ -25,7 +25,7 @@ margin-top: 5rem;
 
 
 const HeroButton = styled.button`
-margin-top: 9rem;
+margin-top: 4rem;
    border-color: #fff;
   padding: 1rem 3rem;
   border-radius: 2rem;
@@ -40,9 +40,21 @@ margin-top: 9rem;
     border: 1px solid orangered; 
   }
   `
+const HomePlayButtonContainer = styled.div`
+background-color: white;
+width: 54px;
+height: 54px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+`
 const HeroPlayIcon = styled.img`
   height: 6.2rem;
   cursor: pointer;
+  width:  15.26px;
+height :  16.43px
   `
 
-export { StyledHero, HeroHeading, HeroButton, HeroPlayIcon }
+export { StyledHero, HeroHeading, HeroButton, HeroPlayIcon , HomePlayButtonContainer }
+ 

@@ -33,6 +33,15 @@ margin-top: 1rem;
 color: #E84025;
 opacity: 0.8;
 `
+export const MarketContentContainer = styled.div`
+  @media screen and (max-width : 775px)   {
+    padding-bottom: 3rem;
+  }
+`
+export const MarketReHeading = styled(MarketSubHeadSecond)`
+  color: red;
+  font-style: italic;
+`
 export const MarketTertiaryHeadMedium = styled(TertiaryHeadingMedium)`
 color: #828282;
 opacity: 0.8;

@@ -1,8 +1,21 @@
 import styled from "styled-components";
+import tetimonial from '../../../assets/tetimonial-background.png'
 
 
 export const Testimonial = styled.div`
-margin-top: 16rem;
+
+background-image: url(${tetimonial}) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-top: 5rem;
+
+
+  .home-testimonial-slider{
+/* the slides */
+
+  }
+
 h1{
     text-align: center;
     font-weight: 500;

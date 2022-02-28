@@ -42,8 +42,8 @@ color: #333333;
 }
 `
 export const StatisticsTextContainer = styled.div`
-margin-top: 4rem;
-text-align: center;
+    margin-top: 4rem;
+    padding-left: 2rem;
 
 `
 

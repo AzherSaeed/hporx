@@ -67,11 +67,11 @@ const Statistics = () => {
                                             <StatisticsImg src={image} alt={image} />
                                         </StatisticsImgContainer>
                                         <StatisticsTextContainer>
-                                            <div className="d-flex justify-content-center">
+                                            <div className="d-flex align-items-center">
                                                 <h3 >{revenue}
 
                                                 </h3>
-                                                <div className='d-flex flex-column'>
+                                                <div className='d-flex flex-column ml-5'>
                                                     <span className='icon' > {
                                                         index === 0 ? <BsFillStarFill   /> : null
                                                     }</span>

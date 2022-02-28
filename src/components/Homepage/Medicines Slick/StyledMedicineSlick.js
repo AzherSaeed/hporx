@@ -6,6 +6,8 @@ export const MedicineContainerMain = styled.div`
 export const MedicineImgContainer = styled.div`
   position: relative;
   text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
   .overlay {
     position: absolute;
     top: 0;

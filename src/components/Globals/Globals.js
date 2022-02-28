@@ -9,6 +9,12 @@ letter-spacing: 0em;
 text-transform: uppercase;
 margin: 0;
 
+  @media screen and (max-width : 600px){
+    font-size: 3rem;
+font-style: normal;
+line-height: 6.2rem;
+  }
+
 `
 export const SubHeading = styled.h2`  
 font-size: 3.2rem;
@@ -33,6 +39,9 @@ line-height: 2.7rem;
 letter-spacing: 0em;
 color: #828282;
 margin: 0;
+
+
+
 `
 export const TertiaryHeadSecondary = styled.h3`
 font-size: 1.8rem;
@@ -95,7 +104,7 @@ padding: 1.2rem 1.1rem;
 
 `
 export const ShopNowBtn = styled.button`
-padding: 0.5rem 2rem;
+padding: 0.9rem 2rem;
 border: 2px solid white;
 color: white;
   border-radius: 2rem;

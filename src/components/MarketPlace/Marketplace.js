@@ -1,22 +1,24 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { MarketplaceImg, MarketSubHead, MarketSubHeadSecond, MarketTertiaryHeadMedium, MarketViewMoreBtn, MarkInnerContainer } from './StyledMarketPlace'
+import { MarketplaceImg, MarketSubHead, MarketContentContainer, MarketReHeading, MarketTertiaryHeadMedium, MarketViewMoreBtn, MarkInnerContainer } from './StyledMarketPlace'
 import marketplace from '../../assets/marketplace.svg'
 import { PrimaryHeading, TertiaryHeadingSmall } from '../Globals/Globals'
 import { MarketPlaceSlick } from './MarketPlaceSlick'
-const Marketplace = () => {
+const Marketplace = ({id}) => {
   return (
     
-    <Container >
-        <MarkInnerContainer className='marketplace-inner'>
+    <Container id={id} >
+        <MarkInnerContainer >
     <Row>
         <Col md={6}>
+            <MarketContentContainer>
             <PrimaryHeading>MARKETPLACE</PrimaryHeading>
             <TertiaryHeadingSmall>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</TertiaryHeadingSmall>
             <MarketSubHead>HEALTH IS WEALTH</MarketSubHead>
-            <MarketSubHeadSecond style={{color:'red'}}>“Great health is great wealth!”</MarketSubHeadSecond>
+            <MarketReHeading >“Great health is great wealth!”</MarketReHeading>
             <MarketTertiaryHeadMedium>Dr A. E De Mandeville</MarketTertiaryHeadMedium>
             <MarketViewMoreBtn>View More</MarketViewMoreBtn>
+            </MarketContentContainer>
         </Col>
         <Col md={6}>
             <MarketplaceImg className='img-fluid' src={marketplace} alt={marketplace}/>

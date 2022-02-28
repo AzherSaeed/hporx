@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ViewMoreBtn } from "../../Globals/Globals";
+import { ViewMoreBtn , ShopNowBtn } from "../../Globals/Globals";
 
 export const PrescribeMainContainer = styled.div`
 margin-top: 7.5rem;
@@ -20,7 +20,6 @@ export const PrescribeImgContainer = styled.div`
   }
   .inner-overlay {
     color: white;
-    font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,12 +29,21 @@ export const PrescribeImgContainer = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     padding: 0 2rem;
     h3 {
-      font-size: 1.6rem;
+      font-weight: 600;
+font-size: 24px;
+line-height: 36px;
     }
     p {
-      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+line-height: 22px;
     }
   }
   &:hover .inner-overlay,
@@ -54,10 +62,23 @@ export const ConsultDarkBtn = styled(ViewMoreBtn)`
 background: #242424;
 color: #FFFFFF;
 `
+
+export const ShopBtn = styled(ShopNowBtn)`
+  margin: 2rem 0;
+`
 export const PrescribeSlickMain = styled.div`
 .prescribe-slick{
   .text-container{
-    padding: 0 3rem;
+    padding-left:2rem;
+    p{
+      opacity: 0.8;
+      color: #828282;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;  
+    }
+
+
     .prescribe-btns{
       margin-top: 3.5rem;
       .prescribe-btn2{

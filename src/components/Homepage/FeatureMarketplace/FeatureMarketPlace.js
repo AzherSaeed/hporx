@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FeatureHeading, FeatureMarketPlaceBtn, FeatureMarketSub, FeatureMarketText, FeatureMarkImg, FeatureMarkMain, FeatureMarkTextContainer, FeatureSubHeading } from './StyledFeatureMark'
+import { FeatureHeading,MarketPlaceHeading, FeatureMarketPlaceBtn, FeatureMarketSub, FeatureMarketText, FeatureMarkImg, FeatureMarkMain, FeatureMarkTextContainer, FeatureSubHeading } from './StyledFeatureMark'
 import featureMark from '../../../assets/featureMarketplace.svg'
 import { PrimaryHeading } from '../../Globals/Globals'
 
@@ -9,7 +9,7 @@ const FeatureMarketPlace = () => {
         <>
             <Container>
                 <FeatureMarketText>
-                    <PrimaryHeading>FEATURED MARKETPLACE PRODUCTS</PrimaryHeading>
+                    <MarketPlaceHeading>FEATURED MARKETPLACE PRODUCTS</MarketPlaceHeading>
                     <FeatureMarketSub>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</FeatureMarketSub>
                 </FeatureMarketText>
             </Container>

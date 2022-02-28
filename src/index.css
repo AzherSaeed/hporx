@@ -24,10 +24,12 @@ img {
 
 .hero-text-container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
   color: white;
 }
 

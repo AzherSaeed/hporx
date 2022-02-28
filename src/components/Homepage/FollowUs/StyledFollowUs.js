@@ -6,6 +6,7 @@ background-image: url(${followUs}) ;
 height: 100%;
 background-size: cover;
   background-repeat: no-repeat;
+  padding: 2rem 0;
 
 `
 export const FollowUsMain = styled.div`
@@ -16,6 +17,8 @@ font-weight: 500;
 line-height: 3.6rem;
 letter-spacing: 0em;
 color: #FFFFFF;
+padding-left: 2rem;
+padding-bottom: 1rem;
 
 }
 

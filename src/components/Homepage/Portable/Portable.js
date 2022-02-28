@@ -7,10 +7,10 @@ import {PrimaryHeading } from '../../Globals/Globals'
 import PlayBtn from '../../Globals/PlayBtn'
 
 
-const Portable = () => {
+const Portable = ({id}) => {
     return (
         <PortableMainContainer>
-            <Container >
+            <Container id={id} >
                 <Row>
                     <Col xs={12} md={6}>
                         <PrimaryHeading>Portable</PrimaryHeading>

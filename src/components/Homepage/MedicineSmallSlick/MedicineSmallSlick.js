@@ -12,7 +12,7 @@ import { Container } from 'react-bootstrap';
 import { MedicineSmallImg, MedicineSmallImgContainer, SmallMedicineContainerMain } from './StyledMedicineSmallSlick';
 
 
-const MedicineSmallSlick = () => {
+const MedicineSmallSlick = ({id}) => {
     const medicSlides = [medicSlide1, medicSlide3, medicSlide4, medicSlide5, medicSlide6,medicSlide1, medicSlide3, medicSlide4, medicSlide5, medicSlide6]
 
     var settings = {
@@ -51,7 +51,7 @@ const MedicineSmallSlick = () => {
         ]
     };
     return (
-        <SmallMedicineContainerMain>
+        <SmallMedicineContainerMain id={id} >
             <Container>
                 <Slider className='d-flex align-items-center' {...settings} >
                     {

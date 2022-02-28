@@ -8,6 +8,14 @@ text-align: center;
 margin-top: 9rem;
 `
 
+export const MarketPlaceHeading = styled(PrimaryHeading)`
+color: #242424;
+font-weight: 500;
+font-size: 48px;
+line-height: 72px;
+opacity: 0.8
+`
+
 
 export const FeatureMarkMain = styled.div`
 margin-top: 4.5rem;
@@ -38,5 +46,6 @@ export const FeatureMarkTextContainer = styled.div`
 margin-left:4rem
 `
 export const FeatureMarketSub = styled(TertiaryHeadSecondary)`
-margin-top: 1rem;
+padding: 2rem;
+padding-top: 1rem;
 `

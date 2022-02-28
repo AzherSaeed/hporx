@@ -13,7 +13,7 @@ import {ConsultDarkBtn, PrescribeSlickMain, PrescribeMainContainer } from './Sty
 import PrescribeCard from './PrescribeCard';
 
 
-const Prescribe = () => {
+const Prescribe = ({id}) => {
 
     const prescribeImgs1 = [prescribe, prescribe01];
     const prescribeImgs2 = [prescribe1, prescribe2, prescribe3];
@@ -58,7 +58,7 @@ const Prescribe = () => {
 
 
     return (
-        <PrescribeMainContainer>
+        <PrescribeMainContainer id={id} >
         <PrescribeSlickMain>
             <Container>
                 <Slider {...settings} className='prescribe-slick'>
@@ -69,7 +69,7 @@ const Prescribe = () => {
                     }
                     <div className='text-container'>
                         <PrimaryHeading>Prescribe</PrimaryHeading>
-                        <TertiaryHeadingMedium>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</TertiaryHeadingMedium>
+                        <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
                         <div className='prescribe-btns'>
                         <ConsultDarkBtn >CONSULTATION</ConsultDarkBtn>
                         <ViewMoreBtn  className='prescribe-btn2'>View more</ViewMoreBtn>

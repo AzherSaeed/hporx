@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap';
 import VaporizeSlickCard from './VaporizeSlickCard';
 
 
-const Vaporize = () => {
+const Vaporize = ({id}) => {
 
     var settings = {
         arrows: true,
@@ -49,7 +49,7 @@ const Vaporize = () => {
     };
     return (
         <VaporizeMainContainer>
-            <Container>
+            <Container id={id} >
                 <div className="vaporize-inner-container">
                     <Slider {...settings} className='vaporize-slick'>
                         <VaporizeSlickCard />

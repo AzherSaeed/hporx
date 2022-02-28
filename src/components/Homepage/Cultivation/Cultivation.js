@@ -4,12 +4,12 @@ import CultivationSlick from './CultivationSlick'
 import { CultivationMainContainer } from './StyledCultivation'
 
 
-const Cutivation = () => {
+const Cutivation = ({id}) => {
     return (
-        <CultivationMainContainer>
+        <CultivationMainContainer id={id} >
             <PrimaryHeading>Cutivation</PrimaryHeading>
             <p>Home Grow</p>
-            <TertiaryHeading>Grow your dose privately at home</TertiaryHeading>
+            <h3>Grow your dose privately at home</h3>
             <CultivationSlick />
         </CultivationMainContainer>
     )

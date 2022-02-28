@@ -21,7 +21,8 @@ import Diaganose from './Diagnose/Diaganose'
 import EMultiVendor from './EMultiVendor/EMultiVendor'
 import mensFashionDiscount from '../../assets/mensFashionDiscount.svg'
 import giftCard from '../../assets/giftCard.svg'
-import Locate from './Locate/Locate'
+import Locate from './Locate/Locate';
+import AgeValidation from './Header/AgeValidation/AgeValidation';
 
 import interOrg1 from '../../assets/interOrg1.svg'
 import interOrg2 from '../../assets/interOrg2.svg'
@@ -34,14 +35,14 @@ import trustedSupplier4 from '../../assets/trustedSupplier4.svg'
 import trustedSupplier5 from '../../assets/trustedSupplier5.svg'
 import trustedSupplier6 from '../../assets/trustedSupplier6.svg'
 import FollowUs from './FollowUs/FollowUs'
-import followUs1 from '../../assets/followUs1.svg'
-import followUs2 from '../../assets/followUs2.svg'
-import followUs3 from '../../assets/followUs3.svg'
-import followUs4 from '../../assets/followUs4.svg'
-import followUs5 from '../../assets/followUs5.svg'
-import followUs6 from '../../assets/followUs6.svg'
-import followUs7 from '../../assets/followUs7.svg'
-import followUs8 from '../../assets/followUs8.svg'
+import followUs1 from '../../assets/twitter.svg'
+import followUs2 from '../../assets/facebook.svg'
+import followUs3 from '../../assets/youtube.svg'
+import followUs4 from '../../assets/snapchat.svg'
+import followUs5 from '../../assets/www.svg'
+import followUs6 from '../../assets/messenger.svg'
+import followUs7 from '../../assets/instagram.svg'
+import followUs8 from '../../assets/linkdin.svg'
 import hygie1 from '../../assets/hygie1.svg'
 import hygie2 from '../../assets/hygie2.svg'
 import hygie3 from '../../assets/hygie3.svg'
@@ -63,6 +64,8 @@ import FeatureMarketPlace from './FeatureMarketplace/FeatureMarketPlace'
 import SSL from './SSL/SSL'
 import Terms from '../Terms/Terms'
 import Testimonials from './Testimonials/Testimonials'
+import SubBar from './Navbar/SubBar';
+import Quote from './Quote/Quote';
 
 const styles = {
   margin: '1rem 2rem',
@@ -80,28 +83,28 @@ const Homepage = () => {
   const aboveCopyrightImgs = [aboveCopyright1, aboveCopyright2, aboveCopyright3, aboveCopyright6, aboveCopyright4, aboveCopyright5, aboveCopyright7, aboveCopyright8,]
   return (
     <>
-      <Header />
-      <Inhalate />
-      <Vaporize />
-      <Portable />
-      <Chillum />
-      <Cutivation />
-      <Agriculture />
-      <GrowProfit />
-      <BelowGrowProfit />
-      <TrustedSuppliers imgs={trustedSuppliers} head='Trusted International Brands' />
-      <Diaganose />
-      <Prescribe />
-      <MedicinesSlick />
-      <MedicinesSlick />
-      <MedicineSmallSlick />
-      <Marketplace />
-      <FeatureMarketPlace />
-      <FashionDiscount imgs={giftImgs} />
-      <EMultiVendor />
-      <Testimonials />
-      <Locate />
-      <Statistics />
+      <Header id='HOME' />
+      <Inhalate  id="INHALATE" />
+      <Vaporize  id="VAPORIZE" />
+      <Portable   id="PORTABLES" />
+      <Chillum  id="CHILLUMS" />
+      <Cutivation  id="CULTIVATE" />
+      <Agriculture  />
+      <GrowProfit   />
+      <BelowGrowProfit   />
+      <TrustedSuppliers  imgs={trustedSuppliers} head='Trusted International Brands' />
+      <Diaganose  id="DIAGNOSE" />
+      <Prescribe  id="PRESCRIBE" />
+      <MedicinesSlick   />
+      <MedicinesSlick   />
+      <MedicineSmallSlick  id="PRODUCTS" />
+      <Marketplace  id="MARKETPLACE" />
+      <FeatureMarketPlace   />
+      <FashionDiscount   imgs={giftImgs} />
+      <EMultiVendor  />
+      <Testimonials  />
+      <Locate  id="LOCATE" />
+      <Statistics  />
       <SubscribeNewsletter />
       <FashionDiscount imgs={fashionDiscountImgs} />
       <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations' />
@@ -111,6 +114,7 @@ const Homepage = () => {
       <hr style={styles} />
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
+      <Quote/>
     </>
   )
 }
