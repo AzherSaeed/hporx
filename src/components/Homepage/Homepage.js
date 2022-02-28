@@ -64,11 +64,11 @@ import SSL from './SSL/SSL'
 import Terms from '../Terms/Terms'
 import Testimonials from './Testimonials/Testimonials'
 
-const styles = { 
-  margin:'1rem 2rem',
+const styles = {
+  margin: '1rem 2rem',
   border: 'none',
   borderTop: '1px solid rgba(0, 0, 0, 0.1)',
-  padding:' 0 2rem'
+  padding: ' 0 2rem'
 }
 const Homepage = () => {
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
