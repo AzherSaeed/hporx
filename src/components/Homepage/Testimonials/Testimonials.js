@@ -11,7 +11,7 @@ function Testimonials() {
     return (
 
     <Testimonial>
-        <div className='container p-5 '>
+        <div className='container p-5  background'>
             <div className=''>
                 <h1 >Testimonilas</h1>
                 <p className='text-design'> Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. </p>

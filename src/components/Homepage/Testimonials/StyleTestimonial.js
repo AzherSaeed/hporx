@@ -1,7 +1,13 @@
 import styled from "styled-components";
-
+import TestimonialBackground from '../../../assets/TestimonialBackground.png';
 
 export const Testimonial = styled.div`
+.background{
+    background-image: 
+    url(${TestimonialBackground});
+    width: 144rem;
+    height: 72.9rem;
+}
 h1{
     text-align: center;
     font-weight: 500;
@@ -22,8 +28,8 @@ h1{
     margin-top: 5.8rem;
 }
 .Card{
-    width: 40.9rem;
-    height: 46.5rem;
+    width: 35rem;
+    height: 50rem;
     //background-color: #828282;
     &:not(:last-child){
         margin-right: 6rem;
