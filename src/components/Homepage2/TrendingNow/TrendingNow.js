@@ -3,7 +3,6 @@ import { StyleTrending, TrendingNowSlick } from "./StyleTrendingNow";
 import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
 function TrendingNow({ heading, imgs }) {
 

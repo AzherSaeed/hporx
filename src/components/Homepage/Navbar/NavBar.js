@@ -6,6 +6,9 @@ import profile from '../../../assets/profile.svg'
 import cart from '../../../assets/cart.svg'
 import  {NavIcon, NavLogo , TopNavBarContainer } from './StyledNavbar'
 // import SideNav from './SideNav'
+import {
+  Link
+} from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -16,7 +19,7 @@ const NavBar = () => {
       <Navbar.Toggle bg='light'  aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Nav.Link className='nav-link' href="#">Home</Nav.Link>
+          <Link className='nav-link' to="/home">Home</Link>
           <Nav.Link className='nav-link' href="#">Inhalate</Nav.Link>
           <Nav.Link className='nav-link' href="#">Vaporise</Nav.Link>
           <Nav.Link className='nav-link' href="#">Portables</Nav.Link>

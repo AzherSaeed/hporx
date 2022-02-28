@@ -3,7 +3,6 @@ import { ViewTodaySlick, ViewTodayStyle } from './StyleViewToday'
 import ViewToday from '../../../assets/ViewToday.svg';
 import { Card} from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
 function ViewedToday({heading}) {
 
