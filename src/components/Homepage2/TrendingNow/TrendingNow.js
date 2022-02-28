@@ -66,7 +66,7 @@ function TrendingNow({ heading, imgs }) {
                 spaceBetween: 30
               }
             }}
-            spaceBetween={0}
+            spaceBetween={30}
             slidesPerView={5}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
