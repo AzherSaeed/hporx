@@ -4,7 +4,7 @@ import React from 'react';
 import { BroswerSlick, BrowserHistoryImg, BrowserHistoryMain } from './StyledBrowserHistory';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+
 import { Container } from 'react-bootstrap';
 
 function BrowserHistory({ imgs }) {

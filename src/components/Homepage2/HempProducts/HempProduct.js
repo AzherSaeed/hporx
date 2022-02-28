@@ -6,7 +6,7 @@ import HempCardIcon from '../../../assets/HempCardIcon.svg';
 import Slider from "react-slick";
 import Banner from "./Banner";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+
 
 function HempProduct(){
     const hempImgs=[HempCardIcon,HempCardIcon,HempCardIcon,HempCardIcon,HempCardIcon,HempCardIcon,HempCardIcon,HempCardIcon,HempCardIcon]
