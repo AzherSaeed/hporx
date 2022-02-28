@@ -10,12 +10,32 @@ import { Container } from 'react-bootstrap';
 
 
 const CultivationSlick = () => {
-
-    const cultivationImgs = [cultivation4,
-        cultivation5,
-        cultivation6, cultivation4,
-        cultivation5,
-        cultivation6]
+  
+    const cultivationBox = [{
+        img:cultivation4,
+        heading:'Mary Ag',
+        description:'Price and shipping on request'
+    },{
+        img:cultivation5,
+        heading:'Seedo Automaed Home Grow Device ',
+        description:'$2,400 + Approx $35 shipping'
+    },{
+        img:cultivation6,
+        heading:'LEAF',
+        description:'Price and shipping on request'
+    },{
+        img:cultivation4,
+        heading:'Mary Ag',
+        description:'Price and shipping on request'
+    },{
+        img:cultivation5,
+        heading:'Seedo Automaed Home Grow Device ',
+        description:'$2,400 + Approx $35 shipping'
+    },{
+        img:cultivation6,
+        heading:'LEAF',
+        description:'Price and shipping on request'
+    },]
 
     var settings = {
         arrows: true,
@@ -57,11 +77,14 @@ const CultivationSlick = () => {
         <Container>
             <Slider {...settings} className='cultivation-slick'>
                 {
-                    cultivationImgs.map((img, index) => (
-                        <div key={index}>
-                            <CultivationCard img={img} />
-                        </div>
-                    ))
+                    cultivationBox.map((cultivationSection, index) =>{
+                    const {heading,description,img}=cultivationSection;
+                   return(
+                    <div key={index}>
+                        <CultivationCard img={img} heading={heading}  description={description}/>
+                    </div>
+                )
+                    } )
                 }
             </Slider>
         </Container>

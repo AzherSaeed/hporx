@@ -1,15 +1,36 @@
 import styled from "styled-components"
 import GrowProfitBack from '../../../assets/growProfitBack.svg';
+import { PrimaryHeading, SubHeading, ViewMoreBtn } from "../../Globals/Globals";
 
 export const GrowProfitMainContainer = styled.div`
- text-align: center;
-margin-top: 7rem;
-h2{
-  font-size: 3.5rem;
-margin-top: 3rem;
-}
+ .grow-profit-width{
+   max-width: 1440px;
+   margin: 0 auto;
+   
+ }
+margin-top: 11.2rem;
 p{
-  font-size: 1.5rem;
+  margin-top: 1.1rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  letter-spacing: 0em;
+  color: #828282;
+
+}
+h5{
+  margin-top: 3.2rem;
+font-size: 2.4rem;
+font-style: normal;
+font-weight: 500;
+line-height: 3.6rem;
+letter-spacing: 0em;
+color: #828282;
+
+}
+.grow-profit-slick {
+  margin-top: 5.6rem;
 }
 .grow-profit-slick  .slick-next {
     right: 4rem;
@@ -23,18 +44,48 @@ p{
     font-size: 4rem !important; 
 }
 `
-
-export const GrowProfitImgsContainer = styled.div`
+export const GrowProfitViewMore=styled(ViewMoreBtn)`
+margin-top: 3.3rem;
+margin-left: 2.4rem;
 `
-export const GrowProfitImg = styled.img`
+export const GrowProfitViewMoreBlack=styled(ViewMoreBtn)`
+margin-top: 3.3rem;
+background: #242424;
+color: white;
 `
-export const GrowProfitSlickContainer = styled.div`
-background-image:linear-gradient(to right, rgba(126, 213, 111, 0.753) , rgba(40, 180, 133, 0.753)), url(${GrowProfitBack}) ;
+export const GrowProfitPriceText=styled(SubHeading)`
+margin-top: 4px;
+`
+export const GrowProfitHeading = styled(PrimaryHeading)`
+color: #242424;
+opacity: 0.8;
+`
+export const GrowProfitSubHeading = styled(SubHeading)`
+color: #333333;
+opacity: 0.8;
+margin-top: 0.9rem;
+`
+export const GrowProfitImgContainer = styled.div`
+background-image:linear-gradient(to right, rgba(10, 71, 46, 0.88), rgba(10, 71, 46, 0.88)), url(${GrowProfitBack}) ;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 61.5rem;
   background-size: cover;
 margin-top: 3rem;
-
+position: relative;
+`
+export const GrowProfitImg = styled.img`
+width:63.6rem;
+height:45.6rem;
+`
+export const GrowProfitSlickContainer = styled.div`
+.text-container{
+  margin-left: 7.5rem;
+}
+@media only screen and (max-width: 768px) {
+ .text-container{
+    margin-left: 0;
+  }
+}
 .overlay{
   position: absolute;
   top: 0;

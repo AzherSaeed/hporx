@@ -1,14 +1,15 @@
 import React from 'react'
+import { PrimaryHeading, TertiaryHeading } from '../../Globals/Globals'
 import CultivationSlick from './CultivationSlick'
 import { CultivationMainContainer } from './StyledCultivation'
 
 
-const Cutivation = () => {
+const Cutivation = ({id}) => {
     return (
-        <CultivationMainContainer>
-            <h3>Cutivation</h3>
+        <CultivationMainContainer id={id} >
+            <PrimaryHeading>Cutivation</PrimaryHeading>
             <p>Home Grow</p>
-            <p className='tertiary-heading'>Grow your dose privately at home</p>
+            <h3>Grow your dose privately at home</h3>
             <CultivationSlick />
         </CultivationMainContainer>
     )

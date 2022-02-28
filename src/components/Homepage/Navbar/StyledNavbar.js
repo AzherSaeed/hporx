@@ -37,14 +37,17 @@ const HeaderTopBar = styled.div`
 
 const SubBarContainer = styled.div`
 
-position: sticky;
-top: 0;
-
-  .subnav-main-links{
+  .subnav-main{
     display: flex;
     justify-content: space-between;
-  }
+    width: 100%;
 
+    &> *{
+      font-size: 1.4rem;
+      color: white;
+      font-weight: 600;
+    }
+  }
 
 `;
 

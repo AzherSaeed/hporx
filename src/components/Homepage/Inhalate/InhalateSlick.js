@@ -6,7 +6,7 @@ import inhalte1 from "../../../assets/inhalate3.svg";
 import inhalate4 from "../../../assets/inhalate4.svg";
 import playButton from "../../../assets/play-outline-button.svg";
 import { InhalatedImgContainer, InhalteImg } from "./StyledInhalate";
-import { ShopNowBtn } from "../../Globals/Globals";
+import { ViewMoreBtn } from "../../Globals/Globals";
 import "./style.css";
 
 const InhalateSlick = () => {
@@ -24,7 +24,7 @@ const InhalateSlick = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -34,7 +34,7 @@ const InhalateSlick = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
           arrows: true,
@@ -71,7 +71,7 @@ const InhalateSlick = () => {
                   </p>
                 </div>
                 <h2>$450</h2>
-                <ShopNowBtn>Shop Now</ShopNowBtn>
+                <ViewMoreBtn>Shop Now</ViewMoreBtn>
               </div>
             </div>
           </InhalatedImgContainer>

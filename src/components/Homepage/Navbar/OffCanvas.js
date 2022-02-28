@@ -3,16 +3,28 @@ import { Offcanvas } from "react-bootstrap";
 import LeftArrow from "../../../assets/right-slider-arrow.svg";
 import searchIcon from "../../../assets/searchIcon.svg";
 import "./offCanvas.css";
+import {ViewMoreBtn} from '../../Globals/Globals'
 
 const OffCanvas = ({ show, handleClose , setShow}) => {
 
   return (
     <Offcanvas show={show} onHide={handleClose} placement="end">
       <Offcanvas.Header>
-        <div className="canvas-title-section">
+       <div className="offcanvas-main-header" >
+       <div className="canvas-title-section">
           <img onClick={() => setShow(false)} src={LeftArrow} alt="LeftArrow" />
           <p>Beta</p>
+        </div>  
+        <div className="offcanvas-header-profile" >
+            <div className="offcanvas-header-profile-name" >
+                <p>Salam</p>
+                <h1>Johen Marks</h1>
+            </div>
+            <div className="offcanvas-header-profile-image" >
+                <img src='https://hporx.com/wp-content/themes/astra-child/assets/images/profile-pic.png' alt="img" />
+            </div>
         </div>
+       </div>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <div className="offCanvas-body-section">
@@ -71,7 +83,7 @@ const OffCanvas = ({ show, handleClose , setShow}) => {
                             <div>
                                 <div class="slider-div">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <img src="./assets/images/sound.svg" alt=""/>
+                                        <img src="https://hporx.com/wp-content/themes/astra-child/assets/images/sound.svg" alt=""/>
                                         <div class="switcher">
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch"
@@ -92,7 +104,15 @@ const OffCanvas = ({ show, handleClose , setShow}) => {
                                 <h3 class="off_text">Audio</h3>
                             </div>
                             <div>
-                                <div class="d-flex align-items-center" id="audio-controller">
+
+                            <audio controls autoplay>
+                                <source src="https://hporx.com/wp-content/themes/astra-child/assets/images/audio.mp3" type="audio/ogg"/>
+                                <source src="https://hporx.com/wp-content/themes/astra-child/assets/images/audio.mp3" type="audio/mpeg"/>
+                            </audio>
+
+
+
+                                {/* <div class="d-flex align-items-center" id="audio-controller">
                                     <div>
                                         <button class="btn">
                                             <img src="./assets/images/back-fast.svg" alt=""/>
@@ -118,7 +138,8 @@ const OffCanvas = ({ show, handleClose , setShow}) => {
                                             <img src="./assets/images/next-farword.svg" alt=""/>
                                         </button>
                                     </div>
-                                </div>
+                                </div> */}
+                                
                             </div>
                         </div>
                     </li>
@@ -199,8 +220,12 @@ const OffCanvas = ({ show, handleClose , setShow}) => {
                         </ul>
                     </li>
                     <li>
+                      
                         <div class="d-flex justify-content-center mt-2">
-                            <button class="btn quotation-btn rounded-pill">Quotation</button>
+                            {/* <button class="btn quotation-btn rounded-pill">Quotation</button> */}
+                            <ViewMoreBtn>
+                            Appointment
+                        </ViewMoreBtn>
                         </div>
                     </li>
                 </ul>

@@ -50,7 +50,6 @@ export const InhalatedImgContainer = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    padding: 0 2rem;
 
     &-content {
       display: flex;
@@ -58,6 +57,7 @@ export const InhalatedImgContainer = styled.div`
       align-items: center;
       justify-content: space-between;
       color: white;
+    padding: 4rem 2rem;
 
       img {
         width: 10%;
@@ -80,8 +80,36 @@ export const InhalatedImgContainer = styled.div`
       }
       h2 {
         font-weight: bold;
-        font-size: 36px;
-        line-height: 100px;
+        font-size: 30px;
+        line-height: 60px;
+      }
+
+      @media screen and (max-width : 1000px){
+        
+      img {
+        width: 6%;
+        height: 6%;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 51px;
+        color: white;
+      }
+      p {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 17px;
+        color: white;
+        padding: 0 1rem;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 50px;
+      }
       }
     }
   }

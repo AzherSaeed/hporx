@@ -8,9 +8,9 @@ import {
   InhalateTextContainer,
 } from "./StyledInhalate";
 
-const Inhalate = () => {
+const Inhalate = ({id}) => {
   return (
-    <Container>
+    <Container id={id}>
       <InhalateMainContainer>
         <InhalateTextContainer>
           <h3>Inhalate</h3>

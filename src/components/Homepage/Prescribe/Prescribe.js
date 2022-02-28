@@ -2,18 +2,20 @@ import React from 'react'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {Container} from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import prescribe from '../../../assets/prescribe.svg'
+import prescribe01 from '../../../assets/prescribe01.svg'
 import prescribe1 from '../../../assets/prescribe1.svg'
 import prescribe2 from '../../../assets/prescribe2.svg'
 import prescribe3 from '../../../assets/prescribe3.svg'
-import { ShopNowBtn, ViewMoreBtn } from '../../Globals/Globals'
-import {PrescribeImg, PrescribeImgContainer, PrescribeButton } from './StyledPrescribe';
+import { PrimaryHeading,TertiaryHeadingMedium, ViewMoreBtn } from '../../Globals/Globals'
+import {ConsultDarkBtn, PrescribeSlickMain, PrescribeMainContainer } from './StyledPrescribe';
+import PrescribeCard from './PrescribeCard';
 
 
-const Prescribe = () => {
+const Prescribe = ({id}) => {
 
-    const prescribeImgs1 = [prescribe, prescribe];
+    const prescribeImgs1 = [prescribe, prescribe01];
     const prescribeImgs2 = [prescribe1, prescribe2, prescribe3];
     var settings = {
         dots: false,
@@ -35,12 +37,12 @@ const Prescribe = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     initialSlide: 1,
-                    arrows: true,
+                    arrows: false,
                 }
             },
             {
@@ -48,7 +50,7 @@ const Prescribe = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: true,
+                    arrows: false,
                 }
             }
         ]
@@ -56,60 +58,37 @@ const Prescribe = () => {
 
 
     return (
-        <div className='prescribe-slick'>
+        <PrescribeMainContainer id={id} >
+        <PrescribeSlickMain>
             <Container>
                 <Slider {...settings} className='prescribe-slick'>
                     {
                         prescribeImgs1.map((img, index) => (
-                            <PrescribeImgContainer>
-                                <div className="overlay">
-                                </div>
-                                <div className='inner-overlay'>
-                                    <h3>About</h3>
-                                    <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
-                                    <ShopNowBtn>Appointment</ShopNowBtn>
-                                </div>
-                                <PrescribeImg src={img} alt={img} />
-                            </PrescribeImgContainer>
-
+                            <PrescribeCard key={index} img={img} />
                         ))
                     }
-                    <div className='main-div mt-4'>
-                        <h3>Prescribe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fugiat officiis libero et eaque repellat? Distinctio nulla consequuntur placeat eum nesciunt velit qui deleniti aliquid?</p>
-                        <ViewMoreBtn>CONSULTATION</ViewMoreBtn>
-                        <ViewMoreBtn className='ms-2'>View more</ViewMoreBtn>
-                       
+                    <div className='text-container'>
+                        <PrimaryHeading>Prescribe</PrimaryHeading>
+                        <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
+                        <div className='prescribe-btns'>
+                        <ConsultDarkBtn >CONSULTATION</ConsultDarkBtn>
+                        <ViewMoreBtn  className='prescribe-btn2'>View more</ViewMoreBtn>
+                        </div>
                     </div>
                 </Slider>
-            </Container>
-            <div className='mt-4'>
-                <Container>
-                    <Slider {...settings}>
+
+                <div className='mt-4'>
+                    <Slider {...settings} className='prescribe-slick'>
                         {
                             prescribeImgs2.map((img, index) => (
-
-                                <PrescribeImgContainer>
-                                    <div className="overlay">
-                                    </div>
-                                    <div className='inner-overlay'>
-                                        <h3>About</h3>
-                                        <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
-                                        <ShopNowBtn>Appointment</ShopNowBtn>
-                                    </div>
-                                    <PrescribeImg src={img} alt={img} />
-                                </PrescribeImgContainer>
-
+                                <PrescribeCard key={index} img={img} />
                             ))
-
                         }
-
                     </Slider>
-
-                </Container>
-            </div>
-
-        </div >
+                </div>
+            </Container>
+        </PrescribeSlickMain>
+        </PrescribeMainContainer>
     )
 }
 

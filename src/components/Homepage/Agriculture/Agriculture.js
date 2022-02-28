@@ -1,18 +1,23 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
+import { PrimaryHeading } from '../../Globals/Globals'
 import AgricultureImgSection from './AgricultureImgSection'
-import { AgricultureMainContainer} from './StyledAgriculture'
+import AgricultureSlick from './AgricultureSlick'
+import { AgricultureMainContainer, AgricultureTertiaryHeading } from './StyledAgriculture'
 const Agriculture = () => {
     return (
         <AgricultureMainContainer>
-            <h2>
-                Contained Environment Agriculture Grow
-            </h2>
-            <p>
-                You can grow profit, profit from you grow
-            </p>
-            <AgricultureImgSection />
+            <Container>
+                <PrimaryHeading>
+                    Contained Environment Agriculture Grow
+                </PrimaryHeading>
+                <AgricultureTertiaryHeading>
+                    You can grow profit, profit from you grow
+                </AgricultureTertiaryHeading>
+                <AgricultureImgSection />
+                <AgricultureSlick/>
+            </Container>
         </AgricultureMainContainer>
     )
 }
-
 export default Agriculture

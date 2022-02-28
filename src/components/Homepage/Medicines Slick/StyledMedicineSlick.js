@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const MedicineContainerMain = styled.div`
-  margin-top: 3rem;
+  margin-top: 3.4rem;
 `;
 export const MedicineImgContainer = styled.div`
   position: relative;
   text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
   .overlay {
     position: absolute;
     top: 0;
@@ -31,7 +33,11 @@ export const MedicineImgContainer = styled.div`
   }
   &:hover .inner-overlay,
   &:hover .overlay {
-    opacity: 1;
+    opacity: 0;
   }
 `;
-export const MedicineImg = styled.img``;
+export const MedicineImg = styled.img`
+width: 30rem;
+height: 32rem;
+
+`;

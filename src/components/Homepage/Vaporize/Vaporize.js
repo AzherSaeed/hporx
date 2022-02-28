@@ -2,12 +2,12 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { VaporizeImg1, VaporizeImg2, VaporizeMainContainer, VaporizeImagesContainer } from './StyledVaporize'
-import { Container, Row, Col } from 'react-bootstrap';
+import { VaporizeMainContainer } from './StyledVaporize'
+import { Container } from 'react-bootstrap';
 import VaporizeSlickCard from './VaporizeSlickCard';
 
 
-const Vaporize = () => {
+const Vaporize = ({id}) => {
 
     var settings = {
         arrows: true,
@@ -17,8 +17,6 @@ const Vaporize = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
-
-
         responsive: [
             {
                 breakpoint: 1024,
@@ -51,12 +49,11 @@ const Vaporize = () => {
     };
     return (
         <VaporizeMainContainer>
-            <Container>
+            <Container id={id} >
                 <div className="vaporize-inner-container">
                     <Slider {...settings} className='vaporize-slick'>
-                     <VaporizeSlickCard/>
-                      <VaporizeSlickCard/>
-
+                        <VaporizeSlickCard />
+                        <VaporizeSlickCard />
                     </Slider>
                 </div>
             </Container>

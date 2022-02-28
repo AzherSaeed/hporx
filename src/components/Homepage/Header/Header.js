@@ -5,24 +5,27 @@ import {
   HeroHeading,
   HeroButton,
   HeroPlayIcon,
+  HomePlayButtonContainer
 } from "./StyledHeader";
 import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
 
 
-const Header = () => {
+const Header = ({id}) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
 
   return (
-    <StyledHero>
+    <StyledHero id={id} >
       <TopBar setShow={setShow} />
       <OffCanvas handleClose={handleClose} show={show}  setShow={setShow}/>
       <SubBar />
       <div className="hero-text-container">
-        <HeroPlayIcon src={playIcon} />
+        <HomePlayButtonContainer >
+          <HeroPlayIcon src={playIcon} />
+        </HomePlayButtonContainer>
         <HeroHeading>THERAPEUTICS</HeroHeading>
         <HeroButton>Appointment</HeroButton>
       </div>

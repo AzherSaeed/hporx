@@ -1,17 +1,23 @@
 import React from 'react'
+import { TertiaryHeading } from '../../Globals/Globals'
 import GrowProfitSlick from './GrowProfitSlick'
-import { GrowProfitMainContainer, } from './StyledGrowProfit'
+import { GrowProfitHeading, GrowProfitMainContainer, GrowProfitSubHeading, } from './StyledGrowProfit'
 
 const GrowProfit = () => {
     return (
         <div>
         <GrowProfitMainContainer>
-            <h2>
+            <div className='text-center'>
+            <GrowProfitHeading>
+            Agriculturists
+            </GrowProfitHeading>
+            <GrowProfitSubHeading>
                 Grow profit, Profit From You Grow
-            </h2>
-            <p>
-                Turn Key Profits
-            </p>
+            </GrowProfitSubHeading>
+            <TertiaryHeading>
+            Delivered turnkey and ready to grow guarantee profits
+            </TertiaryHeading>
+            </div>
             <GrowProfitSlick/>
         </GrowProfitMainContainer>
         </div>
