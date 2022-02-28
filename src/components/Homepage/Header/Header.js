@@ -10,10 +10,12 @@ import {
 import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
+import MyVerticallyCenteredModal from './Modal';
 
 
 const Header = ({id}) => {
   const [show, setShow] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
   const handleClose = () => setShow(false);
 
@@ -21,9 +23,13 @@ const Header = ({id}) => {
     <StyledHero id={id} >
       <TopBar setShow={setShow} />
       <OffCanvas handleClose={handleClose} show={show}  setShow={setShow}/>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
       <SubBar />
       <div className="hero-text-container">
-        <HomePlayButtonContainer >
+        <HomePlayButtonContainer onClick={() => setModalShow(true)} >
           <HeroPlayIcon src={playIcon} />
         </HomePlayButtonContainer>
         <HeroHeading>THERAPEUTICS</HeroHeading>

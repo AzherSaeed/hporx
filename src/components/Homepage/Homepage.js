@@ -21,7 +21,8 @@ import Diaganose from './Diagnose/Diaganose'
 import EMultiVendor from './EMultiVendor/EMultiVendor'
 import mensFashionDiscount from '../../assets/mensFashionDiscount.svg'
 import giftCard from '../../assets/giftCard.svg'
-import Locate from './Locate/Locate'
+import Locate from './Locate/Locate';
+import AgeValidation from './Header/AgeValidation/AgeValidation';
 
 import interOrg1 from '../../assets/interOrg1.svg'
 import interOrg2 from '../../assets/interOrg2.svg'
@@ -64,6 +65,7 @@ import SSL from './SSL/SSL'
 import Terms from '../Terms/Terms'
 import Testimonials from './Testimonials/Testimonials'
 import SubBar from './Navbar/SubBar';
+import Quote from './Quote/Quote';
 
 const styles = { 
   margin:'1rem 2rem',
@@ -112,6 +114,7 @@ const Homepage = () => {
       <hr style={styles} />
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
+      <Quote/>
     </>
   )
 }
