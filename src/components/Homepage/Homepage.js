@@ -19,6 +19,8 @@ import Inhalate from './Inhalate/Inhalate'
 import { PlayBtnContainer } from '../Globals/Globals'
 import Testimonials from './Testimonials/Testimonials'
 import HempProduct from './HempProducts/HempProduct'
+import ViewedToday from './ViewedToday/ViewedToday'
+import TrendingNow from './TrendingNow/TrendingNow'
 
 const Homepage = () => {
   return (
@@ -46,8 +48,9 @@ const Homepage = () => {
       <Footer/> */}
       
       {/* <Testimonials/> */}
-      <HempProduct/>
-
+      {/* <HempProduct/> */}
+        {/* <ViewedToday/> */}
+        <TrendingNow/>
     </>
   )
 }
