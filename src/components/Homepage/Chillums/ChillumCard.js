@@ -13,7 +13,7 @@ const ChillumCard = ({img}) => {
             <div className='inner-overlay'>
                 <PlayBtn/>
                 <h3>CHILLUMS</h3>
-                <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque  aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</p>
+                <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu.</p>
                 <p className="price">$450</p>
                 <ChillumBtn>Quick Shop</ChillumBtn>
             </div>

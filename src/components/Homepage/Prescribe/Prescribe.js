@@ -37,7 +37,7 @@ const Prescribe = ({ id }) => {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -46,7 +46,7 @@ const Prescribe = ({ id }) => {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

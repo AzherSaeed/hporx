@@ -2,9 +2,9 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cultivation4 from '../../../assets/cutivation4.svg'
-import cultivation5 from '../../../assets/cutivation5.svg'
-import cultivation6 from '../../../assets/cutivation6.svg'
+import cultivation1 from '../../../assets/cultivation1.png'
+import cultivation2 from '../../../assets/cultivation2.png'
+import cultivation3 from '../../../assets/cultivation3.png'
 import CultivationCard from './CultivationCard';
 import { Container } from 'react-bootstrap';
 
@@ -12,27 +12,27 @@ import { Container } from 'react-bootstrap';
 const CultivationSlick = () => {
   
     const cultivationBox = [{
-        img:cultivation4,
+        img:cultivation1,
         heading:'Mary Ag',
         description:'Price and shipping on request'
     },{
-        img:cultivation5,
+        img:cultivation2,
         heading:'Seedo Automaed Home Grow Device ',
         description:'$2,400 + Approx $35 shipping'
     },{
-        img:cultivation6,
+        img:cultivation3,
         heading:'LEAF',
         description:'Price and shipping on request'
     },{
-        img:cultivation4,
+        img:cultivation1,
         heading:'Mary Ag',
         description:'Price and shipping on request'
     },{
-        img:cultivation5,
+        img:cultivation2,
         heading:'Seedo Automaed Home Grow Device ',
         description:'$2,400 + Approx $35 shipping'
     },{
-        img:cultivation6,
+        img:cultivation3,
         heading:'LEAF',
         description:'Price and shipping on request'
     },]

@@ -5,6 +5,7 @@ import markSlick2 from '../../assets/markSlick2.svg';
 import { MarketSlickContainer, MarkSlickImg } from "./StyledMarketPlace";
 
 export const  MarketPlaceSlick = () => {
+    const marketPlaceImgs=[markSlick1,markSlick2]
     var settings = {
         arrows: true,
         dots: false,
@@ -46,6 +47,7 @@ export const  MarketPlaceSlick = () => {
     return (
         <MarketSlickContainer>
              <Slider {...settings} className='marketplace-slick'>
+                
                 <div>
                    <MarkSlickImg src={markSlick1} alt={markSlick1}/>
                 </div>

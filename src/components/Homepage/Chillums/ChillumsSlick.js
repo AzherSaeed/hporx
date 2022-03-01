@@ -30,7 +30,7 @@ const ChillumsSlick = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

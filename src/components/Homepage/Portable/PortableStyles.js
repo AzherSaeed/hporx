@@ -87,11 +87,12 @@ transition: .5s ease;
     } */
 `
 export const PortableImg1 = styled.img`
-height:100%;
-object-fit:cover;
+
 `
 export const PortableMiniImg = styled.img`
 margin-top: 2rem;
+height: 100%;
+object-fit: cover;
 `
 export const PortableMoreBtn = styled(ViewMoreBtn)`
 margin-top: 2.8rem;

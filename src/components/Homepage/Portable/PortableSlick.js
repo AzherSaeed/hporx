@@ -50,15 +50,15 @@ const PortableSlick = () => {
     <PortableSlickMain>
       <Slider {...settings} className='portable-slick'>
         <div>
-          <Row className='d-flex align-items-center'>
-            <PortableCard className='img-fluid' img={portables1} />
-            <PortableCard className='img-fluid' img={portables2} />
+          <Row className='d-flex p-0'>
+            <PortableCard className='img-fluid  p-0' img={portables1} />
+            <PortableCard className='img-fluid  p-0' img={portables2} />
           </Row>
         </div>
         <div>
-          <Row className='d-flex align-items-center'>
-            <PortableCard className='img-fluid' img={portables1} />
-            <PortableCard className='img-fluid' img={portables2} />
+          <Row className='d-flex align-items-center  p-0'>
+            <PortableCard className='img-fluid  p-0' img={portables1} />
+            <PortableCard className='img-fluid ' img={portables2} />
           </Row>
         </div>
 

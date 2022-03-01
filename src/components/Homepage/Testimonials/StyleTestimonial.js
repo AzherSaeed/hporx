@@ -29,7 +29,7 @@ h1{
     margin-top: 5.8rem;
 }
 .Card{
-    width: 40rem;
+    width: 35rem;
     height: 50rem;
     margin-right: 1rem;
     

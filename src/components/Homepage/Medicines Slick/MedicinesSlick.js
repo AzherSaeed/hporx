@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import medic1 from "../../../assets/medic1.svg";
 import medic2 from "../../../assets/medic2.svg";
 import medic3 from "../../../assets/medic3.svg";
+import medic4 from "../../../assets/medic4.svg";
 import {
   MedicineContainerMain,
   MedicineImg,
@@ -14,7 +15,7 @@ import { Container } from "react-bootstrap";
 import { AddToCartBtn } from "../../Globals/Globals";
 
 const MedicinesSlick = () => {
-  const imgContainer = [medic1, medic2, medic3, medic1, medic2, medic3];
+  const imgContainer = [medic1, medic2, medic3, medic4, medic2, medic3];
   var settings = {
     arrows: true,
     dots: false,

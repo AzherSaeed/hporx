@@ -18,10 +18,13 @@ margin-top: 2px;
 export const AgricultureImg = styled.img`
 height: 38rem;
 object-fit: cover;
+
 `
 
 export const AgricultureImg1 = styled.img`
-height: 41.3rem;
+height: 40.3rem;
+object-fit: cover;
+
 
 `
 export const AgriculteImgsSection = styled.div`
