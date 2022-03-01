@@ -1,19 +1,73 @@
 :root {
     --off-white: transparent;
   }
-  .nav {
-    background-color: var(--off-white);
-    position: fixed;
-    top: 80px;
-    width: 100%;
-    height: 80px;
-    z-index: 1000;
 
-    /* box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15); */
+
+  .nav {
+    background-color: #fff;
+    width: 100%;
+    color: black;
+    padding: 1.5rem;
+  }
+  .changebackground {
+    background-color: transparent;
+    width: 100%;
+    padding: 1.5rem;
+    color: #fff;
+    opacity: 0.8;
+
+  }
+
+
+  .hporx-header{
+    position: fixed;
+    top: -87px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all  .5s linear;
+  }
+
+  .hporx-header-skew{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all  .5s linear;
+  }
+
+
+  .hporx-header-topbar-skew{
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+
+  }
+  .hporx-header-topbar-normal{
+    display: block;
+
+  }
+
+  .changetopBArbackgournd{
+    background-color: gray;
   }
   
   
   .nav .nav-content {
+    max-width: 1290px;
+    padding: 0rem 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .changebackground .nav-content {
     max-width: 1290px;
     padding: 0rem 3rem;
     margin: 0 auto;
@@ -37,9 +91,9 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: inherit;
     border-bottom: 2px solid transparent;
-    opacity: 0.8;
+
     margin-right: 2.5rem;
  
   }
@@ -49,7 +103,7 @@
     opacity: 1;
     border-bottom: 2px solid #E84025;
     text-decoration: none;
-    color: #FFFFFF;
+    color: inherit;
   }
   
   .nav-item:hover {

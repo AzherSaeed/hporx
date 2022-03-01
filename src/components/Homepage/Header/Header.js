@@ -21,13 +21,13 @@ const Header = ({id}) => {
 
   return (
     <StyledHero id={id} >
-      <TopBar setShow={setShow} />
+      {/* <TopBar setShow={setShow} /> */}
       <OffCanvas handleClose={handleClose} show={show}  setShow={setShow}/>
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-      <SubBar />
+      <SubBar setShow={setShow}  />
       <div className="hero-text-container">
         <HomePlayButtonContainer onClick={() => setModalShow(true)} >
           <HeroPlayIcon src={playIcon} />
