@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {Row } from 'react-bootstrap'
-import portables1 from '../../../assets/portables1.png'
-import portables2 from '../../../assets/portables2.png'
+import portables1 from '../../../assets/portables1.svg'
+import portables2 from '../../../assets/portables2.svg'
 import { PortableSlickMain } from './PortableStyles';
 import PortableCard from './PortableCard';
 

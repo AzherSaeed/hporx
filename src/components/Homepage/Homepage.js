@@ -114,6 +114,7 @@ const Homepage = () => {
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
       <Quote/>
+      {/* <Popup country={props.country} region={props.region}/> */}
     </>
   )
 }
