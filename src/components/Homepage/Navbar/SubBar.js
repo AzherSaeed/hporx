@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { SubBarContainer } from "./StyledNavbar";
 import { Link, animateScroll as scroll } from "react-scroll";
+import {
+
+  Link as ReactLink
+} from "react-router-dom";
 import './SubBar.css';
 
 
@@ -12,13 +16,13 @@ const SubBar = () => {
  
           <ul className="nav-items">
             <li className="nav-item">
-              <Link
+              <ReactLink
                 activeClass="active"
-                to="HOME"
+                to="/home"
                 spy={true}
                 smooth={true}
                 duration={500}
-              > HOME </Link>
+              > HOMES </ReactLink>
             </li>
             <li className="nav-item">
               <Link

@@ -42,7 +42,7 @@
   }
   
   .portable-slick .slick-next {
-    right: 7px !important;
+    right: 27px !important;
     z-index: 1;
   }
 
@@ -104,10 +104,7 @@
 
 
 
-
-
-
-
+/* this icon for cultivation slick */
 
 .cultivation-slick  .slick-prev {
     left: -25px !important;
@@ -134,6 +131,70 @@
   }
 
   .cultivation-slick .slick-next:before {
+    content: '' !important;
+    background-image: url(../../../assets/right-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+
+/* this icon for vaporize slick */
+
+.vaporize-slick  .slick-prev {
+    left: -25px !important;
+    z-index: 1;    
+  }
+  @media screen and (max-width : 575px) {
+    .vaporize-slick  .slick-prev {
+      left: -20px !important;
+      z-index: 1;    
+    }
+  }
+  .vaporize-slick .slick-prev:before {
+    content: '' !important;
+    background-image: url(../../../assets/left-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+  
+  .vaporize-slick .slick-next {
+    right: 7px !important;
+    z-index: 1;
+  }
+
+  .vaporize-slick .slick-next:before {
+    content: '' !important;
+    background-image: url(../../../assets/right-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+/* this icon for diagnose-slick slick */
+
+.diagnose-slick  .slick-prev {
+    left: 10px !important;
+    z-index: 1;    
+  }
+
+  .diagnose-slick .slick-prev:before {
+    content: '' !important;
+    background-image: url(../../../assets/left-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+  
+  .diagnose-slick .slick-next {
+    right: 25px !important;
+    z-index: 1;
+  }
+
+  .diagnose-slick .slick-next:before {
     content: '' !important;
     background-image: url(../../../assets/right-slider-arrow.svg) !important;
     background-position: center;

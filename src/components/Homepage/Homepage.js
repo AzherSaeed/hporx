@@ -64,7 +64,6 @@ import FeatureMarketPlace from './FeatureMarketplace/FeatureMarketPlace'
 import SSL from './SSL/SSL'
 import Terms from '../Terms/Terms'
 import Testimonials from './Testimonials/Testimonials'
-import SubBar from './Navbar/SubBar';
 import Quote from './Quote/Quote';
 
 const styles = {

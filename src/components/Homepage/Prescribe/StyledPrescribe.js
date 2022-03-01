@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { ViewMoreBtn , ShopNowBtn } from "../../Globals/Globals";
+import { ViewMoreBtn, ShopNowBtn } from "../../Globals/Globals";
 
 export const PrescribeMainContainer = styled.div`
-margin-top: 7.5rem;
-
-`
+  margin-top: 7.5rem;
+`;
 
 export const PrescribeImgContainer = styled.div`
   position: relative;
@@ -43,7 +42,9 @@ line-height: 36px;
     p {
       color: rgba(255, 255, 255, 0.8);
       font-size: 16px;
-line-height: 22px;
+      line-height: 22px;
+      font-weight: 200;
+
     }
   }
   &:hover .inner-overlay,
@@ -53,50 +54,44 @@ line-height: 22px;
 `;
 
 export const PrescribeImg = styled.img`
-height: 35rem;
-
+  height: 35rem;
 `;
 
-
 export const ConsultDarkBtn = styled(ViewMoreBtn)`
-background: #242424;
-color: #FFFFFF;
-`
+  background: #242424;
+  color: #ffffff;
+`;
 
 export const ShopBtn = styled(ShopNowBtn)`
   margin: 2rem 0;
-`
+`;
 export const PrescribeSlickMain = styled.div`
-.prescribe-slick{
-  .text-container{
-    padding-left:2rem;
-    p{
-      opacity: 0.8;
-      color: #828282;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 28px;  
+  .prescribe-slick {
+    .text-container {
+      padding-left: 2rem;
+      p {
+        opacity: 0.8;
+        color: #828282;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      .prescribe-btns {
+        margin-top: 3.5rem;
+        .prescribe-btn2 {
+          margin-left: 1rem;
+        }
+        @media only screen and (max-width: 1200px) {
+          .prescribe-btn2 {
+            margin-top: 1rem;
+            margin-left: 1rem;
+          }
+        }
+      }
     }
-
-
-    .prescribe-btns{
-      margin-top: 3.5rem;
-      .prescribe-btn2{
-          margin-left: 1rem;
-        }
-      @media only screen and (max-width: 1200px) {
-        .prescribe-btn2{
-          margin-top: 1rem;
-          margin-left: 1rem;
-        }
-}
-
-    
+    .slick-list {
+      margin: 0 -10px;
     }
   }
-  .slick-list {
-  margin: 0 -10px;
-}
-}
-
-`
+`;

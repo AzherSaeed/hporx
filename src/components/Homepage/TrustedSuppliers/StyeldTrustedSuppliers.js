@@ -15,15 +15,15 @@ color: #242424;
 line-height: 35px;
 }
 }
-margin-top: 3.1rem;
+/* margin-top: 3.1rem; */
 .trusted-suppliers-slick{
-    padding:3rem 0;
+    /* padding:3rem 0; */
     /* background-color: #F7F7F7; */
 }
 `
 export const TrustedSuppliersImgContainer = styled.div`
 padding: 2rem;
-margin-top: 4.3rem;
+/* margin-top: 4.3rem; */
 `
 export const TrustedSuppliersImg = styled.img`
 height: 7rem;

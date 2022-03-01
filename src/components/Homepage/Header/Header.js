@@ -11,6 +11,7 @@ import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
 import MyVerticallyCenteredModal from './Modal';
+import Marquee from '../Navbar/Marquee';
 
 
 const Header = ({id}) => {
@@ -21,6 +22,7 @@ const Header = ({id}) => {
 
   return (
     <StyledHero id={id} >
+      <Marquee/>
       <TopBar setShow={setShow} />
       <OffCanvas handleClose={handleClose} show={show}  setShow={setShow}/>
       <MyVerticallyCenteredModal

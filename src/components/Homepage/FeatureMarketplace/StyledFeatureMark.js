@@ -43,7 +43,8 @@ border: 1px solid #FFFFFF;
 background: transparent;
 `
 export const FeatureMarkTextContainer = styled.div`
-margin-left:4rem
+margin-left:4rem;
+text-align: start ;
 `
 export const FeatureMarketSub = styled(TertiaryHeadSecondary)`
 padding: 2rem;
