@@ -3,7 +3,7 @@ import { StylePopup } from "./StylePopup";
 import Logo1 from '../../../assets/Logo1.svg';
 import {Row,Col,Button} from 'react-bootstrap';
 
-function Popup(){
+function Popup(props){
     return(
     <StylePopup>
              <div className="logo">
@@ -25,15 +25,15 @@ function Popup(){
                             <form>
                                  <div class="form-group">
                                  <label for="country" className="mb-2 fw-5 labels">Your Country <span className="text-danger">*</span></label>
-                                 <input type="text" class="form-control  inputs"  id="country" name='country' value="Pakistan" readOnly/>
+                                 <input type="text" class="form-control  inputs"  id="country" name='country' value={props.country} readOnly/>
                                  </div>
                                  <div class="form-group">
                                  <label for="country" className="mb-2 fw-5 labels">Your State <span className="text-danger">*</span></label>
-                                 <input type="text" class="form-control  inputs"  id="country" name='state' value="Punjab" readOnly/>
+                                 <input type="text" class="form-control  inputs"  id="country" name='state' value={props.region} readOnly/>
                                 </div>
                                  <div class="form-group">
-                                 <label for="country" className="mb-2 fw-5 labels">DOB <span className="text-danger">*</span></label>
-                                 <input type='date' class="form-control  inputs"  id="country" placeholder="mm/dd/year"/>
+                                 <label for="dob" className="mb-2 fw-5 labels">DOB <span className="text-danger">*</span></label>
+                                 <input type='date' class="form-control  inputs"  id="dob" placeholder="dd/mm/year" required/>
                                 </div>
                                 <Button className="btns d-grid col-2 mx-auto btn-lg clo-3">Confirm</Button>
                                 </form>    

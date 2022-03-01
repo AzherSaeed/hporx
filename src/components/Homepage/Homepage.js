@@ -22,12 +22,14 @@ import HempProduct from './HempProducts/HempProduct'
 import ViewedToday from './ViewedToday/ViewedToday'
 import TrendingNow from './TrendingNow/TrendingNow'
 import Popup from './Popup/Popup'
+import { propTypes } from 'react-bootstrap/esm/Image'
 
-const Homepage = () => {
+const Homepage = (props) => {
+
+  console.log(props,'Homepage');
   return (
     <>
-    
-
+  
    {/* <PlayBtnContainer/> */}
       {/* <Header/> */}
        {/* <Inhalate/> */}
@@ -52,7 +54,7 @@ const Homepage = () => {
       {/* <HempProduct/> */}
         {/* <ViewedToday/> */}
         {/* <TrendingNow/> */}
-        <Popup/>
+        <Popup country={props.country} region={props.region}/>
     </>
   )
 }
