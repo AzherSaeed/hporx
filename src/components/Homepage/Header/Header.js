@@ -13,7 +13,7 @@ import OffCanvas from "../Navbar/OffCanvas";
 import MyVerticallyCenteredModal from './Modal';
 
 
-const Header = ({id}) => {
+const Header = ({id , country , state}) => {
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -21,13 +21,16 @@ const Header = ({id}) => {
 
   return (
     <StyledHero id={id} >
-      <TopBar setShow={setShow} />
-      <OffCanvas handleClose={handleClose} show={show}  setShow={setShow}/>
+      {/* <TopBar setShow={setShow} /> */}
+      <OffCanvas country={country} state={state} handleClose={handleClose} show={show}  setShow={setShow}/>
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        setModalShow={setModalShow}
+        state={state}
+        country={country}
       />
-      <SubBar />
+      <SubBar setShow={setShow}  />
       <div className="hero-text-container">
         <HomePlayButtonContainer onClick={() => setModalShow(true)} >
           <HeroPlayIcon src={playIcon} />

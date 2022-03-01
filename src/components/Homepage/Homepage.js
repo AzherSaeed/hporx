@@ -72,7 +72,7 @@ const styles = {
   borderTop: '1px solid rgba(0, 0, 0, 0.1)',
   padding: ' 0 2rem'
 }
-const Homepage = () => {
+const Homepage = ({country , region}) => {
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
   const giftImgs = [giftCard, giftCard, giftCard, giftCard, giftCard, giftCard]
   const trustedSuppliers = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6]
@@ -82,7 +82,7 @@ const Homepage = () => {
   const aboveCopyrightImgs = [aboveCopyright1, aboveCopyright2, aboveCopyright3, aboveCopyright6, aboveCopyright4, aboveCopyright5, aboveCopyright7, aboveCopyright8,]
   return (
     <>
-      <Header id='HOME' />
+      <Header id='HOME' country={country} state={region} />
       <Inhalate  id="INHALATE" />
       <Vaporize  id="VAPORIZE" />
       <Portable   id="PORTABLES" />

@@ -29,7 +29,7 @@ opacity: 0;
     z-index: 1000;
 
     &-voice{
-        background-color: red;
+        background-color: #E84025;
         width: 50px;
         height: 50px;
         border-radius: 50%;

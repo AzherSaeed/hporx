@@ -5,7 +5,9 @@ import searchIcon from "../../../assets/searchIcon.svg";
 import "./offCanvas.css";
 import {ViewMoreBtn} from '../../Globals/Globals'
 
-const OffCanvas = ({ show, handleClose , setShow}) => {
+const OffCanvas = ({ show, handleClose , setShow , country , state }) => {
+    const data = new Date();
+
 
   return (
     <Offcanvas show={show} onHide={handleClose} placement="end">
@@ -148,12 +150,9 @@ const OffCanvas = ({ show, handleClose , setShow}) => {
                             <div>
                                 <h3 class="off_text">Location</h3>
                             </div>
-                            <div class="country-select">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>United Estate</option>
-                                    <option value="1">United Kingdom</option>
-                                </select>
-                            </div>
+                            <div class="ms-2">
+                                    <span>{country}</span>
+                                </div>
                         </div>
                     </li>
                     <li>
@@ -166,7 +165,7 @@ const OffCanvas = ({ show, handleClose , setShow}) => {
                                     <img src="./assets/images/clock 2.svg" alt=""/>
                                 </div>
                                 <div class="ms-2">
-                                    <span>United Estate</span>
+                                    <span>{data.toDateString()}</span>
                                 </div>
                             </div>
                         </div>

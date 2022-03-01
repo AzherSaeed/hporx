@@ -29,7 +29,6 @@ function App() {
    });
  },[])
 
- console.log(country , state , 'region' );
   return (
     <Router>
       <div>

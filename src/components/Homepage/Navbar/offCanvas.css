@@ -198,3 +198,13 @@
        top: 30px;
     z-index: 1000;
    }
+
+
+   /* .hporx-marquee-container .marquee-container{
+       background-color: transparent !important;
+   }
+
+   .hporx-marquee-container .marquee-container .overlay{
+    --gradient-color: none !important;
+    --gradient-width: 200px;
+   } */
