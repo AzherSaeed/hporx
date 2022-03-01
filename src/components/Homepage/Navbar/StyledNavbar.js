@@ -17,8 +17,27 @@ const TopNavBarContainer = styled.div`
   }
 `;
 const HeaderTopBar = styled.div`
-  background: rgba(0, 0, 0, 0.2);
+ 
+
+
+  .normalNavbar{
+    background: rgba(0, 0, 0, 0.2);
   opacity: 0.9;
+  }
+
+
+  .skewNavbar{
+    display: none;
+    display: none;  
+    position: unset;
+  }
+
+  position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+
   .mr-auto.navbar-nav {
     gap: 2rem;
     align-items: baseline;

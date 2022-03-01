@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState , useEffect} from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../assets/logo.svg";
 import profile from "../../../assets/profile.svg";
@@ -9,8 +9,39 @@ import warningIcon from "../../../assets/warning-icon.svg";
 import {HeaderTopBar} from './StyledNavbar';
 
 const TopBar = ({setShow}) => {
+
+  const [navbar, setNavbar] = useState(false)
+
+
+
+
+  const changeBackground = () => {
+    window.onwheel = e => {
+      if(e.deltaY >= 0){
+        // Scrolling Down with mouse
+        setNavbar(true)
+      } else {
+        // Scrolling Up with mouse
+        setNavbar(false)
+      }
+    }
+  }
+
+
+    useEffect(() => {
+      changeBackground()
+      // adding the event when scroll change background
+      window.addEventListener("scroll", changeBackground)
+    })
+
+
+
+    console.log(navbar , 'navbar');
+
+
   return (
     <HeaderTopBar>
+      <div className={navbar ? 'skewNavbar' : 'normalNavbar'} >
       <Navbar bg="transparent" variant="dark">
         <Container>
           <Navbar.Brand href="#">
@@ -35,8 +66,9 @@ const TopBar = ({setShow}) => {
           </Nav>
         </Container>
       </Navbar>
+      </div>
     </HeaderTopBar>
   );
 };
 
-export default TopBar;
+export default TopBar
