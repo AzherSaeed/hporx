@@ -1,13 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
 // import Slider from 'react-slick';
 // import { ViewTodayStyle } from '../ViewedToday/StyleViewToday';
 import { BroswerSlick, BrowserHistoryImg, BrowserHistoryMain } from './StyledBrowserHistory';
-
+import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { Container } from 'react-bootstrap';
-
 function BrowserHistory({ imgs }) {
+  const [getSwiper,setGetSwiper]=useState(0)
 
 
   // var settings = {
@@ -50,7 +49,8 @@ function BrowserHistory({ imgs }) {
       <BrowserHistoryMain>
         <div className='main-heading'>Browsing History</div>
         <BroswerSlick>
-          <Swiper
+          <Swiper  className='swiper-react'
+          
             breakpoints={{
               // when window width is >= 320px
               300: {
@@ -73,12 +73,17 @@ function BrowserHistory({ imgs }) {
               }
             }}
             spaceBetween={10}
+            pagination={true}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
             slidesPerView={5}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            
+            onSlideChange={(swip) => setGetSwiper(swip.activeIndex)}
+            onSwiper={(swiper) => console.log('slide change')}
           > {
-              imgs.map((img, index) => (
-                <SwiperSlide key={index} > <BrowserHistoryImg src={img} alt='Everything today' /></SwiperSlide>
+              imgs.map((img, index) => (  
+                <SwiperSlide key={index} ><BrowserHistoryImg src={img} alt='Everything today' /></SwiperSlide>
               ))
             }
 

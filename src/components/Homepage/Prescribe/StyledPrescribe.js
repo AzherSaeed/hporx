@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ViewMoreBtn , ShopNowBtn } from "../../Globals/Globals";
+import { ViewMoreBtn, ShopNowBtn, ShopBtnTransparent } from "../../Globals/Globals";
 
 export const PrescribeMainContainer = styled.div`
 margin-top: 7.5rem;
@@ -99,4 +99,7 @@ export const PrescribeSlickMain = styled.div`
 }
 }
 
+`
+export const PrescribeBtn=styled(ShopBtnTransparent)`
+margin-top: 2rem;
 `

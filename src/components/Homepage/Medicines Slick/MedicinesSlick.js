@@ -59,11 +59,6 @@ const MedicinesSlick = () => {
               <MedicineImgContainer>
                 <div className="overlay"></div>
                 <div className="inner-overlay">
-                  <h3>About</h3>
-                  <p>
-                    Curabitur cursus sagittis varius. Quisque aliquet luctus
-                    elit, in hendrerit orci malesuada eu. Morbi feugiat et
-                  </p>
                   <AddToCartBtn>Add to Cart</AddToCartBtn>
                 </div>
                 <MedicineImg src={img} alt={img} />

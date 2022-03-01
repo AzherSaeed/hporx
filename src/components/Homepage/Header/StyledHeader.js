@@ -35,9 +35,9 @@ margin-top: 4rem;
   color: white;
   cursor: pointer;
   &:hover{
-    background-color: orangered;
+    background-color: #E84025;
     color: white;
-    border: 1px solid orangered; 
+    border: 1px solid #E84025; 
   }
   `
 const HomePlayButtonContainer = styled.div`

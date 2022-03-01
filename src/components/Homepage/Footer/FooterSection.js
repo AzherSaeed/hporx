@@ -1,4 +1,5 @@
 import React from 'react'
+import { TradingAddressList, TradingAddressMain } from './StyledFooter'
 
 const FooterSection = ({ links, heading }) => {
     return (
@@ -23,3 +24,30 @@ const FooterSection = ({ links, heading }) => {
 }
 
 export default FooterSection
+
+export const TradingAddress = ({ links, heading }) => {
+    return (
+        <TradingAddressMain>
+            <div ><h4>
+                {heading}
+            </h4>
+            <TradingAddressList>
+                <ul>
+                    {
+                        links.map((link, index) => (
+                            <p key={index} className='footer-link' href="#">
+                                {link}
+                            </p>
+                        ))
+                    }
+                    {/* <a className='footer-link' href="#">
+                    European Union Administration Correos No 77 Plaça de la Font, 12 08880 Cubelles Barcelona
+                </a> */}
+                
+            </ul>
+                </TradingAddressList>
+
+                </div>
+        </TradingAddressMain>
+    )
+}
