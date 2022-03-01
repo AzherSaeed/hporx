@@ -21,6 +21,7 @@ import Testimonials from './Testimonials/Testimonials'
 import HempProduct from './HempProducts/HempProduct'
 import ViewedToday from './ViewedToday/ViewedToday'
 import TrendingNow from './TrendingNow/TrendingNow'
+import Popup from './Popup/Popup'
 
 const Homepage = () => {
   return (
@@ -50,7 +51,8 @@ const Homepage = () => {
       {/* <Testimonials/> */}
       {/* <HempProduct/> */}
         {/* <ViewedToday/> */}
-        <TrendingNow/>
+        {/* <TrendingNow/> */}
+        <Popup/>
     </>
   )
 }
