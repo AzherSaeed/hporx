@@ -6,12 +6,13 @@ export const MedicineContainerMain = styled.div`
 export const MedicineImgContainer = styled.div`
   position: relative;
   text-align: center;
+  margin-top: 1.7rem;
   text-align: -moz-center;
   text-align: -webkit-center;
   .overlay {
     position: absolute;
-    top: 6.5rem;
-    bottom: 5rem;
+    top: 0;
+    bottom: 0;
     left: 1rem;
     right: 1.5rem;
     opacity: 0;
@@ -37,8 +38,23 @@ export const MedicineImgContainer = styled.div`
     opacity: 1;
   }
 `;
+
+export const MedicineSlickContainer = styled.div`
+  .medicine-text{
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.6rem;
+letter-spacing: 0em;
+  }
+  .text-red{
+    color: #E84025;
+opacity: 0.8;
+  }
+  
+  `
 export const MedicineImg = styled.img`
-width: 30rem;
-height: 32rem;
+width: 29.8rem;
+height: 28.5rem;
 
 `;

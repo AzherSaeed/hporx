@@ -12,7 +12,8 @@ const DiagnoseSlick = () => {
     var settings = {
         arrows: true,
         dots: false,
-        infinite: false,
+        infinite: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -23,18 +24,16 @@ const DiagnoseSlick = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: false,
+                    infinite: true,
                     dots: false,
-                    arrows: true,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     initialSlide: 1,
-                    arrows: true,
                 }
             },
             {
@@ -42,7 +41,6 @@ const DiagnoseSlick = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: true,
                 }
             }
         ]

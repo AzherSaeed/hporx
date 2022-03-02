@@ -29,10 +29,8 @@ h1{
     margin-top: 5.8rem;
 }
 .Card{
-    width: 40rem;
-    height: 50rem;
-    margin-right: 1rem;
-    
+    width: 40.9rem;
+    height: 50rem;    
 }
 
 .nameHeading{

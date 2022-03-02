@@ -17,6 +17,7 @@ const InhalateSlick = () => {
     arrows: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -64,10 +65,7 @@ const InhalateSlick = () => {
                   <h3>Inhalate</h3>
                   <p>
                     Curabitur cursus sagittis varius. Quisque aliquet luctus
-                    elit, in hendrerit orci malesuada eu. Morbi feugiat et
-                    ligula maximus aliquet. Quisque aliquet luctus elit, in
-                    hendrerit orci malesuada eu. Morbi feugiat et ligula maximus
-                    aliquet
+                    elit, in hendrerit orci malesuada eu. 
                   </p>
                 </div>
                 <h2>$450</h2>

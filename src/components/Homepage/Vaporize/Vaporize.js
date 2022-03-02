@@ -12,7 +12,8 @@ const Vaporize = ({id}) => {
     var settings = {
         arrows: true,
         dots: false,
-        infinite: false,
+        infinite: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -23,7 +24,7 @@ const Vaporize = ({id}) => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: false,
+                    infinite: true,
                     dots: false,
                     arrows: true,
                 }

@@ -4,37 +4,40 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import medic1 from "../../../assets/medic1.svg";
 import medic2 from "../../../assets/medic2.svg";
-import medic3 from "../../../assets/medic3.svg";
+import medic4 from "../../../assets/medic4.svg";
 import {
   MedicineContainerMain,
   MedicineImg,
   MedicineImgContainer,
+  MedicineSlickContainer,
 } from "./StyledMedicineSlick";
 import { Container } from "react-bootstrap";
 import { AddToCartBtn } from "../../Globals/Globals";
 
 const MedicinesSlick = () => {
-  const imgContainer = [medic1, medic2, medic3, medic1, medic2, medic3];
+  const imgContainer = [medic1, medic2, medic1,medic4,medic1, medic2, medic1,medic4];
   var settings = {
     arrows: true,
     dots: false,
-    infinite: false,
+    infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: false,
+          infinite: true,
+          autoplay: true,
           dots: false,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -53,9 +56,14 @@ const MedicinesSlick = () => {
   return (
     <MedicineContainerMain>
       <Container>
-        <Slider {...settings}>
+        <MedicineSlickContainer>
+        <Slider {...settings} className='medicine-slick'>
+
           {imgContainer.map((img, index) => (
             <div key={index}>
+              <div className="text-center medicine-text">
+                <span className="text-red" >Treats</span>:<span className="disease-text">Seizures</span>
+              </div>
               <MedicineImgContainer>
                 <div className="overlay"></div>
                 <div className="inner-overlay">
@@ -66,6 +74,7 @@ const MedicinesSlick = () => {
             </div>
           ))}
         </Slider>
+        </MedicineSlickContainer>
       </Container>
     </MedicineContainerMain>
   );

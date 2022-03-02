@@ -15,6 +15,9 @@ color: #333333;
 opacity: 0.8;
 text-align: start;
 padding: 0 5rem;
+ @media screen and (max-width:480px) {
+  padding: 0 0;
+ }
 }
 p{
   margin-top: 1.6rem;

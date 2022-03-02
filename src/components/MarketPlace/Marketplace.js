@@ -24,7 +24,9 @@ const Marketplace = ({id}) => {
             <MarketplaceImg className='img-fluid' src={marketplace} alt={marketplace}/>
         </Col>
     </Row>
+    <div>
     <MarketPlaceSlick/>
+    </div>
     </MarkInnerContainer>
       </Container>
   )

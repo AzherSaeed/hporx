@@ -14,6 +14,7 @@ const ChillumsSlick = () => {
     dots: false,
     arrows: true,
     infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -30,7 +31,7 @@ const ChillumsSlick = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

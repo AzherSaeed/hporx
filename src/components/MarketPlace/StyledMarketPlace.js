@@ -51,6 +51,26 @@ export const MarketViewMoreBtn = styled(ViewMoreBtn)`
 margin-top: 4.8rem;
 
 `
+export const MarkSlickImgContainer = styled.div`
+position: relative;
+  text-align: center;
+  
+  .inner-overlay {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    
+}
+
+
+`
 export const MarkSlickImg = styled.img`
 width: 41rem;
 height:29rem;
