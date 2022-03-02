@@ -21,7 +21,7 @@
 
   .hporx-header{
     position: fixed;
-    top: -92px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -30,7 +30,7 @@
 
   .hporx-header-skew{
     position: fixed;
-    top: 0;
+    top: 92px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -84,6 +84,7 @@
   .nav-items{
     text-align: center;
     width: 100%;
+    margin-bottom: 0;
   }
   
   .nav-item {

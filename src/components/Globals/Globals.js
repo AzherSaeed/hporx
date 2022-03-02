@@ -9,12 +9,11 @@ letter-spacing: 0em;
 text-transform: uppercase;
 margin: 0;
 
-  @media screen and (max-width : 600px){
-    font-size: 3rem;
+@media screen and (max-width : 600px){
+font-size: 3rem;
 font-style: normal;
 line-height: 6.2rem;
-  }
-
+}
 `
 export const SubHeading = styled.h2`  
 font-size: 3.2rem;
@@ -39,9 +38,6 @@ line-height: 2.7rem;
 letter-spacing: 0em;
 color: #828282;
 margin: 0;
-
-
-
 `
 export const TertiaryHeadSecondary = styled.h3`
 font-size: 1.8rem;
@@ -86,20 +82,46 @@ letter-spacing: 0em;
 text-transform: capitalize;
 cursor: pointer;
   &:hover{
- background-color: orangered;
-border: 1px solid orangered;
+ background-color: #E84025;
+border: 1px solid #E84025;
+  color: white;
+  }   
+`
+export const ShopBtnTransparent = styled.button`
+font-style: normal;
+height: 4.8rem;
+width: 15.4rem;
+border: 1px solid #FFFFFF;
+border-radius: 7rem;
+color: #FFFFFF;
+font-size: 1.6rem;
+font-weight: 500;
+line-height: 2.4rem;
+letter-spacing: 0em;
+background: transparent;
+
+text-transform: capitalize;
+cursor: pointer;
+  &:hover{
+ background-color: #E84025;
+border: 1px solid #E84025;
   color: white;
   }   
 `
 export const PlayBtnContainer = styled.div`
 .btn{
-    border: none;border-radius: 50%;
+    border: none;
+    border-radius: 50%;
     background-color: white;
   }
 
 `
 export const PlayBtnImg = styled.img`
-padding: 1.2rem 1.1rem;
+padding: 1.2rem 1rem;
+transition: all .8s;;
+&:hover{
+  transform: scale(1.1);
+}
 
 
 `
@@ -112,7 +134,7 @@ color: white;
   font-size: 1.2rem;
   cursor: pointer;
   &:hover{
-    background-color: orangered;
+    background-color: #E84025;
 border: 2px solid orangered;
     color: white;
   }   
@@ -126,7 +148,7 @@ color: white;
   font-size: 1.2rem;
   cursor: pointer;
   &:hover{
-    background-color: orangered;
+    background-color: #E84025;
 border: 2px solid orangered;
     color: white;
   }   

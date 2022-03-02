@@ -4,8 +4,8 @@ import Testimonial1 from '../../../assets/Testimonial1.svg';
 import Testimonial2 from '../../../assets/Testimonial2.svg';
 import Testimonial3 from '../../../assets/Testimonial3.svg';
 import flag from '../../../assets/flag.svg';
-import { Testimonial } from './StyledTestimonials';
 import Slider from 'react-slick';
+import { Testimonial } from './StyleTestimonial';
 
 
 function Testimonials() {

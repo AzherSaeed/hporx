@@ -6,7 +6,7 @@ import diagnose1 from '../../../assets/Diagnose1.svg'
 import diagnose2 from '../../../assets/Diagnose2.svg'
 import { Container } from 'react-bootstrap';
 import { DiagnoseAppointmentBtn, DiagnoseImg, DiagnoseImgContainer, StyledSlickContainer } from './StyledDiagnose';
-import { AddToCartBtn } from '../../Globals/Globals';
+import { AddToCartBtn, ShopBtnTransparent } from '../../Globals/Globals';
 const DiagnoseSlick = () => {
     const diagnoseImgs = [diagnose1, diagnose2, diagnose1, diagnose2]
     var settings = {
@@ -55,8 +55,13 @@ const DiagnoseSlick = () => {
                         diagnoseImgs.map((img, index) => (
                             <DiagnoseImgContainer key={index}>
                                 <DiagnoseImg src={img} alt={img} />
+                                <div className="overlay">
+                                </div>
                                 <div className='inner-overlay'>
-                                    <AddToCartBtn>Add to Cart</AddToCartBtn>
+                                    <h3>About</h3>
+                                    <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque  </p>
+                                    <p className="price">$450</p>
+                                    <ShopBtnTransparent>Appointment</ShopBtnTransparent>
                                 </div>
                             </DiagnoseImgContainer>
                         ))

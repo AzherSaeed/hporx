@@ -54,6 +54,7 @@ const imgContainer=[agri1,agri2,agri3,agri4]
           {
               imgContainer.map((img,index)=>(
                   <div key={index}>
+                    
                   <AgricultureImg key={index} className='img-fluid' src={img} alt={img} />
                   </div>
               ))

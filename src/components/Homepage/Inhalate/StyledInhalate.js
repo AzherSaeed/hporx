@@ -62,6 +62,10 @@ export const InhalatedImgContainer = styled.div`
       img {
         width: 10%;
         height: 10%;
+        transition: all 0.6s;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
 
       h3 {

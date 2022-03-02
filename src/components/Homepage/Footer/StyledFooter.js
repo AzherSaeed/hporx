@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const FooterMainContainer = styled.div`
 font-style: normal;
-padding: 8.8rem 2rem;
+padding: 0 2rem;
+padding-top: 8rem;
 
 ul{
     padding-left: 0;
@@ -35,12 +36,27 @@ margin: 0;
  }
 
 `
-export const FooterImg=styled.img`
+export const FooterImg = styled.img`
 height: 1.4rem;
 width: 1.4rem;
 
 `
-export const FooterImg1=styled.img`
+export const FooterImg1 = styled.img`
 height: 11.6rem;
 width: 8rem;
+`
+export const TradingAddressMain = styled.div`
+ul{
+   
+    p{
+        margin-top: 2rem;
+        font-size: 1.4rem;
+font-weight: 400;
+color: #828282;
+margin: 0;
+    }
+}
+`
+export const TradingAddressList=styled.div`
+margin-top: 2rem;
 `

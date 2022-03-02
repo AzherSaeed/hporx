@@ -71,7 +71,7 @@ const SSL = () => {
                 
                   return (
                    
-                      <SSLImg key={index} src={img} alt={img} />
+                      <SSLImg key={index} key={index} src={img} alt={img} />
                      
                    
                   )
