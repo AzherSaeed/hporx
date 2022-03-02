@@ -29,7 +29,7 @@ letter-spacing: 0em;
 color: #828282;
 
 }
-@media screen and (min-width:900){
+@media screen and (min-width:900px){
   .grow-profit-slick {
   margin-top: 5.6rem;
 }

@@ -12,7 +12,11 @@ border-radius: 30px;
     width :20rem;
 }
 .borders{
-    border-right: .2rem solid #fff;
+    @media screen and (min-width:992px) {
+        border-right: .2rem solid #fff;
+    }
+    
+    border-right: none;
 }
 .win-text{
     font-size: 2.4rem;

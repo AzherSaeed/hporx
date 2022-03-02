@@ -11,7 +11,7 @@ export const MarketPlaceSlick = () => {
         arrows: true,
         dots: false,
         infinite: true,
-        autoplay: true,
+        // autoplay: true,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -23,13 +23,13 @@ export const MarketPlaceSlick = () => {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    infinite: true,
+                    // infinite: true,
                     dots: false,
                     arrows: true,
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 700,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

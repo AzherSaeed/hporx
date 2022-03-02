@@ -8,6 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import DesignIQ from './components/DesignIQ/DesignIQ';
 
 
 function App() {
@@ -39,8 +40,14 @@ function App() {
           <Route  path="/home">
           <Homepage2 />
           </Route>  
+          {/* <Route  path="/design-iq">
+          <DesignIQ />
+          </Route>   */}
+          
         </Switch>
       </div>
+          {/* <DesignIQ /> */}
+
     </Router>
   );
 }

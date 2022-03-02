@@ -54,7 +54,7 @@ margin-top: 4.8rem;
 export const MarkSlickImgContainer = styled.div`
 position: relative;
   text-align: center;
-  
+
   .inner-overlay {
     color: white;
     font-size: 2rem;
@@ -74,5 +74,8 @@ position: relative;
 export const MarkSlickImg = styled.img`
 width: 41rem;
 height:29rem;
+@media screen and (max-width:768px) {
+  width: 33.7rem;
+}
 
 `
