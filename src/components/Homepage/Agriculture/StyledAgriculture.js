@@ -47,7 +47,6 @@ margin-top:5.2rem;
 `
 export const AgriculteContainer = styled.div`
 position: relative;
-  text-align: center;
   .overlay {
     position: absolute;
     top: 0;
@@ -86,6 +85,7 @@ line-height: 2.4rem;
 text-align: center;
 color: rgba(255, 255, 255, 0.8);
 margin-top: 0.6rem;
+padding: 0 0.3rem;
     }
    
 }
@@ -102,7 +102,7 @@ position: relative;
   .overlay {
     position: absolute;
     top: 0;
-    bottom: 3rem;
+    bottom: 2rem;
     left: 0;
     right: 0;
     opacity: 0;
@@ -137,6 +137,8 @@ line-height: 2.4rem;
 text-align: center;
 color: rgba(255, 255, 255, 0.8);
 margin-top: 0.6rem;
+padding: 0 0.3rem;
+
     }
    
 }

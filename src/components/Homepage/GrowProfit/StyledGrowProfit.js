@@ -33,12 +33,26 @@ color: #828282;
   margin-top: 5.6rem;
 }
 .grow-profit-slick  .slick-next {
-    right: 4rem;
-    z-index: 1;
+  left: 50%;
+  
+  transform: translate(5rem,36rem);
+  z-index: 1;
+
+  &:before {
+    font-size: 4rem !important;
+    color: black;
+}
 }
 .grow-profit-slick  .slick-prev {
-    left: 2.1rem;
-    z-index:1;
+  left: 50%;
+  
+  transform: translate(0rem,36rem);
+  z-index: 1;
+
+  &:before {
+    font-size: 4rem !important;
+    color: black;
+}
 }
 .grow-profit-slick .slick-prev:before, .grow-profit-slick .slick-next:before {
     font-size: 4rem !important; 

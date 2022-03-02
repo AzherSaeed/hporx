@@ -67,25 +67,36 @@ export const InhalatedImgContainer = styled.div`
           transform: scale(1.1);
         }
       }
-
+/* @media screen and (max-width:480px){
+  h3{
+    line-height: 4rem;
+  }
+  h2{
+    line-height: 3rem;
+  }
+  p{
+    line-height: 1rem; 
+  }
+} */
       h3 {
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 34px;
-        line-height: 71px;
+        font-size: 3.4rem;
+        line-height: 7.1rem;
         color: white;
-      }
-      p {
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 22px;
-        color: white;
-        padding: 0 2rem;
+      
       }
       h2 {
         font-weight: bold;
-        font-size: 30px;
-        line-height: 60px;
+        font-size: 3rem;
+        line-height: 6rem;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: white;
+        padding: 0 2rem;
       }
 
       @media screen and (max-width : 1000px){
@@ -138,4 +149,7 @@ export const InhalateButton = styled(HeroButton)`
   padding: 0.5rem 2rem;
   border: 1px solid black;
   color: black;
+  @media screen and (max-width:480px){
+    margin-top: 1rem;
+  }
 `;

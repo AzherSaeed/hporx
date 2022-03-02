@@ -23,7 +23,7 @@ const AgricultureImgSection = () => {
                                     </div>
                                     <div className='inner-overlay'>
                                         <h3>TITLE HERE</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
 
                                     </div>
                                 </AgriculteContainer>
@@ -42,7 +42,7 @@ const AgricultureImgSection = () => {
                             </div>
                             <div className='inner-overlay'>
                                 <h3>TITLE HERE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
 
                             </div>
                         </AgriculteContainer1>
@@ -54,7 +54,7 @@ const AgricultureImgSection = () => {
                             </div>
                             <div className='inner-overlay'>
                                 <h3>TITLE HERE</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
 
                             </div>
                         </AgriculteContainer>
