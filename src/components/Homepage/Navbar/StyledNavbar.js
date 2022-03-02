@@ -16,9 +16,11 @@ const TopNavBarContainer = styled.div`
     }
   }
 `;
-const HeaderTopBar = styled.div`
-  background: rgba(0, 0, 0, 0.2);
-  opacity: 0.9;
+const HeaderTopBar = styled.div` 
+
+
+
+
   .mr-auto.navbar-nav {
     gap: 2rem;
     align-items: baseline;

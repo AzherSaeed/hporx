@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 function TrendingNow({ heading, imgs }) {
 
   // var settings = {

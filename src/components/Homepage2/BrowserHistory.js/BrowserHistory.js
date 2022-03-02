@@ -73,8 +73,8 @@ function BrowserHistory({ imgs }) {
               }
             }}
             spaceBetween={10}
-            pagination={true}
-            navigation={true}
+            pagination={false}
+            navigation={false}
             modules={[Pagination, Navigation]}
             className="mySwiper"
             slidesPerView={5}

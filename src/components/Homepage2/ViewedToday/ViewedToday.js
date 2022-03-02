@@ -4,6 +4,7 @@ import ViewToday from '../../../assets/ViewToday.svg';
 import { Card} from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 function ViewedToday({heading}) {
 
     const viewTodayImgs = [ViewToday, ViewToday, ViewToday, ViewToday, ViewToday, ViewToday]

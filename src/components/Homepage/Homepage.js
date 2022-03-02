@@ -64,7 +64,6 @@ import FeatureMarketPlace from './FeatureMarketplace/FeatureMarketPlace'
 import SSL from './SSL/SSL'
 import Terms from '../Terms/Terms'
 import Testimonials from './Testimonials/Testimonials'
-import SubBar from './Navbar/SubBar';
 import Quote from './Quote/Quote';
 
 const styles = {
@@ -73,7 +72,7 @@ const styles = {
   borderTop: '1px solid rgba(0, 0, 0, 0.1)',
   padding: ' 0 2rem'
 }
-const Homepage = () => {
+const Homepage = ({country , region}) => {
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
   const giftImgs = [giftCard, giftCard, giftCard, giftCard, giftCard, giftCard]
   const trustedSuppliers = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6]
@@ -83,7 +82,7 @@ const Homepage = () => {
   const aboveCopyrightImgs = [aboveCopyright1, aboveCopyright2, aboveCopyright3, aboveCopyright6, aboveCopyright4, aboveCopyright5, aboveCopyright7, aboveCopyright8,]
   return (
     <>
-      {/* <Header id='HOME' /> */}
+      <Header id='HOME' country={country} state={region} />
       <Inhalate  id="INHALATE" />
       <Vaporize  id="VAPORIZE" />
       <Portable   id="PORTABLES" />
@@ -115,6 +114,7 @@ const Homepage = () => {
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
       <Quote/>
+      {/* <Popup country={props.country} region={props.region}/> */}
     </>
   )
 }

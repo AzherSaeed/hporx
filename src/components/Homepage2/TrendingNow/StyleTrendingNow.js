@@ -1,21 +1,37 @@
 import styled from "styled-components";
 
 export const StyleTrending=styled.div`
-margin-top: 6.4rem;
+.main-section{
+    display:flex;
+    height:6.9rem;
+    border-bottom:.1rem solid #DADADA ;
+    justify-content: space-between;
+}
+.icons{
+    display: felx;
+    cursor: pointer;
+    margin-top: 1rem;
+    
+}
+.icon-images{
+    height: 4rem;
+    width:4rem;
+}
 
 .main-heading{
     font-weight: 500;
     font-size: 3.6rem;
-    line-height: 5.4rem;
+    line-height: 5rem;
     color: #242424;
-    padding-bottom:1.4rem ;
-    border-bottom:.1rem solid #DADADA ;
+    margin-top: 1rem;
+    
 }
 
 .outside-card-text{
     text-align: center;
     font-size: 1.8rem;
     line-height: 2.7rem;
+    /* background-color: red; */
 }
 .card{
   width: 100%;
@@ -25,7 +41,7 @@ margin-top: 6.4rem;
         text-align: center;  
     }
 }
-img{
+.main-img{
     width: 19rem;
     height: 18rem;
     margin: 3.6rem 3rem;

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const FooterMainContainer = styled.div`
 font-style: normal;
-padding: 8.8rem 2rem;
+padding: 0 2rem;
+padding-top: 8rem;
 
 ul{
     padding-left: 0;
