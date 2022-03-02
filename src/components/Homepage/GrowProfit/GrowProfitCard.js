@@ -31,7 +31,6 @@ const GrowProfitCard = () => {
                             <GrowProfitImg className='img-fluid' src={growProfit} alt={growProfit} />
                         </GrowProfitImgContainer>
                     </Col>
-
                 </Row>
 
             </GrowProfitSlickContainer>
