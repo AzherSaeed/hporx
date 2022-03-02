@@ -94,4 +94,9 @@ position: relative;
        opacity: .75
     }
 }
+.msg{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
 `
