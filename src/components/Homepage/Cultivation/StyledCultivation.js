@@ -4,33 +4,19 @@ export const CultivationMainContainer = styled.div`
 margin-top: 12rem;
 text-align: center;
 h3{
-font-size: 3.5rem;
+    font-size: 1.8rem;
+line-height: 27px;
+color: #828282;
 }
+
 p{
-    font-size: 1.6rem;
+    font-size: 3.2rem;
+line-height: 48px;
+opacity: 0.8;
+color: #4F4F4F;
 }
-.cultivation-slick .slick-prev:before, .cultivation-slick .slick-next:before {
-    font-size: 3.5rem !important; 
-    color: white !important;
-    opacity: 1;
-    text-shadow: 0px 2px 6px rgb(0 0 0 / 50%);
-    
-}
-    .cultivation-slick  .slick-next {
-    right:5rem;
-    z-index: 1;
-    
-}
-@media screen and (max-width: 480px) {
-    .cultivation-slick  .slick-next {
-    right:6rem;
-    z-index: 1;
-}
-}
-.cultivation-slick  .slick-prev {
-    left: 1rem;
-    z-index:1;   
-}
+
+
 
 p{
 margin: 0;

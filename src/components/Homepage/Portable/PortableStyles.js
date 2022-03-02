@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { ViewMoreBtn } from "../../Globals/Globals";
 
 export const PortableMainContainer = styled.div`
-margin-top: 12rem;
 .portable-slick .slick-prev:before, .portable-slick .slick-next:before {
     font-size: 3.5rem !important; 
     color: white !important;

@@ -1,6 +1,13 @@
-import { useEffect, useState } from 'react';
+import React ,{ useEffect, useState } from 'react';
 import './App.css';
 import Homepage from './components/Homepage/Homepage';
+import Homepage2 from './components/Homepage2/Homepage2';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
@@ -22,12 +29,19 @@ function App() {
    });
  },[])
 
- console.log(country , state , 'region' );
   return (
-    <>
-    {/* {getLocation()} */}
-   <Homepage country={country} region={state}/>
-    </>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/">
+          <Homepage country={country} region={state}/>
+          </Route>
+          <Route  path="/home">
+          <Homepage2 />
+          </Route>  
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  outline: none;
 }
 
 html {
@@ -23,10 +24,12 @@ img {
 
 .hero-text-container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
   color: white;
 }
 
@@ -39,6 +42,10 @@ img {
   .container-xxl {
     max-width: 1290px !important;
   }
+}
+.box{
+  height: 11rem;
+  background: #F0F0F0;
 }
 @media screen and (max-width: 786px) {
   html {

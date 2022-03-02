@@ -1,13 +1,13 @@
 
 import React from 'react'
-import { FormControl, InputGroup } from 'react-bootstrap'
+import { Form} from 'react-bootstrap'
 
-const InputField = ({placeholder,type}) => {
+const InputField = ({ placeholder, type,label }) => {
   return (
-    <InputGroup size="lg">
-    <FormControl type={type} className='py-4 fs-3' aria-label="Large" 
-     placeholder={placeholder}aria-describedby="inputGroup-sizing-sm" />
-</InputGroup>
+    <Form.Group className="mb-3 subscribe-form" controlId="exampleForm.ControlInput1">
+      <Form.Label className='input-label'>{label}</Form.Label>
+      <Form.Control className='input-field' type={type} placeholder={placeholder} />
+    </Form.Group>
   )
 }
 

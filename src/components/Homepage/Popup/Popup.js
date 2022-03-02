@@ -26,7 +26,7 @@ const[msg,setMsg]=useState('');
              <div className="logo">
                    <img src={Logo1} alt="Logo"/>
             </div>
-            <Button className="btn-close" ></Button>
+            <Button onClick={() => props.setModalShow(false)} className="btn-close" ></Button>
             <Row className="rows">
                     <Col className="borders text-center">
                             <div className=" text-center">
@@ -46,7 +46,7 @@ const[msg,setMsg]=useState('');
                                  </div>
                                  <div class="form-group">
                                  <label for="country" className="mb-2 fw-5 labels">Your State <span className="text-danger">*</span></label>
-                                 <input type="text" class="form-control  inputs"  id="country" name='state' value={props.region} readOnly/>
+                                 <input type="text" class="form-control  inputs"  id="country" name='state' value={props.state} readOnly/>
                                 </div>
                                  <div class="form-group">
                                  <label for="Dob" className="mb-2 fw-5 labels">DOB <span className="text-danger">*</span></label>

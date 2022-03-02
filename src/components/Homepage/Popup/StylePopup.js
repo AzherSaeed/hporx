@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const StylePopup=styled.div`
 background-color: #0a472e;
-margin: 4rem 4rem;
 border-radius: .3rem ;
 color: #fff;
 position: relative;
+padding: 20px;
+border-radius: 30px;
 .logo{
     height: 20rem;
     width :20rem;
@@ -57,7 +58,7 @@ position: relative;
     font-size: 1.6rem;
 }
 .inputs{
-    width:80%;
+    width:100%;
     height:5rem;
     font-size:1.6rem;
 }

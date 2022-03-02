@@ -53,7 +53,7 @@ const imgContainer=[agri1,agri2,agri3,agri4]
       <Slider {...settings} className='chillum-slick'>
           {
               imgContainer.map((img,index)=>(
-                  <div>
+                  <div key={index}>
                   <AgricultureImg key={index} className='img-fluid' src={img} alt={img} />
                   </div>
               ))

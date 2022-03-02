@@ -2,25 +2,8 @@ import styled from "styled-components";
 import { PrimaryHeading, PrimarySubHeading, TertiaryHeading, ViewMoreBtn } from "../../Globals/Globals";
 
 export const VaporizeMainContainer = styled.div`
-margin-top: 9rem;
-font-style: normal;
-.vaporize-slick .slick-prev:before, .vaporize-slick .slick-next:before {
-font-size: 3rem !important;
-color:#0000002e;
-background: #f8f9fa;
-    
-  
-}
+  padding: 5rem 0;
 
-/* .vaporize-slick .slick-next::before {
-    content: url(./assets/images/arrow-next.svg) !important;
-}
-.vaporize-slick .slick-prev::before {
-    content: url(./assets/images/arrow-prev.svg) !important;
-} */
-.vaporize-inner-container{
-    /* padding:0 4rem; */
-}
 `
 
 export const VaporizeSubHeading=styled(TertiaryHeading)`

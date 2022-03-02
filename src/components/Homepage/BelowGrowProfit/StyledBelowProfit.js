@@ -3,7 +3,9 @@ import controlEnvironment from '../../../assets/controlEnvironment.png'
 
 export const BelowGrowProfitMainContainer = styled.div`
 
-margin-top:10rem;
+/* margin-top:10rem; */
+padding-top: 10rem ;
+padding-bottom: 5rem;
 text-align: center;
 
 h2{
@@ -15,12 +17,18 @@ letter-spacing: 0em;
 color: #242424;
 opacity: 0.8;
 padding: 0 3rem;
+
+@media screen and (max-width : 775px){
+  font-size: 2.8rem;
+line-height: 3.6rem;
+
+}
 }
 `
 export const BelowGrowProfitImgContainer = styled.div`
 margin-top: 5.6rem;
 background-image: url(${controlEnvironment}) ;
-height: 72vh;
+/* height: 72vh; */
   background-repeat: no-repeat;
   background-size: cover;
 `
