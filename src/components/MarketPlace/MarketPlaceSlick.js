@@ -2,13 +2,16 @@ import React from "react";
 import Slider from "react-slick";
 import markSlick1 from '../../assets/markSlick.svg';
 import markSlick2 from '../../assets/markSlick2.svg';
-import { MarketSlickContainer, MarkSlickImg } from "./StyledMarketPlace";
+import PlayBtn from "../Globals/PlayBtn";
+import { MarketSlickContainer, MarkSlickImg, MarkSlickImgContainer } from "./StyledMarketPlace";
 
-export const  MarketPlaceSlick = () => {
+export const MarketPlaceSlick = () => {
+    const marketPlaceImgs = [markSlick1, markSlick2, markSlick1, markSlick2,]
     var settings = {
         arrows: true,
         dots: false,
-        infinite: false,
+        infinite: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -19,7 +22,8 @@ export const  MarketPlaceSlick = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: false,
+                    infinite: true,
+                    infinite: true,
                     dots: false,
                     arrows: true,
                 }
@@ -45,19 +49,17 @@ export const  MarketPlaceSlick = () => {
     };
     return (
         <MarketSlickContainer>
-             <Slider {...settings} className='marketplace-slick'>
-                <div>
-                   <MarkSlickImg src={markSlick1} alt={markSlick1}/>
-                </div>
-                <div>
-                   <MarkSlickImg src={markSlick2} alt={markSlick2}/>
-                </div>
-                <div>
-                   <MarkSlickImg src={markSlick1} alt={markSlick1}/>
-                </div>
-                <div>
-                   <MarkSlickImg src={markSlick2} alt={markSlick2}/>
-                </div>
+            <Slider {...settings} className='marketplace-slick'>
+                {
+                    marketPlaceImgs.map((img, index) => (
+                        <MarkSlickImgContainer key={index}>
+                            <div className='inner-overlay'>
+                                <PlayBtn />
+                            </div>
+                            <MarkSlickImg src={img} alt={img} />
+                        </MarkSlickImgContainer>
+                    ))
+                }
             </Slider>
         </MarketSlickContainer>
     )

@@ -6,13 +6,14 @@ import diagnose1 from '../../../assets/Diagnose1.svg'
 import diagnose2 from '../../../assets/Diagnose2.svg'
 import { Container } from 'react-bootstrap';
 import { DiagnoseAppointmentBtn, DiagnoseImg, DiagnoseImgContainer, StyledSlickContainer } from './StyledDiagnose';
-import { AddToCartBtn } from '../../Globals/Globals';
+import { AddToCartBtn, ShopBtnTransparent } from '../../Globals/Globals';
 const DiagnoseSlick = () => {
     const diagnoseImgs = [diagnose1, diagnose2, diagnose1, diagnose2]
     var settings = {
         arrows: true,
         dots: false,
-        infinite: false,
+        infinite: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -23,18 +24,16 @@ const DiagnoseSlick = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: false,
+                    infinite: true,
                     dots: false,
-                    arrows: true,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     initialSlide: 1,
-                    arrows: true,
                 }
             },
             {
@@ -42,7 +41,6 @@ const DiagnoseSlick = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: true,
                 }
             }
         ]
@@ -55,8 +53,13 @@ const DiagnoseSlick = () => {
                         diagnoseImgs.map((img, index) => (
                             <DiagnoseImgContainer key={index}>
                                 <DiagnoseImg src={img} alt={img} />
+                                <div className="overlay">
+                                </div>
                                 <div className='inner-overlay'>
-                                    <AddToCartBtn>Add to Cart</AddToCartBtn>
+                                    <h3>About</h3>
+                                    <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque  </p>
+                                    <p className="price">$450</p>
+                                    <ShopBtnTransparent>Appointment</ShopBtnTransparent>
                                 </div>
                             </DiagnoseImgContainer>
                         ))

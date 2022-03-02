@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { SubBarContainer } from "./StyledNavbar";
 import { Link, animateScroll as scroll } from "react-scroll";
-import {
-
-  Link as ReactLink
-} from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import './SubBar.css';
 import TopBar from '../Navbar/TopBar';
 import Marquee from './Marquee';
 
 
 const SubBar = ({setShow}) => {
+  const history = useHistory()
 
   
   const [navbar, setNavbar] = useState(false)
@@ -67,10 +65,12 @@ const SubBar = ({setShow}) => {
       window.addEventListener("scroll", changeBackground)
     })
   return (
-    <div className={navbar ? 'hporx-header' : 'hporx-header-skew'}  >
+    <div>
       <Marquee/>
+      <TopBar setShow={setShow}  />
+
+      <div className={navbar ? 'hporx-header' : 'hporx-header-skew'}  >
       <div className={navbar ? 'hporx-header-topbar-skew' : navbarbackground ? 'changetopBArbackgournd' : 'hporx-header-topbar-normal'} >
-        <TopBar setShow={setShow}  />
       </div>
        <nav className={navbarbackground ? 'nav' : 'changebackground'} id="navbar">
       <div className="nav-content">
@@ -83,6 +83,7 @@ const SubBar = ({setShow}) => {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={() => history.push('/home')}
             > HOME </Link>
           </li>
           <li className="nav-item">
@@ -188,6 +189,7 @@ const SubBar = ({setShow}) => {
       </div>
     </nav>
   </div>
+    </div>
   );
 };
 

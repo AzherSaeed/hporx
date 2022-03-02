@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import FooterSection from './FooterSection'
+import FooterSection, { TradingAddress } from './FooterSection'
 import { FooterImg, FooterImg1, FooterMainContainer } from './StyledFooter'
 import './Footer.css';
 import usa from '../../../assets/usa.png'
@@ -102,17 +102,11 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col md={2} sm={6}  xs={12}>
-                        <FooterSection links={tradingAddress} heading={'TRADING ADDRESS'} />
-                        <FooterSection links={registeredAddress} heading={'REGISTERED ADDRESS'} />
+                        <TradingAddress links={tradingAddress} heading={'TRADING ADDRESS'} />
+                        <TradingAddress links={registeredAddress} heading={'REGISTERED ADDRESS'} />
+                        <TradingAddress links={callCenter} heading={'REGISTERED ADDRESS'} />
                         <ul class="list-unstyled footer-ul">
-                            <li>
-                                <p>
-                                    World Trade Center Barcelona
-                                    Muelle de Barcelona
-                                    Moll de Barcelona, s/n,
-                                    08039 Barcelona, Spain
-                                </p>
-                            </li>
+                            
                             <li class="mb-1">
                                 <span>
                                     <FooterImg className='img-fluid'  src={usa} alt={usa} /><span class="footer-span">+1 (213) 370

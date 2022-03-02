@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 export const BrowserHistoryMain=styled.div`
 margin-top: 4.8rem;
+
 .main-heading{
 font-size: 3.6rem;
 font-style: normal;
@@ -13,7 +14,6 @@ border-bottom: 1px solid #DADADA ;
 }
 `
 export const BrowserHistoryImg=styled.img`
-width: 22rem;
 height:21rem;
 `
 export const BroswerSlick=styled.div`

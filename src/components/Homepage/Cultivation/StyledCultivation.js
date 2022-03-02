@@ -8,16 +8,12 @@ h3{
 line-height: 27px;
 color: #828282;
 }
-
 p{
     font-size: 3.2rem;
 line-height: 48px;
 opacity: 0.8;
 color: #4F4F4F;
 }
-
-
-
 p{
 margin: 0;
 font-size: 3.2rem;
@@ -28,19 +24,27 @@ letter-spacing: 0em;
 color:#4F4F4F;
 ;
 }
-
 `
 export const CultivationImgContainer = styled.div`
 position:relative;
 transition: .5s ease;
 margin-top: 3.5rem;
 text-align: -webkit-center;
-background: #F7F7F7;
 .product-description{
    p{
     text-align: center;
    }
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+    /* background-color: rgba(0,0,0,.1); */
+  }
 .inner-overlay{
   color: white;
   position: absolute;
@@ -51,7 +55,7 @@ background: #F7F7F7;
   transform: translate(-50%, -50%);
   opacity: 0;
   }
-   &:hover,  &:hover .inner-overlay{
+   &:hover,  &:hover .inner-overlay ,&:hover .overlay{
         opacity: 1;
         
     }

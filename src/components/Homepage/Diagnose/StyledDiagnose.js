@@ -25,24 +25,53 @@ opacity: 0.8;
 
 `
 export const DiagnoseImgContainer = styled.div`
-h4{
+position: relative;
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 2.8rem;
+    left: 2rem;
+    right: 2rem;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+.inner-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  h3{
 font-size: 2.8rem;
 font-style: normal;
 font-weight: 500;
 line-height: 4.2rem;
 letter-spacing: 0em;
-color: #333333;
-opacity: 0.8;
+color: #FFFFFF;
+
 }
 p{
 font-size: 1.8rem;
+color: rgba(255, 255, 255, 0.8);
 font-style: normal;
 font-weight: 400;
 line-height: 2.7rem;
 letter-spacing: 0em;
+color: rgba(255, 255, 255, 0.8);
+padding:0 3rem;
 
 
 }
+  }
+   &:hover,  &:hover .inner-overlay ,&:hover .overlay{
+        opacity: 1;
+        
+    }
+
 `
 export const DiagnoseAppointmentBtn = styled(AddToCartBtn)`
 margin-top: 3rem;
@@ -56,8 +85,7 @@ border: 1px solid black;
 
 `
 export const DiagnoseImg = styled.img`
-width: 
-63rem;
+
 height: 
 51rem;
 `
@@ -81,9 +109,5 @@ line-height: 2.7rem;
 letter-spacing: 0em;
 
 }
-.diagnose-slick{
-    .slick-list {
-  margin: 0 2rem;
-}
-}
+
 `

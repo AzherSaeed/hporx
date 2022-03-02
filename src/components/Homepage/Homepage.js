@@ -75,7 +75,7 @@ const styles = {
 const Homepage = ({country , region}) => {
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
   const giftImgs = [giftCard, giftCard, giftCard, giftCard, giftCard, giftCard]
-  const trustedSuppliers = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6]
+  const trustedSuppliers = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6]
   const trustedOrganizations = [interOrg1, interOrg2, interOrg3, interOrg4, interOrg5, interOrg1]
   const followUsImgs = [{ img: followUs1, title: 'Twitter' }, { img: followUs2, title: 'Facbook' }, { img: followUs3, title: 'Youtube' }, { img: followUs4, title: 'TencentQQ' }, { img: followUs5, title: 'Vkontakte' }, { img: followUs6, title: 'Messenger' }, { img: followUs7, title: 'Instagram' }, { img: followUs8, title: 'LinkedIn' },]
   const hygieImgs = [{ img: hygie1, title: 'Europe' }, { img: hygie2, title: 'USA' }, { img: hygie3, title: 'Canada' }, { img: hygie4, title: 'Qatar' }, { img: hygie5, title: 'Dubai' }, { img: hygie6, title: 'Spain' }, { img: hygie7, title: 'Qatar' }, { img: hygie8, title: 'Spain' }, { img: hygie9, title: 'Dubai' }]

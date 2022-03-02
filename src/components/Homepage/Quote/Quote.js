@@ -1,4 +1,5 @@
 import React , {useState , useEffect} from "react";
+import { Container } from "react-bootstrap";
 import { QuoteContainer } from "./StyledQuote";
 
 
@@ -34,6 +35,7 @@ const Quote = () => {
 
 
   return (
+    <Container>
     <QuoteContainer>
 
       <div className="controles-button">
@@ -55,6 +57,7 @@ const Quote = () => {
         <div className="controles-button-quote">&rdquo;</div>
       </div>    
     </QuoteContainer>
+    </Container>
   );
 };
 

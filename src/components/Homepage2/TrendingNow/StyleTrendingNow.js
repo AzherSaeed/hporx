@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const StyleTrending=styled.div`
-<<<<<<< HEAD:src/components/Homepage2/TrendingNow/StyleTrendingNow.js
-margin-top: 6.4rem;
-=======
 .main-section{
     display:flex;
     height:6.9rem;
@@ -20,13 +17,13 @@ margin-top: 6.4rem;
     height: 4rem;
     width:4rem;
 }
->>>>>>> tabash-branch:src/components/Homepage/TrendingNow/StyleTrendingNow.js
 
 .main-heading{
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 5rem;
     color: #242424;
+    margin-top: 1rem;
     
 }
 
@@ -37,12 +34,7 @@ margin-top: 6.4rem;
     /* background-color: red; */
 }
 .card{
-<<<<<<< HEAD:src/components/Homepage2/TrendingNow/StyleTrendingNow.js
   width: 100%;
-=======
-    width: 27rem;  
-    height: 40.16rem;
->>>>>>> tabash-branch:src/components/Homepage/TrendingNow/StyleTrendingNow.js
     border:.1rem solid #DADADA ;
     border-radius: 0.3rem;
     @media screen and (max-width:480px) {

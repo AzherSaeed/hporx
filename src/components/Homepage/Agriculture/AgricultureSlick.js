@@ -6,10 +6,11 @@ import agri1 from '../../../assets/agri1.svg';
 import agri2 from '../../../assets/agri2.svg';
 import agri3 from '../../../assets/agri3.svg';
 import agri4 from '../../../assets/agri4.svg';
-import { AgricultureImg, SlickMainContainer } from './StyledAgriculture';
+import agri5 from '../../../assets/agri5.svg';
+import { AgricultureImg, AgricultureImg1, SlickMainContainer } from './StyledAgriculture';
 
 const AgricultureSlick = () => {
-const imgContainer=[agri1,agri2,agri3,agri4]
+
   var settings = {
     dots: false,
     arrows: true,
@@ -51,13 +52,12 @@ const imgContainer=[agri1,agri2,agri3,agri4]
   return (
     <SlickMainContainer>
       <Slider {...settings} className='chillum-slick'>
-          {
-              imgContainer.map((img,index)=>(
-                  <div key={index}>
-                  <AgricultureImg key={index} className='img-fluid' src={img} alt={img} />
-                  </div>
-              ))
-          }
+        <AgricultureImg className='img-fluid' src={agri1} alt={agri1} />
+        <AgricultureImg className='img-fluid' src={agri2} alt={agri2} />
+        <AgricultureImg className='img-fluid' src={agri3} alt={agri3} />
+        <AgricultureImg1 className='img-fluid' src={agri4} alt={agri4} />
+        <AgricultureImg className='img-fluid' src={agri5} alt={agri5} />
+
       </Slider>
     </SlickMainContainer>
   )
