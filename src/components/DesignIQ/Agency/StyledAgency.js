@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AgencyMainContainer=styled.div`
+margin-top: 5rem;
 .first-para{
 font-size: 1.6rem;
 font-style: normal;

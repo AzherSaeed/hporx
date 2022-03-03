@@ -76,7 +76,7 @@ import { AgencyMainContainer, DesignIQContainer } from './StyledAgency';
 const Agency = () => {
     return (
         <AgencyMainContainer>
-            <div className="container agency">
+            <div className="container agency mt-8-4">
                 <div className="row justify-content-center my-4 ">
                     <div className=" col-11 col-lg-6 mb-4 mb-lg-0 position-relative">
                         <img width="100%" height="100%" src={image7} alt="image7" />
@@ -114,7 +114,7 @@ const Agency = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className="text-center">Design iQ</h1>
+                <h1 className="text-center mt-8-7">Design iQ</h1>
                 <div className="row my-4 justify-content-center">
                     <div className="col">
                         <img src={image8} alt="agency" width="100%" />

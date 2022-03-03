@@ -33,7 +33,12 @@
     word-break: break-all;
  }
  
- 
+ .mt-8-4{
+    margin-top: 8.4rem;
+ }
+ .mt-8-7{
+   margin-top: 8.7rem;
+ }
  
  .opacity80 {
     opacity: 80%;
