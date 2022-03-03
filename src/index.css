@@ -33,20 +33,18 @@ img {
   color: white;
 }
 
-@media screen and (min-width: 1400px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1290px !important;
-  }
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1290px !important;
 }
-.box{
+/* .box{
   height: 11rem;
   background: #F0F0F0;
-}
+} */
 @media screen and (max-width: 786px) {
   html {
     font-size: 52%;

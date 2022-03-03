@@ -2,6 +2,7 @@ import React ,{ useEffect, useState } from 'react';
 import './App.css';
 import Homepage from './components/Homepage/Homepage';
 import Homepage2 from './components/Homepage2/Homepage2';
+import AgenciesShowCase from './components/AgenciesPage/AgenciesShowCase/AgenciesShowCase';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,18 +31,19 @@ function App() {
  },[])
 
   return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/">
-          <Homepage country={country} region={state}/>
-          </Route>
-          <Route  path="/home">
-          <Homepage2 />
-          </Route>  
-        </Switch>
-      </div>
-    </Router>
+    <AgenciesShowCase/>
+    // <Router>
+    //   <div>
+    //     <Switch>
+    //       <Route exact path="/">
+    //       <Homepage country={country} region={state}/>
+    //       </Route>
+    //       <Route  path="/home">
+    //       <Homepage2 />
+    //       </Route>  
+    //     </Switch>
+    //   </div>
+    // </Router>
   );
 }
 
