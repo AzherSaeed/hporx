@@ -46,7 +46,9 @@ import aboveCopyright5 from '../../assets/aboveCopyright5.svg';
 import aboveCopyright6 from '../../assets/aboveCopyright6.svg';
 import aboveCopyright7 from '../../assets/aboveCopyright7.svg';
 import aboveCopyright8 from '../../assets/aboveCopyright8.svg';
-import FollowUs from '../Homepage/FollowUs/FollowUs'
+import FollowUs from '../Homepage/FollowUs/FollowUs';
+import AgenciesHeader from '../AgenciesPage/AgenciesHeader/AgenciesHeader';
+
 
 const Homepage2 = () => {
     const styles = {
@@ -66,6 +68,7 @@ const Homepage2 = () => {
 
     return (
         <>
+          <AgenciesHeader/>
            <HempProduct/>
            <ViewTodayContainer>
          <ViewedToday heading='Everything you viewed today' />

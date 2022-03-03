@@ -45,8 +45,6 @@ const AgenciesShowCase = () => {
 			</div>
 		</div>
 	</div>
-    <AgenciesFaq/>
-	<MultiEffectSlider/>
 </div>
   )
 }

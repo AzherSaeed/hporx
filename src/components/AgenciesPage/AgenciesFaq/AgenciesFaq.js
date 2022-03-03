@@ -14,12 +14,17 @@ const AgenciesFaq = () => {
   
 
     const [accordianIcon , setAccordianIcon]  = useState(false)
-    const [saveAccordianKey, setsaveAccordianKey] = useState('0')
+    const [saveAccordianKey, setsaveAccordianKey] = useState('')
 
 
     const faqAccordianHandler = (e) => {
-      console.log(e,"tabash");
-      setsaveAccordianKey(e)
+      if(e == saveAccordianKey){
+        setsaveAccordianKey('')
+      }
+      else{
+        setsaveAccordianKey(e)
+
+      }
     }
 
   return (

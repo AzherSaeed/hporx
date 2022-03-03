@@ -42,6 +42,7 @@
 body{
   height: 500rem;
   overflow-x: hidden;
+  padding-right: 0 !important;
 }
 
 *{
