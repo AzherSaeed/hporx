@@ -11,7 +11,7 @@ function Popup(props){
             </div>
             <Button onClick={() => props.setModalShow(false)} className="btn-close" ></Button>
             <Row className="rows">
-                    <Col className="borders text-center">
+                    <Col  lg={6} xs={12}  className="borders text-center">
                             <div className=" text-center">
                                 <h5 className="win-text">Win</h5>
                                 <h2 className="price-style">1000 <span className="dollar-sign">$</span></h2>
@@ -20,7 +20,7 @@ function Popup(props){
                                 <Button className="btn choose-file">Choose file</Button>
                             </div>
                     </Col>
-                    <Col className="">
+                    <Col  lg={6} xs={12}  >
                             <div className="dateofbirth mb-5 text-center">Please Select you Date of birth</div>
                             <form>
                                  <div class="form-group">

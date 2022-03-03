@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import DesignIQ from './components/DesignIQ/DesignIQ';
 
 
 function App() {
@@ -31,19 +32,24 @@ function App() {
  },[])
 
   return (
-    <AgenciesShowCase/>
-    // <Router>
-    //   <div>
-    //     <Switch>
-    //       <Route exact path="/">
-    //       <Homepage country={country} region={state}/>
-    //       </Route>
-    //       <Route  path="/home">
-    //       <Homepage2 />
-    //       </Route>  
-    //     </Switch>
-    //   </div>
-    // </Router>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/">
+          <Homepage country={country} region={state}/>
+          </Route>
+          <Route  path="/home">
+          <Homepage2 />
+          </Route>  
+          {/* <Route  path="/design-iq">
+          <DesignIQ />
+          </Route>   */}
+          
+        </Switch>
+      </div>
+          {/* <DesignIQ /> */}
+
+    </Router>
   );
 }
 

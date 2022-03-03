@@ -202,3 +202,39 @@
     background-size: contain;
     padding: 2.5rem;
   }
+
+  /* this icon for grow-profit slick */
+  @media screen and (max-width:900px) {
+    .grow-profit-slick  .slick-prev {
+      left: 10px !important;
+      z-index: 1;    
+    }
+  }
+  .grow-profit-slick  .slick-prev {
+    
+    z-index: 1;    
+  }
+
+  .grow-profit-slick .slick-prev:before {
+    content: '' !important;
+    background-image: url(../../../assets/left-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+  
+  .grow-profit-slick .slick-next {
+    right: 25px !important;
+    z-index: 1;
+  }
+
+  .grow-profit-slick .slick-next:before {
+    content: '' !important;
+    background-image: url(../../../assets/right-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+  

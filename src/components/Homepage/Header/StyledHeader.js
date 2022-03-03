@@ -7,6 +7,7 @@ const StyledHero = styled.div`
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
+
 `
 const HeroHeading = styled.h3`
 margin-top: 4rem;

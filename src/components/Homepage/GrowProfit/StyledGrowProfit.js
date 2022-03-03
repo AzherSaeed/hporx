@@ -29,7 +29,8 @@ letter-spacing: 0em;
 color: #828282;
 
 }
-.grow-profit-slick {
+@media screen and (min-width:900px){
+  .grow-profit-slick {
   margin-top: 5.6rem;
 }
 .grow-profit-slick  .slick-next {
@@ -45,7 +46,6 @@ color: #828282;
 }
 .grow-profit-slick  .slick-prev {
   left: 50%;
-  
   transform: translate(0rem,36rem);
   z-index: 1;
 
@@ -57,7 +57,9 @@ color: #828282;
 .grow-profit-slick .slick-prev:before, .grow-profit-slick .slick-next:before {
     font-size: 4rem !important; 
 }
+}
 `
+
 export const GrowProfitViewMore=styled(ViewMoreBtn)`
 margin-top: 3.3rem;
 margin-left: 2.4rem;

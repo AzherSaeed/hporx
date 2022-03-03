@@ -3,8 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GrowProfitCard from './GrowProfitCard';
-import { Container } from 'react-bootstrap';
-
 
 const GrowProfitSlick = () => {
 
@@ -12,7 +10,7 @@ const GrowProfitSlick = () => {
         dots: false,
         infinite: true,
         autoplay: true,
-        arrows : false,
+        arrows : true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
