@@ -10,8 +10,8 @@ const OurPackages = () => {
     var settings = {
         dots: false,
         arrows: true,
-        infinite: true,
-        autoplay: true,
+        // infinite: true,
+        // autoplay: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,

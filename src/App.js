@@ -35,19 +35,19 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/">
+          {/* <Route exact path="/">
           <Homepage country={country} region={state}/>
           </Route>
           <Route  path="/home">
           <Homepage2 />
-          </Route>  
+          </Route>   */}
           {/* <Route  path="/design-iq">
           <DesignIQ />
           </Route>   */}
           
         </Switch>
       </div>
-          {/* <DesignIQ /> */}
+          <DesignIQ />
 
     </Router>
   );

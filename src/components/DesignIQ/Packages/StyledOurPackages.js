@@ -1,6 +1,14 @@
 import styled from "styled-components";
-
 export const PackagesCardMain = styled.div`
+@media screen and (max-width:525px) {
+    .packages-slick{
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    .hnIGG{
+        margin-left: 0;
+    }
+}
 margin-top: 4.1rem;
 .main-heading{
 font-size: 3.6rem;
@@ -32,13 +40,13 @@ padding: 2.9rem 0 2.8rem 2.5rem;
 
 `
 export const PackageNameBox = styled.div`
-height: 10.3rem;
+min-height: 10.3rem;
 background: #E84025;
 border-radius: 6px 6px 0px 0px;
 color: #FFFFFF;
-padding: 2.9rem 0 2.1rem 2.5rem;
+padding: 2.9rem  2.4rem;
 h3{
-
+    
 font-size: 20px;
 font-weight: 600;
 line-height: 18px;
@@ -74,7 +82,7 @@ width:
 height: 
 4.1rem;
 margin-top: 4.6rem;
-padding: 10px 24px 10px 24px;
+padding: .7rem 2.4rem;
 background: #E84025;
 border-radius: 0.6rem;
 font-size: 1.6rem;
@@ -83,4 +91,5 @@ line-height: 2.6rem;
 letter-spacing: 0em;
 text-align: center ;
 color: #FFFFFF;
+
 `
