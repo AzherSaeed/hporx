@@ -4,7 +4,7 @@ import showCase from '../../../assets/showCase.svg';
 import { Container } from 'react-bootstrap';
 const ShowCase = () => {
     return (
-        <Container fluid>
+        <Container fluid className='p-0'>
             <ShowCaseMain>
                 <ShowCaseImg src={showCase} src={showCase} />
             </ShowCaseMain>
