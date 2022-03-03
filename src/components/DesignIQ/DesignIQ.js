@@ -7,8 +7,8 @@ const DesignIQ = () => {
   return (
     <>
     <BelowEditIQ/>
-    <ShowCase/>
-    <OurPackages/>
+    {/* <ShowCase/>
+    <OurPackages/> */}
     </>
   )
 }
