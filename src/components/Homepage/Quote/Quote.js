@@ -1,5 +1,6 @@
 import React , {useState , useEffect} from "react";
 import { Container } from "react-bootstrap";
+import Quotation from "../Header/Quotation/Quotation";
 import { QuoteContainer } from "./StyledQuote";
 
 
@@ -52,7 +53,7 @@ const Quote = () => {
             alt="voice"
           />
         )}
-         
+         <Quotation/>
         </div>
         <div className="controles-button-quote">&rdquo;</div>
       </div>    

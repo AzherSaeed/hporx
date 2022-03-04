@@ -11,6 +11,7 @@ import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
 import MyVerticallyCenteredModal from './Modal';
+import Quotation from "./Quotation/Quotation";
 
 
 const Header = ({id , country , state}) => {
@@ -33,6 +34,7 @@ const Header = ({id , country , state}) => {
       <SubBar setShow={setShow}  />
       <div className="hero-text-container">
         <HomePlayButtonContainer onClick={() => setModalShow(true)} >
+        
           <HeroPlayIcon src={playIcon} />
         </HomePlayButtonContainer>
         <HeroHeading>THERAPEUTICS</HeroHeading>
