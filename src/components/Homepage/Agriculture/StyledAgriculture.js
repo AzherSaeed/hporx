@@ -102,10 +102,11 @@ position: relative;
   .overlay {
     position: absolute;
     top: 0;
-    bottom: 2rem;
     left: 0;
+    bottom:0;
     right: 0;
     opacity: 0;
+    height: 95%;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
   }

@@ -20,7 +20,6 @@ const InhalateSlick = () => {
     autoplay: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,

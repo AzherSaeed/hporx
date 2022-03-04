@@ -2,7 +2,16 @@ import styled from 'styled-components';
 import styles from 'styled-components';
 
 const StyleDesignShowcase=styled.div`
-margin-top: 5rem;
+margin-top: 9rem;
+h3{
+font-size: 3.6rem;
+font-style: normal;
+font-weight: 500;
+line-height: 5.4rem;
+letter-spacing: 0em;
+color: #333333;
+text-align: center;
+}
 .swiper-slide{
     background-position: center;
     background-size: 100%;
@@ -41,3 +50,6 @@ margin-top: 5rem;
 `
 
 export default StyleDesignShowcase;
+export const StyleDesignInner=styled.div`
+margin-top: 6rem;
+`

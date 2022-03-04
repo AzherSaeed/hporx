@@ -6,7 +6,7 @@ import support1 from "../../../assets/support-svgrepo-com 1.png";
 import image8 from "../../../assets/image 8.png";
 
 import "./Agency.css";
-import { AgencyMainContainer, DesignIQContainer } from "./StyledAgency";
+import { AgencyMainContainer, DesignIQContainer, DesignIQHead, DesignIQInner } from "./StyledAgency";
 const Agency = () => {
   return (
     <AgencyMainContainer>
@@ -24,7 +24,7 @@ const Agency = () => {
             </p>
             <div className="d-flex justify-content-start align-items-start mt2rem">
               <div className="me-2">
-                <img src={arrowGrowth} alt="agency" />
+                <img className="surprise-img" src={arrowGrowth} alt="agency" />
               </div>
               <div>
                 <h3 className="h3">Fast & Reliable Dealings</h3>
@@ -37,7 +37,7 @@ const Agency = () => {
             </div>
             <div className="d-flex justify-content-start align-items-start mt2rem">
               <div className="me-2">
-                <img src={shield1} alt="agency" />
+                <img className="surprise-img" src={shield1} alt="agency" />
               </div>
               <div>
                 <h3 className="h3">Fast & Reliable Dealings</h3>
@@ -50,7 +50,7 @@ const Agency = () => {
 
             <div className="d-flex justify-content-start align-items-start mt2rem">
               <div className="me-2">
-                <img src={support1} alt="agency" />
+                <img className="surprise-img" src={support1} alt="agency" />
               </div>
               <div>
                 <h3 className="h3">Live chat support 24/7 Available</h3>
@@ -62,12 +62,14 @@ const Agency = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-center mt-8-7">Design iQ</h1>
-        <div className="row my-4 justify-content-center">
+        <DesignIQHead className="text-center mt-8-7">Design iQ</DesignIQHead>
+        <DesignIQInner>
+        <div className="row  justify-content-center">
           <div className="col">
             <img src={image8} alt="agency" width="100%" />
           </div>
         </div>
+        </DesignIQInner>
       </div>
     </AgencyMainContainer>
   );

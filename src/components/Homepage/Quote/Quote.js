@@ -53,7 +53,7 @@ const Quote = () => {
             alt="voice"
           />
         )}
-         <Quotation/>
+         {/* <Quotation/> */}
         </div>
         <div className="controles-button-quote">&rdquo;</div>
       </div>    

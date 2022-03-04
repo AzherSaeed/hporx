@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const StyleDesignServices=styled.div`
+margin-top: 17rem;
 .bgcolor{
 background-color: #FCFBFB;
 }
 .main-heading{
-    padding-top: 7.4rem;
+    /* padding-top: 7.4rem; */
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 5.4rem; 

@@ -2,6 +2,11 @@ import styled from "styled-components";
 import { HeroButton } from "../../Homepage/Header/StyledHeader";
 
 export const InhalateMainContainer = styled.div`
+.inhalate-slick{
+  .slick-list {
+  margin: 0 10px;
+}
+}
   margin-top: 8.5rem;
   font-style: normal;
   text-align: center;
@@ -32,9 +37,8 @@ export const InhalatedImgContainer = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 1rem;
-    right: 1rem;
-
+    left: 3;
+    right: 3;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
@@ -67,7 +71,7 @@ export const InhalatedImgContainer = styled.div`
           transform: scale(1.1);
         }
       }
-/* @media screen and (max-width:480px){
+@media screen and (max-width:480px){
   h3{
     line-height: 4rem;
   }
@@ -77,7 +81,7 @@ export const InhalatedImgContainer = styled.div`
   p{
     line-height: 1rem; 
   }
-} */
+}
       h3 {
         text-transform: uppercase;
         font-weight: 600;

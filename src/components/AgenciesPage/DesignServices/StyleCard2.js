@@ -5,7 +5,7 @@ h1{
     font-size: 4rem;
 }
 .rows{
-    margin-top: 6rem;
+    margin-top: 13rem;
 }
 .icon-img{
     width:4rem;

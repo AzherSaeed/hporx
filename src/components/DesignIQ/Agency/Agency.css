@@ -34,7 +34,7 @@
  }
  
  .mt-8-4{
-    margin-top: 8.4rem;
+    margin-top: 6rem;
  }
  .mt-8-7{
    margin-top: 8.7rem;
@@ -42,6 +42,10 @@
  
  .opacity80 {
     opacity: 80%;
+ }
+ .surprise-img{
+    width: auto;
+    height: auto;
  }
  .first-para{
     font-size: 1.6rem;
@@ -77,6 +81,18 @@
     font-weight: 500;
     padding: 1.3rem 1.92rem;
     width: fit-content;
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1rem;
+letter-spacing: 0em;
+text-align: center;
+text-decoration: none;
+
+
+ }
+ .btnGraphics:hover{
+    color: #E84025;
  }
  
  .designIq-container-second {

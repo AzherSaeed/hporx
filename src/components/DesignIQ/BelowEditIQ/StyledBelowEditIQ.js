@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
-export const BelowEditIQMain=styled.div`
+export const BelowEditIQMain = styled.div`
 margin-top: 9rem;
+@media screen and (max-width:480px) {
+    margin-top: 3rem;
+}
 `
-export const BelowEditIQImgContainer=styled.div`
+export const BelowEditIQImgContainer = styled.div`
 position: relative;
 
 
 `
-export const BelowEditIQImg=styled.img`
+export const BelowEditIQImg = styled.img`
 
 `
-export const BelowEditIQVideo=styled.div`
+export const BelowEditIQVideo = styled.div`
 video{
     transform: translateX(16%) translateY(-9%) !important;
     border-radius: 10px;

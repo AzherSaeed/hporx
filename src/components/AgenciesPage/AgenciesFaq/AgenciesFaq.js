@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap";
 import faqPlusIcon from "../../../assets/faqPlusIcon.svg";
 import faqMinusIcon from "../../../assets/faqMinusIcon.svg";
-import { AgenciesFaqContainer } from "./AgenciesStyle";
+import { AgenciesFaqContainer, AgenciesFaqMain } from "./AgenciesStyle";
 
 const AgenciesFaq = () => {
   
@@ -30,7 +30,10 @@ const AgenciesFaq = () => {
     console.log('e-->2',saveAccordianKey )
 
   return (
+    
     <Container>
+      <AgenciesFaqMain>
+      <h3 className="faq-head">Frequently Asked Questions</h3>
       <AgenciesFaqContainer>
         <Accordion  defaultActiveKey={[0]} alwaysOpen>
           {
@@ -51,9 +54,10 @@ const AgenciesFaq = () => {
             </Accordion.Item>
             ))
           }
-        
         </Accordion>
       </AgenciesFaqContainer>
+      </AgenciesFaqMain>
+      
     </Container>
   );
 };

@@ -11,7 +11,6 @@ import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
 import MyVerticallyCenteredModal from './Modal';
-import Quotation from "./Quotation/Quotation";
 
 
 const Header = ({id , country , state}) => {

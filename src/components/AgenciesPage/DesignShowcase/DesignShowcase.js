@@ -3,7 +3,7 @@ import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css';
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
-import StyleDesignShowcase from './StyleDesignShowcase';
+import StyleDesignShowcase, { StyleDesignInner } from './StyleDesignShowcase';
 
 import SwiperCore,{EffectCoverflow,Pagination,Navigation,Keyboard,Mousewheel} from 'swiper/core';
 
@@ -24,7 +24,9 @@ SwiperCore.use([EffectCoverflow,Pagination,Navigation,Keyboard,Mousewheel]);
 function DesignShowcase(){
     return (
     <StyleDesignShowcase>
-            <div className="container">
+        <h3>Designer Showcase</h3>
+        <StyleDesignInner>
+        <div className="container">
                 <Swiper navigation={false} effect={"coverflow"}
                  centeredSlides={true}
                   slidesPerView={3}
@@ -70,6 +72,8 @@ function DesignShowcase(){
                    <SwiperSlide><img src={banner11}/></SwiperSlide>
                   </Swiper>
             </div>
+        </StyleDesignInner>
+           
     </StyleDesignShowcase>);
 }
 

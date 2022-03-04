@@ -2,7 +2,7 @@ import styled from "styled-components";
 import TestimonialBackground from '../../../assets/TestimonialBackground.png';
 
 export const Testimonial = styled.div`
-
+margin-top: 16rem;
 .background{
     background-image: 
     url(${TestimonialBackground});
@@ -29,7 +29,6 @@ h1{
     margin-top: 5.8rem;
 }
 .Card{
-    width: 40.9rem;
     height: 50rem;    
 }
 

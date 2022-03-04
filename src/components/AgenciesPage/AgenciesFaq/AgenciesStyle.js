@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+
+export const AgenciesFaqMain = styled.div`
+margin-top: 9rem;
+.faq-head{
+font-size: 3.6rem;
+font-style: normal;
+font-weight: 500;
+line-height: 5.4rem;
+letter-spacing: 0em;
+text-align: center;
+color: #333333;
+}
+`
 export const AgenciesFaqContainer = styled.div`
   .accordion-button {
     background: white;
@@ -47,7 +60,7 @@ export const AgenciesFaqContainer = styled.div`
 font-size: 17px;
 line-height: 24px;
 color: #54595F;
-padding: 2rem;
+padding: 0 2rem;
   }
   .agencies-fag-button {
     background: none;

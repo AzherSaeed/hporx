@@ -57,5 +57,4 @@ const HeroPlayIcon = styled.img`
 height :  16.43px
   `
 
-export { StyledHero, HeroHeading, HeroButton, HeroPlayIcon , HomePlayButtonContainer }
- 
+export { StyledHero, HeroHeading, HeroButton, HeroPlayIcon, HomePlayButtonContainer }

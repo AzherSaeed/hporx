@@ -39,8 +39,8 @@ const MultiEffectSlider = () => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
+      <div className="mt-11-8">
       <div class="model-before-afters">
-     
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 mod-img">
@@ -76,6 +76,7 @@ const MultiEffectSlider = () => {
         </div>
       </div>
     </div>
+      </div>
     </div>
   );
 };

@@ -113,11 +113,12 @@ export const PlayBtnContainer = styled.div`
     border: none;
     border-radius: 50%;
     background-color: white;
+    padding: 0.4rem;
   }
 
 `
 export const PlayBtnImg = styled.img`
-padding: 1.2rem 1rem;
+padding: 1.2rem;
 transition: all .8s;;
 &:hover{
   transform: scale(1.1);
