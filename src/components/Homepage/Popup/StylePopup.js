@@ -5,11 +5,15 @@ background-color: #0a472e;
 border-radius: .3rem ;
 color: #fff;
 position: relative;
-padding: 20px;
+padding: 15px;
 border-radius: 30px;
+height: 100%;
 .logo{
-    height: 20rem;
-    width :20rem;
+    width :15rem;
+}
+
+.local-prize-container{
+    margin: 3rem;
 }
 .borders{
     @media screen and (min-width:992px) {
@@ -23,7 +27,7 @@ border-radius: 30px;
     font-weight: 500;
 }
 .price-style{
-    font-size: 10rem;
+    font-size: 9rem;
     font-weight: 600;
     line-height: 9rem;
 }
@@ -48,11 +52,9 @@ border-radius: 30px;
     padding: .6rem 2.4rem;
     font-size: 1.6rem;
     background-color: #0a472e;
-    margin-bottom: 8rem;
 }
 .dateofbirth{
-    font-size: 2.4rem;
-    margin-top: -5rem;
+    font-size: 1.8rem;
 }
 .form-group{
     margin: 2rem 6rem;
@@ -71,18 +73,18 @@ border-radius: 30px;
     background: #6fa871;
     font-weight: 700;
     color: #fff;
-    border: 0;
+    border: none;
     border-radius: 0.25rem;
     cursor: pointer;
     padding: 1rem .5rem;
-    margin-top: 6rem;
+    margin-top: 3.5rem;
+    border: 1px solid transparent;
     &:hover{
-        border: .3rem solid white;
+        background: #0a472e;
+        border: 1px solid white;
     }
 }
-.rows{
-    margin-top: -7rem;
-}
+
 .btn-close{
     width: 3.5rem;
     height: 3.5rem;
@@ -98,5 +100,10 @@ border-radius: 30px;
         text-decoration: none;
        opacity: .75
     }
+}
+.msg{
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
 }
 `

@@ -135,7 +135,7 @@ color: white;
   cursor: pointer;
   &:hover{
     background-color: #E84025;
-border: 2px solid orangered;
+border: 2px solid #E84025;
     color: white;
   }   
 `
@@ -149,7 +149,7 @@ color: white;
   cursor: pointer;
   &:hover{
     background-color: #E84025;
-border: 2px solid orangered;
+border: 2px solid #E84025;
     color: white;
   }   
 `

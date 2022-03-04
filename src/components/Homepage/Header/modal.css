@@ -2,6 +2,9 @@
   background-color: transparent !important;
   border: none;
 }
+.homeModalageGater .modal-content{
+  height: auto;
+}
 .sc-gSQFLo {
   height: 100%;
 }

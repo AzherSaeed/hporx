@@ -41,9 +41,12 @@
 
 body{
   height: 500rem;
+  overflow-x: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 *{
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 

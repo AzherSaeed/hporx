@@ -6,7 +6,7 @@ import './modal.css'
 const HomeModal = (props) => {
   return (
     <Modal
-    style={{maxHeight : '800px' }}
+    className='homeModalageGater'
     {...props}
     size="xl"
     aria-labelledby="contained-modal-title-vcenter"

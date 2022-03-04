@@ -29,10 +29,12 @@ const SubBar = ({setShow}) => {
 
   const changenavColor = () => {
     console.log(window.scrollY)
-    if (window.scrollY > 0) {
+    if (window.scrollY > 15) {
       setnavbarbackground(true)
+      setNavbar(true)
     } else {
       setnavbarbackground(false)
+      setNavbar(false)
     }
   }
 
@@ -46,24 +48,24 @@ const SubBar = ({setShow}) => {
 
 
 
-  const changeBackground = () => {
-    window.onwheel = e => {
-      if(e.deltaY >= 0){
-        // Scrolling Down with mouse
-        setNavbar(true)
-      } else {
-        // Scrolling Up with mouse
-        setNavbar(false)
-      }
-    }
-  }
+  // const changeBackground = () => {
+  //   window.onwheel = e => {
+  //     if(e.deltaY >= 0){
+  //       // Scrolling Down with mouse
+  //       setNavbar(true)
+  //     } else {
+  //       // Scrolling Up with mouse
+  //       setNavbar(false)
+  //     }
+  //   }
+  // }
 
 
-    useEffect(() => {
-      changeBackground()
-      // adding the event when scroll change background
-      window.addEventListener("scroll", changeBackground)
-    })
+    // useEffect(() => {
+    //   changeBackground()
+    //   // adding the event when scroll change background
+    //   window.addEventListener("scroll", changeBackground)
+    // })
   return (
     <div>
       <Marquee/>

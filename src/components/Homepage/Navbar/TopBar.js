@@ -7,10 +7,12 @@ import searchIcon from "../../../assets/searchIcon.svg";
 import featherMenu from "../../../assets/Icon feather-menu.svg";
 import warningIcon from "../../../assets/warning-icon.svg";
 import {HeaderTopBar} from './StyledNavbar';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const TopBar = ({setShow}) => {
 
   const [navbar, setNavbar] = useState(false)
+  const history =  useHistory();
 
 
 
@@ -57,7 +59,7 @@ const TopBar = ({setShow}) => {
             <Nav.Link href="#" className="topbar-nav-icon">
               <img className="img-fluid" src={profile}  alt="featherMenu" />
             </Nav.Link>
-            <Nav.Link href="#" className="topbar-nav-icon">
+            <Nav.Link href="#" className="topbar-nav-icon" onClick={() => history.push('/agency')} >
               <img className="img-fluid" src={cart}  alt="featherMenu"/>
             </Nav.Link>
             <Nav.Link href="#" className="topbar-nav-icon">
