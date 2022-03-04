@@ -9,7 +9,7 @@
   .changebackground {
     background-color: transparent;
     width: 100%;
-    padding: 1.5rem;
+    padding-top: 2rem;
     color: #fff;
     opacity: 0.8;
 
@@ -23,6 +23,7 @@
     right: 0;
     z-index: 1000;
     transition: all  .5s linear;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
   .hporx-header-skew{
@@ -32,6 +33,7 @@
     right: 0;
     z-index: 1000;
     transition: all  .5s linear;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
 
@@ -53,11 +55,7 @@
   
   .nav .nav-content {
     max-width: 1290px;
-    padding: 0rem 3rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 100%;
     width: 100%;
     overflow-x: auto;
@@ -66,11 +64,7 @@
   }
   .changebackground .nav-content {
     max-width: 1290px;
-    padding: 0rem 3rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 100%;
     width: 100%;
     overflow-x: auto;
@@ -82,6 +76,9 @@
     text-align: center;
     width: 100%;
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .nav-item {
@@ -91,7 +88,6 @@
     line-height: 24px;
     color: inherit;
     border-bottom: 2px solid transparent;
-
     margin-right: 2.5rem;
  
   }
@@ -102,6 +98,7 @@
     border-bottom: 2px solid #E84025;
     text-decoration: none;
     color: inherit;
+    font-weight: 600;
   }
   
   .nav-item:hover {

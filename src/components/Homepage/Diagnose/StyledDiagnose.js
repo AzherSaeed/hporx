@@ -100,6 +100,7 @@ line-height: 4.2rem;
 letter-spacing: 0em;
 color: #333333;
 opacity: 0.8;
+margin-top: 6rem;
 }
 p{
 font-size: 1.8rem;

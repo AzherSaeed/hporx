@@ -42,7 +42,7 @@ width: 1.4rem;
 
 `
 export const FooterImg1 = styled.img`
-height: 11.6rem;
+
 width: 8rem;
 `
 export const TradingAddressMain = styled.div`

@@ -9,7 +9,7 @@ const Agriculture = () => {
         <AgricultureMainContainer>
             <Container>
                 <PrimaryHeading>
-                    Contained Environment Agriculture Grow
+                    Contained Environment Agriculture
                 </PrimaryHeading>
                 <AgricultureTertiaryHeading>
                     You can grow profit, profit from you grow

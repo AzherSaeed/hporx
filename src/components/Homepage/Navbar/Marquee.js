@@ -6,8 +6,8 @@ import './offCanvas.css'
 
     const MarqueeView = () => {
         return(
-        <div className="container"  style={{background : '#0000003b' , padding : '3px 0' , fontSize : '12px' , color  : 'white' }}>
-            <Marquee gradient={false} pauseOnHover direction="right" speed="70"> simply dummy text of the printing and typesetting industry</Marquee>
+        <div style={{background : '#0000003b' , height : '30px' , fontSize : '12px' , color  : 'white' }}>
+            <Marquee style={{paddingTop : '5px'}} gradient={false} pauseOnHover direction="left" speed="70"> simply dummy text of the printing and typesetting industry</Marquee>
         </div>
         )
     }

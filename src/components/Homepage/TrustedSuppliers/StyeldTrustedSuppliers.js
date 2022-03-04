@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TrustedSuppliersMainContainer = styled.div`
 text-align: center;
+padding: 9rem 0;
 h3{
 font-size: 30px;
 font-style: normal;
@@ -28,4 +29,9 @@ padding: 2rem;
 export const TrustedSuppliersImg = styled.img`
 height: 7rem;
 object-fit: contain;
+`
+
+
+export const TrustedCompanyContainer = styled.div`
+    padding: 3.8rem 0;
 `

@@ -31,6 +31,12 @@ const HeaderTopBar = styled.div`
     }
   }
 
+
+  .topBar-Header{
+    background: rgba(0, 0, 0, 0.2);
+opacity: 0.9;
+  }
+
   .header-topBar-logo {
     width: 147.05px;
     height: 51.35px;

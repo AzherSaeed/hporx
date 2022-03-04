@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MedicineContainerMain = styled.div`
-  margin-top: 3.4rem;
+  margin-top: 9rem;
 `;
 export const MedicineImgContainer = styled.div`
   position: relative;

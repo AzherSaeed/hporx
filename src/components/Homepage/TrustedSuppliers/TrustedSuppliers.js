@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import { TrustedSuppliersImg, TrustedSuppliersImgContainer, TrustedSuppliersMainContainer } from './StyeldTrustedSuppliers';
+import { TrustedSuppliersImg, TrustedSuppliersImgContainer, TrustedSuppliersMainContainer , TrustedCompanyContainer } from './StyeldTrustedSuppliers';
 import { Container } from 'react-bootstrap';
 
 
@@ -49,7 +49,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
     };
     return (
         <Container>
-            <TrustedSuppliersMainContainer>
+            <TrustedCompanyContainer>
                 <h3>{head}</h3>
                 <Slider {...settings} className='trusted-suppliers-slick'>
                     {imgs.map((supplierImg, index) => (
@@ -61,7 +61,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
                     ))
                     }
                 </Slider>
-            </TrustedSuppliersMainContainer>
+            </TrustedCompanyContainer>
         </Container>
     )
 }

@@ -38,12 +38,11 @@ const TopBar = ({setShow}) => {
 
 
 
-    console.log(navbar , 'navbar');
 
 
   return (
     <HeaderTopBar>
-      <div className={navbar ? 'skewNavbar' : 'normalNavbar'} >
+      <div className='topBar-Header' >
       <Navbar bg="transparent" variant="dark">
         <Container>
           <Navbar.Brand href="#">

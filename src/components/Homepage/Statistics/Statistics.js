@@ -19,27 +19,27 @@ const Statistics = () => {
         p1: 'Medical marijuana',
         p2: 'Industry Valuation',
     }, {
-        image: static2,
+        image: static1,
         revenue: '67',
         mini: '',
         p1: 'Awarded Licenses in',
-        p2: 'fourtenses in fourtenn status',
+        p2: 'fourtenses in fourtenn',
     }, {
-        image: static3,
+        image: static2,
         revenue: '4,781',
         mini: '',
 
         p1: 'Thousand ft2 of',
         p2: 'cultivation space builtv',
     }, {
-        image: static4,
+        image: static3,
         revenue: '150t',
         mini: '',
 
         p1: 'Tons od solids',
         p2: 'produced',
     }, {
-        image: static5,
+        image: static4,
         revenue: '400%',
         mini: '',
 
@@ -49,7 +49,7 @@ const Statistics = () => {
     return (
         <StatisticsMainContainer>
             <Container>
-                <PrimaryHeading>Statistics</PrimaryHeading>
+                <h1>Statistics</h1>
                 <Row className=' p-0 '>
                     {
                         cards.map((data, index) => {

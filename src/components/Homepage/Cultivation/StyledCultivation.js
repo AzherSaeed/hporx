@@ -30,6 +30,7 @@ position:relative;
 transition: .5s ease;
 margin-top: 3.5rem;
 text-align: -webkit-center;
+text-align: -moz-center;
 .product-description{
    p{
     text-align: center;

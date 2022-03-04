@@ -8,6 +8,7 @@ line-height: 7.2rem;
 letter-spacing: 0em;
 text-transform: uppercase;
 margin: 0;
+color: #242424;
 
 @media screen and (max-width : 600px){
 font-size: 3rem;
@@ -80,6 +81,7 @@ font-weight: 500;
 line-height: 2.4rem;
 letter-spacing: 0em;
 text-transform: capitalize;
+background: white;
 cursor: pointer;
   &:hover{
  background-color: #E84025;

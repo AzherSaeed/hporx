@@ -36,7 +36,7 @@ color: #828282;
 .grow-profit-slick  .slick-next {
   left: 50%;
   
-  transform: translate(5rem,36rem);
+  transform: translate(1rem,36rem);
   z-index: 1;
 
   &:before {
@@ -46,7 +46,7 @@ color: #828282;
 }
 .grow-profit-slick  .slick-prev {
   left: 50%;
-  transform: translate(0rem,36rem);
+  transform: translate(-7rem,36rem);
   z-index: 1;
 
   &:before {

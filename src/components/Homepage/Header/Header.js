@@ -37,6 +37,7 @@ const Header = ({id , country , state}) => {
           <HeroPlayIcon src={playIcon} />
         </HomePlayButtonContainer>
         <HeroHeading>THERAPEUTICS</HeroHeading>
+        <p className="home-main-header-sub-heading" >CULITVATED WELLNESS</p>
         <HeroButton>Appointment</HeroButton>
       </div>
     </StyledHero>

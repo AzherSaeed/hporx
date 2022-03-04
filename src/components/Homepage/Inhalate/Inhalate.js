@@ -23,7 +23,7 @@ const Inhalate = ({id}) => {
         </InhalateTextContainer>
         <InhalateSlick />
         <InhalateButtonContainer>
-          <ViewMoreBtn>Quick Shop</ViewMoreBtn>
+          <ViewMoreBtn>View More</ViewMoreBtn>
         </InhalateButtonContainer>
       </InhalateMainContainer>
     </Container>

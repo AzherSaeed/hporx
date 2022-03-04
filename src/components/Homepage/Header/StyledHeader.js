@@ -8,11 +8,23 @@ const StyledHero = styled.div`
   height: 100vh;
   background-size: cover;
 
+
+
+.home-main-header-sub-heading{
+    color: #ffff;
+    opacity: 0.8;
+    font-weight: normal;
+font-size: 1.9rem;
+}
+
+
+
+
 `
 const HeroHeading = styled.h3`
 margin-top: 4rem;
  font-size: 8.5rem;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 11.3rem;
   color: white;
 
@@ -25,10 +37,11 @@ margin-top: 4rem;
 `
 
 
+
 const HeroButton = styled.button`
-margin-top: 4rem;
+  margin-top: 4rem;
    border-color: #fff;
-  padding: 1rem 3rem;
+  padding: 1.2rem 3.2rem;
   border-radius: 2rem;
   border: 1px solid white;
   background: transparent;
