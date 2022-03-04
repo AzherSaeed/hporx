@@ -7,7 +7,7 @@ import { CultivationMainContainer } from './StyledCultivation'
 const Cutivation = ({id}) => {
     return (
         <CultivationMainContainer id={id} >
-            <PrimaryHeading>Cutivation</PrimaryHeading>
+            <PrimaryHeading>Cultivation</PrimaryHeading>
             <p>Home Grow</p>
             <h3>Grow your dose privately at home</h3>
             <CultivationSlick />

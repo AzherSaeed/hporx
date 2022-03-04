@@ -2,9 +2,9 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cultivation1 from '../../../assets/cultivation1.png'
-import cultivation2 from '../../../assets/cultivation2.png'
-import cultivation3 from '../../../assets/cultivation3.png'
+import cultivation1 from '../../../assets/cultivation1.jpg'
+import cultivation2 from '../../../assets/cultivation2.jpg'
+import cultivation3 from '../../../assets/cultivation3.jpg'
 import CultivationCard from './CultivationCard';
 import { Container } from 'react-bootstrap';
 

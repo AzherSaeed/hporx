@@ -3,7 +3,7 @@ import { PrescribeBtn, PrescribeImg, PrescribeImgContainer , ShopBtn} from './St
 
 const PrescribeCard = ({ img }) => {
     return (
-        <PrescribeImgContainer >
+        <PrescribeImgContainer className='card-overlay'>
             <div className="overlay">
             </div>
             <div className='inner-overlay'>

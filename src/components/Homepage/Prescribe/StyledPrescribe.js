@@ -3,6 +3,10 @@ import { ViewMoreBtn, ShopNowBtn, ShopBtnTransparent } from "../../Globals/Globa
 
 export const PrescribeMainContainer = styled.div`
   margin-top: 7.5rem;
+  .card-overlay{
+    padding-right: 2rem;
+   
+  }
 `;
 
 export const PrescribeImgContainer = styled.div`
@@ -11,8 +15,9 @@ export const PrescribeImgContainer = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 1rem;
-    right: 1rem;
+    left: 0;
+    right: 0;
+    width: 95%;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);

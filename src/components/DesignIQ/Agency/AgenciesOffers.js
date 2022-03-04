@@ -2,9 +2,9 @@ import React from "react";
 import { DesignIQContainer, DesignIQContainerInner, DesignIQContainerMain } from './StyledAgency';
 
 
-import graphicsiq1 from "../../../assets/unsplash_OSiLnlAcwYg.png";
+import graphicsiq1 from "../../../assets/unsplash_OSiLnlAcwYg.jpg";
 import graphicsiq from "../../../assets/graphicsIq.png";
-import graphicsiq3 from "../../../assets/unsplash_OSiLnlAcwYg.png";
+import graphicsiq3 from "../../../assets/unsplash_OSiLnlAcwYg.jpg";
 import ai from "../../../assets/ai.svg";
 import ps10 from "../../../assets/ps10.svg";
 import xd11 from "../../../assets/xd11.svg";
@@ -12,7 +12,7 @@ import dia12 from "../../../assets/dia12.svg";
 import fig14 from "../../../assets/fig14.svg";
 import sketch13 from "../../../assets/sketch13.svg";
 
-import wireFrame from "../../../assets/wireframeimage.png";
+import wireFrame from "../../../assets/wireframeimage.jpg";
 import wireIcon from "../../../assets/wireicon16.svg";
 import micro from "../../../assets/micro.svg";
 import cohmtl from "../../../assets/cohmtl.svg";
@@ -24,7 +24,7 @@ import storyIcon from "../../../assets/storyIcon.svg";
 import reel from "../../../assets/reel.svg";
 import boardhtml from "../../../assets/boardhtml.svg";
 import panel from "../../../assets/panel.svg";
-import storyboard from "../../../assets/storyboard.png";
+import storyboard from "../../../assets/storyboard.jpg";
 
 import dnet from "../../../assets/dnet.svg";
 import jq from "../../../assets/jq.svg";
@@ -35,7 +35,7 @@ import js from "../../../assets/js.svg";
 import css from "../../../assets/css.svg";
 import htmlprog from "../../../assets/htmlprog.svg";
 import programming from "../../../assets/programming.svg";
-import progcover from "../../../assets/progcover.png";
+import progcover from "../../../assets/progcover.jpg";
 
 import eye from "../../../assets/eye.svg";
 import keyshot from "../../../assets/keyshot.svg";
@@ -45,7 +45,7 @@ import premier from "../../../assets/premier.svg";
 import blender from "../../../assets/blender.svg";
 import aesvg from "../../../assets/aesvg.svg";
 import motionic from "../../../assets/motionic.svg";
-import motion from "../../../assets/motion.png";
+import motion from "../../../assets/motion.jpg";
 
 import unity from "../../../assets/unity.svg";
 import autodesk3d from "../../../assets/autodesk3d.png";
@@ -53,7 +53,7 @@ import autodesk from "../../../assets/autodesk.svg";
 import maya from "../../../assets/maya.svg";
 import huodini from "../../../assets/huodini.svg";
 import d3icon from "../../../assets/3dicon.svg";
-import d3 from "../../../assets/3d.png";
+import d3 from "../../../assets/3d.jpg";
 
 import namelast from "../../../assets/namelast.svg";
 import pinnacle from "../../../assets/pinnacle.svg";
@@ -61,7 +61,7 @@ import name3 from "../../../assets/name3.svg";
 import name2 from "../../../assets/name2.svg";
 import name from "../../../assets/name.svg";
 import videoIcon from "../../../assets/videoIcon.svg";
-import video from "../../../assets/video.png";
+import video from "../../../assets/video.jpg";
 
 
 const Offers = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { PortableImg1, PortableImg1Container, PortableMainContainer, PortableMoreBtn } from './PortableStyles'
-import portable from '../../../assets/portable.svg'
+import portable from '../../../assets/portable.jpg'
 import PortableSlick from './PortableSlick'
 import {PrimaryHeading } from '../../Globals/Globals'
 import PlayBtn from '../../Globals/PlayBtn'
