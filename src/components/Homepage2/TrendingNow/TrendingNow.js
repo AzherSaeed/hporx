@@ -53,13 +53,18 @@ function TrendingNow({ heading, imgs }) {
               // when window width is >= 320px
               200: {
                 slidesPerView: 1,
-                spaceBetween: 0
+                spaceBetween: 10
               },
               // when window width is >= 480px
-              450: {
+              500: {
                 slidesPerView: 2,
                 spaceBetween: 30
               },
+              820: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              },
+             
              
               1000: {
                 slidesPerView: 4,
@@ -75,9 +80,9 @@ function TrendingNow({ heading, imgs }) {
 
                 <SwiperSlide key={index} > <div key={index} className="d-inline-block">
                   <h5 className="outside-card-text">Fairman Online</h5>
-                  <Card>
+                  <Card className="card">
                     <div className="card-body">
-                      <img src={img} alt="Trending-Now" />
+                      <img className="main-img" src={img} alt="Trending-Now" />
                       <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
                       <h4>From $ 35</h4>
                     </div>

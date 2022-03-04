@@ -34,11 +34,12 @@ export const StyleTrending=styled.div`
     /* background-color: red; */
 }
 .card{
-  width: 100%;
+  width: 28rem;
     border:.1rem solid #DADADA ;
     border-radius: 0.3rem;
     @media screen and (max-width:480px) {
         text-align: center;  
+        width:95%;
     }
 }
 .main-img{

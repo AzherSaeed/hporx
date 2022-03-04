@@ -37,11 +37,12 @@ export const InhalatedImgContainer = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 3;
-    right: 3;
+    left: 1.5%;
+    right: 0;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
+    width:97%;
   }
   .inner-overlay {
     color: white;

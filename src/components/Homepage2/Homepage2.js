@@ -48,6 +48,7 @@ import aboveCopyright7 from '../../assets/aboveCopyright7.svg';
 import aboveCopyright8 from '../../assets/aboveCopyright8.svg';
 import FollowUs from '../Homepage/FollowUs/FollowUs';
 import AgenciesHeader from '../AgenciesPage/AgenciesHeader/AgenciesHeader';
+import FeatureMarketContainer from '../Homepage/FeatureMarketplace/FeatureMarketContainer'
 
 
 const Homepage2 = () => {
@@ -69,6 +70,7 @@ const Homepage2 = () => {
     return (
         <>
           <AgenciesHeader/>
+          <FeatureMarketContainer/>
            <HempProduct/>
            <ViewTodayContainer>
          <ViewedToday heading='Everything you viewed today' />
