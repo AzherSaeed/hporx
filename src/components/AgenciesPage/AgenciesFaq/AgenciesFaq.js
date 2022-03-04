@@ -14,11 +14,11 @@ const AgenciesFaq = () => {
   
 
     const [accordianIcon , setAccordianIcon]  = useState(false)
-    const [saveAccordianKey, setsaveAccordianKey] = useState('')
+    const [saveAccordianKey, setsaveAccordianKey] = useState(0)
 
 
     const faqAccordianHandler = (e) => {
-      if(e == saveAccordianKey){
+      if(e === saveAccordianKey){
         setsaveAccordianKey('')
       }
       else{
@@ -27,16 +27,18 @@ const AgenciesFaq = () => {
       }
     }
 
+    console.log('e-->2',saveAccordianKey )
+
   return (
     <Container>
       <AgenciesFaqContainer>
-        <Accordion defaultActiveKey={["0"]} alwaysOpen>
+        <Accordion  defaultActiveKey={[0]} alwaysOpen>
           {
             Array.from({length : 5}).map((no , i) => (
               <Accordion.Item eventKey={i}>
               <Accordion.Header onClick={() => faqAccordianHandler(i)} >
                   <div className="faq-header" >
-                      {saveAccordianKey == i ? (
+                      {saveAccordianKey === i ? (
                           <img src={faqMinusIcon} alt='faqMinusIcon' />
                           
                       ) : (

@@ -16,7 +16,7 @@ function MyVerticallyCenteredModal(props) {
         centered
       >
         <div class="modal-body">
-         <button onClick={props.onHide} type="button" class="btn-close" ></button>
+         <button onClick={props.onHide} type="button" class="beforeAfterModalButton" ></button>
 
           <img class="main-img" src={bgmain} alt="background-img" />
           <div class="outer-div">
