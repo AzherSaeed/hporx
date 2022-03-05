@@ -38,6 +38,7 @@ position: relative;
     bottom: 0;
     left: 0;
     right: 0;
+    width:96%;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
@@ -48,7 +49,7 @@ position: relative;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 90%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -90,7 +91,9 @@ margin-top: 2rem;
 
 `
 export const ChillumImg = styled.img`
-
+padding-right:2rem;
+height:100%;
+object-fit: cover;
 `
 export const ChillumBtn = styled(ShopBtnTransparent)`
 margin-top: 1.9rem;

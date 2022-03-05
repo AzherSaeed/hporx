@@ -93,7 +93,7 @@ border: 1px solid black;
 
 `
 export const DiagnoseImg = styled.img`
-
+padding-right:2rem;
 height: 
 51rem;
 `

@@ -28,12 +28,11 @@ position: relative;
   text-align: -webkit-center;
   .overlay {
     position: absolute;
-   top: 14%;
+    top: 3%;
     bottom: 0;
-    left: 25%;
-    right: 31%;
-    height: 74%;
-    width: 50%;
+    left: 12%;
+    height: 90%;
+    width: 78%;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
