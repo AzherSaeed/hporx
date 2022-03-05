@@ -13,12 +13,34 @@ export const MedicineImgContainer = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 1rem;
-    right: 1.5rem;
+    left: 4%;
+    right: 0;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
     border-radius: 1rem;
+    width: 93%;
+
+    @media screen and (max-width : 1024px) {
+      left: 6%;
+      width: 89%;
+    }
+    @media screen and (max-width : 768px) {
+      left: 16%;
+      width: 69%;
+    }
+    @media screen and (max-width : 425px) {
+      left: 19%;
+      width: 63%;
+    }
+    @media screen and (max-width : 375px) {
+      left: 13%;
+      width: 74%;
+    }
+    @media screen and (max-width : 320px) {
+      left: 8%;
+      width: 86%;
+    }
   }
   .inner-overlay {
     color: white;

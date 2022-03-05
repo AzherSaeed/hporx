@@ -77,6 +77,7 @@ border: 1px solid #242424;
 border-radius: 7rem;
 color: #242424;
 font-size: 1.6rem;
+background: transparent;
 font-weight: 500;
 line-height: 2.4rem;
 letter-spacing: 0em;

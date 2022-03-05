@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const ViewTodayStyle=styled.div`
-    padding-top: 6.4rem;
-    margin-top: 5.3rem;
+    /* padding-top: 6.4rem; */
+    /* margin-top: 5.3rem; */
     padding-bottom: 3.1rem;
 .everythingviewproduct{
     background: #FFFFFF;

@@ -18,8 +18,7 @@ const HomeModal = (props) => {
 
     {props.children}
 
-    {/* <VideoModal video='/Videos/video1.mp4' setModalShow={props.setModalShow}/> */}
-      {/* <Popup country={props.country} state={props.state} setModalShow={props.setModalShow}/> */}
+      <Popup country={props.country} state={props.state} setModalShow={props.setModalShow}/>
   </Modal>  
   )
 }

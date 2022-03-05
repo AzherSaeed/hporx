@@ -9,7 +9,7 @@ const EVendorCard = ({ key,img, miniImg }) => {
         <div key={key}>
             <EVendorImgContainer>
             <div className="overlay"></div>
-                <div className="inner-overlay">
+                <div className="EVendorImg-inner-overlay">
                   <AddToCartBtn>Add to Cart</AddToCartBtn>
                 </div>
                 <EVendorImg className='img-fluid' src={img} alt={img} />

@@ -7,10 +7,10 @@ import agri2 from '../../../assets/agri2.jpg';
 import agri3 from '../../../assets/agri3.jpg';
 import agri4 from '../../../assets/agri4.jpg';
 import agri5 from '../../../assets/agri5.jpg';
-import { AgricultureImg, AgricultureImg1, SlickMainContainer } from './StyledAgriculture';
+import { AgricultureImg, AgricultureImg1, AgricultureImgContainer1, AgricultureMiniImg, SlickMainContainer } from './StyledAgriculture';
 
 const AgricultureSlick = () => {
-
+  const agriImgs2 = [agri1, agri2, agri3, agri4, agri5]
   var settings = {
     dots: false,
     arrows: true,
@@ -52,11 +52,21 @@ const AgricultureSlick = () => {
   return (
     <SlickMainContainer>
       <Slider {...settings} className='chillum-slick'>
-        <AgricultureImg className='img-fluid' src={agri1} alt={agri1} />
-        <AgricultureImg className='img-fluid' src={agri2} alt={agri2} />
-        <AgricultureImg className='img-fluid' src={agri3} alt={agri3} />
-        <AgricultureImg1 className='img-fluid' src={agri4} alt={agri4} />
-        <AgricultureImg className='img-fluid' src={agri5} alt={agri5} />
+        {
+          agriImgs2.map((img, index) => (
+            <AgricultureImgContainer1 key={index}>
+              <div className="overlay">
+              </div>
+              <div className='inner-overlay'>
+                <h3>TITLE HERE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
+
+              </div>
+              <AgricultureMiniImg className='img-fluid' src={img} alt={img} />
+            </AgricultureImgContainer1>
+          ))
+        }
+
 
       </Slider>
     </SlickMainContainer>

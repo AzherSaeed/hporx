@@ -28,18 +28,35 @@ position: relative;
   text-align: -webkit-center;
   .overlay {
     position: absolute;
-   top: 14%;
+    top: 3%;
     bottom: 0;
-    left: 25%;
-    right: 31%;
-    height: 74%;
-    width: 50%;
+    left: 16%;
+    height: 90%;
+    width: 69%;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
     border-radius: 1rem;
+
+
+    @media screen and (max-width  : 1024px){
+      width: 86%;
+      left: 7%;
+    }
+    @media screen and (max-width : 768px){
+      left: 24% ;
+      width: 52%;
+    }
+    @media screen and (max-width : 320px){
+      left: 19%;
+      width: 63%;
+    }
+
+
+
+
   }
-  .inner-overlay {
+  .EVendorImg-inner-overlay {
     color: white;
     font-size: 2rem;
     position: absolute;
@@ -51,6 +68,9 @@ position: relative;
     transform: translate(-50%, -50%);
     opacity: 0;
     padding: 0 2rem;
+
+
+
   }
   &:hover,&:hover .inner-overlay,
   &:hover .overlay {

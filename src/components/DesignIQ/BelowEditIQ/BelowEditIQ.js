@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { BelowEditIQImg, BelowEditIQImgContainer, BelowEditIQMain, BelowEditIQVideo } from './StyledBelowEditIQ'
-import belowEditIQ from '../../../assets/belowEditIQ.svg'
+import belowEditIQ from '../../../assets/belowEditIQ.png'
 const BelowEditIQ = () => {
   return (
     <BelowEditIQMain>

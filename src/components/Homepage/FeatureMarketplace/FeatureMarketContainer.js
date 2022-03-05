@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-// import featureMark from '../../../assets/featureMarketplace.svg'
+import featureMark from '../../../assets/featureMarketplace.svg'
 
 import { FeatureHeading, FeatureMarketPlaceBtn, FeatureMarkImg, FeatureMarkMain, FeatureMarkTextContainer, FeatureSubHeading } from './StyledFeatureMark'
 
@@ -12,7 +12,7 @@ const FeatureMarketContainer = () => {
                 <Container>
                     <Row>
                         <Col lg={6}>
-                            {/* <FeatureMarkImg src={featureMark} alt={featureMark} /> */}
+                            <FeatureMarkImg src={featureMark} alt={featureMark} />
                         </Col>
                         <Col lg={6}>
                             <FeatureMarkTextContainer>

@@ -15,7 +15,7 @@ const EVendorSlick = () => {
   const eVendorImgs = [{ img: eVendorImg1, mini: eVendorHprox }, { img: eVendorImg2, mini: eVendorMedi }, { img: eVendorImg3, mini: eVendorFairman }, { img: eVendorImg, mini: eVendorHprox },{ img: eVendorImg1, mini: eVendorHprox }, { img: eVendorImg2, mini: eVendorMedi }, { img: eVendorImg3, mini: eVendorFairman }, { img: eVendorImg, mini: eVendorHprox },]
   var settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,

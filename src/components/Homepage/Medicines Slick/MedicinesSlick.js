@@ -19,8 +19,8 @@ const MedicinesSlick = () => {
   var settings = {
     arrows: true,
     dots: false,
-    infinite: true,
-    autoplay: true,
+    infinite: false,
+    autoplay: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
