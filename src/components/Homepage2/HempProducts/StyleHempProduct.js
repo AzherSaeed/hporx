@@ -34,6 +34,7 @@ h2{
     border: 1px solid #F0F0F0;
     box-sizing: border-box;
     border-radius:.3rem;
+    margin-bottom: 1.5rem;
 }
 .box{
     height: 11rem;

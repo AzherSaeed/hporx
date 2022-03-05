@@ -33,6 +33,16 @@ object-fit: contain;
 
 
 export const TrustedCompanyContainer = styled.div`
-    padding: 3rem 0;
+    margin-top: 3.8rem;
+    padding: 2.1rem;
     background: #FBFAFA;
+
+
+    h3{
+        font-weight: 500;
+font-size: 32px;
+line-height: 48px;
+color: #242424;
+text-align: center;
+    }
 `

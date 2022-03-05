@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const StyleTrending=styled.div`
+padding-top: 6.4rem;
+/* padding-bottom: 10.2rem; */
+/* background: #E7E7E7; */
 .main-section{
     display:flex;
     height:6.9rem;
@@ -24,6 +27,8 @@ export const StyleTrending=styled.div`
     line-height: 5rem;
     color: #242424;
     margin-top: 1rem;
+    border-bottom:'1px solid #DADADA';
+    padding-top:'1rem';
     
 }
 
@@ -35,7 +40,8 @@ export const StyleTrending=styled.div`
 }
 .card{
   width: 28rem;
-    border:.1rem solid #DADADA ;
+  background: #FFFFFF;
+border: 2px solid #E2E2E2;
     border-radius: 0.3rem;
     @media screen and (max-width:480px) {
         text-align: center;  

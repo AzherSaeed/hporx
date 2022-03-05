@@ -1,5 +1,5 @@
 import React from 'react'
-import InputField from '../../Homepage/SubscribeNewsletter/InputField'
+// import InputField from '../../Homepage/SubscribeNewsletter/InputField'
 import { GetInTouchImg, GetInTouchInner, GetInTouchMain } from './StyledGetInTouch'
 import { Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap'
 import Select from '../../Homepage/Select/Select'
@@ -10,7 +10,8 @@ import getIn from '../../../assets/getInTouch.png'
 const GetInTouch = () => {
     return (
         <Container>
-            <GetInTouchMain>
+            <h1>Get in touch</h1>
+            {/* <GetInTouchMain>
                 <h3>
                     Have any Query Get In Touch!
                 </h3>
@@ -65,7 +66,7 @@ const GetInTouch = () => {
                         </Col>
                     </Row>
                 </GetInTouchInner>
-            </GetInTouchMain>
+            </GetInTouchMain> */}
         </Container>
     )
 }

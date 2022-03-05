@@ -43,10 +43,15 @@ function TrendingNow({ heading, imgs }) {
   //   ],
   // };
 
+  const style={
+    borderBottom:'1px solid #DADADA',
+    paddingBottom:'1rem',
+}
+
   return (
     <StyleTrending>
       <div className="container">
-        <h1 className='main-heading'>{heading}</h1>
+        <h1 style={style} className='main-heading'>{heading}</h1>
         <TrendingNowSlick>
           <Swiper
             breakpoints={{

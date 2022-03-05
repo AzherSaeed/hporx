@@ -23,12 +23,13 @@ background-color: #FCFBFB;
     margin-bottom: 3rem;
 
     @media (max-width: 768px){
-           max-width: 70%;
+           /* max-width: 80%; */
            margin: 0 auto;
            margin-bottom: 2rem;
     }
     @media (max-width: 400px){
-           max-width: 100%;
+           /* max-width: 100%; */
+           margin: 0 auto;
            margin-bottom: 2rem;
     }
 }

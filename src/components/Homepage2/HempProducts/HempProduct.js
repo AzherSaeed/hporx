@@ -53,28 +53,28 @@ function HempProduct() {
             // when window width is >= 320px
             300: {
               slidesPerView: 2,
-              spaceBetween: 20
+              spaceBetween: 1
             },
             // when window width is >= 480px
             640: {
               slidesPerView: 3,
-              spaceBetween: 30
+              spaceBetween: 1
             },
             // when window width is >= 640px
             768: {
               slidesPerView: 4,
-              spaceBetween: 30
+              spaceBetween: 1
             },
             1000: {
               slidesPerView: 7,
-              spaceBetween: 30
+              spaceBetween: 1
             },
             1200: {
               slidesPerView: 7,
-              spaceBetween: 30
+              spaceBetween: 1
             }
           }}
-          spaceBetween={10}
+          spaceBetween={1}
           slidesPerView={5}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
@@ -125,28 +125,28 @@ function HempProduct() {
             // when window width is >= 320px
             300: {
               slidesPerView: 2,
-              spaceBetween: 20
+              spaceBetween: 1
             },
             // when window width is >= 480px
             640: {
               slidesPerView: 3,
-              spaceBetween: 30
+              spaceBetween: 1
             },
             // when window width is >= 640px
             768: {
               slidesPerView: 4,
-              spaceBetween: 30
+              spaceBetween: 1
             },
             1000: {
               slidesPerView: 7,
-              spaceBetween: 30
+              spaceBetween: 1
             },
             1200: {
               slidesPerView: 7,
-              spaceBetween: 30
+              spaceBetween: 1
             }
           }}
-          spaceBetween={10}
+          spaceBetween={1}
           slidesPerView={5}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}

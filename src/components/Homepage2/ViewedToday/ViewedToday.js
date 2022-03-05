@@ -75,7 +75,7 @@ function ViewedToday({heading}) {
           > {
             viewTodayImgs.map((img, index) => (
                 <SwiperSlide key={index} >  <Card className='card'>
-                <div className='d-flex ' >
+                <div className='d-flex everythingviewproduct' >
                     <img src={ViewToday} alt='Everything today' />
                     <div className='right-block'>
                         <h2>Fairman Online</h2>

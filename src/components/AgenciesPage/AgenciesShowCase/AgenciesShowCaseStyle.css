@@ -169,6 +169,7 @@
     z-index: -1;
     left: -10.5%;
     width: -webkit-fill-available;
+	width: -moz-available;
     right: -5%;
     height: 100%;
 

@@ -1,6 +1,13 @@
 import styled from "styled-components"
 
 export const ViewTodayStyle=styled.div`
+    padding-top: 6.4rem;
+    margin-top: 5.3rem;
+    padding-bottom: 3.1rem;
+.everythingviewproduct{
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+}
 
 
 .main-heading{
@@ -12,7 +19,7 @@ export const ViewTodayStyle=styled.div`
     border-bottom:1px solid #DADADA ;
 }
 .card{
-    border:.1rem solid #DADADA ;
+    background: #FFFFFF;
     border-radius: 0.3rem;
     margin-right: 1rem;
 }
