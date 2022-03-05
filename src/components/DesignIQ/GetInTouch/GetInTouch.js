@@ -68,6 +68,7 @@ const GetInTouch = () => {
                   .catch((error) => {
                     setFormLading(false);
                     console.log(error);
+                    alert('Some thing went wrong please try again')
                   });
               }}
             >
