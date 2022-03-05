@@ -69,5 +69,27 @@ const HeroPlayIcon = styled.img`
   width:  15.26px;
 height :  16.43px
   `
-
+export const VideoModalMain=styled.div`
+video{
+  width: 100%;
+  height: auto;
+}
+.btn-close{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 5rem;
+    border: .1rem solid #fff;
+    background-color: #fff;
+    position: absolute;
+    top: -4rem;
+    right: -2rem;
+    opacity:.5;
+    &:hover{
+        color: #000;
+        text-decoration: none;
+       opacity: .75
+    }
+    z-index: 100;
+}
+`
 export { StyledHero, HeroHeading, HeroButton, HeroPlayIcon, HomePlayButtonContainer }

@@ -48,8 +48,9 @@ const TrustedSuppliers = ({ imgs, head }) => {
         ]
     };
     return (
+        <TrustedCompanyContainer>
         <Container>
-            <TrustedCompanyContainer>
+          
                 <h3>{head}</h3>
                 <Slider {...settings} className='trusted-suppliers-slick'>
                     {imgs.map((supplierImg, index) => (
@@ -61,8 +62,9 @@ const TrustedSuppliers = ({ imgs, head }) => {
                     ))
                     }
                 </Slider>
-            </TrustedCompanyContainer>
+            
         </Container>
+        </TrustedCompanyContainer>
     )
 }
 

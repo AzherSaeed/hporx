@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import markSlick1 from '../../assets/markSlick.svg';
-import markSlick2 from '../../assets/markSlick2.svg';
+import markSlick1 from '../../assets/markSlick.jpg';
+import markSlick2 from '../../assets/markSlick2.jpg';
 import PlayBtn from "../Globals/PlayBtn";
 import { MarketSlickContainer, MarkSlickImg, MarkSlickImgContainer } from "./StyledMarketPlace";
 

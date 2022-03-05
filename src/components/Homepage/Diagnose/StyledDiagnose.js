@@ -3,6 +3,12 @@ import { AddToCartBtn } from "../../Globals/Globals";
 
 export const DiagnoseMainContainer = styled.div`
 margin-top: 9rem;
+.diagnose-slick{
+  .slick-slide {
+  padding-right: 0 10px;
+}
+}
+
 text-align: center;
 h3{
 font-size: 4.8rem;
@@ -26,11 +32,13 @@ opacity: 0.8;
 `
 export const DiagnoseImgContainer = styled.div`
 position: relative;
+margin-right: 2rem;
 .overlay {
     position: absolute;
     top: 0;
     bottom: 2.8rem;
-    left: 2rem;
+    left: 0;
+    width: 97%;
     right: 2rem;
     opacity: 0;
     transition: 0.5s ease;

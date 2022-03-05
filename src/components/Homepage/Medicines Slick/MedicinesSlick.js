@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import medic1 from "../../../assets/medic1.svg";
-import medic2 from "../../../assets/medic2.svg";
-import medic4 from "../../../assets/medic4.svg";
+import medic1 from "../../../assets/medic1.jpg";
+import medic2 from "../../../assets/medic2.jpg";
+import medic4 from "../../../assets/medic3.jpg";
 import {
   MedicineContainerMain,
   MedicineImg,

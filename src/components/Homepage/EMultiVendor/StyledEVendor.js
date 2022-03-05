@@ -28,7 +28,7 @@ position: relative;
   text-align: -webkit-center;
   .overlay {
     position: absolute;
-    top: 14%;
+   top: 14%;
     bottom: 0;
     left: 25%;
     right: 31%;

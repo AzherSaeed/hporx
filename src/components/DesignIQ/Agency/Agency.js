@@ -3,7 +3,7 @@ import arrowGrowth from "../../../assets/arrow-growth-svgrepo-com 1.png";
 import image7 from "../../../assets/image 7.png";
 import shield1 from "../../../assets/shield-svgrepo-com 1.png";
 import support1 from "../../../assets/support-svgrepo-com 1.png";
-import image8 from "../../../assets/image 8.png";
+import image8 from "../../../assets/image 8.jpg";
 
 import "./Agency.css";
 import { AgencyMainContainer, DesignIQContainer, DesignIQHead, DesignIQInner } from "./StyledAgency";

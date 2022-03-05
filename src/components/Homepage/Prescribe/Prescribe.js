@@ -3,11 +3,11 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container } from 'react-bootstrap'
-import prescribe from '../../../assets/prescribe.svg'
-import prescribe01 from '../../../assets/prescribe01.svg'
-import prescribe1 from '../../../assets/prescribe1.svg'
-import prescribe2 from '../../../assets/prescribe2.svg'
-import prescribe3 from '../../../assets/prescribe3.svg'
+import prescribe from '../../../assets/prescribe3.jpg'
+import prescribe01 from '../../../assets/prescribe5.jpg'
+import prescribe1 from '../../../assets/prescribe1.jpg'
+import prescribe2 from '../../../assets/prescribe2.jpg'
+import prescribe3 from '../../../assets/prescribe3.jpg'
 import { PrimaryHeading, TertiaryHeadingMedium, ViewMoreBtn } from '../../Globals/Globals'
 import { ConsultDarkBtn, PrescribeSlickMain, PrescribeMainContainer } from './StyledPrescribe';
 import PrescribeCard from './PrescribeCard';
@@ -21,7 +21,7 @@ const Prescribe = ({ id }) => {
         dots: false,
         arrows: false,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -33,7 +33,7 @@ const Prescribe = ({ id }) => {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                       autoplay: true,
+                       autoplay: false,
                     dots: false,
                     arrows: false,
                 }
@@ -83,7 +83,7 @@ const Prescribe = ({ id }) => {
                         <Slider {...settings} className='prescribe-slick'>
                             {
                                 prescribeImgs2.map((img, index) => (
-                                    <PrescribeCard key={index} img={img} />
+                                    <PrescribeCard  key={index} img={img} />
                                 ))
                             }
                         </Slider>

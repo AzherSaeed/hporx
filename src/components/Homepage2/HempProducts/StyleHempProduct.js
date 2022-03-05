@@ -40,3 +40,9 @@ h2{
     background: #F0F0F0;
 }
 `;
+export const HempBox =styled.div`
+ height: 11rem;
+    background: #F0F0F0;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+`

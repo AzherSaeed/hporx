@@ -33,5 +33,6 @@ object-fit: contain;
 
 
 export const TrustedCompanyContainer = styled.div`
-    padding: 3.8rem 0;
+    padding: 3rem 0;
+    background: #FBFAFA;
 `

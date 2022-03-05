@@ -2,8 +2,8 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import diagnose1 from '../../../assets/Diagnose1.svg'
-import diagnose2 from '../../../assets/Diagnose2.svg'
+import diagnose1 from '../../../assets/Diagnose1.jpg'
+import diagnose2 from '../../../assets/Diagnose2.jpg'
 import { Container } from 'react-bootstrap';
 import { DiagnoseAppointmentBtn, DiagnoseImg, DiagnoseImgContainer, StyledSlickContainer } from './StyledDiagnose';
 import { AddToCartBtn, ShopBtnTransparent } from '../../Globals/Globals';
@@ -13,7 +13,7 @@ const DiagnoseSlick = () => {
         arrows: true,
         dots: false,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,

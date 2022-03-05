@@ -5,13 +5,12 @@ width: 30rem;
 background-color: white;
    padding :1rem;
    border: 1px solid white;
-   position: absolute;
-   bottom: .9rem;
-    right: 1rem;
+  
    .inner-div{
 width: 20rem;
 width: 100%;
    }
+  
     p{
     margin-top: 1rem;
     
@@ -36,4 +35,25 @@ width: 100%;
         color: white;
     }
 
+`
+export const QuotationContainer=styled.div`
+.quote-open{
+    position: absolute;
+    right: 1.6rem;
+    bottom: 1.4rem;
+transition: all .5s linear;
+    
+         transform-origin: bottom;
+        transform:scaleY(1);
+        opacity: 1;
+}
+.quote-close{
+    position: absolute;
+transition: all .5s linear;
+
+    right: 1.6rem;
+    bottom: 1.4rem;
+    transform:scaleY(0);
+        opacity: 0; 
+}
 `

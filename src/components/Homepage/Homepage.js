@@ -20,9 +20,8 @@ import Marketplace from '../MarketPlace/Marketplace'
 import Diaganose from './Diagnose/Diaganose'
 import EMultiVendor from './EMultiVendor/EMultiVendor'
 import mensFashionDiscount from '../../assets/mensFashionDiscount.svg'
-import giftCard from '../../assets/giftCard.svg'
+import giftCard from '../../assets/giftCard.jpg'
 import Locate from './Locate/Locate';
-import AgeValidation from './Header/AgeValidation/AgeValidation';
 
 import interOrg1 from '../../assets/interOrg1.svg'
 import interOrg2 from '../../assets/interOrg2.svg'
