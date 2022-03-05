@@ -25,6 +25,10 @@ export const AgricultureImg1 = styled.img`
 height: 40.3rem;
 object-fit: cover;
 
+`
+
+export const AgricultureMiniImg = styled.img`
+padding-right: 2rem;
 
 `
 export const AgriculteImgsSection = styled.div`
@@ -153,6 +157,7 @@ padding: 0 0.3rem;
 export const AgricultureImgContainer1=styled.div`
 
 text-align: center;
+position:relative;
   .overlay {
     position: absolute;
     top: 0;
@@ -160,7 +165,7 @@ text-align: center;
     bottom:0;
     right: 0;
     opacity: 0;
-    height: 95%;
+    width: 95%;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
   }
