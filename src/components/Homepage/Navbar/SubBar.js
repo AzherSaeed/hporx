@@ -28,7 +28,6 @@ const SubBar = ({setShow}) => {
 
 
   const changenavColor = () => {
-    console.log(window.scrollY)
     if (window.scrollY > 15) {
       setnavbarbackground(true)
       setNavbar(true)

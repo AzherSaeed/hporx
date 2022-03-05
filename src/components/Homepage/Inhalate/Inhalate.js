@@ -7,13 +7,18 @@ import {
   InhalateMainContainer,
   InhalateTextContainer,
 } from "./StyledInhalate";
+import VideoModal from '../VideoModal/VideoModal';
 
 const Inhalate = ({id}) => {
+
+
+
   return (
     <Container id={id}>
+    
       <InhalateMainContainer>
         <InhalateTextContainer>
-          <h3>Inhalate</h3>
+          <h3 >Inhalate</h3>
           <p>
             Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in
             hendrerit orci malesuada eu. Morbi feugiat et ligula maximus
@@ -23,7 +28,7 @@ const Inhalate = ({id}) => {
         </InhalateTextContainer>
         <InhalateSlick />
         <InhalateButtonContainer>
-          <ViewMoreBtn>View More</ViewMoreBtn>
+          <ViewMoreBtn  >View More</ViewMoreBtn>
         </InhalateButtonContainer>
       </InhalateMainContainer>
     </Container>

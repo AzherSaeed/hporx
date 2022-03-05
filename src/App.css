@@ -44,6 +44,9 @@ body{
   overflow-x: hidden;
   padding-right: 0 !important;
 }
+.modal{
+  padding-left: 0px !important;
+}
 
 *{
   transition: all .1s linear;

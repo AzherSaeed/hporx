@@ -2,31 +2,64 @@ import React, { useState } from "react";
 import { StylePopup } from "./StylePopup";
 import Logo1 from "../../../assets/Logo1.svg";
 import { Row, Col, Button } from "react-bootstrap";
+import { useCookies } from "react-cookie";
 
 function Popup(props) {
   const [dob, setDob] = useState("");
   const [msg, setMsg] = useState("");
+  const [cookies, setCookie] = useCookies(["access_token"]);
   //console.log(dob,'dateofbirth')
+
+  console.log(cookies, "cookies");
   function submitform(e) {
     e.preventDefault();
-    var today = new Date();
-    var birthDate = new Date(dob);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      if (age >= 18) {
-        setMsg("Congratulation You can accces this website");
-      } else {
-        setMsg("Sorry you cannot acces this website.");
-      }
-    } else {
-      if (age >= 18) {
-        setMsg("Congratulation You can accces this website");
-      } else {
-        setMsg("Sorry you cannot acces this website.");
-      }
-    }
-    console.log("Your date of birth is:", dob);
+    // var today = new Date();
+    let expires = new Date();
+    // var birthDate = new Date(dob);
+
+
+    expires.setTime(expires.getTime() + 60000);
+
+
+    // console.log(expires.setTime(), "set");
+    // console.log(expires.getTime(), "get");
+
+
+    let d = new Date();
+    d.setTime(d.getTime() + 30);
+
+
+    console.log(d , 'dd--');
+
+
+    
+
+
+
+setCookie("access_token", dob, { path: "/", expires : d });
+
+
+    
+
+
+    // var age = today.getFullYear() - birthDate.getFullYear();
+    // var m = today.getMonth() - birthDate.getMonth();
+    // if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    //   if (age >= 18) {
+    //     setCookie("access_token", dob, { path: "/", expires });
+    //     // setMsg("Congratulation You can accces this website" , 'one');
+    //   } else {
+    //     setMsg("Sorry you cannot acces this website.");
+    //   }
+    // } else {
+    //   if (age >= 18) {
+    //     console.log("two birthdaty ok");
+    //     setMsg("Congratulation You can accces this website");
+    //   } else {
+    //     console.log("two birthdaty");
+    //     setMsg("Sorry you cannot acces this website.");
+    //   }
+    // }
   }
 
   return (
@@ -103,11 +136,11 @@ function Popup(props) {
             </div>
             <div className="msg">{msg}</div>
             <Button
-              type="submit"
-              className="btns d-grid col-2 mx-auto btn-lg clo-3"
-            >
-              Confirm
-            </Button>
+                type="submit"
+                className="btns d-grid col-2 mx-auto btn-lg clo-3"
+              >
+                Confirm
+              </Button>
           </form>
         </Col>
       </Row>
