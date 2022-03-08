@@ -11,8 +11,6 @@ import VideoModal from '../VideoModal/VideoModal';
 
 const Inhalate = ({id}) => {
 
-
-
   return (
     <Container id={id}>
     

@@ -3,20 +3,18 @@ export const BrowserHistoryMain = styled.div`
 margin-top: 4.8rem;
 
 
-.viewToday-slick{
-    .slick-next{
-    right: 2% !important;
-    top: -16%;
+.viewToday-slick{  
+    
+    @media screen and (max-width:768px) {
+        .slick-next{
+    right: 4px !important;
+    
    
 }
-        
-    .slick-prev{
-        left: auto;
-    right: 5%!important;
-    top: -16%;
-    @media screen and (max-width:600px) {
-        margin-right:22px ;
-    }
+.slick-prev{
+        left: 2px !important;
+}
+    
         }
     }
 .main-heading{
@@ -28,10 +26,19 @@ letter-spacing: 0em;
 color: #242424;
 padding: 1rem 0;
 border-bottom: 1px solid #DADADA ;
+@media screen and (max-width:480px) {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+
+}
 }
 `
+export const BrowserHistoryImgContainer = styled.div`
+min-height:15.5rem;
+`
 export const BrowserHistoryImg = styled.img`
-height:18rem;
+
+width: 22rem;
 margin-top:6.5rem ;
 `
 export const BroswerSlick = styled.div`

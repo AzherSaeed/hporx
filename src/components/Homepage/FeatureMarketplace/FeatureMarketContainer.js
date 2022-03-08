@@ -8,7 +8,7 @@ const FeatureMarketContainer = ({order}) => {
     console.log(order , 'order')
     return (
 
-        <Container fluid>
+        <Container fluid className='p-0'>
             <FeatureMarkMain>
                 <Container>
                     <Row>
@@ -19,7 +19,7 @@ const FeatureMarketContainer = ({order}) => {
                             <FeatureMarkTextContainer>
                                 <FeatureHeading>Marketplace Vendors</FeatureHeading>
                                 <FeatureSubHeading>All products featured are available from select marketplace vendors, please search or select the product category you require</FeatureSubHeading>
-                                <FeatureMarketPlaceBtn>View More</FeatureMarketPlaceBtn>
+                                <FeatureMarketPlaceBtn>Start Buying</FeatureMarketPlaceBtn>
                             </FeatureMarkTextContainer>
                         </Col>
                     </Row>

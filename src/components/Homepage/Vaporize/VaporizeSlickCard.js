@@ -1,7 +1,7 @@
 import React from 'react'
 import { VaporizeImg1, VaporizeImg2, VaporizeImagesContainer, VaporizeViewMoreBtn, VaporizeImg2Container, VaporizeSubHeading } from './StyledVaporize'
-import vaporize1 from '../../../assets/vaporize1.jpg'
-import vaporize2 from '../../../assets/vaporize2.svg'
+import vaporize1 from '../../../assets/vaporize1.png'
+import vaporize2 from '../../../assets/vaporize2.png'
 import { Row, Col, Modal } from 'react-bootstrap';
 import PlayBtn from '../../Globals/PlayBtn';
 import { PlayBtnContainer, PrimaryHeading } from '../../Globals/Globals';

@@ -11,9 +11,9 @@ margin: 0;
 color: #242424;
 
 @media screen and (max-width : 600px){
-font-size: 3rem;
+  font-size: 2.5rem;
 font-style: normal;
-line-height: 6.2rem;
+line-height: 4.2rem;
 }
 `
 export const SubHeading = styled.h2`  

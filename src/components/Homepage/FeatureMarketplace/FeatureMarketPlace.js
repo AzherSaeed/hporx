@@ -9,7 +9,7 @@ const FeatureMarketPlace = () => {
         <>
             <Container>
                 <FeatureMarketText>
-                    <MarketPlaceHeading>FEATURED MARKETPLACE PRODUCTS</MarketPlaceHeading>
+                    <MarketPlaceHeading style={{color:'#242424'}}>FEATURED MARKETPLACE PRODUCTS</MarketPlaceHeading>
                     <FeatureMarketSub>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</FeatureMarketSub>
                 </FeatureMarketText>
             </Container>

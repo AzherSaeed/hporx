@@ -90,9 +90,10 @@ export const PortableImg1 = styled.img`
 
 `
 export const PortableMiniImg = styled.img`
-margin-top: 2rem;
-height: 100%;
-object-fit: cover;
+@media screen and (min-width:1400px) {
+    width: 37rem !important;
+}
+
 `
 export const PortableMoreBtn = styled(ViewMoreBtn)`
 margin-top: 2.8rem;

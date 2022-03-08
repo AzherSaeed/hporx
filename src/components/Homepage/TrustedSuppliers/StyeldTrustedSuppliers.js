@@ -4,10 +4,10 @@ export const TrustedSuppliersMainContainer = styled.div`
 text-align: center;
 padding: 9rem 0;
 h3{
-font-size: 30px;
+font-size: 3rem;
 font-style: normal;
 font-weight: 500;
-line-height: 45px;
+line-height: 4.5rem;
 letter-spacing: 0em;
 color: #242424;
 
@@ -40,9 +40,14 @@ export const TrustedCompanyContainer = styled.div`
 
     h3{
         font-weight: 500;
-font-size: 32px;
-line-height: 48px;
+font-size: 3.2rem;
+line-height: 4.8rem;
 color: #242424;
 text-align: center;
+@media screen and (max-width:480px) {
+    font-size: 2.6rem;
+line-height: 3.4rem;
+
+}
     }
 `

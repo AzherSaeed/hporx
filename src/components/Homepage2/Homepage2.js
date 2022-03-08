@@ -77,18 +77,24 @@ const Homepage2 = () => {
         <ViewedToday heading='Everything you viewed today' />
       </ViewTodayContainer>
       <TrendingNow1 heading='Trending Now' imgs={products} />
-      <FashionDiscount imgs={fashionDiscountImgs} />
-      <HempProductMIni className='Last Month Top Categories' />
+     <FashionDiscount imgs={fashionDiscountImgs} />
+        <HempProductMIni className='Last Month Top Categories' />
       <TrendingNow heading="Man's Product" imgs={mensProducts} />
       <TrendingNow heading="Ladies Product" imgs={mensProducts} />
       <FashionDiscount imgs={fashionDiscountImgs} />
       <BrowserHistory imgs={historyProducts} />
-      <ViewedToday heading='Wishlist' />
-      <Banner />
-      <TrendingNow heading="Products you brought was recently" imgs={mensProducts} />
-      <Banner />
+       <ViewedToday heading='Wishlist' />
+       <div className='mt-3-2'>
+     <Banner />
+       </div>
+     <TrendingNow heading="Products you brought was recently" imgs={mensProducts} />
+     <div className='mt-3-2'>
+     <Banner />
+       </div>
       <TrendingNow heading="Products you may like from your recent choices" imgs={mensProducts} />
-      <Banner />
+      <div className='mt-3-2'>
+     <Banner />
+       </div>
       <SimilarProductsContainer>
         <ViewedToday heading='Similar products trending' />
       </SimilarProductsContainer>
@@ -99,7 +105,7 @@ const Homepage2 = () => {
       <hr style={styles} />
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
-      <Quote />
+      <Quote /> 
     </>
   )
 }

@@ -102,6 +102,8 @@ function TrendingNow1({ heading, imgs }) {
   <SwiperSlide>Slide 4</SwiperSlide> */}
           {/* </Swiper>
         </TrendingNowSlick> */} 
+        <div className="mt-2-9">
+
         <Slider {...settings} className='trendingNow-slick'>
           {
             imgs.map((img, index) => (
@@ -109,7 +111,7 @@ function TrendingNow1({ heading, imgs }) {
                 <h5 className="outside-card-text">Fairman Online</h5>
                 <Card className="card">
                   <div className="card-body">
-                    <img  src={img} alt="Trending-Now" />
+                    <img className="main-img"  src={img} alt="Trending-Now" />
                     <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
                     <h4>From $ 35</h4>
                   </div>
@@ -118,6 +120,7 @@ function TrendingNow1({ heading, imgs }) {
             ))
           }
         </Slider>
+        </div>
       </div>
     </StyleTrending>)
 }

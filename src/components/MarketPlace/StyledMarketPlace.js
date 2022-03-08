@@ -21,7 +21,19 @@ width: 90rem;
   
 }
  }
+ 
+ @media screen and (max-width:1250px) {
+ width: 100%;
+ position:static;
+ width: auto;
+ margin-top: 2rem;
+ }
+ @media screen and (max-width:450px) {
+width: 100%;
+ }
+
 `
+
 export const MarketplaceImg = styled.img`
 
 `
@@ -57,7 +69,6 @@ position: relative;
 
   .inner-overlay {
     color: white;
-    font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,15 +78,16 @@ position: relative;
     transform: translate(-50%, -50%);
     opacity: 1;
     
+    
 }
+
 
 
 `
 export const MarkSlickImg = styled.img`
 width: 41rem;
-height:29rem;
-@media screen and (max-width:768px) {
-  width: 33.7rem;
+@media screen and (max-width:430px) {
+  height:23rem;
 }
 
 `

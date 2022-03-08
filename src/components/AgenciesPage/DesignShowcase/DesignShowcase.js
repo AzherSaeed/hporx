@@ -8,16 +8,21 @@ import StyleDesignShowcase, { StyleDesignInner } from './StyleDesignShowcase';
 import SwiperCore,{EffectCoverflow,Pagination,Navigation,Keyboard,Mousewheel} from 'swiper/core';
 
 
-import banner1 from '../../../img/banner1.jpg';
-import banner2 from '../../../img/banner2.jpg';
-import banner7 from '../../../img/banner7.jpg';
-import banner4 from '../../../img/banner4.jpg';
-import banner5 from '../../../img/banner5.jpg';
-import banner6 from '../../../img/banner6.jpg';
-import banner8 from '../../../img/banner8.jpg';
-import banner9 from '../../../img/banner9.jpg';
-import banner10 from '../../../img/banner10.jpg';
-import banner11 from '../../../img/banner11.jpg';
+import banner1 from '../../../assets/banner1.jpg';
+import banner2 from '../../../assets/banner2.jpg';
+import banner3 from '../../../assets/banner3.jpg';
+import banner4 from '../../../assets/banner4.jpg';
+import banner5 from '../../../assets/banner5.jpg';
+// import banner6 from '../../../assets/banner6.jpg';
+// import banner2 from '../../../img/banner2.jpg';
+// import banner7 from '../../../img/banner7.jpg';
+// import banner4 from '../../../img/banner4.jpg';
+// import banner5 from '../../../img/banner5.jpg';
+// import banner6 from '../../../img/banner6.jpg';
+// import banner8 from '../../../img/banner8.jpg';
+// import banner9 from '../../../img/banner9.jpg';
+// import banner10 from '../../../img/banner10.jpg';
+// import banner11 from '../../../img/banner11.jpg';
 
 SwiperCore.use([EffectCoverflow,Pagination,Navigation,Keyboard,Mousewheel]);
 
@@ -62,14 +67,14 @@ function DesignShowcase(){
     }}}>
                    <SwiperSlide><img src={banner1}/></SwiperSlide>
                    <SwiperSlide><img src={banner2}/></SwiperSlide>
-                   <SwiperSlide><img src={banner7}/></SwiperSlide>
+                   <SwiperSlide><img src={banner3}/></SwiperSlide>
                    <SwiperSlide><img src={banner4}/></SwiperSlide>
                    <SwiperSlide><img src={banner5}/></SwiperSlide>
-                   <SwiperSlide><img src={banner6}/></SwiperSlide>
-                   <SwiperSlide><img src={banner8}/></SwiperSlide>
-                   <SwiperSlide><img src={banner9}/></SwiperSlide>
-                   <SwiperSlide><img src={banner10}/></SwiperSlide>
-                   <SwiperSlide><img src={banner11}/></SwiperSlide>
+                   <SwiperSlide><img src={banner1}/></SwiperSlide>
+                   <SwiperSlide><img src={banner2}/></SwiperSlide>
+                   <SwiperSlide><img src={banner3}/></SwiperSlide>
+                   <SwiperSlide><img src={banner4}/></SwiperSlide>
+                   <SwiperSlide><img src={banner5}/></SwiperSlide>
                   </Swiper>
             </div>
         </StyleDesignInner>
