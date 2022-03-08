@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const TrendNowInner=styled.div`
-margin-top:2.9rem ;
-`
-    
-
 export const StyleTrending=styled.div`
 padding-top: 6.4rem;
 /* padding-bottom: 10.2rem; */
@@ -77,7 +72,7 @@ border: 2px solid #E2E2E2;
 }
 .main-img{
     width: 19rem;
-    height: 18rem;
+    height: 13rem;
     margin: 3.6rem 3rem;
 }
 h2{

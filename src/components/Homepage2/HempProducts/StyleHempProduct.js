@@ -2,6 +2,22 @@ import styled from 'styled-components';
 
 export const StyleHemp=styled.div`
 margin-top: 6.2rem;
+.viewToday-slick{
+    .slick-next{
+    right: 2% !important;
+    top: -29%;
+   
+}
+        
+    .slick-prev{
+    left: auto;
+    right: 5%!important;
+    top: -28%;
+    @media screen and (max-width:600px) {
+        margin-right:22px ;
+    }
+        }
+    }
  .IconImage{
     width: 5rem;
     height: 5rem;
@@ -28,7 +44,7 @@ h2{
     margin-bottom: 2.7rem;
 }
 .cards{
-    width :15rem;
+    margin-right :1rem;
     height :15rem;
     background: #FFFFFF;
     border: 1px solid #F0F0F0;

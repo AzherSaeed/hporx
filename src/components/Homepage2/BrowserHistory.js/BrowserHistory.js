@@ -5,51 +5,52 @@ import { BroswerSlick, BrowserHistoryImg, BrowserHistoryMain } from './StyledBro
 import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Container } from 'react-bootstrap';
+import Slider from 'react-slick/lib/slider';
 function BrowserHistory({ imgs }) {
   const [getSwiper,setGetSwiper]=useState(0)
 
 
-  // var settings = {
-  //     arrows: true,
-  //     dots: false,
-  //     infinite: false,
-  //     speed: 500,
-  //     slidesToShow: 5,
-  //     slidesToScroll: 1,
-  //     initialSlide: 0,
-  //     responsive: [
-  //       {
-  //         breakpoint: 1024,
-  //         settings: {
-  //           slidesToShow: 5,
-  //           slidesToScroll: 1,
-  //           infinite: false,
-  //           dots: false,
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 600,
-  //         settings: {
-  //           slidesToShow: 2,
-  //           slidesToScroll: 1,
-  //           initialSlide: 1,
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 480,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           slidesToScroll: 1,
-  //         },
-  //       },
-  //     ],
-  //   };
+  var settings = {
+      arrows: true,
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
   return (
     <Container>
       <BrowserHistoryMain>
-        <div className='main-heading'>Browsing History</div>
+        {/* <div className='main-heading'>Browsing History</div> */}
         <BroswerSlick>
-          <Swiper  className='swiper-react'
+          {/* <Swiper  className='swiper-react'
           
             breakpoints={{
               // when window width is >= 320px
@@ -90,8 +91,8 @@ function BrowserHistory({ imgs }) {
             {/* <SwiperSlide>Slide 2</SwiperSlide>
             <SwiperSlide>Slide 3</SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide> */}
-          </Swiper>
-          {/* <div className='container'>
+          {/* </Swiper> */} 
+          <div className='container'>
                 <div className='main-heading'>Browsing History</div>
                 <Slider {...settings} className='viewToday-slick mt-3'>
                 {
@@ -104,7 +105,7 @@ function BrowserHistory({ imgs }) {
                     ))
                 }
                  </Slider>
-                </div> */}
+                </div>
         </BroswerSlick>
       </BrowserHistoryMain>
     </Container>

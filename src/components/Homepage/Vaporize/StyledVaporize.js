@@ -26,7 +26,9 @@ export const VaporizeImg2Container = styled.div`
   right: 28%;
   z-index: 100;
   opacity: 1;
-  
+  @media screen and (max-width:480px) {
+    right: 39%;
+  }
   }
 &:hover .inner-overlay  {
   opacity: 1;

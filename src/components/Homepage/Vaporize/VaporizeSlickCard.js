@@ -16,15 +16,14 @@ const VaporizeSlickCard = () => {
 
     return (
         <div>
-               
+
             <Row className='justify-content-between   align-items-center'>
                 <Col sm={12} md={6}>
                     <VaporizeImagesContainer>
                         <VaporizeImg1 className='img-fluid' src={vaporize1} alt={vaporize1} />
                         <VaporizeImg2Container>
-
                             <div className='inner-overlay'>
-                                    <PlayBtn />
+                                <PlayBtn />
                             </div>
                             <VaporizeImg2 className='img-fluid' src={vaporize2} alt={vaporize2} />
                         </VaporizeImg2Container>

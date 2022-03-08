@@ -97,7 +97,7 @@ const Homepage = ({country , region}) => {
       <MedicinesSlick   />
       <MedicineSmallSlick  id="PRODUCTS" />
       <Marketplace  id="MARKETPLACE" />
-      <FeatureMarketPlace   />
+      <FeatureMarketPlace  order='first'   />
       <FashionDiscount   imgs={giftImgs} />
       <EMultiVendor  />
       <Testimonials  />

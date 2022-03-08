@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleTrending, TrendingNowSlick, TrendNowInner } from "./StyleTrendingNow";
+import { StyleTrending, TrendingNowSlick } from "./StyleTrendingNow1";
 import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
-function TrendingNow({ heading, imgs }) {
+function TrendingNow1({ heading, imgs }) {
 
   var settings = {
     arrows: true,
@@ -51,10 +51,7 @@ function TrendingNow({ heading, imgs }) {
 
   return (
     <StyleTrending>
-        <TrendNowInner>
       <div className="container">
-
-       
         <h1 style={style} className='main-heading'>{heading}</h1>
         {/* <TrendingNowSlick>
           <Swiper
@@ -108,13 +105,11 @@ function TrendingNow({ heading, imgs }) {
         <Slider {...settings} className='trendingNow-slick'>
           {
             imgs.map((img, index) => (
-              <div key={index} className="d-inline-block">
+                <div key={index} className="d-inline-block">
                 <h5 className="outside-card-text">Fairman Online</h5>
-                <Card>
+                <Card className="card">
                   <div className="card-body">
-                    <div className='main-img'>
-                    <img   src={img} alt="Trending-Now" />
-                    </div>
+                    <img  src={img} alt="Trending-Now" />
                     <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
                     <h4>From $ 35</h4>
                   </div>
@@ -124,7 +119,6 @@ function TrendingNow({ heading, imgs }) {
           }
         </Slider>
       </div>
-        </TrendNowInner>
     </StyleTrending>)
 }
-export default TrendingNow;
+export default TrendingNow1;
