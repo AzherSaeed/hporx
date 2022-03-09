@@ -84,7 +84,7 @@ export default function Waveform({ url }) {
         /> */}
         {/* <label htmlFor="volume">Volume</label> */}
       </div>
-      <div className="mx-auto">
+      <div className="mx-auto mt-5">
         {
           playing ? (
             <FaPause onClick={handlePlayPause} fontSize='2rem' className="me-4" />
@@ -92,7 +92,7 @@ export default function Waveform({ url }) {
             <FaPlay onClick={handlePlayPause} fontSize='2rem' className="me-4" />
           )
         }
-        <FaStop onClick={stopHandler} fontSize='2rem' className="me-4" />
+        <FaStop onClick={stopHandler} fontSize='2rem' className="me-4 " />
         {
           muteVolume?(
             <FaVolumeMute onClick={volumeMutedHandler} fontSize='2rem' className="me-4" />

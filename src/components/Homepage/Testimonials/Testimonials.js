@@ -1,17 +1,17 @@
 import React from 'react';
-import { Card} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Testimonial1 from '../../../assets/Testimonial1.png';
 import Testimonial2 from '../../../assets/Testimonial2.png';
 import Testimonial3 from '../../../assets/Testimonial3.png';
 import flag from '../../../assets/flag.svg';
 import Slider from 'react-slick';
-import {Testimonial} from './StyleTestimonial'
+import { Testimonial ,RecordingContainer} from './StyleTestimonial'
 import WaveSurf from './WaveSurf/WaveSurf';
 
 
 
 function Testimonials() {
-  const imgs = [Testimonial1, Testimonial2, Testimonial3,Testimonial1, Testimonial2, Testimonial3]
+  const imgs = [Testimonial1, Testimonial2, Testimonial3, Testimonial1, Testimonial2, Testimonial3]
 
   var settings = {
     arrows: true,
@@ -52,8 +52,8 @@ function Testimonials() {
   return (
 
     <Testimonial>
- <h1 >Testimonilas</h1>
-          <p className='text-design'> Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. </p>
+      <h1 >Testimonilas</h1>
+      <p className='text-design'> Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. </p>
       <div className='container p-5 '>
         <Slider {...settings} className='testimonial-slider'>
           {imgs.map((img, index) => (
@@ -63,9 +63,23 @@ function Testimonials() {
                   <img class src={img} alt="Testimonial " className='main-image mx-auto' />
                   <h3 className="nameHeading">Markes Lorath</h3>
                   <h6 className="profession">Marketing Agency</h6>
-                  <WaveSurf/>
+
                   <img src={flag} alt="flag" className='flag mx-auto' />
-                  <div className='lead'>"Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. "</div>
+                  <RecordingContainer className='pb-4'>
+
+                    {
+                      index === 2 && (
+                        <WaveSurf />
+                      )
+                    }
+                  </RecordingContainer>
+
+
+                  {
+                    index !== 2 && (
+                      <div className='lead'>"Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. "</div>
+                    )
+                  }
                   <a href='#' className='btn-read'>Read More</a>
                 </div>
               </Card>

@@ -38,7 +38,7 @@ h1{
 }
 .Card{
     margin-right: 1rem;
-    height: 50rem;    
+    height: 55rem;    
     width: 40rem;
 }
 
@@ -72,4 +72,7 @@ h1{
    line-height: 2.4rem;
    color: #E84025;
  }
+`
+export const RecordingContainer=styled.div`
+padding:2rem ;
 `
