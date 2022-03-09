@@ -6,7 +6,15 @@ import BeforeAfterSlider from './BeforeAfterSlider';
 import AgenciesFaq from '../AgenciesFaq/AgenciesFaq';
 import MultiEffectSlider from '../MultiEffectSlider/MultiEffectSlider';
 
+import modalImg2 from "../../../assets/model-img2.png";
+import leftImg from '../../../assets/left-side.jpg'
+import rightImg from '../../../assets/right-side.jpg';
+
 const AgenciesShowCase = () => {
+	const data= {
+		laptop:modalImg2,
+		img1:leftImg,img2:rightImg
+	  }
   return (
     <div class="main-designers">
 	<div class="container">
@@ -40,7 +48,7 @@ const AgenciesShowCase = () => {
 				<div class="content beforeAfter">
 					{/* <img src="assets/images/left-side.png" alt="Before after left image" />
             		<img src="assets/images/right-side.png" alt="Before after right image" /> */}
-					<BeforeAfterSlider/>
+					<BeforeAfterSlider imagesData={data}/>
 				</div>
 			</div>
 		</div>

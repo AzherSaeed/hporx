@@ -6,6 +6,7 @@ import Testimonial3 from '../../../assets/Testimonial3.png';
 import flag from '../../../assets/flag.svg';
 import Slider from 'react-slick';
 import {Testimonial} from './StyleTestimonial'
+import WaveSurf from './WaveSurf/WaveSurf';
 
 
 
@@ -62,6 +63,7 @@ function Testimonials() {
                   <img class src={img} alt="Testimonial " className='main-image mx-auto' />
                   <h3 className="nameHeading">Markes Lorath</h3>
                   <h6 className="profession">Marketing Agency</h6>
+                  <WaveSurf/>
                   <img src={flag} alt="flag" className='flag mx-auto' />
                   <div className='lead'>"Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. "</div>
                   <a href='#' className='btn-read'>Read More</a>

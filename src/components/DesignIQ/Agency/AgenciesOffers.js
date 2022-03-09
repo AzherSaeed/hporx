@@ -72,7 +72,7 @@ const Offers = () => {
         <DesignIQContainer>
           <div className="container bg-offwhite designIq-container">
             <div className="row">
-              <div className="col-11 col-lg-6  d-none d-md-block">
+              <div className="col-11 col-lg-6  d-none d-lg-block">
                 <img className="img-lg" src={graphicsiq1} alt="" />
               </div>
               <div className="col-11 col-lg-6  designIq-container-second text-center text-md-start">
@@ -85,7 +85,7 @@ const Offers = () => {
                   Request a consult with our Digital Agency Services at no charge
                   to your business, describe your project?.
                 </p>
-                <div className="d-md-none d-block my-3">
+                <div className="d-lg-none d-block my-3">
                   <img
                     className="img-fluid"
                     src={graphicsiq3}
@@ -126,7 +126,7 @@ const Offers = () => {
                   </div>
                 </div>
 
-                <a href="#" className="btnGraphics mx-auto mx-md-0 ">
+                <a href="#" className="btnGraphics mx-auto mx-lg-0 ">
                   Lets Get Started
                 </a>
               </div>
@@ -136,7 +136,7 @@ const Offers = () => {
         <DesignIQContainer>
           <div className="container bg-offwhite mt-5 mt-md-5 designIq-container">
             <div className="row">
-              <div className="col-11 col-lg-6 order-2 d-none d-md-block">
+              <div className="col-11 col-lg-6 order-2 d-none d-lg-block">
                 <img
                   className="img-lg"
                   src={wireFrame}
@@ -156,7 +156,7 @@ const Offers = () => {
                   to your business, describe your project?.
                 </p>
 
-                <div className="d-md-none d-block my-3">
+                <div className="d-lg-none d-block my-3">
                   <img
                     className="img-lg"
                     src={wireFrame}
@@ -193,7 +193,7 @@ const Offers = () => {
                   </div>
                 </div>
 
-                <a href="#" className="btnGraphics mx-auto mx-md-0">
+                <a href="#" className="btnGraphics mx-auto mx-lg-0">
                   Lets Get Started
                 </a>
               </div>
@@ -203,7 +203,7 @@ const Offers = () => {
         <DesignIQContainer>
           <div class="container mt-5 mt-md-5 bg-offwhite designIq-container">
             <div class="row justify-content-center">
-              <div class="col-11 col-lg-6  d-none d-md-block">
+              <div class="col-11 col-lg-6  d-none d-lg-block">
                 <img
                   className="img-lg"
                   src={storyboard}
@@ -223,7 +223,7 @@ const Offers = () => {
                   to your business, describe your project?.
                 </p>
 
-                <div class="d-md-none d-block my-3">
+                <div class="d-lg-none d-block my-3">
                   <img
                     className="img-lg"
                     src={storyboard}
@@ -260,7 +260,7 @@ const Offers = () => {
                   </div>
                 </div>
 
-                <a href="#" class="btnGraphics mx-auto mx-md-0">
+                <a href="#" class="btnGraphics mx-auto mx-lg-0">
                   Lets Get Started
                 </a>
               </div>
@@ -352,7 +352,7 @@ const Offers = () => {
         <DesignIQContainer>
           <div class="container mt-5 mt-md-5 bg-offwhite designIq-container">
             <div class="row justify-content-center">
-              <div class="col-11 col-lg-6  d-none d-md-block">
+              <div class="col-11 col-lg-6  d-none d-lg-block">
                 <img
                   className="img-lg"
                   src={motion}
@@ -372,7 +372,7 @@ const Offers = () => {
                   to your business, describe your project?.
                 </p>
 
-                <div class="d-md-none d-block my-3">
+                <div class="d-lg-none d-block my-3">
                   <img
                     className="img-lg"
                     src={motion}
@@ -419,7 +419,7 @@ const Offers = () => {
                   </div>
                 </div>
 
-                <a href="#" class="btnGraphics mx-auto mx-md-0">
+                <a href="#" class="btnGraphics mx-auto mx-lg-0">
                   Lets Get Started
                 </a>
               </div>
@@ -429,7 +429,7 @@ const Offers = () => {
         <DesignIQContainer>
           <div class="container mt-3 mt-md-5 bg-offwhite mt-5 designIq-container">
             <div class="row justify-content-center">
-              <div class="col-11 col-lg-6 order-2 d-none d-md-block">
+              <div class="col-11 col-lg-6 order-2 d-none d-lg-block">
                 <img
                   className="img-lg"
                   src={d3}
@@ -449,7 +449,7 @@ const Offers = () => {
                   to your business, describe your project?.
                 </p>
 
-                <div class="d-md-none d-block my-3">
+                <div class="d-lg-none d-block my-3">
                   <img
                     className="img-lg"
                     src={d3}
@@ -485,7 +485,7 @@ const Offers = () => {
                     <p>Unity</p>
                   </div>
                 </div>
-                <a href="#" class="btnGraphics mx-auto mx-md-0">
+                <a href="#" class="btnGraphics mx-auto mx-lg-0">
                   Lets Get Started
                 </a>
               </div>
@@ -496,7 +496,7 @@ const Offers = () => {
         <DesignIQContainer>
           <div class="container mt-5 mt-md-5 bg-offwhite designIq-container">
             <div class="row justify-content-center">
-              <div class="col-11 col-lg-6  d-none d-md-block">
+              <div class="col-11 col-lg-6  d-none d-lg-block">
                 <img
                   className="img-lg"
                   src={video}
@@ -516,7 +516,7 @@ const Offers = () => {
                   to your business, describe your project?.
                 </p>
 
-                <div class="d-md-none d-block my-3">
+                <div class="d-lg-none d-block my-3">
                   <img
                     className="img-lg"
                     src={video}
@@ -553,7 +553,7 @@ const Offers = () => {
                   </div>
                 </div>
 
-                <a href="#" class="btnGraphics mx-auto mx-md-0">
+                <a href="#" class="btnGraphics mx-auto mx-lg-0">
                   Lets Get Started
                 </a>
               </div>
