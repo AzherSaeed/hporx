@@ -9,6 +9,43 @@ export const MarkInnerContainer = styled.div`
  position: relative;
 `
 export const MarketSlickContainer = styled.div`
+  @media screen and (min-width:1140px) {
+    .inhalate-slick .slick-prev {
+    left:-13px !important ;
+    }
+    .inhalate-slick .slick-next {
+      right: 26px !important;
+      
+  }
+  }
+  @media screen and (min-width:1024px) and (max-width:1130px) {
+    .inhalate-slick .slick-prev {
+    left:12px !important ;
+    }
+    .inhalate-slick .slick-next {
+      right: 52px !important;
+      z-index: 1;
+  }
+  }
+@media screen and (min-width:768px) and (max-width:1022px) {
+  .inhalate-slick .slick-prev {
+  left:13px !important ;
+  }
+  .inhalate-slick .slick-next {
+    right: 40px !important;
+    z-index: 1;
+}
+}
+@media screen and (min-width:425px) and (max-width:767px) {
+  .inhalate-slick .slick-prev {
+  left:-3px !important ;
+  }
+  .inhalate-slick .slick-next {
+    right: 22px !important;
+    z-index: 1;
+}
+}
+
 width: 90rem;
  position: absolute;
  bottom: 3rem;
@@ -24,18 +61,22 @@ width: 90rem;
  
  @media screen and (max-width:1250px) {
  width: 100%;
- position:static;
- width: auto;
- margin-top: 2rem;
+ display: inline-block;
+    text-align: -webkit-center;
+ }
+ @media screen and (max-width:1200px)and (min-width: 768px) {
+  width: 50rem;
  }
  @media screen and (max-width:450px) {
 width: 100%;
+display: inline-block;
+
  }
 
 `
 
 export const MarketplaceImg = styled.img`
-
+    
 `
 export const MarketSubHead = styled(SubHeading)`
 margin-top: 4.8rem;
@@ -76,18 +117,14 @@ position: relative;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    opacity: 1;
-    
-    
+    opacity: 1;  
 }
-
-
-
 `
 export const MarkSlickImg = styled.img`
+border-radius:1rem ;
 width: 41rem;
-@media screen and (max-width:430px) {
+@media screen and (min-width:430px) {
   height:23rem;
+  display:inherit !important ;
 }
-
 `

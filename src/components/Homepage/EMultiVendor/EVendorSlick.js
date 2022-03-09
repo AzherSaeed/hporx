@@ -19,7 +19,7 @@ import { Container } from 'react-bootstrap';
 import EVendorCard from './EVendorCard';
 const EVendorSlick = () => {
 
-  const eVendorData = [{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi} ]
+  const eVendorData = [{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi} ]
   var settings = {
     dots: false,
     infinite: false,
