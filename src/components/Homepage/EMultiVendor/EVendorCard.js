@@ -5,7 +5,8 @@ import { EVendorImg, EVendorImgContainer, EVendorMiniImg, MiniPharmImg , EVendor
 
 
 
-const EVendorCard = ({ key, img, flag, miniImg }) => {
+const EVendorCard = ({ key, img, flag,flag1, miniImg }) => {
+    console.log(flag1);
     return (
         <EVendorCardMain>
             <Card key={key} >
@@ -20,7 +21,16 @@ const EVendorCard = ({ key, img, flag, miniImg }) => {
                     </EVendorImgContainer>                  
                 </div>
             </Card>
+            <div className='d-flex'>
             <EVendorMiniImg className='img-fluid' src={flag} alt="flags" />
+            {
+                flag1&&
+                <EVendorMiniImg className='img-fluid  ms-2' src={flag1} alt="flags" />
+            }
+        
+            </div>
+
+
         </EVendorCardMain>
 
     )

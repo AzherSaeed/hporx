@@ -8,7 +8,7 @@ import evendor3 from '../../../assets/evendor3.png'
 import evendor4 from '../../../assets/evendor4.png'
 import mini1 from '../../../assets/evendorMini1.svg'
 import mini2 from '../../../assets/evendorMini2.svg'
-import mini3 from '../../../assets/evendorMini3.svg'
+
 
 import hprox from '../../../assets/eVendorHprox.svg'
 import fairman from '../../../assets/eVendorFairman.svg'
@@ -19,8 +19,7 @@ import { Container } from 'react-bootstrap';
 import EVendorCard from './EVendorCard';
 const EVendorSlick = () => {
 
-  const eVendorData = [{ img: evendor1,flag:mini1,miniImg:hprox }, { img: evendor2, flag: mini2,miniImg:fairman }, { img: evendor3, flag: mini3,miniImg:medi }, { img: evendor4,flag:mini1,miniImg:hprox }, { img: evendor1, flag: mini1 ,miniImg:fairman
-  }, { img: evendor2, flag: mini2 ,miniImg:medi}, { img: evendor3, flag:mini3,miniImg:hprox }, { img: evendor4, flag: mini1,miniImg:fairman }]
+  const eVendorData = [{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi} ]
   var settings = {
     dots: false,
     infinite: false,
@@ -62,9 +61,9 @@ const EVendorSlick = () => {
         <Slider {...settings} className='EVendor-slick'>
           {
             eVendorData.map((data, index) => {
-              const { img, flag,miniImg } = data
+              const { img, flag,flag1,miniImg } = data
               return (
-                <EVendorCard key={index} img={img} flag={flag} miniImg={miniImg} />
+                <EVendorCard key={index} img={img} flag={flag} flag1={flag1} miniImg={miniImg} />
               )
             })
           }

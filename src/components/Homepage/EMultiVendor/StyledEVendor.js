@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ViewMoreBtn } from "../../Globals/Globals";
 
 
-export const  EVendorCardMain = styled.div`
+export const EVendorCardMain = styled.div`
     margin-right: 1.5rem;
     .card{
       border-radius: 1rem !important;
@@ -59,18 +59,6 @@ export const EVendorImgContainer = styled.div`
     border-radius: 1rem;
 
 
-    /* @media screen and (max-width  : 1024px){
-      width: 86%;
-      left: 7%;
-    }
-    @media screen and (max-width : 768px){
-      left: 24% ;
-      width: 52%;
-    }
-    @media screen and (max-width : 320px){
-      left: 19%;
-      width: 63%;
-    } */
   }
   .EVendorImg-inner-overlay {
     font-size: 2rem;
@@ -96,12 +84,12 @@ height: 100%;
 export const EVendorMiniImg = styled.img`
 margin-top:1.3rem ;
 width : 
-8.2rem;
+2.3rem;
 height : 
 2.7rem;
 `
-export const MiniPharmImg=styled.img`
-height: 3rem;
+export const MiniPharmImg = styled.img`
+height: 1.8rem;
 width: auto;
 position:absolute ;
 top : 1rem;
