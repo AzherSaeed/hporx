@@ -44,6 +44,7 @@ h6{
     background: #FFFFFF; 
     box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
+    margin-bottom:1.5rem ;
     @media (max-width:991px) {
         margin-bottom:1.5rem ;
     }
@@ -121,5 +122,10 @@ h6{
    line-height: 89.5%;
    color: #828282;
    padding-bottom:1.8rem ;
+}
+.label-locator{
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 89.5%;
 }
 `;
