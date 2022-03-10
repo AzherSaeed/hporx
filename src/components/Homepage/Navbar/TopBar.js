@@ -56,7 +56,7 @@ const TopBar = ({setShow}) => {
               <img className="img-fluid" src={searchIcon}  alt="featherMenu"/>
             </Nav.Link>
             <Nav.Link href="#" className="topbar-nav-icon">
-              <img className="img-fluid" src={profile}  alt="featherMenu" />
+              <img className="img-fluid" src={profile} onClick={() => history.push('/locator')}  alt="featherMenu" />
             </Nav.Link>
             <Nav.Link href="#" className="topbar-nav-icon" onClick={() => history.push('/agency')} >
               <img className="img-fluid" src={cart}  alt="featherMenu"/>

@@ -1,1 +1,1 @@
-export const API_URL = 'https://test.zaptatechnologies.com/api/'
+export const API_URL = 'https://hporx-backend.herokuapp.com/api/'

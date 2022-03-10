@@ -1,0 +1,23 @@
+import React from 'react'
+
+function Pagination({totalPosts,postPerPage,paginate}){
+    const pageNumber=[];
+
+    for (let i=1; i<= Math.ceil(totalPosts/postPerPage); i++ ){
+        pageNumber.push(i);
+    }
+    return(
+    <nav>
+        <ul className="pagination justify-content-center pagination-lg">
+                {pageNumber.map((number)=>
+                <li key={number} className='page-item'>
+                        <a onClick={()=>paginate(number)} href='#' className='page-link'>
+                            {number}
+                        </a>
+                </li>
+                )}
+        </ul>
+    </nav>);
+}
+
+export default Pagination;
