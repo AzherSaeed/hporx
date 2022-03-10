@@ -11,7 +11,7 @@ import {
 } from "./StyeldTrustedSuppliers";
 import { Container } from "react-bootstrap";
 
-const TrustedSuppliers = ({ imgs, head }) => {
+const TrustedSuppliers = ({ imgs, head,id }) => {
   var settings = {
     arrows: false,
     dots: false,
@@ -49,7 +49,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
     ],
   };
   return (
-    <TrustedCompanyContainer>
+    <TrustedCompanyContainer id={id}>
       <Container>
         <h3>{head}</h3>
         <Slider {...settings} className="trusted-suppliers-slick">

@@ -4,9 +4,9 @@ import belowprofit from '../../../assets/belowGrowProfit.svg'
 import { BelowGrowProfitMainContainer, BelowGrowProfitImg, BelowGrowProfitImgContainer } from './StyledBelowProfit'
 import playButton from "../../../assets/play-outline-button.svg";
 import BelowEditIQ from '../../DesignIQ/BelowEditIQ/BelowEditIQ';
-const BelowGrowProfit = () => {
+const BelowGrowProfit = ({id}) => {
   return (
-    <BelowGrowProfitMainContainer>
+    <BelowGrowProfitMainContainer id={id}>
       <Container>
         <h2>Controlled Environment Agriculture Manufacturers</h2>
       </Container>

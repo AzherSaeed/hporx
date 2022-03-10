@@ -4,9 +4,10 @@ import { PrimaryHeading } from '../../Globals/Globals'
 import AgricultureImgSection from './AgricultureImgSection'
 import AgricultureSlick from './AgricultureSlick'
 import { AgricultureMainContainer, AgricultureTertiaryHeading } from './StyledAgriculture'
-const Agriculture = () => {
+const Agriculture = ({id}) => {
     return (
-        <AgricultureMainContainer>
+        <div id={id}>
+        <AgricultureMainContainer >
             <Container>
                 <PrimaryHeading>
                     Contained Environment Agriculture
@@ -18,6 +19,7 @@ const Agriculture = () => {
                 <AgricultureSlick/>
             </Container>
         </AgricultureMainContainer>
+        </div>
     )
 }
 export default Agriculture
