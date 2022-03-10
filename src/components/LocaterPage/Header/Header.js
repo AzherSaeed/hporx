@@ -103,6 +103,18 @@ function Header() {
     setCurrentPage(pageNumber);
   }
   const genericService = new GenerecService();
+
+// const arr = []
+//   for(i , i < lengh < 0++){
+//     console.log(values);
+//     arr.push(genericService
+//       .post(`${API_URL}usersData`, values))
+    
+//   }
+
+//   Promise.all(arr)
+
+  
   return (
     <StyleHeader>
       <div className="header">
@@ -122,7 +134,7 @@ function Header() {
             onSubmit={(values) => {
               console.log(values);
               genericService
-                .get(`${API_URL}usersData`, values)
+                .post(`${API_URL}usersData`, values)
                 .then((msg) => {
                   console.log(msg);
                 })
