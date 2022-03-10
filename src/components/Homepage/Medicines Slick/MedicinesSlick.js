@@ -31,7 +31,7 @@ const MedicinesSlick = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
+         
           autoplay: true,
           dots: false,
         },

@@ -15,7 +15,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
   var settings = {
     arrows: false,
     dots: false,
-    infinite: true,
+   
     autoplay: true,
     speed: 500,
     slidesToShow: 6,
@@ -27,7 +27,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
         settings: {
           slidesToShow: 6,
           slidesToScroll: 1,
-          infinite: true,
+         
           dots: false,
         },
       },

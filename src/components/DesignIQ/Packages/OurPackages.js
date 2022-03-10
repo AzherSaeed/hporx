@@ -10,7 +10,7 @@ const OurPackages = () => {
     var settings = {
         dots: false,
         arrows: true,
-        // infinite: true,
+        //
         // autoplay: true,
         speed: 500,
         slidesToShow: 4,
@@ -22,7 +22,7 @@ const OurPackages = () => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
+                   
                     dots: false,
                     arrows: true,
                 }

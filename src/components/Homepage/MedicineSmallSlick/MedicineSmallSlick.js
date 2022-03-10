@@ -18,7 +18,7 @@ const MedicineSmallSlick = ({id}) => {
     var settings = {
         arrows: false,
         dots: false,
-        infinite: true,
+       
         autoplay: true,
         speed: 500,
         slidesToShow: 6,
@@ -30,7 +30,7 @@ const MedicineSmallSlick = ({id}) => {
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 1,
-                    infinite: true,
+                   
                     autoplay: true,
                     dots: false
                 }

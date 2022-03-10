@@ -14,7 +14,7 @@ const AgricultureSlick = () => {
   var settings = {
     dots: false,
     arrows: true,
-    infinite: true,
+   
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -25,7 +25,7 @@ const AgricultureSlick = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 3,
-          infinite: true,
+         
           dots: false,
           arrows: true,
         }

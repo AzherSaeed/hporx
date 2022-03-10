@@ -20,7 +20,7 @@ const Prescribe = ({ id }) => {
     var settings = {
         dots: false,
         arrows: false,
-        infinite: true,
+       
         autoplay: false,
         speed: 500,
         slidesToShow: 3,
@@ -32,7 +32,7 @@ const Prescribe = ({ id }) => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    infinite: true,
+                   
                     dots: false,
                     arrows: false,
                 }

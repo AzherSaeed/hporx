@@ -8,7 +8,7 @@ const GrowProfitSlick = () => {
 
     var settings = {
         dots: false,
-        infinite: true,
+       
         autoplay: true,
         arrows : true,
         speed: 500,
@@ -21,7 +21,7 @@ const GrowProfitSlick = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                   
                     dots: false
                 }
             },
