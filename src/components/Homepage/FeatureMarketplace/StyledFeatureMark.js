@@ -13,7 +13,8 @@ color: #242424;
 font-weight: 500;
 font-size: 48px;
 line-height: 72px;
-opacity: 0.8
+opacity: 0.8;
+color: #FFFFFF;
 `
 
 
@@ -35,6 +36,7 @@ opacity: 0.8;
 `
 export const FeatureHeading = styled(PrimaryHeading)`
 text-transform: capitalize;
+color:white ;
 `
 export const FeatureMarketPlaceBtn = styled(ViewMoreBtn)`
 margin-top: 5rem;

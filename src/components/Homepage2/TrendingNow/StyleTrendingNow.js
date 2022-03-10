@@ -1,9 +1,32 @@
 import styled from "styled-components";
 
+export const TrendNowInner=styled.div`
+margin-top:2.9rem ;
+`
+    
+
 export const StyleTrending=styled.div`
-padding-top: 6.4rem;
+
 /* padding-bottom: 10.2rem; */
-/* background: #E7E7E7; */
+.trendingNow-slick{
+    margin-top: 3.3rem !important;
+    .slick-next{
+        right: 9px !important;   
+    }
+    .slick-prev{
+        left: -23px !important;
+        @media screen and (max-width:768px) {
+            left: -16px !important;
+        }
+/*   
+    @media screen and (max-width:1000px) {
+        margin-right:15px ;
+    }
+    @media screen and (max-width:500px) {
+        margin-right:20px ;
+    } */
+        }
+} 
 .main-section{
     display:flex;
     height:6.9rem;
@@ -29,6 +52,11 @@ padding-top: 6.4rem;
     margin-top: 1rem;
     border-bottom:'1px solid #DADADA';
     padding-top:'1rem';
+    @media screen and (max-width:480px) {
+        margin-top: 0;
+        font-size: 2.6rem;
+        line-height: 3.4rem;
+    }
     
 }
 
@@ -38,8 +66,16 @@ padding-top: 6.4rem;
     line-height: 2.7rem;
     /* background-color: red; */
 }
+.d-inline-block{
+    text-align: -webkit-center;
+
+}
 .card{
-  width: 28rem;
+    width: auto !important;
+    margin-right:1rem;
+    @media screen and (max-width:480px) {
+        width: 67% !important;
+    }
   background: #FFFFFF;
 border: 2px solid #E2E2E2;
     border-radius: 0.3rem;

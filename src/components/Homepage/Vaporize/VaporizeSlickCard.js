@@ -1,7 +1,7 @@
 import React from 'react'
 import { VaporizeImg1, VaporizeImg2, VaporizeImagesContainer, VaporizeViewMoreBtn, VaporizeImg2Container, VaporizeSubHeading } from './StyledVaporize'
-import vaporize1 from '../../../assets/vaporize1.jpg'
-import vaporize2 from '../../../assets/vaporize2.svg'
+import vaporize1 from '../../../assets/vaporize1.png'
+import vaporize2 from '../../../assets/vaporize2.png'
 import { Row, Col, Modal } from 'react-bootstrap';
 import PlayBtn from '../../Globals/PlayBtn';
 import { PlayBtnContainer, PrimaryHeading } from '../../Globals/Globals';
@@ -16,15 +16,14 @@ const VaporizeSlickCard = () => {
 
     return (
         <div>
-               
+
             <Row className='justify-content-between   align-items-center'>
                 <Col sm={12} md={6}>
                     <VaporizeImagesContainer>
                         <VaporizeImg1 className='img-fluid' src={vaporize1} alt={vaporize1} />
                         <VaporizeImg2Container>
-
                             <div className='inner-overlay'>
-                                    <PlayBtn />
+                                <PlayBtn />
                             </div>
                             <VaporizeImg2 className='img-fluid' src={vaporize2} alt={vaporize2} />
                         </VaporizeImg2Container>

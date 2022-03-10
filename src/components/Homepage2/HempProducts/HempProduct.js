@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 function HempProduct() {
   const hempImgs = [HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon]
   var settings = {
-    arrows: true,
+    arrows: false,
     dots: false,
     infinite: false,
     speed: 500,
@@ -48,7 +48,7 @@ function HempProduct() {
     <StyleHemp>
       <div className="container p-5">
         <h1 className="text-center"><span><img src={HempHeadingIcon} alt={HempHeadingIcon} className="imgHeading" /></span>HEMP PRODUCTS ONLINE</h1>
-        <Swiper
+        {/* <Swiper
           breakpoints={{
             // when window width is >= 320px
             300: {
@@ -94,8 +94,8 @@ function HempProduct() {
           {/* <SwiperSlide>Slide 2</SwiperSlide>
   <SwiperSlide>Slide 3</SwiperSlide>
   <SwiperSlide>Slide 4</SwiperSlide> */}
-        </Swiper>
-        {/* <Slider {...settings} className='hemp-slick'>
+        {/* </Swiper> */} 
+        <Slider {...settings} className='hemp-slick'>
               {hempImgs.map((img,index)=>(
                   <div key={index}>
                   <Card className="cards">
@@ -107,8 +107,8 @@ function HempProduct() {
               </div>
               ))}
          
-           </Slider> */}
-        {/* <Slider {...settings} className='hemp-slick mt-4'>
+           </Slider>
+        <Slider {...settings} className='hemp-slick mt-4'>
               {hempImgs.map((img,index)=>(
                   <div key={index}>
                   <Card className="cards">
@@ -119,8 +119,8 @@ function HempProduct() {
                   </Card>
               </div>
               ))}
-           </Slider> */}
-        <Swiper
+           </Slider>
+        {/* <Swiper
           breakpoints={{
             // when window width is >= 320px
             300: {
@@ -166,7 +166,7 @@ function HempProduct() {
           {/* <SwiperSlide>Slide 2</SwiperSlide>
   <SwiperSlide>Slide 3</SwiperSlide>
   <SwiperSlide>Slide 4</SwiperSlide> */}
-        </Swiper>
+        {/* </Swiper> */} 
         <Banner />
 
       </div>

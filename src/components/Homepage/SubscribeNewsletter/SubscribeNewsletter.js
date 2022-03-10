@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { NewsLetterImg, NewsLetterMainContianer, SubscribeButton } from './StyledNewsLetter'
+import { NewsLetterImg, NewsLetterMainContianer, SubscribeButton, SubscribeHeading } from './StyledNewsLetter'
 import newletterImg from '../../../assets/newsLetter.svg'
 import Select from '../Select/Select'
 import InputField from './InputField'
@@ -23,9 +23,9 @@ const SubscribeNewsletter = () => {
         <NewsLetterMainContianer>
             <Container>
                 <Row className='justify-content-between'>
-                    <h1>
+                    <SubscribeHeading>
                         Subscribe
-                    </h1>
+                    </SubscribeHeading>
                     <Formik initialValues={{
                       firstName :'',
                       lastName:'',

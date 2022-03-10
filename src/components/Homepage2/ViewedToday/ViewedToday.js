@@ -1,54 +1,55 @@
 import React from 'react';
 import { ViewTodaySlick, ViewTodayStyle } from './StyleViewToday'
-import ViewToday from '../../../assets/ViewToday.svg';
+import ViewToday from '../../../assets/ViewToday.png';
 import { Card} from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Slider from 'react-slick';
 
 
 function ViewedToday({heading}) {
 
     const viewTodayImgs = [ViewToday, ViewToday, ViewToday, ViewToday, ViewToday, ViewToday]
-    // var settings = {
-    //     arrows: true,
-    //     dots: false,
-    //     infinite: false,
-    //     speed: 500,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     initialSlide: 0,
-    //     responsive: [
-    //       {
-    //         breakpoint: 1024,
-    //         settings: {
-    //           slidesToShow: 3,
-    //           slidesToScroll: 1,
-    //           infinite: false,
-    //           dots: false,
-    //         },
-    //       },
-    //       {
-    //         breakpoint: 980,
-    //         settings: {
-    //           slidesToShow: 2,
-    //           slidesToScroll: 1,
-    //           initialSlide: 1,
-    //         },
-    //       },
-    //       {
-    //         breakpoint: 480,
-    //         settings: {
-    //           slidesToShow: 1,
-    //           slidesToScroll: 1,
-    //         },
-    //       },
-    //     ],
-    //   };
+    var settings = {
+        arrows: true,
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 980,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              initialSlide: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
     return (
         <ViewTodayStyle>
             <div className='container'>
                 <div className='main-heading'>{heading}</div>
                 <ViewTodaySlick>
-
+{/* 
                 <Swiper
             breakpoints={{
               // when window width is >= 320px
@@ -88,12 +89,14 @@ function ViewedToday({heading}) {
             }
 
             
-          </Swiper>
+          </Swiper> */}
           </ViewTodaySlick>
-                {/* <Slider {...settings} className='viewToday-slick'>
+                <Slider {...settings} className='viewToday-slick'>
                 {
                     viewTodayImgs.map((img, index) => (
-                        <Card className='card'>
+                      <div className='view-today'>
+                       <div key={index} className="d-inline-block"> 
+                        <div className='card'>
                             <div className='d-flex ' >
                                 <img src={ViewToday} alt='Everything today' />
                                 <div className='right-block'>
@@ -102,10 +105,12 @@ function ViewedToday({heading}) {
                                     <h4>From $ 35</h4>
                                 </div>
                             </div>
-                        </Card>
+                        </div>
+                        </div>
+                      </div>
                     ))
                 }
-                 </Slider> */}
+                 </Slider>
                
             </div>
         </ViewTodayStyle>);

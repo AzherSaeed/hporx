@@ -2,17 +2,24 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import eVendorImg from '../../../assets/eCommerceVendor.svg'
-import eVendorImg1 from '../../../assets/eCommerceVendor2.svg'
-import eVendorImg2 from '../../../assets/eCommerceVendor3.svg'
-import eVendorImg3 from '../../../assets/eCommerceVendor4.svg'
-import eVendorHprox from '../../../assets/eVendorHprox.svg'
-import eVendorMedi from '../../../assets/eVendorMedi.svg'
-import eVendorFairman from '../../../assets/eVendorFairman.svg'
+import evendor1 from '../../../assets/evendor1.png'
+import evendor2 from '../../../assets/evendor2.png'
+import evendor3 from '../../../assets/evendor3.png'
+import evendor4 from '../../../assets/evendor4.png'
+import mini1 from '../../../assets/evendorMini1.svg'
+import mini2 from '../../../assets/evendorMini2.svg'
+
+
+import hprox from '../../../assets/eVendorHprox.svg'
+import fairman from '../../../assets/eVendorFairman.svg'
+import medi from '../../../assets/eVendorMedi.svg'
+
+
 import { Container } from 'react-bootstrap';
 import EVendorCard from './EVendorCard';
 const EVendorSlick = () => {
-  const eVendorImgs = [{ img: eVendorImg1, mini: eVendorHprox }, { img: eVendorImg2, mini: eVendorMedi }, { img: eVendorImg3, mini: eVendorFairman }, { img: eVendorImg, mini: eVendorHprox },{ img: eVendorImg1, mini: eVendorHprox }, { img: eVendorImg2, mini: eVendorMedi }, { img: eVendorImg3, mini: eVendorFairman }, { img: eVendorImg, mini: eVendorHprox },]
+
+  const eVendorData = [{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi} ]
   var settings = {
     dots: false,
     infinite: false,
@@ -50,21 +57,20 @@ const EVendorSlick = () => {
   return (
     <div className='slick-container'>
 
-    <Container>
-      <Slider {...settings} className='EVendor-slick'>
-        {
-          eVendorImgs.map((data, index) => {
-           const {img,mini}=data
-            return (
-              <EVendorCard key={index} img={img} miniImg={mini} />
-              
-            )
-          })
-        }
-      </Slider>
-     
-    </Container>
-        </div>
+      <Container>
+        <Slider {...settings} className='EVendor-slick'>
+          {
+            eVendorData.map((data, index) => {
+              const { img, flag,flag1,miniImg } = data
+              return (
+                <EVendorCard key={index} img={img} flag={flag} flag1={flag1} miniImg={miniImg} />
+              )
+            })
+          }
+        </Slider>
+
+      </Container>
+    </div>
   )
 }
 

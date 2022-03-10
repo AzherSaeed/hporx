@@ -1,9 +1,31 @@
 import styled from "styled-components"
 
-export const ViewTodayStyle=styled.div`
-    /* padding-top: 6.4rem; */
-    /* margin-top: 5.3rem; */
-    padding-bottom: 3.1rem;
+export const ViewTodayStyle = styled.div`
+  
+    .viewToday-slick{
+        margin-top: 3.3rem;
+    .slick-next{
+    right: 0 !important;  
+    @media screen and (max-width:480px) {
+        right: 10px !important;
+    } 
+} 
+    .slick-prev{
+    @media screen and (max-width:768px) {
+    left: -13px;
+   }
+}
+    }
+    .view-today{
+        @media screen and (max-width:480px) {
+    text-align: center;
+   }
+    }
+    .d-inline-block{
+        @media screen and (max-width:480px) {
+            width: 90%;
+   }
+    }
 .everythingviewproduct{
     background: #FFFFFF;
     border: 1px solid #E2E2E2;
@@ -17,11 +39,18 @@ export const ViewTodayStyle=styled.div`
     color: #242424;
     padding-bottom:1.4rem ;
     border-bottom:1px solid #DADADA ;
+    @media screen and (max-width:480px) {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+
+}
 }
 .card{
+    width:auto !important;
     background: #FFFFFF;
     border-radius: 0.3rem;
-    margin-right: 1rem;
+    margin-right:1rem ;
+  
 }
 img{
     width: 9.5rem;
@@ -52,6 +81,6 @@ p{
 }
 
 `
-export const ViewTodaySlick=styled.div`
+export const ViewTodaySlick = styled.div`
 margin-top: 4rem;
 `

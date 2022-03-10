@@ -6,7 +6,7 @@ import { EVendorMain, EVendorViewMoreBtn } from './StyledEVendor'
 const EMultiVendor = () => {
     return (
         <EVendorMain>
-            <PrimaryHeading><span style={{ color: 'red', textTransform: 'lowercase' }}>e</span> Commerce Multivendor Marketplace</PrimaryHeading>
+            <PrimaryHeading><span style={{ color: 'red', textTransform: 'lowercase' }}>e</span>Commerce Multivendor Marketplace</PrimaryHeading>
             <p>WHERE MERCHANTS MEET BUYERS</p>
             <EVendorSlick />
             <div className='evendor-2'>

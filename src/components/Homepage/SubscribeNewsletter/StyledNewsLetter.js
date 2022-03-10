@@ -32,7 +32,10 @@ export const NewsLetterMainContianer = styled.div`
   }
 `;
 export const SubscribeHeading = styled(PrimaryHeading)`
-  line-height: 4.3rem;
+  line-height: 5.3rem;
+  @media screen and (max-width: 480px) {
+    font-size: 3.5rem;
+  }
 `;
 export const NewsLetterImg = styled.img`
   margin-top: 3rem;

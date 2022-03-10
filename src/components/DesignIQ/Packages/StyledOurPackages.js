@@ -23,6 +23,7 @@ text-align: center;
 `
 export const PackageCardMain = styled.div`
 margin-top: 6rem;
+box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
 font-style: normal;
 margin-left: 10px;
 .include{ 

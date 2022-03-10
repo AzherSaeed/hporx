@@ -17,19 +17,19 @@ export const MarketPlaceSlick = () => {
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
+            // {
+            //     breakpoint: 1024,
+            //     settings: {
+            //         slidesToShow: 2,
+            //         slidesToScroll: 1,
+            //         infinite: true,
+            //         // infinite: true,
+            //         dots: false,
+            //         arrows: true,
+            //     }
+            // },
             {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    // infinite: true,
-                    dots: false,
-                    arrows: true,
-                }
-            },
-            {
-                breakpoint: 700,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -49,7 +49,7 @@ export const MarketPlaceSlick = () => {
     };
     return (
         <MarketSlickContainer>
-            <Slider {...settings} className='marketplace-slick'>
+            <Slider {...settings} className='inhalate-slick'>
                 {
                     marketPlaceImgs.map((img, index) => (
                         <MarkSlickImgContainer key={index}>

@@ -27,6 +27,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "swiper": "^6.8.4",
+    "wavesurfer-react": "^2.1.1",
+    "wavesurfer.js": "^6.0.4",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },

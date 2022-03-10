@@ -57,12 +57,13 @@ const Quote = () => {
                 alt="voice"
               />
             )}
-            <QuotationContainer >
+            
+          </div>
+          <QuotationContainer >
             <div className={newClass ? 'quote-open' : 'quote-close'}>
               <Quotation sendValue={getValue} />
             </div>
             </QuotationContainer>
-          </div>
           <div onClick={() => setNewClass(!newClass)} className="controles-button-quote">&rdquo;</div>
         </div>
       </QuoteContainer>

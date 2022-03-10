@@ -72,29 +72,28 @@ export const InhalatedImgContainer = styled.div`
           transform: scale(1.1);
         }
       }
-@media screen and (max-width:480px){
-  h3{
-    line-height: 4rem;
-  }
-  h2{
-    line-height: 3rem;
-  }
-  p{
-    line-height: 1rem; 
-  }
-}
+
       h3 {
         text-transform: uppercase;
         font-weight: 600;
         font-size: 3.4rem;
         line-height: 7.1rem;
         color: white;
-      
+      @media screen and (max-width:480px) {
+        line-height: 3.6rem;
+        font-size: 2.5rem;
+
+      }
       }
       h2 {
         font-weight: bold;
         font-size: 3rem;
         line-height: 6rem;
+        @media screen and (max-width:480px) {
+        line-height: 3.6rem;
+        font-size: 2.5rem;
+
+      }
       }
       p {
         font-weight: normal;
@@ -131,6 +130,30 @@ export const InhalatedImgContainer = styled.div`
         line-height: 50px;
       }
       }
+      @media screen and (max-width : 480px){
+        
+        
+  
+        h3 {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1.4rem;
+          line-height: 3.6rem;
+          color: white;
+        }
+        p {
+          font-weight: normal;
+          font-size: 1.2ren;
+          line-height: 1.7ren;
+          color: white;
+          padding: 0 1rem;
+        }
+        h2 {
+          font-weight: bold;
+          font-size: 2.6rem;
+          line-height: 3.6rem;
+        }
+        }
     }
   }
   &:hover .inner-overlay,

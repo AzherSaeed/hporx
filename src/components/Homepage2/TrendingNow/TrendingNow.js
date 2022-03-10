@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleTrending, TrendingNowSlick } from "./StyleTrendingNow";
+import { StyleTrending, TrendingNowSlick, TrendNowInner } from "./StyleTrendingNow";
 import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,41 +7,42 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 function TrendingNow({ heading, imgs }) {
 
-  // var settings = {
-  //   arrows: true,
-  //   dots: false,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 4,
-  //         slidesToScroll: 1,
-  //         infinite: false,
-  //         dots: false,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //         initialSlide: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
+  var settings = {
+    arrows: true,
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+        },
+      },
+    
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   const style={
     borderBottom:'1px solid #DADADA',
@@ -50,9 +51,12 @@ function TrendingNow({ heading, imgs }) {
 
   return (
     <StyleTrending>
+        <TrendNowInner>
       <div className="container">
+
+       
         <h1 style={style} className='main-heading'>{heading}</h1>
-        <TrendingNowSlick>
+        {/* <TrendingNowSlick>
           <Swiper
             breakpoints={{
               // when window width is >= 320px
@@ -99,16 +103,18 @@ function TrendingNow({ heading, imgs }) {
             {/* <SwiperSlide>Slide 2</SwiperSlide>
   <SwiperSlide>Slide 3</SwiperSlide>
   <SwiperSlide>Slide 4</SwiperSlide> */}
-          </Swiper>
-        </TrendingNowSlick>
-        {/* <Slider {...settings} className='trendingNow-slick'>
+          {/* </Swiper>
+        </TrendingNowSlick> */} 
+        <Slider {...settings} className='trendingNow-slick'>
           {
             imgs.map((img, index) => (
               <div key={index} className="d-inline-block">
                 <h5 className="outside-card-text">Fairman Online</h5>
                 <Card>
                   <div className="card-body">
-                    <img src={img} alt="Trending-Now" />
+                    <div className='main-img'>
+                    <img   src={img} alt="Trending-Now" />
+                    </div>
                     <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
                     <h4>From $ 35</h4>
                   </div>
@@ -116,8 +122,9 @@ function TrendingNow({ heading, imgs }) {
               </div>
             ))
           }
-        </Slider> */}
+        </Slider>
       </div>
+        </TrendNowInner>
     </StyleTrending>)
 }
 export default TrendingNow;

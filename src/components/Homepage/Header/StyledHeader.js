@@ -32,7 +32,8 @@ margin-top: 4rem;
     font-size: 6.5rem;
   }
   @media screen and (max-width: 480px){
-    font-size: 5.5rem;
+    font-size: 4rem;
+    text-align: center;
   }
 `
 

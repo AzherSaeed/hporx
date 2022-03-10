@@ -5,7 +5,7 @@ export const PrescribeMainContainer = styled.div`
   margin-top: 7.5rem;
   .card-overlay{
     padding-right: 2rem;
-   
+
   }
 `;
 
@@ -39,6 +39,7 @@ export const PrescribeImgContainer = styled.div`
     align-items: center;
     height: 100%;
     padding: 0 2rem;
+   
     h3 {
       font-weight: 600;
 font-size: 24px;
@@ -56,10 +57,20 @@ line-height: 36px;
   &:hover .overlay {
     opacity: 1;
   }
+  @media screen and (max-width:768px) {
+     .overlay{
+      left: 4%;
+    width: 91%;
+     }
+    }
 `;
 
 export const PrescribeImg = styled.img`
-  height: 35rem;
+  /* height: 35rem; */
+  @media screen and (max-width:768px) {
+    padding-left:2rem ;
+    
+  }
 `;
 
 export const ConsultDarkBtn = styled(ViewMoreBtn)`

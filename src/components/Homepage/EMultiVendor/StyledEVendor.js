@@ -1,9 +1,31 @@
 import styled from "styled-components";
 import { ViewMoreBtn } from "../../Globals/Globals";
 
+
+export const EVendorCardMain = styled.div`
+    margin-right: 1.5rem;
+    .card{
+      border-radius: 1rem !important;
+
+    }
+    .EVendorCard-main{
+      height: 300px ;
+      width: 100% ;
+      position: relative;
+      padding: 59px 67px;
+  }
+
+`
+
 export const EVendorMain = styled.div`
+
 margin-top: 9rem;
 text-align: center;
+.VendorCard-main{
+  margin-right:2rem;
+  height:30rem !important ;
+  width : 100%;
+}
 .evendor-2{
     margin-top: 6.7rem;
 }
@@ -22,76 +44,57 @@ opacity: 0.8;
 
 `
 export const EVendorImgContainer = styled.div`
-position: relative;
-  text-align: center;
-  text-align: -moz-center;
-  text-align: -webkit-center;
+  
+  width: 100% ;
+  height: 100% ;
+
   .overlay {
     position: absolute;
-    top: 3%;
+    top: 0;
     bottom: 0;
-    left: 16%;
-    height: 90%;
-    width: 69%;
+    left: 0;
     opacity: 0;
     transition: 0.5s ease;
     background-color: rgba(0, 0, 0, 0.71);
     border-radius: 1rem;
 
 
-    @media screen and (max-width  : 1024px){
-      width: 86%;
-      left: 7%;
-    }
-    @media screen and (max-width : 768px){
-      left: 24% ;
-      width: 52%;
-    }
-    @media screen and (max-width : 320px){
-      left: 19%;
-      width: 63%;
-    }
-
-
-
-
   }
   .EVendorImg-inner-overlay {
-    color: white;
     font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    padding: 0 2rem;
-
-
-
   }
-  &:hover,&:hover .inner-overlay,
+  &:hover,&:hover .EVendorImg-inner-overlay,
   &:hover .overlay {
     opacity: 1;
   }
 `
 export const EVendorImg = styled.img`
-width: 
-23.4rem;
-height: 
-24.5rem;
+width: 100%;
+height: 100%;
+
 
 `
 export const EVendorMiniImg = styled.img`
+margin-top:1.3rem ;
 width : 
-8.2rem;
+2.3rem;
 height : 
 2.7rem;
-
 `
-export const EVendorViewMoreBtn=styled(ViewMoreBtn)`
+export const MiniPharmImg = styled.img`
+height: 1.8rem;
+width: auto;
+position:absolute ;
+top : 1rem;
+left: 1rem ;
+`
+export const EVendorViewMoreBtn = styled(ViewMoreBtn)`
 margin-top:5.6rem
-
 `

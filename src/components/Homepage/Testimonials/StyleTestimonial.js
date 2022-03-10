@@ -3,6 +3,14 @@ import TestimonialBackground from '../../../assets/TestimonialBackground.png';
 
 export const Testimonial = styled.div`
 margin-top: 16rem;
+.testimonial-slider{
+    .slick-prev{
+        left: -25px;
+    } 
+    .slick-next {
+        right: 6px;
+    }
+}
 .background{
     background-image: 
     url(${TestimonialBackground});
@@ -29,7 +37,9 @@ h1{
     margin-top: 5.8rem;
 }
 .Card{
-    height: 50rem;    
+    margin-right: 1rem;
+    height: 55rem;    
+    width: 40rem;
 }
 
 .nameHeading{
@@ -62,4 +72,7 @@ h1{
    line-height: 2.4rem;
    color: #E84025;
  }
+`
+export const RecordingContainer=styled.div`
+padding:2rem ;
 `

@@ -26,6 +26,9 @@
 	color: #333333;
 
 }
+.beforeAfter> div{
+	border-radius: 1rem !important;
+}
 
 .main-designers .main-content .left-section .top-content h1 span{
 	color: #E84025;

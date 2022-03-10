@@ -20,7 +20,7 @@ padding: 0 3rem;
 margin-top: 8.9rem;
 
 @media screen and (max-width : 775px){
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 line-height: 3.6rem;
 
 }

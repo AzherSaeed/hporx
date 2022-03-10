@@ -5,7 +5,7 @@ width: 30rem;
 background-color: white;
    padding :1rem;
    border: 1px solid white;
-  
+
    .inner-div{
 width: 20rem;
 width: 100%;
@@ -36,7 +36,7 @@ width: 100%;
     }
 
 `
-export const QuotationContainer=styled.div`
+export const QuotationContainer = styled.div`
 .quote-open{
     position: absolute;
     right: 1.6rem;

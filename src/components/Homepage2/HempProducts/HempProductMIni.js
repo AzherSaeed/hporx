@@ -48,7 +48,7 @@ const style={
         <StyleHemp>
             <div className="container p-5" >
                 <h1 style={style}>Last Month Top Categories </h1>
-                <Slider {...settings} className='hemp-slick mt-4'>
+                <Slider {...settings} className='viewToday-slick mt-4'>
                     {hempImgs.map((img, index) => (
                         <div key={index}>
                             <Card  className="cards">
