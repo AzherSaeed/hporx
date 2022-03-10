@@ -31,6 +31,34 @@ opacity: 0.8;
 padding: 0 5rem;
 
 }
+.map{
+  width: 100%;
+  height:62.5rem;
+}
+.location-icon{
+  height: 2rem;
+  width: 2rem; 
+}
+.location-info{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 400px;
+  min-height:200px; 
+  padding: 20px ;
+  background-color: rgba(0, 0,0, .6);
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+.location-info ul{
+  list-style-type: none;
+  padding: 0;
+
+}
+.location-info li{
+  padding: 5px 0;
+}
 @media only screen and (max-width: 480PX) {
   P{
     padding: 0 0;

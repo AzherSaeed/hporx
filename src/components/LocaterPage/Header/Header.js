@@ -33,6 +33,11 @@ function Header() {
   const [cityList, setcityList] = useState([]);
   const [serviceList, setserviceList] = useState([]);
   const [doctorsData, setdoctorsData] = useState([]);
+  const[address,setAddress]=useState([]);
+
+ 
+
+  
 
   useEffect(() => {
     genericService
