@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const PackagesCardMain = styled.div`
 @media screen and (max-width:525px) {
     .packages-slick{
-        max-width: 40rem;
+        max-width: 37rem;
         margin: 0 auto;
     }
     .hnIGG{
@@ -23,6 +23,8 @@ text-align: center;
 `
 export const PackageCardMain = styled.div`
 margin-top: 6rem;
+margin-bottom: 2.4rem;
+
 box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
 font-style: normal;
 margin-left: 10px;
@@ -48,16 +50,16 @@ color: #FFFFFF;
 padding: 2.9rem  2.4rem;
 h3{
     
-font-size: 20px;
+font-size: 2rem;
 font-weight: 600;
-line-height: 18px;
+line-height: 1.8rem;
 letter-spacing: 0em;
 }
 p{
 margin-top: 1.3rem;
-font-size: 28px;
+font-size: 2.8rem;
 font-weight: 600;
-line-height: 24px;
+line-height: 2.4rem;
 letter-spacing: 0em;
 }
 `

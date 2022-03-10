@@ -82,7 +82,7 @@ export const ShopBtn = styled(ShopNowBtn)`
   margin: 2rem 0;
 `;
 export const PrescribeSlickMain = styled.div`
-  .prescribe-slick {
+  .responsive-slick {
     .text-container {
       padding-left: 2rem;
       p {

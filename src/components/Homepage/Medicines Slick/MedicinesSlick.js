@@ -57,7 +57,7 @@ const MedicinesSlick = () => {
     <MedicineContainerMain>
       <Container>
         <MedicineSlickContainer>
-        <Slider {...settings} className='medicine-slick'>
+        <Slider {...settings} className='responsive-slick'>
 
           {imgContainer.map((img, index) => (
             <div key={index}>

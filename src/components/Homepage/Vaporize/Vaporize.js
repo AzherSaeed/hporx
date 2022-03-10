@@ -52,7 +52,7 @@ const Vaporize = ({id}) => {
         <VaporizeMainContainer>
             <Container id={id} >
                 <div className="vaporize-inner-container">
-                    <Slider {...settings} className='vaporize-slick'>
+                    <Slider {...settings} className='responsive-slick'>
                         <VaporizeSlickCard />
                         <VaporizeSlickCard />
                     </Slider>

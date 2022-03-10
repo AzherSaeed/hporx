@@ -45,6 +45,15 @@ export const MarketSlickContainer = styled.div`
     z-index: 1;
 }
 }
+@media screen and (min-width:320px) and (max-width:425px) {
+  .inhalate-slick .slick-prev {
+  left:-4px !important ;
+  }
+  .inhalate-slick .slick-next {
+    right: 18px !important;
+    z-index: 1;
+}
+}
 
 width: 90rem;
  position: absolute;
@@ -123,8 +132,9 @@ position: relative;
 export const MarkSlickImg = styled.img`
 border-radius:1rem ;
 width: 41rem;
-@media screen and (min-width:430px) {
+@media screen and (min-width:320px) {
   height:23rem;
   display:inherit !important ;
 }
+
 `

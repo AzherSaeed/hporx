@@ -20,6 +20,12 @@ export const PortableMainContainer = styled.div`
     z-index: 1;
 }
 }
+@media screen and (min-width: 320px) {
+    .portable-slick  .slick-next {
+    right:17px !important;
+    z-index: 1;
+}
+}
 .portable-slick  .slick-prev {
     left: -1rem;
     z-index:1;   
@@ -51,7 +57,18 @@ color:#828282;
 export const PortableMiniImgContainer = styled.div`
 position:relative;
 transition: .5s ease;
-
+.overlay {
+    position: absolute;
+    bottom: 0;
+    height: 89%;
+    width: 97%;
+    top: 5%;
+    left: 8%;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.71);
+  }
 .inner-overlay{
   color: white;
   position: absolute;
@@ -63,6 +80,41 @@ transition: .5s ease;
   opacity: 0;
   }
    &:hover,  &:hover .inner-overlay{
+    .overlay{
+        opacity: 1;   
+    }
+        opacity: 1;   
+    }
+`
+export const PortableMiniImgContainer2 = styled.div`
+position:relative;
+transition: .5s ease;
+.overlay {
+    position: absolute;
+    bottom: 0;
+    height: 89%;
+    width: 97%;
+    top: 5%;
+    left: 8%;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.71);
+  }
+.inner-overlay{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  }
+   &:hover,  &:hover .inner-overlay{
+    .overlay{
+        opacity: 1;   
+    }
         opacity: 1;   
     }
 `
@@ -82,16 +134,15 @@ transition: .5s ease;
   transform: translate(-50%, -50%);
   opacity: 1;
   }
-   /* &:hover,  &:hover .inner-overlay{
-        opacity: 1;   
-    } */
+   
 `
+
 export const PortableImg1 = styled.img`
 
 `
 export const PortableMiniImg = styled.img`
-@media screen and (min-width:1400px) {
-    width: 37rem !important;
+@media screen and (min-width:1300px) {
+    width: 36.5rem !important;
 }
 
 `

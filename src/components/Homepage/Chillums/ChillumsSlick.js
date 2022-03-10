@@ -51,7 +51,7 @@ const ChillumsSlick = () => {
   };
   return (
     <div>
-      <Slider {...settings} className='chillum-slick'>
+      <Slider {...settings} className='responsive-slick'>
         <ChillumCard img={chillum1} />
         <ChillumCard img={chillum2} />
         <ChillumCard img={chillum3} />

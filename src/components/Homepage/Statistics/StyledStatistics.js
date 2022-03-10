@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 export const StatisticsMainContainer = styled.div`
   margin-top: 5.6rem;
+  .source-world{
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #858484;
+    margin-top: 2rem;
+  }
   h1 {
       font-weight: 500;
       font-size: 4.8rem;

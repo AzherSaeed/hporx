@@ -22,6 +22,7 @@ const Header = ({id , country , state}) => {
   return (
     <StyledHero id={id} >
       {/* <TopBar setShow={setShow} /> */}
+      
       <OffCanvas country={country} state={state} handleClose={handleClose} show={show}  setShow={setShow}/>
       <MyVerticallyCenteredModal
         show={modalShow}
@@ -30,10 +31,13 @@ const Header = ({id , country , state}) => {
         state={state}
         country={country}
       />
+     
+
+      
       <SubBar setShow={setShow}  />
+      <video className="hero-video" autoPlay loop src='/Videos/hporx.mp4' />
       <div className="hero-text-container">
         <HomePlayButtonContainer onClick={() => setModalShow(true)} >
-        
           <HeroPlayIcon src={playIcon} />
         </HomePlayButtonContainer>
         <HeroHeading>THERAPEUTICS</HeroHeading>

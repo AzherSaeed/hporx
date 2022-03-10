@@ -51,7 +51,7 @@ const AgricultureSlick = () => {
   };
   return (
     <SlickMainContainer>
-      <Slider {...settings} className='chillum-slick'>
+      <Slider {...settings} className='responsive-slick'>
         {
           agriImgs2.map((img, index) => (
             <AgricultureImgContainer1 key={index}>

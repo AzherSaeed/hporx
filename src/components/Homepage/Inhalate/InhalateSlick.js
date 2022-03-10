@@ -64,7 +64,7 @@ const InhalateSlick = () => {
         <iframe width="100%" height="500px" src="https://www.youtube.com/embed/oJaO4JdFWB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       }
       />
-      <Slider {...settings} className="inhalate-slick">
+      <Slider {...settings} className="responsive-slick">
         {imgContainer.map((img, index) => (
           <InhalatedImgContainer key={index}>
             <InhalteImg src={img} alt={img} />

@@ -11,12 +11,12 @@ import prescribe3 from '../../../assets/prescribe3.jpg'
 import { PrimaryHeading, TertiaryHeadingMedium, ViewMoreBtn } from '../../Globals/Globals'
 import { ConsultDarkBtn, PrescribeSlickMain, PrescribeMainContainer } from './StyledPrescribe';
 import PrescribeCard from './PrescribeCard';
-
+import { PrescribeBtn, PrescribeImg, PrescribeImgContainer , ShopBtn} from './StyledPrescribe';
 
 const Prescribe = ({ id }) => {
 
-    const prescribeImgs1 = [prescribe, prescribe01,prescribe, prescribe01,prescribe, prescribe01];
-    const prescribeImgs2 = [prescribe1, prescribe2, prescribe3,prescribe1, prescribe2, prescribe3,prescribe1, prescribe2, prescribe3];
+    const prescribeImgs1 = [prescribe, prescribe01];
+    const prescribeImgs2 = [prescribe1, prescribe2, prescribe3, prescribe1, prescribe2, prescribe3, prescribe1, prescribe2, prescribe3];
     var settings = {
         dots: false,
         arrows: false,
@@ -33,7 +33,6 @@ const Prescribe = ({ id }) => {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                       autoplay: false,
                     dots: false,
                     arrows: false,
                 }
@@ -57,18 +56,36 @@ const Prescribe = ({ id }) => {
             }
         ]
     };
-
-
     return (
         <PrescribeMainContainer id={id} >
             <PrescribeSlickMain>
                 <Container>
-                    <Slider {...settings} className='prescribe-slick'>
-                        {
+                    <Slider {...settings} className='responsive-slick'>
+                        <PrescribeImgContainer className='card-overlay'>
+                            <div className="overlay">
+                            </div>
+                            <div className='inner-overlay'>
+                                <h3>About</h3>
+                                <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet.</p>
+                                <PrescribeBtn>Appointment</PrescribeBtn>
+                            </div>
+                            <PrescribeImg src={prescribe} alt={prescribe} />
+                        </PrescribeImgContainer >
+                        <PrescribeImgContainer className='card-overlay'>
+                            <div className="overlay">
+                            </div>
+                            <div className='inner-overlay'>
+                                <h3>About</h3>
+                                <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet.</p>
+                                <PrescribeBtn>Appointment</PrescribeBtn>
+                            </div>
+                            <PrescribeImg src={prescribe1 } alt={prescribe1} />
+                        </PrescribeImgContainer >
+                        {/* {
                             prescribeImgs1.map((img, index) => (
                                 <PrescribeCard key={index} img={img} />
                             ))
-                        }
+                        } */}
                         <div className='text-container'>
                             <PrimaryHeading>Prescribe</PrimaryHeading>
                             <p>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet.</p>
@@ -80,10 +97,10 @@ const Prescribe = ({ id }) => {
                     </Slider>
 
                     <div className='mt-4'>
-                        <Slider {...settings} className='prescribe-slick'>
+                        <Slider {...settings} className='responsive-slick'>
                             {
                                 prescribeImgs2.map((img, index) => (
-                                    <PrescribeCard  key={index} img={img} />
+                                    <PrescribeCard key={index} img={img} />
                                 ))
                             }
                         </Slider>

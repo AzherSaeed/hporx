@@ -48,7 +48,7 @@ const DiagnoseSlick = () => {
     return (
         <StyledSlickContainer>
             <Container>
-                <Slider {...settings} className='diagnose-slick'>
+                <Slider {...settings} className='responsive-slick'>
                     {
                         diagnoseImgs.map((img, index) => (
                             <DiagnoseImgContainer key={index}>

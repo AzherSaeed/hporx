@@ -82,12 +82,13 @@ const Homepage = ({country , region}) => {
   return (
     <>
       <Header id='HOME' country={country} state={region} />
-      <Inhalate  id="INHALATE" />
+      
+       <Inhalate  id="INHALATE" />
       <Vaporize  id="VAPORIZE" />
-      <Portable   id="PORTABLES" />
+     <Portable   id="PORTABLES" />
       <Chillum  id="CHILLUMS" />
       <Cutivation  id="CULTIVATE" />
-      <Agriculture  />
+       <Agriculture  />
       <GrowProfit   />
       <BelowGrowProfit   />
       <TrustedSuppliers  imgs={trustedSuppliers} head='Trusted International Brands' />
@@ -102,7 +103,7 @@ const Homepage = ({country , region}) => {
       <EMultiVendor  />
       <Testimonials  />
       <Locate  id="LOCATE" />
-      <Statistics  />
+      <Statistics  /> 
       <SubscribeNewsletter />
       <FashionDiscount imgs={fashionDiscountImgs} />
       <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations' />

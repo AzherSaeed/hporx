@@ -76,7 +76,7 @@ const CultivationSlick = () => {
     return (
 
         <Container>
-            <Slider {...settings} className='cultivation-slick'>
+            <Slider {...settings} className='responsive-slick'>
                 {
                     cultivationBox.map((cultivationSection, index) =>{
                     const {heading,description,img}=cultivationSection;

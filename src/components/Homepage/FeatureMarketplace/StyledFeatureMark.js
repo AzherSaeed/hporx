@@ -29,7 +29,10 @@ background-image: url(${featureMarkBack}) ;
   padding: 4rem 0;
 `
 export const FeatureMarkImg = styled.img`
-
+@media screen and (max-width:480px) {
+margin-top: 1.5rem;
+  
+}
 `
 export const FeatureSubHeading = styled(TertiaryHeadingMedium)`
 opacity: 0.8;
@@ -39,6 +42,7 @@ text-transform: capitalize;
 color:white ;
 `
 export const FeatureMarketPlaceBtn = styled(ViewMoreBtn)`
+
 margin-top: 5rem;
 color: #FFFFFF;
 border: 1px solid #FFFFFF;

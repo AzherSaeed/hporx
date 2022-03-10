@@ -39,7 +39,10 @@ h1{
 .Card{
     margin-right: 1rem;
     height: 55rem;    
-    width: 40rem;
+    max-width: 40rem;
+    @media screen and (min-width:320px) {
+        
+    }
 }
 
 .nameHeading{

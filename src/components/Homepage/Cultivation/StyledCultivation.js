@@ -40,11 +40,13 @@ text-align: -moz-center;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 13%;
     right: 0;
     opacity: 0;
+    width: 77%;
+    height: 86%;
     transition: 0.5s ease;
-    /* background-color: rgba(0,0,0,.1); */
+    background-color: rgba(0,0,0,0.71);
   }
 .inner-overlay{
   color: white;

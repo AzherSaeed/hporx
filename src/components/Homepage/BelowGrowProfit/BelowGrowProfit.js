@@ -3,15 +3,18 @@ import { Container } from 'react-bootstrap'
 import belowprofit from '../../../assets/belowGrowProfit.svg'
 import { BelowGrowProfitMainContainer, BelowGrowProfitImg, BelowGrowProfitImgContainer } from './StyledBelowProfit'
 import playButton from "../../../assets/play-outline-button.svg";
+import BelowEditIQ from '../../DesignIQ/BelowEditIQ/BelowEditIQ';
 const BelowGrowProfit = () => {
   return (
     <BelowGrowProfitMainContainer>
       <Container>
         <h2>Controlled Environment Agriculture Manufacturers</h2>
       </Container>
-      <BelowGrowProfitImgContainer>
+            <BelowGrowProfitImgContainer>
 
-       
+      <BelowEditIQ/>
+      </BelowGrowProfitImgContainer>
+      {/* <BelowGrowProfitImgContainer>
         <div className="inner-overlay">
           <div className="inner-overlay-content">
             <img className='play-img' src={playButton} alt="playButton" />
@@ -19,7 +22,7 @@ const BelowGrowProfit = () => {
           </div>
         </div>
         <BelowGrowProfitImg src={belowprofit} alt={belowprofit} />
-      </BelowGrowProfitImgContainer>
+      </BelowGrowProfitImgContainer> */}
     </BelowGrowProfitMainContainer>
   )
 }
