@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import { StyleHeader } from "./StyleHeader";
 import { Form, Formik, ErrorMessage } from "formik";
@@ -11,110 +11,78 @@ import Card1img from "../../../assets/Card1img.svg";
 import Card2img from "../../../assets/Card2img.svg";
 import Card3img from "../../../assets/Card3img.svg";
 import Card4img from "../../../assets/Card4img.svg";
+import emptyUser from "../../../assets/emptyUser.png";
+import emptyLocation from "../../../assets/emptyLocation.png";
 import GenerecService from "../../../services/GenericService";
 import { API_URL } from "../../../services/config";
 import * as Yup from "yup";
 import Pagination from "./Pagination";
 
+
+const validate = Yup.object({
+  country: Yup.string().required("Please select a country"),
+  city: Yup.string().required("Please select a city"),
+  service: Yup.string().required("Please Select a Service"),
+});
 function Header() {
+  const genericService = new GenerecService();
+
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(12);
-  const arr = [
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card2img,
-    Card4img,
-    Card4img,
-  ];
-  const countryList = [
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "American Samoa",
-    "Andorra",
-    "Angola",
-    "Anguilla",
-    "Antarctica",
-    "Antigua and Barbuda",
-    "Argentina",
-    "Armenia",
-    "Aruba",
-    "Australia",
-    "Austria",
-    "Azerbaijan",
-  ];
-  const cityList = [
-    "Karachi",
-    "Lahore",
-    "Faisalabad",
-    "Rawalpindi",
-    "Gujranwala",
-    "Peshawar",
-    "Hyderabad",
-    "Islamabad",
-    "Quetta",
-    "Bahawalpur",
-    "Sargodha",
-    "Sialkot",
-    "Sukkur",
-    "Larkana",
-    "Chiniot",
-    "Shekhupura",
-    "Jhang City",
-    "Dera Ghazi Khan",
-    "Gujrat",
-    "Rahimyar Khan",
-    "Kasur",
-  ];
-  const serviceList = [
-    "Medical Specialist",
-    "Orthopedic",
-    "Surgen",
-    "Child Specialist",
-  ];
-  const validate = Yup.object({
-    country: Yup.string().required("Please select a country"),
-    city: Yup.string().required("Please select a city"),
-    service: Yup.string().required("Please Select a Service"),
-  });
+  const [countryList, setcountryList] = useState([]);
+  const [cityList, setcityList] = useState([]);
+  const [serviceList, setserviceList] = useState([]);
+  const [doctorsData, setdoctorsData] = useState([]);
+
+  useEffect(() => {
+    genericService
+      .get(`${API_URL}getAddresses`)
+      .then((res) => {
+        setcountryList(res.finalData.country);
+        setcityList(res.finalData.city);
+        setserviceList(res.finalData.service);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    genericService
+      .post(`${API_URL}usersData`, {
+        city: "",
+        country: "",
+        service: "",
+      })
+      .then((res) => {
+        setdoctorsData(...doctorsData , res.data )
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }, []);
+
+ 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
-  const currentPost = arr.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPost = doctorsData.slice(indexOfFirstPost, indexOfLastPost);
 
   function paginate(pageNumber) {
     setCurrentPage(pageNumber);
   }
-  const genericService = new GenerecService();
 
-// const arr = []
-//   for(i , i < lengh < 0++){
-//     console.log(values);
-//     arr.push(genericService
-//       .post(`${API_URL}usersData`, values))
-    
-//   }
+  // const arr = []
+  //   for(i , i < lengh < 0++){
+  //     console.log(values);
+  //     arr.push(genericService
+  //       .post(`${API_URL}usersData`, values))
 
-//   Promise.all(arr)
+  //   }
 
-  
+  //   Promise.all(arr)
+
+  console.log(doctorsData, "doctorsData");
+
   return (
     <StyleHeader>
       <div className="header">
@@ -136,7 +104,8 @@ function Header() {
               genericService
                 .post(`${API_URL}usersData`, values)
                 .then((msg) => {
-                  console.log(msg);
+                  setdoctorsData([...doctorsData, msg.data]);
+                  // doctorsData.push(msg.data)
                 })
                 .catch((error) => {
                   console.warn("warn", error);
@@ -196,7 +165,7 @@ function Header() {
             <Col lg={3} md={6} sm={6}>
               <Card className="cards">
                 <div className>
-                  <img src={v} className="img-section" alt="img" />{" "}
+                  <img src={emptyLocation} className="img-section" alt="img" />{" "}
                 </div>
                 <div className="card-data">
                   <h6>Advance Medical Associates PC...</h6>
@@ -232,9 +201,9 @@ function Header() {
         </Row>
         <Pagination
           postPerPage={postPerPage}
-          totalPosts={arr.length}
+          totalPosts={doctorsData.length}
           paginate={paginate}
-          size="lg"
+          size="sm"
         />
       </div>
     </StyleHeader>
