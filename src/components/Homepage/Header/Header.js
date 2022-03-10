@@ -58,23 +58,21 @@ const data = localStorage.getItem("ageGateActive");
           show={show}
           setShow={setShow}
         />
-        {/* <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        setModalShow={setModalShow}
-        state={state}
-        country={country}
-      /> */}
-        <SubBar setShow={setShow} />
-        <div className="hero-text-container">
-          <HomePlayButtonContainer onClick={() => setModalShow(true)}>
-            <HeroPlayIcon src={playIcon} />
-          </HomePlayButtonContainer>
-          <HeroHeading>THERAPEUTICS</HeroHeading>
-          <p className="home-main-header-sub-heading">CULITVATED WELLNESS</p>
-          <HeroButton>Appointment</HeroButton>
-        </div>
-      </StyledHero>
+ 
+     
+
+      
+      <SubBar setShow={setShow}  />
+      <video className="hero-video" autoPlay loop src='/Videos/hporx.mp4' />
+      <div className="hero-text-container">
+        <HomePlayButtonContainer onClick={() => setModalShow(true)} >
+          <HeroPlayIcon src={playIcon} />
+        </HomePlayButtonContainer>
+        <HeroHeading>THERAPEUTICS</HeroHeading>
+        <p className="home-main-header-sub-heading" >CULITVATED WELLNESS</p>
+        <HeroButton>Appointment</HeroButton>
+      </div>
+    </StyledHero>
     </div>
   );
 };

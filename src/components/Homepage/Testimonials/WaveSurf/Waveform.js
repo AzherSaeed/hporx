@@ -94,9 +94,9 @@ export default function Waveform({ url }) {
         }
         <FaStop onClick={stopHandler} fontSize='2rem' className="me-4 " />
         {
-          muteVolume?(
+          muteVolume ? (
             <FaVolumeMute onClick={volumeMutedHandler} fontSize='2rem' className="me-4" />
-          ):(
+          ) : (
             <FaVolumeUp onClick={volumeMutedHandler} fontSize='2rem' className="me-4" />
           )
         }

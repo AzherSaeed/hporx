@@ -1,14 +1,19 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React,{useState} from 'react'
+import { Col, Container, Row, Spinner } from 'react-bootstrap'
 import { NewsLetterImg, NewsLetterMainContianer, SubscribeButton, SubscribeHeading } from './StyledNewsLetter'
-import newletterImg from '../../../assets/newsLetter.svg'
+import newletterImg from '../../../assets/newsLetter.png'
 import Select from '../Select/Select'
 import InputField from './InputField'
-import { SubHeading } from '../../Globals/Globals'
 import {Formik,Form} from 'formik';
 import *as Yup from 'yup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import GenericService from '../../../services/GenericService'
+import { API_URL } from '../../../services/config'
+
 const SubscribeNewsletter = () => {
-    
+  const [formLoading, setFormLading] = useState(false);
+    const generic = new GenericService()
     const validate=Yup.object( {
         firstName:Yup.string().max(15,"Must be 15 character or less").required("Required"),
         lastName:Yup.string().max(20,"Must be 20 character or less").required("Required"),
@@ -17,15 +22,17 @@ const SubscribeNewsletter = () => {
         inviteFriend:Yup.string().max(15,"Must be 15 character or less").required("Required"),
         city:Yup.string().min(5,"Must be 5 character or more").required("Required"),
         service:Yup.string().required("Required"),
-        service1:Yup.string().required("Required")
+        position:Yup.string().required("Required")
     });  
     return (
         <NewsLetterMainContianer>
+
             <Container>
-                <Row className='justify-content-between'>
+      <ToastContainer style={{fontSize:'1.4rem'}}  />
                     <SubscribeHeading>
                         Subscribe
                     </SubscribeHeading>
+                <Row className='justify-content-between mt-3'>
                     <Formik initialValues={{
                       firstName :'',
                       lastName:'',
@@ -34,12 +41,31 @@ const SubscribeNewsletter = () => {
                       inviteFriend:'',
                       city:'',
                       service:'',
-                      service1:''
+                      position:''
                     }}
                     validationSchema={validate}
                     
                     onSubmit={values=>{
-                        console.log(values);
+                        setFormLading(true);
+                        console.log(values)
+                        generic
+                          .post(`${API_URL}subcription`, values)
+                          .then((msg) => {
+                            console.log(msg);
+                            toast.success(msg.message );
+                            // <div>
+                            //     <button onClick={notify}>Notify!</button>
+                            //    
+                            //   </div>
+                            setFormLading(false);
+                            // alert('Successful')
+                          })
+                          .catch((error) => {
+                            console.log(error);
+                            toast.error("Something went wrong" );
+                            setFormLading(false);
+                            // console.log(error);
+                          });
                     }}>
                      {formik =>(
                     <Col lg={7}>
@@ -74,10 +100,19 @@ const SubscribeNewsletter = () => {
                                 <Select required name="service" title='How can we be of service to you?'/>
                             </Col>
                             <Col md={12}>
-                                <Select required name="service1" title='How can we be of service to you?'/>
+                                <Select required name="position" title='How can we be of service to you?'/>
                             </Col>
                             <SubscribeButton type='submit'>
-                                Subscribe
+                            {
+                                  formLoading ? (
+                                    <Spinner
+                                    as="span"
+                                    animation="grow"
+                                    role="status"
+                                    aria-hidden="true"
+                                  />
+                                  ) : 'Subscribe'
+                              }
                             </SubscribeButton>
 
                         </Row>

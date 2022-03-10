@@ -33,7 +33,7 @@ const InhalateSlick = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+         
           dots: false,
           arrows: true,
         },
@@ -75,7 +75,7 @@ const InhalateSlick = () => {
           ></iframe>
         }
       />
-      <Slider {...settings} className="inhalate-slick">
+      <Slider {...settings} className="responsive-slick">
         {imgContainer.map((img, index) => (
           <InhalatedImgContainer key={index}>
             <InhalteImg src={img} alt={img} />

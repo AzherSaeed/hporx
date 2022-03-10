@@ -82,19 +82,20 @@ const Homepage = ({country , region}) => {
   return (
     <>
       <Header id='HOME' country={country} state={region} />
-      <Inhalate  id="INHALATE" />
+      
+       <Inhalate  id="INHALATE" />
       <Vaporize  id="VAPORIZE" />
-      <Portable   id="PORTABLES" />
+     <Portable   id="PORTABLES" />
       <Chillum  id="CHILLUMS" />
       <Cutivation  id="CULTIVATE" />
-      <Agriculture  />
-      <GrowProfit   />
-      <BelowGrowProfit   />
-      <TrustedSuppliers  imgs={trustedSuppliers} head='Trusted International Brands' />
+       <Agriculture id="CULTIVATE" />
+      <GrowProfit  id="CULTIVATE" />
+      <BelowGrowProfit  id="CULTIVATE" />
+      <TrustedSuppliers id="CULTIVATE"  imgs={trustedSuppliers} head='Trusted International Brands' />
       <Diaganose  id="DIAGNOSE" />
       <Prescribe  id="PRESCRIBE" />
-      <MedicinesSlick   />
-      <MedicinesSlick   />
+      <MedicinesSlick   id="PRESCRIBE" />
+      <MedicinesSlick    id="PRODUCTS"/>
       <MedicineSmallSlick  id="PRODUCTS" />
       <Marketplace  id="MARKETPLACE" />
       <FeatureMarketPlace  order='first'   />
@@ -102,7 +103,7 @@ const Homepage = ({country , region}) => {
       <EMultiVendor  />
       <Testimonials  />
       <Locate  id="LOCATE" />
-      <Statistics  />
+      <Statistics  /> 
       <SubscribeNewsletter />
       <FashionDiscount imgs={fashionDiscountImgs} />
       <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations' />

@@ -6,9 +6,9 @@ import { PrimaryHeading, TertiaryHeadingSmall } from '../Globals/Globals'
 import { MarketPlaceSlick } from './MarketPlaceSlick'
 const Marketplace = ({id}) => {
   return (
-    
-    <Container id={id} >
-        <MarkInnerContainer >
+    <div id={id}>
+    <Container  >
+        <MarkInnerContainer  >
     <Row>
         <Col md={6}>
             <MarketContentContainer>
@@ -29,6 +29,7 @@ const Marketplace = ({id}) => {
     </div>
     </MarkInnerContainer>
       </Container>
+    </div>
   )
 }
 

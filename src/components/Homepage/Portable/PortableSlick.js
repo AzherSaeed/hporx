@@ -7,6 +7,7 @@ import portables1 from '../../../assets/portables1.jpg'
 import portables2 from '../../../assets/portables2.jpg'
 import { PortableSlickMain } from './PortableStyles';
 import PortableCard from './PortableCard';
+import PortableCard2 from './PortableCard2';
 
 
 const PortableSlick = () => {
@@ -14,8 +15,8 @@ const PortableSlick = () => {
   var settings = {
     arrows: true,
     dots: false,
-    infinite: true,
-    autoplay: true,
+   
+    autoplay: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -51,13 +52,13 @@ const PortableSlick = () => {
         <div>
           <Row className='d-flex p-0'>
             <PortableCard className='img-fluid  p-0' img={portables1} />
-            <PortableCard className='img-fluid  p-0' img={portables2} />
+            <PortableCard2 className='img-fluid  p-0' img={portables2} />
           </Row>
         </div>
         <div>
           <Row className='d-flex align-items-center  p-0'>
             <PortableCard className='img-fluid  p-0' img={portables1} />
-            <PortableCard className='img-fluid ' img={portables2} />
+            <PortableCard2 className='img-fluid ' img={portables2} />
           </Row>
         </div>
 

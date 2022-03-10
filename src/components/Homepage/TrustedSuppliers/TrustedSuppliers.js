@@ -11,11 +11,11 @@ import {
 } from "./StyeldTrustedSuppliers";
 import { Container } from "react-bootstrap";
 
-const TrustedSuppliers = ({ imgs, head }) => {
+const TrustedSuppliers = ({ imgs, head,id }) => {
   var settings = {
     arrows: false,
     dots: false,
-    infinite: true,
+   
     autoplay: true,
     speed: 500,
     slidesToShow: 6,
@@ -27,7 +27,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
         settings: {
           slidesToShow: 6,
           slidesToScroll: 1,
-          infinite: true,
+         
           dots: false,
         },
       },
@@ -49,7 +49,7 @@ const TrustedSuppliers = ({ imgs, head }) => {
     ],
   };
   return (
-    <TrustedCompanyContainer>
+    <TrustedCompanyContainer id={id}>
       <Container>
         <h3>{head}</h3>
         <Slider {...settings} className="trusted-suppliers-slick">

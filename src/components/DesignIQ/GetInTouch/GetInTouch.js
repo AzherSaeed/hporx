@@ -13,7 +13,8 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import GenerecService from "../../../services/GenericService";
 import { API_URL } from "../../../services/config";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const validate = Yup.object({
   name: Yup.string()
     .max(15, "Must be 15 character or less")
@@ -40,9 +41,12 @@ const GetInTouch = () => {
   const genericService = new GenerecService();
 
   const [formLoading, setFormLading] = useState(false);
+ 
+
 
   return (
     <Container>
+      <ToastContainer style={{fontSize:'1.4rem'}}  />
       <GetInTouchMain>
         <h3>Have any Query Get In Touch!</h3>
         <GetInTouchInner>
@@ -60,15 +64,22 @@ const GetInTouch = () => {
               onSubmit={(values) => {
                 setFormLading(true);
                 genericService
-                  .post(`${API_URL}hporx-form`, values)
+                  .post(`${API_URL}getInTouchQuery`, values)
                   .then((msg) => {
+                    console.log(msg);
+                    toast.success(msg.message );
+                    // <div>
+                    //     <button onClick={notify}>Notify!</button>
+                    //    
+                    //   </div>
                     setFormLading(false);
-                    alert('Successful')
+                    // alert('Successful')
                   })
                   .catch((error) => {
-                    setFormLading(false);
                     console.log(error);
-                    alert('Some thing went wrong please try again')
+                    toast.error("Something went wrong" );
+                    setFormLading(false);
+                    // console.log(error);
                   });
               }}
             >
@@ -117,7 +128,7 @@ const GetInTouch = () => {
                           />
                         </Col>
 
-                        <Col md={12}>
+                       <Col md={12}>
                           <InputField
                             name="message"
                             as="textarea"
@@ -147,13 +158,13 @@ const GetInTouch = () => {
                 </Col>
               )}
             </Formik>
-
             <Col lg={5}>
               <GetInTouchImg src={getIn} alt={getIn} />
             </Col>
           </Row>
         </GetInTouchInner>
       </GetInTouchMain>
+      
     </Container>
   );
 };

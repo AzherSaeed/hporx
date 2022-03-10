@@ -5,15 +5,13 @@ width: 30rem;
 background-color: white;
    padding :1rem;
    border: 1px solid white;
-
+border-radius: 2rem;
    .inner-div{
 width: 20rem;
 width: 100%;
    }
-  
     p{
     margin-top: 1rem;
-    
     padding: 15px;
     margin: 5px 0 2px 0;
     border: none;
@@ -41,15 +39,14 @@ export const QuotationContainer = styled.div`
     position: absolute;
     right: 1.6rem;
     bottom: 1.4rem;
-transition: all .5s linear;
-    
+transition: all .2s linear;
          transform-origin: bottom;
         transform:scaleY(1);
         opacity: 1;
 }
 .quote-close{
     position: absolute;
-transition: all .5s linear;
+
 
     right: 1.6rem;
     bottom: 1.4rem;

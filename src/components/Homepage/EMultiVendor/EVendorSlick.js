@@ -23,6 +23,7 @@ const EVendorSlick = () => {
   var settings = {
     dots: false,
     infinite: false,
+    arrows:false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -34,7 +35,8 @@ const EVendorSlick = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: false,
-          dots: false
+          dots: false,
+          
         }
       },
       {

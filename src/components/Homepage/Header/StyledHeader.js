@@ -2,14 +2,20 @@ import styled from "styled-components";
 import headerImg from '../../../assets/banner.svg';
 
 const StyledHero = styled.div`
-  background-image: url(${headerImg});
+  /* background-image: url(${headerImg});
   background-color: #cccccc;
   background-repeat: no-repeat;
   height: 100vh;
-  background-size: cover;
-
-
-
+  background-size: cover; */
+.hero-video{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  
+  z-index: -1;
+  margin-top: -10rem;
+}
 .home-main-header-sub-heading{
     color: #ffff;
     opacity: 0.8;
@@ -42,7 +48,7 @@ margin-top: 4rem;
 const HeroButton = styled.button`
   margin-top: 4rem;
    border-color: #fff;
-  padding: 1.2rem 3.2rem;
+  padding: 0.8rem 3.2rem;
   border-radius: 2rem;
   border: 1px solid white;
   background: transparent;
