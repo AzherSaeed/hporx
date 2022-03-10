@@ -13,9 +13,7 @@ function App() {
     fetch("http://ip-api.com/json")
       .then((res) => res.json())
       .then((response) => {
-        console.log("Country is : ", response.country);
         setCountry(response.country);
-        console.log("Region is: ", response.regionName);
         setState(response.regionName);
       })
       .catch((data, status) => {
