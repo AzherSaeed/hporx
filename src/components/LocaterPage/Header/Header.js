@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Button, Card } from "react-bootstrap";
+import { Row, Col, Button, Card, Placeholder } from "react-bootstrap";
 import { StyleHeader } from "./StyleHeader";
 import { Form, Formik, ErrorMessage } from "formik";
 import Select from "./Select";
@@ -18,7 +18,6 @@ import { API_URL } from "../../../services/config";
 import * as Yup from "yup";
 import Pagination from "./Pagination";
 
-
 const validate = Yup.object({
   country: Yup.string().required("Please select a country"),
   city: Yup.string().required("Please select a city"),
@@ -33,6 +32,7 @@ function Header() {
   const [cityList, setcityList] = useState([]);
   const [serviceList, setserviceList] = useState([]);
   const [doctorsData, setdoctorsData] = useState([]);
+  const [cardsLoading, setcardsLoading] = useState(true);
 
   useEffect(() => {
     genericService
@@ -41,6 +41,7 @@ function Header() {
         setcountryList(res.finalData.country);
         setcityList(res.finalData.city);
         setserviceList(res.finalData.service);
+        setcardsLoading(false);
       })
       .catch((error) => {
         console.log("error", error);
@@ -53,16 +54,17 @@ function Header() {
         city: "",
         country: "",
         service: "",
+        limit: 50,
       })
       .then((res) => {
-        setdoctorsData(...doctorsData , res.data )
+        setdoctorsData(...doctorsData, res.data);
+        setcardsLoading(false);
       })
       .catch((error) => {
         console.log("error", error);
       });
   }, []);
 
- 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
   const currentPost = doctorsData.slice(indexOfFirstPost, indexOfLastPost);
@@ -81,31 +83,28 @@ function Header() {
 
   //   Promise.all(arr)
 
-  console.log(doctorsData, "doctorsData");
 
   return (
     <StyleHeader>
       <div className="header">
         <div className="container">
           <h1>LOCATE</h1>
-          <h2>
-            DOCTORS, ASSOCIATIONS, CANNABIS CLUBS, CAFES, DISPENSARIES AND
-            LAWYERS
-          </h2>
+          <h2>DOCTORS, ASSOCIATIONS, CANNABIS CLUBS, CAFES, DISPENSARIES AND LAWYERS </h2>
           <Formik
             initialValues={{
               country: "",
               city: "",
               service: "",
             }}
-            validationSchema={validate}
+            // validationSchema={validate}
             onSubmit={(values) => {
-              console.log(values);
+              setcardsLoading(true)
+              const data = { ...values, limit: 50 };
               genericService
-                .post(`${API_URL}usersData`, values)
+                .post(`${API_URL}usersData`, data)
                 .then((msg) => {
-                  setdoctorsData([...doctorsData, msg.data]);
-                  // doctorsData.push(msg.data)
+                  setdoctorsData(msg.data);
+                  setcardsLoading(false)
                 })
                 .catch((error) => {
                   console.warn("warn", error);
@@ -160,51 +159,74 @@ function Header() {
         </div>
       </div>
       <div className="container">
-        <Row>
-          {currentPost.map((v) => (
-            <Col lg={3} md={6} sm={6}>
-              <Card className="cards">
-                <div className>
-                  <img src={emptyLocation} className="img-section" alt="img" />{" "}
-                </div>
-                <div className="card-data">
-                  <h6>Advance Medical Associates PC...</h6>
-                  <p className="para">
-                    Doctor & Medical Marijuana - Cannabis...
-                  </p>
-                  <div className="d-flex pt-1 text1">
-                    <div>
-                      <img src={Flag1} className="icon " alt="icon" />
-                      <span className="icon-text">USA</span>
+        {cardsLoading ? (
+          <>
+            <Placeholder as="p" animation="glow" size="lg" >
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="wave" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg" >
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="wave" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+          </>
+        ) : (
+          <div>
+            <Row>
+              {currentPost.map((v) => (
+                <Col lg={3} md={6} sm={6}>
+                  <Card className="cards">
+                    <div className>
+                      <img
+                        src={emptyLocation}
+                        className="img-section"
+                        alt="img"
+                      />{" "}
                     </div>
-                    <div>
-                      <img src={Star1} className="icon " alt="icon" />
-                      <span className="icon-text">0.0</span>
+                    <div className="card-data">
+                      <h6>{v.Title}</h6>
+                      <p className="para">{v._address}</p>
+                      <div className="d-flex pt-1 text1">
+                        <div>
+                          <img src={Flag1} className="icon " alt="icon" />
+                          <span className="icon-text">
+                            {v.LocatorCountries}
+                          </span>
+                        </div>
+                        <div>
+                          <img src={Star1} className="icon " alt="icon" />
+                          <span className="icon-text">0.0</span>
+                        </div>
+                        <div>
+                          <img src={Like} className="icon " alt="icon" />
+                          <span className="icon-text">Likes 0</span>
+                        </div>
+                      </div>
+                      <div>
+                        <input
+                          type="submit"
+                          className="locator-card-bt"
+                          name="See Details"
+                          value="See Details"
+                        />
+                      </div>
                     </div>
-                    <div>
-                      <img src={Like} className="icon " alt="icon" />
-                      <span className="icon-text">Likes 0</span>
-                    </div>
-                  </div>
-                  <div>
-                    <input
-                      type="submit"
-                      className="locator-card-bt"
-                      name="See Details"
-                      value="See Details"
-                    />
-                  </div>
-                </div>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-        <Pagination
-          postPerPage={postPerPage}
-          totalPosts={doctorsData.length}
-          paginate={paginate}
-          size="sm"
-        />
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+            <Pagination
+              postPerPage={postPerPage}
+              totalPosts={doctorsData.length}
+              paginate={paginate}
+              size="sm"
+            />
+          </div>
+        )}
       </div>
     </StyleHeader>
   );

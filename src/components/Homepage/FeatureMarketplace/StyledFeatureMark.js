@@ -19,7 +19,7 @@ color: #FFFFFF;
 
 
 export const FeatureMarkMain = styled.div`
-margin-top: 4.5rem;
+/* margin-top: 4.5rem; */
 text-align: center;
 color: #FFFFFF;
 background-image: url(${featureMarkBack}) ;

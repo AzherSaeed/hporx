@@ -8,13 +8,16 @@ import playButton from "../../../assets/play-outline-button.svg";
 import { InhalatedImgContainer, InhalteImg } from "./StyledInhalate";
 import { ViewMoreBtn } from "../../Globals/Globals";
 import "./style.css";
-import VideoModal from '../VideoModal/VideoModal';
+import VideoModal from "../VideoModal/VideoModal";
+import Popup from '../Popup/Popup';
+
 
 const InhalateSlick = () => {
   const imgContainer = [inhalte1, inhalate4, inhalte1, inhalate4];
   const [modalShow, setModalShow] = React.useState(false);
 
-  
+  const data = localStorage.getItem("ageGateActive");
+
 
   var settings = {
     dots: false,
@@ -56,13 +59,21 @@ const InhalateSlick = () => {
   };
   return (
     <div className="slick-main-div">
-        <VideoModal 
-      show={modalShow}
-      onHide={() => setModalShow(false)}
-      setModalShow={setModalShow}
-      children={
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/oJaO4JdFWB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      }
+      <VideoModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        setModalShow={setModalShow}
+        children={ data !== 'active' ? <Popup setModalShow={setModalShow}  /> : 
+          <iframe
+            width="100%"
+            height="550px"
+            src="https://www.youtube.com/embed/oJaO4JdFWB8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        }
       />
       <Slider {...settings} className="inhalate-slick">
         {imgContainer.map((img, index) => (
@@ -71,12 +82,16 @@ const InhalateSlick = () => {
             <div className="overlay"></div>
             <div className="inner-overlay">
               <div className="inner-overlay-content">
-                <img onClick={() => setModalShow(true)}  src={playButton} alt="playButton" />
+                <img
+                  onClick={() => setModalShow(true)}
+                  src={playButton}
+                  alt="playButton"
+                />
                 <div>
                   <h3>Inhalate</h3>
                   <p>
                     Curabitur cursus sagittis varius. Quisque aliquet luctus
-                    elit, in hendrerit orci malesuada eu. 
+                    elit, in hendrerit orci malesuada eu.
                   </p>
                 </div>
                 <h2>$450</h2>

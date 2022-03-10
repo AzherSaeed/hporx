@@ -49,7 +49,8 @@ import aboveCopyright8 from '../../assets/aboveCopyright8.svg';
 import FollowUs from '../Homepage/FollowUs/FollowUs';
 import AgenciesHeader from '../AgenciesPage/AgenciesHeader/AgenciesHeader';
 import FeatureMarketContainer from '../Homepage/FeatureMarketplace/FeatureMarketContainer'
-import TrendingNow1 from './TrendingNow/TrendingNow1'
+import TrendingNow1 from './TrendingNow/TrendingNow1';
+import HomePageNav from './HomePageNav'
 
 
 const Homepage2 = () => {
@@ -71,6 +72,7 @@ const Homepage2 = () => {
   return (
     <>
       <AgenciesHeader />
+      <HomePageNav/>
       <FeatureMarketContainer order='second' />
       <HempProduct />
       <ViewTodayContainer>

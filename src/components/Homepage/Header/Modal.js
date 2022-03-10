@@ -6,7 +6,6 @@ import VideoModal from './VideoModal';
 
 
 const HomeModal = (props) => {
-  console.log(props.name,'name moda;')
   return (
     <Modal  
     className='homeModalageGater'
@@ -16,7 +15,7 @@ const HomeModal = (props) => {
     centered
   >
 
-    {props.children}
+    {/* {props.children} */}
 
       <Popup country={props.country} state={props.state} setModalShow={props.setModalShow}/>
   </Modal>  
