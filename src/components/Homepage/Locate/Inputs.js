@@ -15,7 +15,10 @@ function Inputs() {
   const [cityList, setcityList] = useState([]);
   const [serviceList, setserviceList] = useState([]);
   const [doctorsData, setdoctorsData] = useState([]);
-const [allAddresses, setallAddresses] = useState([])
+  const [allAddresses, setallAddresses] = useState([]);
+
+
+
 
 
   const validate = Yup.object({
@@ -27,7 +30,7 @@ const [allAddresses, setallAddresses] = useState([])
 
   useEffect(() => {
     const getAddress = doctorsData.map((res) => res._address)
-    //console.log(getAddress , 'getAddressgetAddress')
+
     setallAddresses(getAddress)
   }, [doctorsData])
   
@@ -45,7 +48,7 @@ const [allAddresses, setallAddresses] = useState([])
       });
   }, []);
 
-  //console.log(allAddresses,"Addreess");
+
   
   return (
     <>
@@ -59,12 +62,12 @@ const [allAddresses, setallAddresses] = useState([])
           }}
         //   validationSchema={validate}
           onSubmit={(values) => {
-            console.log(values);
+            const data = {...values , limit : 500}
             genericService
-              .post(`${API_URL}usersData`, values)
+              .post(`${API_URL}usersData`, data)
               .then((msg) => {
                 setdoctorsData(msg.data);
-                // doctorsData.push(msg.data)
+                
               })
               .catch((error) => {
                 console.warn("warn", error);
@@ -108,7 +111,7 @@ const [allAddresses, setallAddresses] = useState([])
                       src={Search}
                       alt="Search icon"
                       className="search-img"
-                    />{" "}
+                    />
                     Search
                   </Button>
                 </Col>
@@ -118,7 +121,7 @@ const [allAddresses, setallAddresses] = useState([])
         </Formik>
       </div>
     </StyleHeader>
-        <Map allAddresses={allAddresses}/>
+        <Map allAddresses={allAddresses}  />
     </>
   );
 }
