@@ -4,8 +4,7 @@ import LocaterHeader from '../../../assets/LocaterHeader.svg';
 export const StyleHeader=styled.div`
 
 .select-option{
-    padding-top:1rem ;
-    
+       
 }
 .btn{
     width: 100%;
@@ -28,15 +27,8 @@ export const StyleHeader=styled.div`
 
 .container{
     margin-top:1rem ;
-   
-
 }
 
-.label-locator{
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 89.5%;
-    text-align: left !important;
-}
+
 
 `;

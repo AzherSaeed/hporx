@@ -3,10 +3,18 @@ import GoogleMapReact from "google-map-react";
 import LocationMarker from "./LocationMarker";
 import LocationInfoBox from "./LocationInfoBox";
 import axios from "axios";
-const Map = ({ center, zoom, allAddresses}) => {
+const Map = ({allAddresses}) => {
   const [locationInfo, setLocationInfo] = useState(false);
   const [marker, setMarker] = useState([]);
-  const [centerLocation , setCenterLoacation] = useState('')
+  const [centerLocation , setCenterLoacation] = useState('');
+  
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+     const lat=position.coords.latitude;
+      const lng=position.coords.longitude;
+      setCenterLoacation({lat,lng});
+    });
+  }, []);
 
   useEffect( async () => {
     const arr = [];
@@ -41,8 +49,8 @@ const Map = ({ center, zoom, allAddresses}) => {
     <div className="map">
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI" }}
-        defaultCenter={center}
-        defaultZoom={zoom}
+        defaultCenter={centerLocation}
+        defaultZoom={5}
         center={centerLocation}
       >
         {marker.map((v) => (
@@ -57,12 +65,6 @@ const Map = ({ center, zoom, allAddresses}) => {
     </div>
   );
 };
-Map.defaultProps = {
-  center: {
-    lat: 37.9357385,
-    lng: -0.7720319999999999,
-  },
-  zoom: 6,
-};
+
 
 export default Map;
