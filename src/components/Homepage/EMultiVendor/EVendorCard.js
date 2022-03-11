@@ -5,7 +5,7 @@ import { EVendorImg, EVendorImgContainer, EVendorMiniImg, MiniPharmImg , EVendor
 
 
 
-const EVendorCard = ({ key, img, flag,flag1, miniImg }) => {
+const EVendorCard = ({ key, img, flag,flag1, miniImg , Flag_of_Canada }) => {
     console.log(flag1);
     return (
         <EVendorCardMain>

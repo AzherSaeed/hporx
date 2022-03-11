@@ -135,13 +135,13 @@ const Footer = () => {
                     <Col md={10}>
                         <Row>
                             <div className='sm-12 col-md' >
-                                <FooterSection links={company} heading={'Company'} />
+                                <FooterSection links={company} heading={'COMPANY'} />
                             </div>
                             <div className='sm-12 col-md'>
                                 <FooterSection links={marketplace} heading={'MARKETPLACE'} />
                             </div>
                             <div className='sm-12 col-md'>
-                                <FooterSection links={medical} heading={'Medical'} />
+                                <FooterSection links={medical} heading={'MEDICAL'} />
                             </div>
                             <div className='sm-12 col-md'>
                                 <FooterSection links={advertising} heading={'ADVERTISING'} />
