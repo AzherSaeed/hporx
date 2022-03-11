@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ViewMoreBtn } from "../../Globals/Globals";
+import { PrimaryHeading, ViewMoreBtn } from "../../Globals/Globals";
 
 
 export const EVendorCardMain = styled.div`
@@ -97,4 +97,7 @@ left: 1rem ;
 `
 export const EVendorViewMoreBtn = styled(ViewMoreBtn)`
 margin-top:5.6rem
+`
+export const EvendorHeading=styled(PrimaryHeading)`
+text-transform: capitalize;
 `

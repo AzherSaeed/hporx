@@ -3,22 +3,22 @@ import { Container } from 'react-bootstrap'
 import { PrimaryHeading } from '../../Globals/Globals'
 import AgricultureImgSection from './AgricultureImgSection'
 import AgricultureSlick from './AgricultureSlick'
-import { AgricultureMainContainer, AgricultureTertiaryHeading } from './StyledAgriculture'
-const Agriculture = ({id}) => {
+import { AgricultureMainContainer, AgricultureTertiaryHeading, AgriHeading } from './StyledAgriculture'
+const Agriculture = ({ id }) => {
     return (
         <div id={id}>
-        <AgricultureMainContainer >
-            <Container>
-                <PrimaryHeading>
-                    Contained Environment Agriculture
-                </PrimaryHeading>
-                <AgricultureTertiaryHeading>
-                    You can grow profit, profit from you grow
-                </AgricultureTertiaryHeading>
-                <AgricultureImgSection />
-                <AgricultureSlick/>
-            </Container>
-        </AgricultureMainContainer>
+            <AgricultureMainContainer >
+                <Container>
+                    <AgriHeading>
+                    Controlled Environment Agriculture
+                    </AgriHeading>
+                    <AgricultureTertiaryHeading>
+                    Grow profits, profit from your grow
+                    </AgricultureTertiaryHeading>
+                    <AgricultureImgSection />
+                    <AgricultureSlick />
+                </Container>
+            </AgricultureMainContainer>
         </div>
     )
 }

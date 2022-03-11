@@ -33,6 +33,7 @@ export const NewsLetterMainContianer = styled.div`
 `;
 export const SubscribeHeading = styled(PrimaryHeading)`
   line-height: 5.3rem;
+  text-transform: capitalize;
   @media screen and (max-width: 480px) {
     font-size: 3.5rem;
   }

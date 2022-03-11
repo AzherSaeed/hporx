@@ -88,7 +88,7 @@ const data = localStorage.getItem("ageGateActive");
           <HeroPlayIcon src={playIcon} />
         </HomePlayButtonContainer>
         <HeroHeading>THERAPEUTICS</HeroHeading>
-        <p className="home-main-header-sub-heading" >CULITVATED WELLNESS</p>
+        <p className="home-main-header-sub-heading" >CULTIVATED WELLNESS</p>
         <HeroButton>Appointment</HeroButton>
       </div>
     </StyledHero>

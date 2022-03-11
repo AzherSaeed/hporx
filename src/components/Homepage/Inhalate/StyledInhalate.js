@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ViewMoreBtn } from "../../Globals/Globals";
 import { HeroButton } from "../../Homepage/Header/StyledHeader";
 
 export const InhalateMainContainer = styled.div`
@@ -17,6 +18,7 @@ export const InhalateMainContainer = styled.div`
     line-height: 7.2rem;
     letter-spacing: 0em;
     color: #242424;
+    text-transform: uppercase;
   }
   p {
     font-size: 1.8rem;
@@ -181,3 +183,13 @@ export const InhalateButton = styled(HeroButton)`
     margin-top: 1rem;
   }
 `;
+
+export const QuickShopBtn=styled(ViewMoreBtn)`
+background-color: transparent;
+border: 1px solid #FFFFFF;
+color:#FFFFFF;
+&:hover{
+  background-color: #E84025 !important;
+border: 1px solid #E84025;
+}
+`

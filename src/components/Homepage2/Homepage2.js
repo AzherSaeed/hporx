@@ -73,7 +73,7 @@ const Homepage2 = () => {
     <>
       <AgenciesHeader />
       <HomePageNav />
-      <FeatureMarketContainer order='second' />
+      <FeatureMarketContainer order='first' />
       <HempProduct />
       <ViewTodayContainer>
         <ViewedToday heading='Everything you viewed today' />
@@ -89,7 +89,7 @@ const Homepage2 = () => {
       <div className='mt-3-2'>
         <Banner />
       </div>
-      <TrendingNow heading="Products you brought was recently" imgs={mensProducts} />
+      <TrendingNow heading="Products you brought recently" imgs={mensProducts} />
       <div className='mt-3-2'>
         <Banner />
       </div>
@@ -98,7 +98,7 @@ const Homepage2 = () => {
         <Banner />
       </div>
       <SimilarProductsContainer>
-        <ViewedToday heading='Similar products trending' />
+        <ViewedToday heading='Similar Trending Products' />
       </SimilarProductsContainer>
       <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations' />
       <FollowUs imgs={followUsImgs} head='Follow Us' imgs1={hygieImgs} head1='Hygieia Apothecary' />

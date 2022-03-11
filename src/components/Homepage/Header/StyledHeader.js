@@ -14,7 +14,7 @@ const StyledHero = styled.div`
   position: relative;
   
   z-index: -1;
-  margin-top: -10rem;
+  margin-top: -9.8rem;
 }
 .home-main-header-sub-heading{
     color: #ffff;

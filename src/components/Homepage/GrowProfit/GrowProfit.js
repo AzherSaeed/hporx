@@ -12,7 +12,7 @@ const GrowProfit = ({id}) => {
             Agriculturists
             </GrowProfitHeading>
             <GrowProfitSubHeading>
-                Grow profit, Profit From You Grow
+            Grow profits, profit from your grow
             </GrowProfitSubHeading>
             <TertiaryHeading>
             Delivered turnkey and ready to grow guarantee profits
