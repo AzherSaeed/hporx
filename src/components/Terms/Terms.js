@@ -20,7 +20,7 @@ const Terms = () => {
                     <Col md={6}
                     >
                         <HeadingTerms>
-                            RELIEF FROM CHRONIC PAIN IS A HUMAN RIGHT UNDER THE UNITED NATION CHARTER RESPECTED BY ALL UN COUNRIES
+                            RELIEF FROM CHRONIC PAIN IS A HUMAN RIGHT UNDER THE UNITED NATION CHARTER RESPECTED BY ALL UN COUNTRIES
                         </HeadingTerms>
                     </Col>
                 </Row>

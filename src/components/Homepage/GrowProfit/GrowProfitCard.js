@@ -15,7 +15,7 @@ const GrowProfitCard = () => {
                             <p>Are you located in a country, region, or state in which cannabis and marijuana consumption has been decriminalized and regulated by law? A Cannabis Association? A marijuana Club? A Pharmacist Serving a Small Rural Population? licensed therapeutic herbalist? A rural doctor?  </p>
                             <p>Can you prescribe medical-grade extract or flower from Cannabaceae family grown in a laboratory standard contained environment agriculture? Alternatively, if you are a self-starter, higher achiever and you are gifted with entrepreneurial skills.  </p>
                             <h5>
-                                Tunkey from
+                                Turnkey from
                             </h5>
                             <GrowProfitPriceText>$35000</GrowProfitPriceText>
                             <div className="d-flex">

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TertiaryHeading } from "../../Globals/Globals";
+import { PrimaryHeading, TertiaryHeading } from "../../Globals/Globals";
 
 export const AgricultureMainContainer = styled.div`
 margin-top: 15rem;
@@ -154,7 +154,7 @@ padding: 0 0.3rem;
 
 
 `
-export const AgricultureImgContainer1=styled.div`
+export const AgricultureImgContainer1 = styled.div`
 
 text-align: center;
 position:relative;
@@ -207,4 +207,7 @@ padding: 0 0.3rem;
     opacity: 1;
   }
 
+`
+export const AgriHeading = styled(PrimaryHeading)`
+text-transform: capitalize;
 `
