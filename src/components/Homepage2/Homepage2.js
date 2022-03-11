@@ -61,9 +61,9 @@ const Homepage2 = () => {
     padding: ' 0 2rem'
   }
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
-  const mensProducts = [trendingNow, catagory1, catagory2, catagory1,catagory2, catagory1];
+  const mensProducts = [trendingNow, catagory1, catagory2, catagory1, catagory2, catagory1];
   const products = [trendingNow, trendingNow, trendingNow, trendingNow, trendingNow, trendingNow, trendingNow];
-  const historyProducts = [catagory2, trendingNow, catagory1, trendingNow, catagory2,catagory1, trendingNow, catagory2]
+  const historyProducts = [catagory2, trendingNow, catagory1, trendingNow, catagory2, catagory1, trendingNow, catagory2]
   const trustedOrganizations = [interOrg1, interOrg2, interOrg3, interOrg4, interOrg5, interOrg1]
   const followUsImgs = [{ img: followUs1, title: 'Twitter' }, { img: followUs2, title: 'Facbook' }, { img: followUs3, title: 'Youtube' }, { img: followUs4, title: 'TencentQQ' }, { img: followUs5, title: 'Vkontakte' }, { img: followUs6, title: 'Messenger' }, { img: followUs7, title: 'Instagram' }, { img: followUs8, title: 'LinkedIn' },]
   const hygieImgs = [{ img: hygie1, title: 'Europe' }, { img: hygie2, title: 'USA' }, { img: hygie3, title: 'Canada' }, { img: hygie4, title: 'Qatar' }, { img: hygie5, title: 'Dubai' }, { img: hygie6, title: 'Spain' }, { img: hygie7, title: 'Qatar' }, { img: hygie8, title: 'Spain' }, { img: hygie9, title: 'Dubai' }]
@@ -72,31 +72,31 @@ const Homepage2 = () => {
   return (
     <>
       <AgenciesHeader />
-      <HomePageNav/>
+      <HomePageNav />
       <FeatureMarketContainer order='second' />
       <HempProduct />
       <ViewTodayContainer>
         <ViewedToday heading='Everything you viewed today' />
       </ViewTodayContainer>
       <TrendingNow1 heading='Trending Now' imgs={products} />
-     <FashionDiscount imgs={fashionDiscountImgs} />
-        <HempProductMIni className='Last Month Top Categories' />
+      <FashionDiscount imgs={fashionDiscountImgs} />
+      <HempProductMIni className='Last Month Top Categories' />
       <TrendingNow heading="Man's Product" imgs={mensProducts} />
       <TrendingNow heading="Ladies Product" imgs={mensProducts} />
       <FashionDiscount imgs={fashionDiscountImgs} />
       <BrowserHistory imgs={historyProducts} />
-       <ViewedToday heading='Wishlist' />
-       <div className='mt-3-2'>
-     <Banner />
-       </div>
-     <TrendingNow heading="Products you brought was recently" imgs={mensProducts} />
-     <div className='mt-3-2'>
-     <Banner />
-       </div>
+      <ViewedToday heading='Wishlist' />
+      <div className='mt-3-2'>
+        <Banner />
+      </div>
+      <TrendingNow heading="Products you brought was recently" imgs={mensProducts} />
+      <div className='mt-3-2'>
+        <Banner />
+      </div>
       <TrendingNow heading="Products you may like from your recent choices" imgs={mensProducts} />
       <div className='mt-3-2'>
-     <Banner />
-       </div>
+        <Banner />
+      </div>
       <SimilarProductsContainer>
         <ViewedToday heading='Similar products trending' />
       </SimilarProductsContainer>
@@ -107,7 +107,7 @@ const Homepage2 = () => {
       <hr style={styles} />
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
-      <Quote /> 
+      <Quote />
     </>
   )
 }

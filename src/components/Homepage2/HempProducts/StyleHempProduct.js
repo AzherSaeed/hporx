@@ -1,23 +1,18 @@
 import styled from 'styled-components';
 
-export const StyleHemp=styled.div`
+export const StyleHemp = styled.div`
 margin-top: 6.2rem;
 .viewToday-slick{
     margin-top: 3.3rem;
     .slick-next{
-   
     right: 5px;
-   
 }
         
-    /* .slick-prev{
-    left: auto;
-    right: 5%!important;
-    top: -28%;
-    @media screen and (max-width:600px) {
-        margin-right:22px ;
-    }
-        } */
+    .slick-prev{
+    left: -20px;
+   
+  
+        }
     }
  .IconImage{
     width: 5rem;
@@ -64,7 +59,7 @@ h2{
     background: #F0F0F0;
 }
 `;
-export const HempBox =styled.div`
+export const HempBox = styled.div`
  height: 11rem;
     background: #F0F0F0;
     border: 1px solid rgba(0,0,0,.125);

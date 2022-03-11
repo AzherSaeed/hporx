@@ -12,7 +12,7 @@ padding-top: 6.4rem;
 }
 .slick-prev{
     @media screen and (max-width:480px) {
-        left:10px ;
+        left:-4px !important;
     }
     @media screen and (max-width:768px) {
         left:-20px ;

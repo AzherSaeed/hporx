@@ -27,6 +27,14 @@ function HempProduct() {
         },
       },
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
