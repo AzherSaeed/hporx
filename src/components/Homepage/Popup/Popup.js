@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { StylePopup } from "./StylePopup";
 import Logo1 from "../../../assets/Logo1.svg";
 import { Row, Col, Button } from "react-bootstrap";
@@ -8,7 +8,21 @@ function Popup(props) {
   const [dob, setDob] = useState("");
   const [msg, setMsg] = useState("");
   const [cookies, setCookie] = useCookies(["access_token"]);
-  //console.log(dob,'dateofbirth')
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+
+  useEffect(() => {
+    fetch("http://ip-api.com/json")
+      .then((res) => res.json())
+      .then((response) => {
+        setCountry(response.country);
+        setState(response.regionName);
+      })
+      .catch((data, status) => {
+        console.log("Request failed:", data);
+      });
+  }, []);
+  
 
 
   console.log(props , 'propsprops');
@@ -107,7 +121,7 @@ function Popup(props) {
                 class="form-control  inputs"
                 id="country"
                 name="country"
-                value={props.country}
+                value={country}
               />
             </div>
             <div class="form-group">
@@ -119,7 +133,7 @@ function Popup(props) {
                 class="form-control  inputs"
                 id="country"
                 name="state"
-                value={props.state}
+                value={state}
               />
             </div>
             <div class="form-group">

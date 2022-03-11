@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import playIcon from "../../../assets/play-btn.svg";
 import {
   StyledHero,
@@ -18,7 +18,7 @@ import VideoModal from '../VideoModal/VideoModal'
 
 
 
-const Header = ({ id, country, state ,value}) => {
+const Header = ({ id  ,value}) => {
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = React.useState(false);
   const [offNavValue, setOffNavValue] = React.useState(false);
@@ -31,6 +31,22 @@ const data = localStorage.getItem("ageGateActive");
     setOffNavValue(value);
 
   }
+
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+
+  useEffect(() => {
+    fetch("http://ip-api.com/json")
+      .then((res) => res.json())
+      .then((response) => {
+        setCountry(response.country);
+        setState(response.regionName);
+      })
+      .catch((data, status) => {
+        console.log("Request failed:", data);
+      });
+  }, []);
+
 
   return (
     <div>

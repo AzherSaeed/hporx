@@ -6,20 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MainPage from "./components/AgenciesPage/MainPage";
 import LocatehomePage from "./components/LocaterPage/LocatehomePage";
 function App() {
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-
-  useEffect(() => {
-    fetch("http://ip-api.com/json")
-      .then((res) => res.json())
-      .then((response) => {
-        setCountry(response.country);
-        setState(response.regionName);
-      })
-      .catch((data, status) => {
-        console.log("Request failed:", data);
-      });
-  }, []);
+ 
 
   //dasfasdf//
   return (
@@ -27,7 +14,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Homepage country={country} region={state} />
+            <Homepage />
           </Route>
           <Route path="/home">
             <Homepage2 />
