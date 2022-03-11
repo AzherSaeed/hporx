@@ -8,26 +8,11 @@ function Popup(props) {
   const [dob, setDob] = useState("");
   const [msg, setMsg] = useState("");
   const [cookies, setCookie] = useCookies(["access_token"]);
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-
-  useEffect(() => {
-    fetch("http://ip-api.com/json")
-      .then((res) => res.json())
-      .then((response) => {
-        setCountry(response.country);
-        setState(response.regionName);
-      })
-      .catch((data, status) => {
-        console.log("Request failed:", data);
-      });
-  }, []);
+  
   
 
 
-  console.log(props , 'propsprops');
 
-  console.log(cookies, "cookies");
   function submitform(e) {
     e.preventDefault();
     var today = new Date();
@@ -45,8 +30,7 @@ function Popup(props) {
     d.setTime(d.getTime() + 30);
 
 
-    console.log(d , 'dd--');
-
+  
 
     
 
@@ -121,7 +105,7 @@ function Popup(props) {
                 class="form-control  inputs"
                 id="country"
                 name="country"
-                value={country}
+                value={props.country}
               />
             </div>
             <div class="form-group">
@@ -133,7 +117,7 @@ function Popup(props) {
                 class="form-control  inputs"
                 id="country"
                 name="state"
-                value={state}
+                value={props.state}
               />
             </div>
             <div class="form-group">

@@ -185,7 +185,7 @@ const SubBar = ({ setShow }) => {
               <li className="nav-item "  >
                 <Link
                   activeClass="active"
-                  // to="PRODUCTS"
+                  to="PRODUCTS"
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -193,15 +193,8 @@ const SubBar = ({ setShow }) => {
                   onClick={(e) => navTogglerHanler(e)}
                  
                 >
-                  PRODUCTS{" "}
+                  PRODUCTS
                 </Link>
-                <ul className={`${toggle ? 'show' : ""}`} >
-                  <li>one</li>
-                  <li>two</li>
-                  <li>four</li>
-                  <li>five</li>
-                  <li>six</li>
-                </ul>
               </li>
               <li className="nav-item">
                 <Link

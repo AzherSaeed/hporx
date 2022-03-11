@@ -24,7 +24,7 @@ const Header = ({ id  ,value}) => {
   const [offNavValue, setOffNavValue] = React.useState(false);
   console.log({offNavValue})
 const data = localStorage.getItem("ageGateActive");
-
+const apiKey = "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI";
   const handleClose = () => setShow(false);
   const getValue=(value)=>{
     console.log(value,'value')
@@ -35,17 +35,28 @@ const data = localStorage.getItem("ageGateActive");
   const [country, setCountry] = useState("");
   const [state, setState] = useState("");
 
+  const [lat, setLat] = useState("");
+  const [lng, setLng] = useState("");
+
+
   useEffect(() => {
-    fetch("http://ip-api.com/json")
-      .then((res) => res.json())
-      .then((response) => {
-        setCountry(response.country);
-        setState(response.regionName);
-      })
-      .catch((data, status) => {
-        console.log("Request failed:", data);
-      });
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setLat(position.coords.latitude);
+      setLng(position.coords.longitude);
+    });
   }, []);
+
+  useEffect(() => {
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`)
+   .then(response => response.json())
+   .then(result => {
+    setState(result.results[0].address_components[7].long_name);
+    setCountry(result.results[0].address_components[8].long_name);
+   })
+   .catch(error => {
+     console.error('Error:', error);
+   });
+   } , [lat , lng])
 
 
   return (
@@ -56,7 +67,7 @@ const data = localStorage.getItem("ageGateActive");
         setModalShow={setModalShow}
         children={
           data !== "active" ? (
-            <Popup setModalShow={setModalShow} />
+            <Popup setModalShow={setModalShow} country={country} state={state} />
           ) : (
             <iframe
               width="100%"
