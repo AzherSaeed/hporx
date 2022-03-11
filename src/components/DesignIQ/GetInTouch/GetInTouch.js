@@ -61,12 +61,12 @@ const GetInTouch = () => {
                 message: "",
               }}
               validationSchema={validate}
-              onSubmit={(values) => {
+              onSubmit={(values , {resetForm}) => {
                 setFormLading(true);
                 genericService
                   .post(`${API_URL}getInTouchQuery`, values)
                   .then((msg) => {
-                    console.log(msg);
+                    resetForm()
                     toast.success(msg.message );
                     // <div>
                     //     <button onClick={notify}>Notify!</button>
