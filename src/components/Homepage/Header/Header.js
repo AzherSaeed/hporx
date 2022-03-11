@@ -18,14 +18,19 @@ import VideoModal from '../VideoModal/VideoModal'
 
 
 
-const Header = ({ id, country, state }) => {
+const Header = ({ id, country, state ,value}) => {
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = React.useState(false);
-
-  
+  const [offNavValue, setOffNavValue] = React.useState(false);
+  console.log({offNavValue})
 const data = localStorage.getItem("ageGateActive");
 
   const handleClose = () => setShow(false);
+  const getValue=(value)=>{
+    console.log(value,'value')
+    setOffNavValue(value);
+
+  }
 
   return (
     <div>
@@ -57,13 +62,11 @@ const data = localStorage.getItem("ageGateActive");
           handleClose={handleClose}
           show={show}
           setShow={setShow}
-        />
- 
-     
-
-      
+          sendValue={getValue}
+          value={value}
+        /> 
       <SubBar setShow={setShow}  />
-      <video className="hero-video" autoPlay loop src='/Videos/hporx.mp4' />
+      <video autoPlay muted loop className="hero-video"  src='/Videos/hporx.mp4' />
       <div className="hero-text-container">
         <HomePlayButtonContainer onClick={() => setModalShow(true)} >
           <HeroPlayIcon src={playIcon} />

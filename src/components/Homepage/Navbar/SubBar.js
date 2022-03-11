@@ -159,22 +159,22 @@ const SubBar = ({setShow}) => {
           <li className="nav-item">
             <Link
               activeClass="active"
-              to="MARKETPLACE"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >MARKETPLACE </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              activeClass="active"
               to="PRODUCTS"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >PRODUCTS </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              activeClass="active"
+              to="MARKETPLACE"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >MARKETPLACE </Link>
           </li>
           <li className="nav-item">
             <Link
