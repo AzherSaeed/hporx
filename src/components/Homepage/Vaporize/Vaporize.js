@@ -12,7 +12,7 @@ const Vaporize = ({id}) => {
     var settings = {
         arrows: true,
         dots: false,
-        infinite: true,
+       
         autoplay: true,
         speed: 500,
         slidesToShow: 1,
@@ -24,7 +24,7 @@ const Vaporize = ({id}) => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                    
                     dots: false,
                     arrows: true,
                 }
@@ -52,7 +52,7 @@ const Vaporize = ({id}) => {
         <VaporizeMainContainer>
             <Container id={id} >
                 <div className="vaporize-inner-container">
-                    <Slider {...settings} className='vaporize-slick'>
+                    <Slider {...settings} className='responsive-slick'>
                         <VaporizeSlickCard />
                         <VaporizeSlickCard />
                     </Slider>

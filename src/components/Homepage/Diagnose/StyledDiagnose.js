@@ -71,15 +71,11 @@ line-height: 2.7rem;
 letter-spacing: 0em;
 color: rgba(255, 255, 255, 0.8);
 padding:0 3rem;
-
-
 }
   }
    &:hover,  &:hover .inner-overlay ,&:hover .overlay{
-        opacity: 1;
-        
+     opacity: 1;   
     }
-
 `
 export const DiagnoseAppointmentBtn = styled(AddToCartBtn)`
 margin-top: 3rem;
@@ -89,13 +85,13 @@ font-weight: 500;
 line-height: 2.4rem;
 letter-spacing: 0.03em;
 color: #242424;
-border: 1px solid black;
-
+border: 2px solid black;
 `
 export const DiagnoseImg = styled.img`
 padding-right:2rem;
 height: 
 51rem;
+
 `
 export const StyledSlickContainer = styled.div`
 margin-top: 5.6rem;

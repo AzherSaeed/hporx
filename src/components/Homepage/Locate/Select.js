@@ -2,7 +2,7 @@ import React from 'react';
 import { Field} from 'formik';
 function Select({label, name, title , list}){
     return(<div className='select'>
-              <label for="inputCountry" className='label-locator'>{label}</label>
+              {/* <label for="inputCountry" className='label-locator'>{label}</label> */}
               <Field as="select" name={name} >
                 <option value="">
                    {title}   

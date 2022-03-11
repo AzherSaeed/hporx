@@ -34,6 +34,9 @@ padding: 0 5rem;
 .map{
   width: 100%;
   height:62.5rem;
+  position: relative;
+    z-index: -1;
+    transform: translateY(-9%);
 }
 .location-icon{
   height: 2rem;

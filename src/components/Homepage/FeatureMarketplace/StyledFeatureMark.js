@@ -11,15 +11,19 @@ margin-top: 9rem;
 export const MarketPlaceHeading = styled(PrimaryHeading)`
 color: #242424;
 font-weight: 500;
-font-size: 48px;
-line-height: 72px;
+font-size: 4.8rem;
+line-height: 7.2rem;
 opacity: 0.8;
 color: #FFFFFF;
+@media screen and (max-width:480px) {
+  font-size: 3.6rem;
+line-height: 4rem;
+}
 `
 
 
 export const FeatureMarkMain = styled.div`
-margin-top: 4.5rem;
+/* margin-top: 4.5rem; */
 text-align: center;
 color: #FFFFFF;
 background-image: url(${featureMarkBack}) ;
@@ -29,7 +33,10 @@ background-image: url(${featureMarkBack}) ;
   padding: 4rem 0;
 `
 export const FeatureMarkImg = styled.img`
-
+@media screen and (max-width:480px) {
+margin-top: 1.5rem;
+  
+}
 `
 export const FeatureSubHeading = styled(TertiaryHeadingMedium)`
 opacity: 0.8;
@@ -39,6 +46,7 @@ text-transform: capitalize;
 color:white ;
 `
 export const FeatureMarketPlaceBtn = styled(ViewMoreBtn)`
+
 margin-top: 5rem;
 color: #FFFFFF;
 border: 1px solid #FFFFFF;

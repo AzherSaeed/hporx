@@ -5,11 +5,11 @@
 .homeModalageGater .modal-content{
   height: auto;
 }
-.sc-gSQFLo {
+/* .sc-gSQFLo {
   height: 100%;
-}
+} */
 
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
   .sc-gSQFLo {
     height: 70vh;
   }
@@ -25,4 +25,4 @@
     .sc-gSQFLo {
    margin-top: 8rem;
   }
-}
+} */

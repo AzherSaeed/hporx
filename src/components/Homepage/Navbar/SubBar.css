@@ -61,6 +61,10 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+   
+  }
+  .nav .nav-content::-webkit-scrollbar{
+    display: none;
   }
   .changebackground .nav-content {
     max-width: 1290px;

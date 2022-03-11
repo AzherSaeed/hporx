@@ -23,6 +23,7 @@ import aboveCopyright8 from '../../assets/aboveCopyright8.svg';
 import SSL from '../../components/Homepage/SSL/SSL';
 import TrustedSuppliers from '../../components/Homepage/TrustedSuppliers/TrustedSuppliers';
 import Terms from '../../components/Terms/Terms';
+import HomePageNav from '../Homepage2/HomePageNav';
 
 const aboveCopyrightImgs = [aboveCopyright1, aboveCopyright2, aboveCopyright3, aboveCopyright6, aboveCopyright4, aboveCopyright5, aboveCopyright7, aboveCopyright8,]
 
@@ -31,6 +32,7 @@ function MainPage() {
   return (
     <div>
       <AgenciesHeader />
+      <HomePageNav/>
       <AgenciesShowCase />
       <Agency />
       <MultiEffectSlider />

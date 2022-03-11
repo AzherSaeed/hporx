@@ -14,7 +14,7 @@ import {
 import { Container } from "react-bootstrap";
 import { AddToCartBtn } from "../../Globals/Globals";
 
-const MedicinesSlick = () => {
+const MedicinesSlick = ({id}) => {
   const imgContainer = [medic1, medic2, medic1,medic4,medic1, medic2, medic1,medic4];
   var settings = {
     arrows: true,
@@ -31,7 +31,7 @@ const MedicinesSlick = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
+         
           autoplay: true,
           dots: false,
         },
@@ -54,10 +54,10 @@ const MedicinesSlick = () => {
     ],
   };
   return (
-    <MedicineContainerMain>
+    <MedicineContainerMain id={id}>
       <Container>
         <MedicineSlickContainer>
-        <Slider {...settings} className='medicine-slick'>
+        <Slider {...settings} className='responsive-slick'>
 
           {imgContainer.map((img, index) => (
             <div key={index}>

@@ -3,10 +3,10 @@ import { TertiaryHeading } from '../../Globals/Globals'
 import GrowProfitSlick from './GrowProfitSlick'
 import { GrowProfitHeading, GrowProfitMainContainer, GrowProfitSubHeading, } from './StyledGrowProfit'
 
-const GrowProfit = () => {
+const GrowProfit = ({id}) => {
     return (
         <div>
-        <GrowProfitMainContainer>
+        <GrowProfitMainContainer id={id}>
             <div className='text-center'>
             <GrowProfitHeading>
             Agriculturists

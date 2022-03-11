@@ -16,9 +16,9 @@ const MedicineSmallSlick = ({id}) => {
     const medicSlides = [medicSlide1, medicSlide3, medicSlide4, medicSlide5, medicSlide6,medicSlide1, medicSlide3, medicSlide4, medicSlide5, medicSlide6]
 
     var settings = {
-        arrows: true,
+        arrows: false,
         dots: false,
-        infinite: true,
+       
         autoplay: true,
         speed: 500,
         slidesToShow: 6,
@@ -30,7 +30,7 @@ const MedicineSmallSlick = ({id}) => {
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 1,
-                    infinite: true,
+                   
                     autoplay: true,
                     dots: false
                 }

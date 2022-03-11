@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { StylePopup } from "./StylePopup";
 import Logo1 from "../../../assets/Logo1.svg";
 import { Row, Col, Button } from "react-bootstrap";
@@ -8,17 +8,33 @@ function Popup(props) {
   const [dob, setDob] = useState("");
   const [msg, setMsg] = useState("");
   const [cookies, setCookie] = useCookies(["access_token"]);
-  //console.log(dob,'dateofbirth')
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+
+  useEffect(() => {
+    fetch("http://ip-api.com/json")
+      .then((res) => res.json())
+      .then((response) => {
+        setCountry(response.country);
+        setState(response.regionName);
+      })
+      .catch((data, status) => {
+        console.log("Request failed:", data);
+      });
+  }, []);
+  
+
+
+  console.log(props , 'propsprops');
 
   console.log(cookies, "cookies");
   function submitform(e) {
     e.preventDefault();
-    // var today = new Date();
-    let expires = new Date();
-    // var birthDate = new Date(dob);
+    var today = new Date();
+    var birthDate = new Date(dob);
 
 
-    expires.setTime(expires.getTime() + 60000);
+    // expires.setTime(expires.getTime() + 60000);
 
 
     // console.log(expires.setTime(), "set");
@@ -36,30 +52,33 @@ function Popup(props) {
 
 
 
-setCookie("access_token", dob, { path: "/", expires : d });
+// setCookie("access_token", dob, { path: "/", expires : d });
 
 
     
 
 
-    // var age = today.getFullYear() - birthDate.getFullYear();
-    // var m = today.getMonth() - birthDate.getMonth();
-    // if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    //   if (age >= 18) {
-    //     setCookie("access_token", dob, { path: "/", expires });
-    //     // setMsg("Congratulation You can accces this website" , 'one');
-    //   } else {
-    //     setMsg("Sorry you cannot acces this website.");
-    //   }
-    // } else {
-    //   if (age >= 18) {
-    //     console.log("two birthdaty ok");
-    //     setMsg("Congratulation You can accces this website");
-    //   } else {
-    //     console.log("two birthdaty");
-    //     setMsg("Sorry you cannot acces this website.");
-    //   }
-    // }
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      if (age >= 18) {
+        localStorage.setItem('ageGateActive' , 'active')
+        props.setModalShow(false)
+        // setCookie("access_token", dob, { path: "/", expires });
+        // setMsg("Congratulation You can accces this website" , 'one');
+      } else {
+        setMsg("Sorry you cannot acces this website.");
+      }
+    } else {
+      if (age >= 18) {
+        localStorage.setItem('ageGateActive' , 'active')
+        props.setModalShow(false)
+        // setMsg("Congratulation You can accces this website");
+      } else {
+        console.log("two birthdaty");
+        setMsg("Sorry you cannot acces this website.");
+      }
+    }
   }
 
   return (
@@ -67,10 +86,10 @@ setCookie("access_token", dob, { path: "/", expires : d });
       <div className="logo">
         <img src={Logo1} alt="Logo" />
       </div>
-      <Button
+      {/* <Button
         onClick={() => props.setModalShow(false)}
         className="btn-close"
-      ></Button>
+      ></Button> */}
       <Row className="row align-items-center">
         <Col lg={6} xs={12} className="borders text-center">
           <div className="local-prize-container">
@@ -102,8 +121,7 @@ setCookie("access_token", dob, { path: "/", expires : d });
                 class="form-control  inputs"
                 id="country"
                 name="country"
-                value={props.country}
-                readOnly
+                value={country}
               />
             </div>
             <div class="form-group">
@@ -115,8 +133,7 @@ setCookie("access_token", dob, { path: "/", expires : d });
                 class="form-control  inputs"
                 id="country"
                 name="state"
-                value={props.state}
-                readOnly
+                value={state}
               />
             </div>
             <div class="form-group">

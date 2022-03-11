@@ -21,6 +21,7 @@ const Portable = ({id}) => {
                     </Col>
                     <Col xs={12} md={6}>
                         <PortableImg1Container>
+                        
                             <div className='inner-overlay'>
                                 <PlayBtn/>
                             </div>

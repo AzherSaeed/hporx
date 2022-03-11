@@ -17,7 +17,7 @@ const Quotation = ({ sendValue }) => {
   return (
     <QuotatinMainContainer>
       <div className='inner-div'>
-        <b>Quotation of the day </b>
+        <h4>Inspire</h4>
         <p>{questions[question]}</p>
         <div className='cancel-btn'>
           <h3 onClick={() => {

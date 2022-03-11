@@ -40,7 +40,7 @@ const CultivationSlick = () => {
     var settings = {
         arrows: true,
         dots: false,
-        infinite: true,
+       
         autoplay: true,
         speed: 500,
         slidesToShow: 3,
@@ -76,7 +76,7 @@ const CultivationSlick = () => {
     return (
 
         <Container>
-            <Slider {...settings} className='cultivation-slick'>
+            <Slider {...settings} className='responsive-slick'>
                 {
                     cultivationBox.map((cultivationSection, index) =>{
                     const {heading,description,img}=cultivationSection;

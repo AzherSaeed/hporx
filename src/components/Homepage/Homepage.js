@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import Agriculture from './Agriculture/Agriculture'
 import BelowGrowProfit from './BelowGrowProfit/BelowGrowProfit'
 import Chillum from './Chillums/Chillums'
@@ -65,6 +65,7 @@ import Terms from '../Terms/Terms'
 import Testimonials from './Testimonials/Testimonials'
 import Quote from './Quote/Quote';
 
+export const VolumeContext=createContext();
 const styles = {
   margin: '1rem 2rem',
   border: 'none',
@@ -72,6 +73,13 @@ const styles = {
   padding: ' 0 2rem'
 }
 const Homepage = ({country , region}) => {
+  const [volumeValue, setVolumeValue] = React.useState(false)
+  
+  const handleVolume = (value) => {
+    setVolumeValue(value);
+    console.log('handle volume run',volumeValue)
+    console.log(' run',value)
+}
   const fashionDiscountImgs = [mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount, mensFashionDiscount]
   const giftImgs = [giftCard, giftCard, giftCard, giftCard, giftCard, giftCard]
   const trustedSuppliers = [trustedSupplier2, trustedSupplier3, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6, trustedSupplier4, trustedSupplier5, trustedSupplier6, trustedSupplier6]
@@ -81,20 +89,24 @@ const Homepage = ({country , region}) => {
   const aboveCopyrightImgs = [aboveCopyright1, aboveCopyright2, aboveCopyright3, aboveCopyright6, aboveCopyright4, aboveCopyright5, aboveCopyright7, aboveCopyright8,]
   return (
     <>
-      <Header id='HOME' country={country} state={region} />
-      <Inhalate  id="INHALATE" />
+     <VolumeContext.Provider value={handleVolume}>
+      <Header id='HOME' country={country} state={region} value={volumeValue}  />
+</VolumeContext.Provider>
+
+      
+       <Inhalate  id="INHALATE" />
       <Vaporize  id="VAPORIZE" />
-      <Portable   id="PORTABLES" />
+     <Portable   id="PORTABLES" />
       <Chillum  id="CHILLUMS" />
       <Cutivation  id="CULTIVATE" />
-      <Agriculture  />
-      <GrowProfit   />
-      <BelowGrowProfit   />
-      <TrustedSuppliers  imgs={trustedSuppliers} head='Trusted International Brands' />
+       <Agriculture id="CULTIVATE" />
+      <GrowProfit  id="CULTIVATE" />
+      <BelowGrowProfit  id="CULTIVATE" />
+      <TrustedSuppliers id="CULTIVATE"  imgs={trustedSuppliers} head='Trusted International Brands' />
       <Diaganose  id="DIAGNOSE" />
       <Prescribe  id="PRESCRIBE" />
-      <MedicinesSlick   />
-      <MedicinesSlick   />
+      <MedicinesSlick   id="PRESCRIBE" />
+      <MedicinesSlick    id="PRODUCTS"/>
       <MedicineSmallSlick  id="PRODUCTS" />
       <Marketplace  id="MARKETPLACE" />
       <FeatureMarketPlace  order='first'   />
@@ -102,7 +114,7 @@ const Homepage = ({country , region}) => {
       <EMultiVendor  />
       <Testimonials  />
       <Locate  id="LOCATE" />
-      <Statistics  />
+      <Statistics  /> 
       <SubscribeNewsletter />
       <FashionDiscount imgs={fashionDiscountImgs} />
       <TrustedSuppliers imgs={trustedOrganizations} head='Trusted International Organizations' />
@@ -112,7 +124,10 @@ const Homepage = ({country , region}) => {
       <hr style={styles} />
       <TrustedSuppliers imgs={aboveCopyrightImgs} head='' />
       <Terms />
-      <Quote/>
+      <VolumeContext.Provider value={handleVolume}>
+      <Quote value={volumeValue}/>
+</VolumeContext.Provider>
+        
      
     </>
   )

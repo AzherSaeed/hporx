@@ -28,6 +28,56 @@
 
 
 
+
+
+  .responsive-slick  .slick-prev {
+    left: -15px !important;
+    z-index: 1;    
+  }
+  .responsive-slick .slick-prev:before {
+    content: '' !important;
+    background-image: url(../../../assets/left-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+  
+  .responsive-slick .slick-next {
+    right: 10px !important;
+    z-index: 1;
+  }
+
+  .responsive-slick .slick-next:before {
+    content: '' !important;
+    background-image: url(../../../assets/right-slider-arrow.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2.5rem;
+  }
+
+
+@media screen and (max-width:480px) {
+  .responsive-slick .slick-next {
+    right: 27px !important;
+    z-index: 1;
+  }
+}
+@media screen and (max-width:380px) {
+  .responsive-slick .slick-next {
+    right: 17px !important;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+
+
+
 .portable-slick  .slick-prev {
     left: -7px !important;
     z-index: 1;    

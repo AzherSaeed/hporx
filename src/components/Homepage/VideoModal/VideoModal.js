@@ -9,7 +9,7 @@ const VideoModal = (props) => {
       <Modal
         className="videoModalContainer"
         {...props}
-        size="lg"
+        size="xl"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >

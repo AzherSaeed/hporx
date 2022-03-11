@@ -8,7 +8,7 @@ import static4 from '../../../assets/static4.svg'
 import static5 from '../../../assets/static5.svg'
 import { BsFillStarFill } from "react-icons/bs";
 import { PrimaryHeading } from '../../Globals/Globals'
-
+import { FaStar } from "react-icons/fa";
 const Statistics = () => {
     const cards = [{
         image: static1,
@@ -93,6 +93,7 @@ const Statistics = () => {
                         )
                     }
                 </Row>
+                <p className='source-world'>Source: <span><FaStar size={7} color='red'/> </span> World Trade Organization (40-% of which is USA/CANADA and 31% European Union) 7/ 2021</p>
             </Container >
         </StatisticsMainContainer>
     )

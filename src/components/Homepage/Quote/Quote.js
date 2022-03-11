@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container } from "react-bootstrap";
 import Quotation from "../Header/Quotation/Quotation";
 import { QuotationContainer } from "../Header/Quotation/StyledQuotation";
+import { VolumeContext } from "../Homepage";
 import { QuoteContainer } from "./StyledQuote";
-
-
 const useAudio = url => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(false);
-
   const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
@@ -31,8 +29,20 @@ const useAudio = url => {
 
 
 
-const Quote = () => {
+const Quote = ({value}) => {
+  const [audio] = useState(new Audio('https://hporx.com/wp-content/themes/astra-child/assets/images/audio.mp3'));
 
+const handleVolume=useContext(VolumeContext);
+useEffect(() => {
+  console.log(value, 'value in quote')
+  value ? audio.play() : audio.pause();
+
+},
+[value]
+);
+
+
+console.log(value)
   const [playing, toggle] = useAudio('https://hporx.com/wp-content/themes/astra-child/assets/images/audio.mp3');
 
   const [newClass, setNewClass] = useState(false)
@@ -44,8 +54,10 @@ const Quote = () => {
       <QuoteContainer>
 
         <div className="controles-button">
-          <div className="controles-button-voice" onClick={toggle} >
-            {playing ? (
+          <div className="controles-button-voice" onClick={()=>{handleVolume(!value);
+            // toggle();
+            }} >
+            {value ? (
               <img
                 src="https://cdn3.iconfinder.com/data/icons/eightyshades/512/29_Sound_alt-24.png"
                 alt="voice"

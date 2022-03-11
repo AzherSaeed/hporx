@@ -15,9 +15,13 @@ export const StyleTrending=styled.div`
     }
     .slick-prev{
         left: -23px !important;
+      
         @media screen and (max-width:768px) {
             left: -16px !important;
         }
+        @media screen and (max-width:480px) {
+        left:-4px !important;
+    }
 /*   
     @media screen and (max-width:1000px) {
         margin-right:15px ;

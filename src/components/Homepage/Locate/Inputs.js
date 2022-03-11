@@ -121,7 +121,7 @@ function Inputs() {
         </Formik>
       </div>
     </StyleHeader>
-        <Map allAddresses={allAddresses}  />
+        <Map allAddresses={allAddresses}   />
     </>
   );
 }

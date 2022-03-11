@@ -10,7 +10,7 @@ export const MarketPlaceSlick = () => {
     var settings = {
         arrows: true,
         dots: false,
-        infinite: true,
+       
         // autoplay: true,
         speed: 500,
         slidesToShow: 2,
@@ -22,8 +22,8 @@ export const MarketPlaceSlick = () => {
             //     settings: {
             //         slidesToShow: 2,
             //         slidesToScroll: 1,
-            //         infinite: true,
-            //         // infinite: true,
+            //        
+            //         //
             //         dots: false,
             //         arrows: true,
             //     }
