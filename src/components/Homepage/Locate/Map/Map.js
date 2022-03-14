@@ -95,13 +95,13 @@ const Map = ({allAddresses , doctorsData }) => {
         defaultZoom={5}
         center={centerLocation}
       >
-        {marker.map((v) => (
+        {marker.length>=0 ? marker.map((v) => (
           <LocationMarker
             lat={v.lat}
             lng={v.lng}
             onClick={(e) => findExactAddressHandler(v.address)}
           />
-        ))}
+        )):<></>}
       </GoogleMapReact>
       {locationInfo && <LocationInfoBox selectedAddress={selectedAddress} />}
       <LocateUsButton onClick={() => history.push('/locator')} >Locate Us</LocateUsButton>
