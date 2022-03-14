@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import { PrimaryHeading } from '../../Globals/Globals'
 import { LocateImg, LocateMainContainer } from './StylesLocate'
 import Inputs from './Inputs'
-const Locate = ({id}) => {
+const Locate = ({id }) => {
   return (
     <LocateMainContainer id={id}>
       <Container>

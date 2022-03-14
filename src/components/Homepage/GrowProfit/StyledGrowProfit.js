@@ -75,6 +75,7 @@ margin-top: 4px;
 export const GrowProfitHeading = styled(PrimaryHeading)`
 color: #242424;
 opacity: 0.8;
+text-transform: capitalize;
 `
 export const GrowProfitSubHeading = styled(SubHeading)`
 color: #333333;

@@ -10,37 +10,42 @@ import { Container } from 'react-bootstrap';
 
 
 const CultivationSlick = () => {
-  
-    const cultivationBox = [{
-        img:cultivation1,
-        heading:'Mary Ag',
-        description:'Price and shipping on request'
-    },{
-        img:cultivation2,
-        heading:'Seedo Automaed Home Grow Device ',
-        description:'$2,400 + Approx $35 shipping'
-    },{
-        img:cultivation3,
-        heading:'LEAF',
-        description:'Price and shipping on request'
-    },{
-        img:cultivation1,
-        heading:'Mary Ag',
-        description:'Price and shipping on request'
-    },{
-        img:cultivation2,
-        heading:'Seedo Automaed Home Grow Device ',
-        description:'$2,400 + Approx $35 shipping'
-    },{
-        img:cultivation3,
-        heading:'LEAF',
-        description:'Price and shipping on request'
-    },]
+
+    const cultivationBox = [
+        {
+            img: cultivation1,
+            heading: 'Seedo Automaed Home Grow Device ',
+            description: '$2,400 + Approx $35 shipping'
+        },
+        {
+            img: cultivation2,
+            heading: 'Mary Ag',
+            description: 'Price and shipping on request'
+
+        }, {
+            img: cultivation3,
+            heading: 'LEAF',
+            description: 'Price and shipping on request'
+        }, {
+            img: cultivation1,
+            heading: 'Seedo Automaed Home Grow Device ',
+            description: '$2,400 + Approx $35 shipping'
+        },
+        {
+            img: cultivation2,
+            heading: 'Mary Ag',
+            description: 'Price and shipping on request'
+
+        }, {
+            img: cultivation3,
+            heading: 'LEAF',
+            description: 'Price and shipping on request'
+        }]
 
     var settings = {
         arrows: true,
         dots: false,
-       
+
         autoplay: true,
         speed: 500,
         slidesToShow: 3,
@@ -78,14 +83,14 @@ const CultivationSlick = () => {
         <Container>
             <Slider {...settings} className='responsive-slick'>
                 {
-                    cultivationBox.map((cultivationSection, index) =>{
-                    const {heading,description,img}=cultivationSection;
-                   return(
-                    <div key={index}>
-                        <CultivationCard img={img} heading={heading}  description={description}/>
-                    </div>
-                )
-                    } )
+                    cultivationBox.map((cultivationSection, index) => {
+                        const { heading, description, img } = cultivationSection;
+                        return (
+                            <div key={index}>
+                                <CultivationCard img={img} heading={heading} description={description} />
+                            </div>
+                        )
+                    })
                 }
             </Slider>
         </Container>

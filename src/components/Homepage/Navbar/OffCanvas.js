@@ -23,7 +23,7 @@ const OffCanvas = ({ show, handleClose, setShow, value, country, state }) => {
                 <div className="offcanvas-main-header" >
                     <div className="canvas-title-section">
                         <img onClick={() => setShow(false)} src={LeftArrow} alt="LeftArrow" />
-                        <p>Alpha</p>
+                        <p>Alpha  v8.1.7.22 React Release Candidate</p>
                     </div>
                     <div className="offcanvas-header-profile" >
                         <div className="offcanvas-header-profile-name" >

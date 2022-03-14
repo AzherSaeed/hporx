@@ -4,18 +4,32 @@ import FooterSection, { TradingAddress } from './FooterSection'
 import { FooterImg, FooterImg1, FooterMainContainer } from './StyledFooter'
 import './Footer.css';
 import usa from '../../../assets/usa.png'
+import flag from '../../../assets/flag.svg'
 import mail from '../../../assets/mail.png'
 import footerLogo from '../../../assets/footer-logo.png'
 
 const Footer = () => {
-    const company = ['About Us', 'Jobs', 'Data Protection', 'Privacy Policy', 'Cookie Policy', 'FAQ', 'FAQ', 'Career Opportunities', 'Investment Opportunities']
+    const company = ['About Us',
+    'Jobs ',
+   ' Data Protection',
+    'Privacy Policy',
+    'Cookie Policy',
+    'FAQ',
+   ' Career Opportunities',
+    'Investment Opportunities',
+    'Teams']
     const tradingAddress = ['European Union Administration Correos No 77 Plaça de la Font, 12 08880 Cubelles Barcelona']
-    const marketplace = ['Edibles & Drink',
-        'Growth Materials',
-        'Lighting Equipment',
-        ' Seeds & Flower',
-        ' Sativa, Indica & Hybrids',
-        'Vaporizers & Inhalants']
+    const marketplace = ['Fabric',
+    'Finished Goods',
+  '  Manufactured Goods',
+   ' Health & Fitness',
+    'Hygiene & Beauty ',
+    'Edibles & Drink ',
+    'Growth Materials',
+   ' Lighting Equipment',
+   ' Seeds & Flower',
+   ' Sativa, Indica & Hybrids',
+    'Vaporizers & Inhalants']
     const medical = ['Appointment Calendar',
         'Zoom Consultation',
         'Diagnose',
@@ -104,12 +118,12 @@ const Footer = () => {
                     <Col md={2} sm={6}  xs={12}>
                         <TradingAddress links={tradingAddress} heading={'TRADING ADDRESS'} />
                         <TradingAddress links={registeredAddress} heading={'REGISTERED ADDRESS'} />
-                        <TradingAddress links={callCenter} heading={'REGISTERED ADDRESS'} />
+                        <TradingAddress links={callCenter} heading={'CALL CENTER'} />
                         <ul class="list-unstyled footer-ul">
                             
                             <li class="mb-1">
                                 <span>
-                                    <FooterImg className='img-fluid'  src={usa} alt={usa} /><span class="footer-span">+1 (213) 370
+                                    <FooterImg className='img-fluid'  src={flag} alt={flag} /><span class="footer-span">+1 (213) 370
                                         0873</span>
                                 </span>
                             </li>
@@ -135,13 +149,13 @@ const Footer = () => {
                     <Col md={10}>
                         <Row>
                             <div className='sm-12 col-md' >
-                                <FooterSection links={company} heading={'Company'} />
+                                <FooterSection links={company} heading={'COMPANY'} />
                             </div>
                             <div className='sm-12 col-md'>
                                 <FooterSection links={marketplace} heading={'MARKETPLACE'} />
                             </div>
                             <div className='sm-12 col-md'>
-                                <FooterSection links={medical} heading={'Medical'} />
+                                <FooterSection links={medical} heading={'MEDICAL'} />
                             </div>
                             <div className='sm-12 col-md'>
                                 <FooterSection links={advertising} heading={'ADVERTISING'} />

@@ -5,15 +5,17 @@ import agencydrop from "../../../assets/agency-drop-dummy.png";
 import agencyLogo from "../../../assets/agencyLogo.png";
 import agencysearch from "../../../assets/agency-search-icon.svg";
 import agencyuser from "../../../assets/agency-user.svg";
+import { useHistory } from "react-router-dom";
 
 const AgenciesHeader = () => {
+  const history = useHistory()
   return (
     <AgenciesHeaderContainer>
       <header class="top-bar">
         <div class="container">
           <div class="inner-content">
             <div class="logo">
-              <img src={agencyLogo} alt="agencyLogo" />
+              <img style={{cursor : 'pointer'}} onClick={() => history.push('/') } src={agencyLogo} alt="agencyLogo" />
             </div>
             <div class="search-box">
               <input type="search" name="" placeholder="Search" />

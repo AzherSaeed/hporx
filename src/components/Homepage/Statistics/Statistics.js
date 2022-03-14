@@ -14,37 +14,32 @@ const Statistics = () => {
         image: static1,
         revenue: '4.2',
         mini: 'Trillion',
-
-
-        p1: 'Medical marijuana',
-        p2: 'Industry Valuation',
+        p1: 'MEDICAL MARIJUANA',
+        p2: 'INDUSTRY VALUATION',
     }, {
         image: static1,
         revenue: '67',
         mini: '',
-        p1: 'Awarded Licenses in',
-        p2: 'fourtenses in fourtenn',
+        p1: 'AWARDED LICENSES IN ',
+        p2: 'FOURTENN STATUS',
     }, {
         image: static2,
         revenue: '4,781',
         mini: '',
-
-        p1: 'Thousand ft2 of',
-        p2: 'cultivation space builtv',
+        p1: 'MEDICAL MARIJUANA',
+        p2: 'INDUSTRY VALUATION',
     }, {
         image: static3,
         revenue: '150t',
         mini: '',
-
-        p1: 'Tons od solids',
-        p2: 'produced',
+        p1: 'MEDICAL MARIJUANA',
+        p2: 'INDUSTRY VALUATION',
     }, {
         image: static4,
         revenue: '400%',
         mini: '',
-
-        p1: 'Perfect Growth in the',
-        p2: ' last tow years',
+        p1: 'MEDICAL MARIJUANA',
+        p2: 'INDUSTRY VALUATION',
     },]
     return (
         <StatisticsMainContainer>

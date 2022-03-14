@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import playIcon from "../../../assets/play-btn.svg";
 import {
   StyledHero,
@@ -11,52 +11,66 @@ import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
 import MyVerticallyCenteredModal from "./Modal";
+import Popup from "../Popup/Popup";
+import VideoModal from "../VideoModal/VideoModal";
+const apiKey = "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI";
 
-import Popup from '../Popup/Popup';
-import VideoModal from '../VideoModal/VideoModal'
+const Header = ({ id, value }) => {
+  const data = localStorage.getItem("ageGateActive");
+  const locationFound = localStorage.getItem("saveCurentLocation");
 
+  const getLocation = JSON.parse(locationFound);
 
-
-
-const Header = ({ id  ,value}) => {
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = React.useState(false);
   const [offNavValue, setOffNavValue] = React.useState(false);
-  console.log({offNavValue})
-const data = localStorage.getItem("ageGateActive");
-const apiKey = "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI";
+  const [finalCountry, setfinalCountry] = useState('')
+  const [finalState, setfinalState] = useState('')
+
+
+
+  
+
+
+
   const handleClose = () => setShow(false);
-  const getValue=(value)=>{
-    console.log(value,'value')
+
+  const getValue = (value) => {
     setOffNavValue(value);
+  };
 
-  }
-
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-
-  const [lat, setLat] = useState("");
-  const [lng, setLng] = useState("");
-
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLat(position.coords.latitude);
-      setLng(position.coords.longitude);
-    });
-  }, []);
+  // useEffect(() => {
+  //   if(!locationFound){
+  //     navigator.geolocation.getCurrentPosition(function (position) {
+  //       const lat=position.coords.latitude;
+  //        const lng=position.coords.longitude;
+  //        localStorage.setItem('saveCurentLocation' , 'location')
+  //        setLat(lat)
+  //        setLng(lng)
+  //        console.log(lat , lng , 'lng' );
+  //      });
+  //   }
+  // }, []);
 
   useEffect(() => {
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`)
-   .then(response => response.json())
-   .then(result => {
-    setState(result.results[0].address_components[7].long_name);
-    setCountry(result.results[0].address_components[8].long_name);
-   })
-   .catch(error => {
-     console.error('Error:', error);
-   });
-   } , [lat , lng])
+    if (getLocation) {
+      const lat = getLocation.lat;
+      const lng = getLocation.lng;
+      fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          const finalResult = result.results[0].formatted_address.split(' ')
+          setfinalCountry(finalResult.pop())
+          setfinalState(finalResult.at(-1))
+        }) 
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+  }, [getLocation]);
+
 
 
   return (
@@ -67,7 +81,11 @@ const apiKey = "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI";
         setModalShow={setModalShow}
         children={
           data !== "active" ? (
-            <Popup setModalShow={setModalShow} country={country} state={state} />
+            <Popup
+              setModalShow={setModalShow}
+              country={finalCountry}
+              state={finalState}
+            />
           ) : (
             <iframe
               width="100%"
@@ -84,25 +102,30 @@ const apiKey = "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI";
       <StyledHero id={id}>
         {/* <TopBar setShow={setShow} /> */}
         <OffCanvas
-          country={country}
-          state={state}
+           country={finalCountry}
           handleClose={handleClose}
           show={show}
           setShow={setShow}
           sendValue={getValue}
           value={value}
-        /> 
-      <SubBar setShow={setShow}  />
-      <video autoPlay muted loop className="hero-video"  src='/Videos/hporx.mp4' />
-      <div className="hero-text-container">
-        <HomePlayButtonContainer onClick={() => setModalShow(true)} >
-          <HeroPlayIcon src={playIcon} />
-        </HomePlayButtonContainer>
-        <HeroHeading>THERAPEUTICS</HeroHeading>
-        <p className="home-main-header-sub-heading" >CULITVATED WELLNESS</p>
-        <HeroButton>Appointment</HeroButton>
-      </div>
-    </StyledHero>
+        />
+        <SubBar setShow={setShow} />
+        <video
+          autoPlay
+          muted
+          loop
+          className="hero-video"
+          src="/Videos/hporx.mp4"
+        />
+        <div className="hero-text-container">
+          <HomePlayButtonContainer onClick={() => setModalShow(true)}>
+            <HeroPlayIcon src={playIcon} />
+          </HomePlayButtonContainer>
+          <HeroHeading>THERAPEUTICS</HeroHeading>
+          <p className="home-main-header-sub-heading">CULTIVATED WELLNESS</p>
+          <HeroButton>Appointment</HeroButton>
+        </div>
+      </StyledHero>
     </div>
   );
 };

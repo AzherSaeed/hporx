@@ -3,17 +3,42 @@ import GoogleMapReact from "google-map-react";
 import LocationMarker from "./LocationMarker";
 import LocationInfoBox from "./LocationInfoBox";
 import axios from "axios";
-const Map = ({allAddresses}) => {
+import {ViewMoreBtn} from '../../../Globals/Globals';
+import {LocateUsButton} from '../StylesLocate';
+import {useHistory} from 'react-router-dom';
+
+
+const Map = ({allAddresses }) => {
+  const history = useHistory()
+  const locationFound = localStorage.getItem('saveCurentLocation')
+
+  
   const [locationInfo, setLocationInfo] = useState(false);
   const [marker, setMarker] = useState([]);
   const [centerLocation , setCenterLoacation] = useState('');
+
+
+  useState(() => {
+    if(locationFound){
+      setCenterLoacation(JSON.parse(locationFound))
+    }
+  },[locationFound])
+
+
+
+ 
   
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-     const lat=position.coords.latitude;
-      const lng=position.coords.longitude;
-      setCenterLoacation({lat,lng});
-    });
+    if(!locationFound){
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const lat=position.coords.latitude;
+         const lng=position.coords.longitude;
+   
+         console.log(lat , lng , 'lng' );
+         setCenterLoacation({lat,lng});
+       });
+    }
+
   }, []);
 
   useEffect( async () => {
@@ -40,11 +65,6 @@ const Map = ({allAddresses}) => {
 
   }, [allAddresses]);
 
-
-
-
- 
-
   return (
     <div className="map">
       <GoogleMapReact
@@ -62,6 +82,7 @@ const Map = ({allAddresses}) => {
         ))}
       </GoogleMapReact>
       {locationInfo && <LocationInfoBox />}
+      <LocateUsButton onClick={() => history.push('/locator')} >Locate Us</LocateUsButton>
     </div>
   );
 };

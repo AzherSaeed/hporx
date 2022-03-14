@@ -10,6 +10,7 @@ border-radius: 30px;
 height: 100%;
 .logo{
     width :15rem;
+    cursor: pointer;
 }
 
 .local-prize-container{

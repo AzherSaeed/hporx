@@ -6,15 +6,42 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MainPage from "./components/AgenciesPage/MainPage";
 import LocatehomePage from "./components/LocaterPage/LocatehomePage";
 function App() {
- 
+  const locationFound = localStorage.getItem('saveCurentLocation')
 
-  //dasfasdf//
+
+  console.log(locationFound)
+
+
+    useEffect(() => {
+      if(!locationFound){
+        navigator.geolocation.getCurrentPosition(function (position) {
+          const lat=position.coords.latitude;
+           const lng=position.coords.longitude;
+          localStorage.setItem('saveCurentLocation' , JSON.stringify({lat,lng}))
+         });
+      }
+  }, []);
+
+
+  // useEffect(() => {
+  //   fetch("http://ip-api.com/json")
+  //     .then((res) => res.json())
+  //     .then((response) => {
+  //       console.log("Country is : ", response.country);
+  //       console.log("Region is: ", response.regionName);
+  //     })
+  //     .catch((error) => {
+  //       console.log("Request failed:", error);
+  //     });
+  // }, []);
+
+
   return (
     <>
       <Router>
         <Switch>
           <Route exact path="/">
-            <Homepage />
+            <Homepage  />
           </Route>
           <Route path="/home">
             <Homepage2 />

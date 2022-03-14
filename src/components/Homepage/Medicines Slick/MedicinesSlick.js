@@ -62,7 +62,8 @@ const MedicinesSlick = ({id}) => {
           {imgContainer.map((img, index) => (
             <div key={index}>
               <div className="text-center medicine-text">
-                <span className="text-red" >Treats</span>:<span className="disease-text">Seizures</span>
+                
+                <span className="text-red" >Treats</span>:<span style={{display:'inline-block',marginLeft:'5px'}} className="disease-text">Seizures</span>
               </div>
               <MedicineImgContainer>
                 <div className="overlay"></div>

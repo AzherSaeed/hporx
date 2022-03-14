@@ -68,6 +68,8 @@ h1{
     color: #828282;
     margin:2rem 0;
     padding:0 3rem; 
+   margin-top: 5px;
+
  }   
  .btn-read{
     font-weight: normal;

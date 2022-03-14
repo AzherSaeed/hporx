@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import inhalte1 from "../../../assets/inhalate3.jpg";
 import inhalate4 from "../../../assets/inhalate4.jpg";
 import playButton from "../../../assets/play-outline-button.svg";
-import { InhalatedImgContainer, InhalteImg } from "./StyledInhalate";
+import { InhalatedImgContainer, InhalteImg, QuickShopBtn } from "./StyledInhalate";
 import { ViewMoreBtn } from "../../Globals/Globals";
 import "./style.css";
 import VideoModal from "../VideoModal/VideoModal";
@@ -95,7 +95,7 @@ const InhalateSlick = () => {
                   </p>
                 </div>
                 <h2>$450</h2>
-                <ViewMoreBtn>Shop Now</ViewMoreBtn>
+                <QuickShopBtn style={{backgroundColor:'transparent'}}>Quick Shop</QuickShopBtn>
               </div>
             </div>
           </InhalatedImgContainer>

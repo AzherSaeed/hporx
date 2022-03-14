@@ -41,6 +41,16 @@ opacity: 0.9;
     width: 147.05px;
     height: 51.35px;
   }
+
+  .reponsive-topbar-toggler{
+     margin: 0 1rem;
+    }
+
+  @media screen and (min-width : 1130px){
+    .reponsive-topbar-toggler{
+      display: none;
+    }
+  }
 `;
 
 const SubBarContainer = styled.div`

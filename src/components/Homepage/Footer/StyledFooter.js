@@ -16,6 +16,7 @@ line-height: 1.8rem;
 letter-spacing: 0em;
 color: #242424;
 margin: 0;
+margin-bottom: 1rem;
 
 }
  ul{
@@ -23,10 +24,11 @@ margin: 0;
     list-style-type: none;
     li{
     a{
+       
 text-decoration: none;
 font-size: 1.4rem;
 font-weight: 400;
-line-height: 2.8;
+line-height: 2;
 letter-spacing: 0em;
 color: #828282;
 margin: 0;

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import evendor1 from '../../../assets/evendor1.png'
-import evendor2 from '../../../assets/evendor2.png'
+import evendor2 from '../../../assets/evendor2.jpeg'
 import evendor3 from '../../../assets/evendor3.png'
 import evendor4 from '../../../assets/evendor4.png'
 import mini1 from '../../../assets/evendorMini1.svg'
@@ -13,6 +13,7 @@ import mini2 from '../../../assets/evendorMini2.svg'
 import hprox from '../../../assets/eVendorHprox.svg'
 import fairman from '../../../assets/eVendorFairman.svg'
 import medi from '../../../assets/eVendorMedi.svg'
+import Flag_of_Canada from '../../../assets/Flag_of_Canada.svg'
 
 
 import { Container } from 'react-bootstrap';
@@ -65,7 +66,7 @@ const EVendorSlick = () => {
             eVendorData.map((data, index) => {
               const { img, flag,flag1,miniImg } = data
               return (
-                <EVendorCard key={index} img={img} flag={flag} flag1={flag1} miniImg={miniImg} />
+                <EVendorCard key={index} img={img} flag={flag} flag1={flag1} Flag_of_Canada={Flag_of_Canada} miniImg={miniImg} />
               )
             })
           }

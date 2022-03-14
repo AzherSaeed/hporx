@@ -13,7 +13,7 @@ const Portable = ({id}) => {
             <Container id={id} >
                 <Row>
                     <Col xs={12} md={6}>
-                        <PrimaryHeading>Portable</PrimaryHeading>
+                        <PrimaryHeading>PORTABLES</PrimaryHeading>
                         <p>"You can take it with you"</p>
                         <p className='mini-title'>Under Legal prescription</p>
                         <PortableMoreBtn>View More</PortableMoreBtn>

@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import chillum1 from '../../../assets/chillum1.jpg'
+import chillum1 from '../../../assets/chillum1.png'
 import chillum2 from '../../../assets/chillum2.jpg'
 import chillum3 from '../../../assets/chillum4.jpg'
 import ChillumCard from './ChillumCard';
