@@ -106,7 +106,7 @@ function Popup(props) {
                 id="country"
                 name="country"
                 value={props.country}
-              />
+               />
             </div>
             <div class="form-group">
               <label for="country" className="mb-2 fw-5 labels">

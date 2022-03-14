@@ -189,7 +189,7 @@ function Header() {
                   {currentPost.map((v) => (
                     <Col lg={3} md={6} sm={6}>
                       <Card className="cards">
-                        <div className>
+                        <div >
                           <img
                             src={emptyLocation}
                             className="img-section"
