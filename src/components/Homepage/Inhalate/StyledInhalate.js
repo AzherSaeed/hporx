@@ -30,6 +30,10 @@ export const InhalateMainContainer = styled.div`
 `;
 export const InhalateTextContainer = styled.div`
   padding: 3rem 4rem;
+  @media screen and (max-width:480px) {
+  padding: 3rem 0rem;
+    
+  }
 `;
 export const InhalatedImgContainer = styled.div`
   padding: 0 1rem;
