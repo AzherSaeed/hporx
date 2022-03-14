@@ -20,7 +20,10 @@ import { Container } from 'react-bootstrap';
 import EVendorCard from './EVendorCard';
 const EVendorSlick = () => {
 
-  const eVendorData = [{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi}, { img: evendor3,flag:mini1,flag1:null,miniImg:medi} ]
+  const eVendorData = [{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi},{ img: evendor1,flag:mini1,flag1:mini2,miniImg:hprox }, { img: evendor2, flag:mini1,flag1:null,miniImg:fairman }, { img: evendor3,flag:mini1,flag1:null,miniImg:medi},
+
+  
+  ]
   var settings = {
     dots: false,
     infinite: false,
@@ -28,7 +31,7 @@ const EVendorSlick = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: 1,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1000,
@@ -64,9 +67,10 @@ const EVendorSlick = () => {
         <Slider {...settings} className='EVendor-slick'>
           {
             eVendorData.map((data, index) => {
+              console.log('key',index)
               const { img, flag,flag1,miniImg } = data
               return (
-                <EVendorCard key={index} img={img} flag={flag} flag1={flag1} Flag_of_Canada={Flag_of_Canada} miniImg={miniImg} />
+                <EVendorCard number={index} img={img} flag={flag} flag1={flag1} Flag_of_Canada={Flag_of_Canada} miniImg={miniImg} />
               )
             })
           }

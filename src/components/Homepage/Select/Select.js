@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Field,ErrorMessage} from 'formik'
 import './Select.css'
 
-export default function Select({title,name}) {
+export default function Select({title,name,defaultOption}) {
   // const options = ['Select Option', 'no', 'other']
 
   return (
@@ -16,7 +16,7 @@ export default function Select({title,name}) {
       <label className='select-label'>{title}</label>
       <Field as="select" name={name} >
              <option value="">
-               Select Option
+              {`${defaultOption}`}
              </option>
              <option value="no">no</option>
              <option value="others">others</option>

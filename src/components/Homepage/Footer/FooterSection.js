@@ -28,7 +28,7 @@ export default FooterSection
 export const TradingAddress = ({ links, heading }) => {
     return (
         <TradingAddressMain>
-            <div ><h4>
+            <div><h4>
                 {heading}
             </h4>
             <TradingAddressList>

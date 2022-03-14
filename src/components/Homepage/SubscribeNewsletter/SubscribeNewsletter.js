@@ -144,14 +144,16 @@ const SubscribeNewsletter = () => {
                       <Select
                         required
                         name="service"
+                        defaultOption='Select Service'
                         title="How can we be of service to you?"
                       />
                     </Col>
                     <Col md={12}>
                       <Select
+                      defaultOption='Select Option'
                         required
                         name="position"
-                        title="How can we be of service to you?"
+                        title="Are you a company or individual?"
                       />
                     </Col>
                     <SubscribeButton type="submit">

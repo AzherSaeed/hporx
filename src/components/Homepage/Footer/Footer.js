@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import FooterSection, { TradingAddress } from './FooterSection'
-import { FooterImg, FooterImg1, FooterMainContainer } from './StyledFooter'
+import { FooterImg, FooterImg1, FooterMainContainer, TradingAddressList, TradingAddressMain } from './StyledFooter'
 import './Footer.css';
 import usa from '../../../assets/usa.png'
 import flag from '../../../assets/flag.svg'
@@ -10,26 +10,26 @@ import footerLogo from '../../../assets/footer-logo.png'
 
 const Footer = () => {
     const company = ['About Us',
-    'Jobs ',
-   ' Data Protection',
-    'Privacy Policy',
-    'Cookie Policy',
-    'FAQ',
-   ' Career Opportunities',
-    'Investment Opportunities',
-    'Teams']
+        'Jobs ',
+        ' Data Protection',
+        'Privacy Policy',
+        'Cookie Policy',
+        'FAQ',
+        ' Career Opportunities',
+        'Investment Opportunities',
+        'Teams']
     const tradingAddress = ['European Union Administration Correos No 77 Plaça de la Font, 12 08880 Cubelles Barcelona']
     const marketplace = ['Fabric',
-    'Finished Goods',
-  '  Manufactured Goods',
-   ' Health & Fitness',
-    'Hygiene & Beauty ',
-    'Edibles & Drink ',
-    'Growth Materials',
-   ' Lighting Equipment',
-   ' Seeds & Flower',
-   ' Sativa, Indica & Hybrids',
-    'Vaporizers & Inhalants']
+        'Finished Goods',
+        '  Manufactured Goods',
+        ' Health & Fitness',
+        'Hygiene & Beauty ',
+        'Edibles & Drink ',
+        'Growth Materials',
+        ' Lighting Equipment',
+        ' Seeds & Flower',
+        ' Sativa, Indica & Hybrids',
+        'Vaporizers & Inhalants']
     const medical = ['Appointment Calendar',
         'Zoom Consultation',
         'Diagnose',
@@ -115,21 +115,47 @@ const Footer = () => {
         <FooterMainContainer>
             <Container>
                 <Row>
-                    <Col md={2} sm={6}  xs={12}>
-                        <TradingAddress links={tradingAddress} heading={'TRADING ADDRESS'} />
+                    <Col md={2} sm={6} xs={12}>
+                        <TradingAddressMain>
+                            <div><h4>
+                            TRADING ADDRESS
+                            </h4>
+                                <TradingAddressList>
+                                    <ul>
+                                        <p className='footer-link fs-5' href="#">
+                                            European Union Administration 
+                                        </p>
+                                        <p className='footer-link'>
+
+                                         Correos No 77
+                                        </p>
+
+                                        <p className='footer-link'>
+
+                                         Plaça de la Font, 12   
+                                        </p>
+                                        <p className='footer-link'>
+
+                                        08880 Cubelles Barcelona
+                                        </p>
+                                    </ul>
+                                </TradingAddressList>
+
+                            </div>
+                        </TradingAddressMain>
                         <TradingAddress links={registeredAddress} heading={'REGISTERED ADDRESS'} />
                         <TradingAddress links={callCenter} heading={'CALL CENTER'} />
                         <ul class="list-unstyled footer-ul">
-                            
+
                             <li class="mb-1">
                                 <span>
-                                    <FooterImg className='img-fluid'  src={flag} alt={flag} /><span class="footer-span">+1 (213) 370
+                                    <FooterImg className='img-fluid' src={flag} alt={flag} /><span class="footer-span">+1 (213) 370
                                         0873</span>
                                 </span>
                             </li>
                             <li>
                                 <span>
-                                    <FooterImg  className='img-fluid' src={usa} alt={mail}/>
+                                    <FooterImg className='img-fluid' src={usa} alt={mail} />
                                     <span class="footer-span">
                                         +31 938 022
                                         780</span>

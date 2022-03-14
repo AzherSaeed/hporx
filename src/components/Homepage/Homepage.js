@@ -111,7 +111,7 @@ const Homepage = () => {
     { img: followUs1, title: "Twitter" },
     { img: followUs2, title: "Facbook" },
     { img: followUs3, title: "Youtube" },
-    { img: followUs4, title: "TencentQQ" },
+    { img: followUs4, title: "Snapchat" },
     { img: followUs5, title: "Vkontakte" },
     { img: followUs6, title: "Messenger" },
     { img: followUs7, title: "Instagram" },
