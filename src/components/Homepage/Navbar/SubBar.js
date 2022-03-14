@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import "./SubBar.css";
 import TopBar from "../Navbar/TopBar";
 import Marquee from "./Marquee";
+import downIcon from '../../../assets/ionic-ios-arrow-down.svg'
 
 const SubBar = ({ setShow }) => {
   const history = useHistory();
@@ -20,7 +21,6 @@ const SubBar = ({ setShow }) => {
     // adding the event when scroll change background
     window.addEventListener("scroll", changenavColor);
   });
-
 
   const changenavColor = () => {
     if (window.scrollY > 15) {
@@ -70,7 +70,7 @@ const SubBar = ({ setShow }) => {
         >
           <div className="nav-content">
             <ul className="nav-items">
-              <li className="nav-item">
+              <li className="main-li" >
                 <Link
                   activeClass="active"
                   to="HOME"
@@ -83,7 +83,7 @@ const SubBar = ({ setShow }) => {
                   HOME{" "}
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="INHALATE"
@@ -94,7 +94,7 @@ const SubBar = ({ setShow }) => {
                   INHALATE
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="VAPORIZE"
@@ -106,7 +106,7 @@ const SubBar = ({ setShow }) => {
                   VAPORIZE
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="PORTABLES"
@@ -117,13 +117,8 @@ const SubBar = ({ setShow }) => {
                 >
                   PORTABLES
                 </Link>
-                <ul>
-                  <li>one</li>
-                  <li>one</li>
-                  <li>one</li>
-                </ul>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="CHILLUMS"
@@ -135,7 +130,7 @@ const SubBar = ({ setShow }) => {
                   CHILLUMS
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="CULTIVATE"
@@ -147,7 +142,7 @@ const SubBar = ({ setShow }) => {
                   CULTIVATE
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="DIAGNOSE"
@@ -159,7 +154,7 @@ const SubBar = ({ setShow }) => {
                   DIAGNOSE{" "}
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li" >
                 <Link
                   activeClass="active"
                   to="PRESCRIBE"
@@ -171,7 +166,7 @@ const SubBar = ({ setShow }) => {
                   PRESCRIBE{" "}
                 </Link>
               </li>
-              <li className="nav-item ">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   // to="PRODUCTS"
@@ -179,17 +174,16 @@ const SubBar = ({ setShow }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  onClick={() => setToggle(!toggle)}
                 >
-                  PRODUCTS
+                  <span style={{ color: "red", fontSize: "1.5rem" }}>Rx</span>
+                  PRODUCTS<img src={downIcon} alt='downIcon' />
                 </Link>
-                <ul className={toggle ? 'show' : ''} >
-                  <li>one</li>
-                  <li>one</li>
-                  <li>one</li>
+                <ul>
+                  <li className="sub-li" onClick={() => history.push('/locator')} >Locate Us</li>
+                  <li className="sub-li" onClick={() => history.push('/agency') } >Agency</li>
                 </ul>
               </li>
-              <li className="nav-item">
+              <li className="main-li">
                 <Link
                   activeClass="active"
                   to="MARKETPLACE"
@@ -201,7 +195,7 @@ const SubBar = ({ setShow }) => {
                   MARKETPLACE{" "}
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="main-li" >
                 <Link
                   activeClass="active"
                   to="LOCATE"

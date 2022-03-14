@@ -8,45 +8,8 @@ import "./homePageNav.css";
 const SubBar = ({ setShow }) => {
   const history = useHistory();
 
-  const [navbar, setNavbar] = useState(false);
-
-  const [navbarbackground, setnavbarbackground] = useState(false);
-
-  useEffect(() => {
-    changenavColor();
-    // adding the event when scroll change background
-    window.addEventListener("scroll", changenavColor);
-  });
-
-  const changenavColor = () => {
-    if (window.scrollY > 15) {
-      setnavbarbackground(true);
-      setNavbar(true);
-    } else {
-      setnavbarbackground(false);
-      setNavbar(false);
-    }
-  };
-
-  // const changeBackground = () => {
-  //   window.onwheel = e => {
-  //     if(e.deltaY >= 0){
-  //       // Scrolling Down with mouse
-  //       setNavbar(true)
-  //     } else {
-  //       // Scrolling Up with mouse
-  //       setNavbar(false)
-  //     }
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   changeBackground()
-  //   // adding the event when scroll change background
-  //   window.addEventListener("scroll", changeBackground)
-  // })
   return (
-    <Container className="nav">
+    <Container className="homeNav">
       <div className="nav-content">
         <ul className="nav-items">
           <li className="nav-item">
