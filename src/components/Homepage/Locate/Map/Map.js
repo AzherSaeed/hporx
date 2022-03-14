@@ -14,12 +14,15 @@ const Map = ({allAddresses , doctorsData }) => {
 
   
   const [locationInfo, setLocationInfo] = useState(false);
-  const [marker, setMarker] = useState([]);
+  const [marker, setMarker] = useState([{
+    lat:40.4637,
+    lng:3.7492
+  }]);
   const [centerLocation , setCenterLoacation] = useState("");
   const [defaulcenterLocation , setDefaultCenterLoacation] = useState([]);
   const [selectedAddress, setselectedAddress] = useState({})
 
-
+ console.log(locationFound,"Location.....!")
   useState(() => {
     if(locationFound){
       setDefaultCenterLoacation(JSON.parse(locationFound));
@@ -34,6 +37,7 @@ const Map = ({allAddresses , doctorsData }) => {
         const lat=position.coords.latitude;
          const lng=position.coords.longitude;
          setDefaultCenterLoacation({lat,lng});
+         setMarker({lat,lng});
        });
     }
 
@@ -63,9 +67,9 @@ const Map = ({allAddresses , doctorsData }) => {
 
       const getlatlan = getData.map((item) => {
         return {
-          'address' : item.config.params.address,
-          'lat' : item.data.results[0].geometry.location.lat,
-          'lng' : item.data.results[0].geometry.location.lng
+           address : item.config.params.address,
+           lat : item.data.results[0].geometry.location.lat,
+           lng : item.data.results[0].geometry.location.lng
         }
       } )
       console.log(getlatlan , 'getlatlangetlatlangetlatlan')
