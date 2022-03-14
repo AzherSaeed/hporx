@@ -35,32 +35,13 @@ padding: 0 5rem;
 .map{
   width: 100%;
   height:62.5rem;
- 
+ position: relative;
 }
 .location-icon{
   height: 2rem;
   width: 2rem; 
 }
-.location-info{
-  /* position: absolute;
-  top: 50px;
-  right: 50px; */
-  width: 400px;
-  min-height:200px; 
-  padding: 20px ;
-  background-color: rgba(0, 0,0, .6);
-  border-radius: 10px;
-  font-size: 18px;
-  color: #fff;
-}
-.location-info ul{
-  list-style-type: none;
-  padding: 0;
 
-}
-.location-info li{
-  padding: 5px 0;
-}
 @media only screen and (max-width: 480PX) {
   P{
     padding: 0 0;
@@ -68,6 +49,47 @@ text-align: start;
 
   }
 
+}
+.cards{
+    background: #FFFFFF; 
+    box-shadow: 0px 0px 1.7rem rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    margin-bottom:1.5rem ;
+    position: absolute;
+    top: 7rem;
+    right: 5rem;
+    }
+    .card-data{
+    padding:1.5rem 1.5rem ;
+}
+.para{
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 89.5%;
+     color: #828282;
+     text-align: left;
+}
+.text1{
+    font-size: 1.3rem;
+   line-height: 89.5%;
+   color: #828282;
+   padding-bottom:1.8rem ;
+}
+.icon{
+    height:1.6rem ;
+    width:1.6rem ;
+    
+}
+.icon-text{
+    margin-left:1rem ;
+    margin-right:1rem ;
+}
+h6{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 89.5%;
+    color: #242424;
+    padding-bottom:1.2rem ;
 }
 `
 export const LocateUsButton=styled(ViewMoreBtn)`

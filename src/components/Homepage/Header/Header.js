@@ -61,9 +61,9 @@ const Header = ({ id, value }) => {
       )
         .then((response) => response.json())
         .then((result) => {
-          const finalResult = result.results[0].formatted_address.split(' ')
-          setfinalCountry(finalResult.pop())
-          setfinalState(finalResult.at(-1))
+          const finalResult = result.results[0].formatted_address.split(',')
+          setfinalCountry(finalResult.pop());
+          setfinalState(finalResult.at(-1).split(" ").at(1));
         }) 
         .catch((error) => {
           console.error("Error:", error);
