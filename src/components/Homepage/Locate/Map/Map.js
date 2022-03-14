@@ -19,12 +19,14 @@ const Map = ({allAddresses , doctorsData }) => {
   const [defaulcenterLocation , setDefaultCenterLoacation] = useState([]);
   const [selectedAddress, setselectedAddress] = useState({})
 
-
-  useState(() => {
+console.log(locationFound,"Location...1");
+  useEffect(() => {
     if(locationFound){
       setDefaultCenterLoacation(JSON.parse(locationFound));
+    }else{
+      setDefaultCenterLoacation({lat:40.4637,lng:3.7492})
     }
-    setMarker([JSON.parse(locationFound)]);
+    //  setMarker([JSON.parse(locationFound)]);
   },[locationFound])
 
 
