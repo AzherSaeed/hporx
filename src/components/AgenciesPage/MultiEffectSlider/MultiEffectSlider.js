@@ -98,36 +98,7 @@ const MultiEffectSlider = () => {
                   </div>
                 ))
               }
-              {/* <div class="col-lg-4 col-md-6 mod-img">
-                <a onClick={() => setModalShow(true)}>
-                  <img src={modalImg} alt="modalImg" />
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 mod-img" onClick={() => setModalShow(true)}>
-                <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <img src={modalImg} alt="modalImg" />
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 mod-img" onClick={() => setModalShow(true)}>
-                <a data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => setModalShow(true)}>
-                  <img src={modalImg} alt="modalImg" />
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 mod-img">
-                <a data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => setModalShow(true)}>
-                  <img src={modalImg} alt="modalImg" />
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 mod-img">
-                <a data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => setModalShow(true)}>
-                  <img src={modalImg} alt="modalImg" />
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 mod-img">
-                <a data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => setModalShow(true)}>
-                  <img src={modalImg} alt="modalImg" />
-                </a>
-              </div> */}
+             
             </div>
           </div>
         </div>

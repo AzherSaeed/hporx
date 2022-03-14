@@ -1,15 +1,15 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { AddToCartBtn } from '../../Globals/Globals'
-import { EVendorImg, EVendorImgContainer, EVendorMiniImg, MiniPharmImg , EVendorCardMain } from './StyledEVendor'
+import { EVendorImg, EVendorImgContainer, EVendorMiniImg, MiniPharmImg, EVendorCardMain } from './StyledEVendor'
 
 
 
-const EVendorCard = ({ key, img, flag,flag1, miniImg , Flag_of_Canada }) => {
-    console.log(flag1);
+const EVendorCard = ({ number, img, flag, flag1, miniImg, Flag_of_Canada }) => {
+    console.log('key in card', number);
     return (
         <EVendorCardMain>
-            <Card key={key} >
+            <Card number={number} >
                 <div className='EVendorCard-main' >
                     <EVendorImgContainer>
                         <MiniPharmImg src={miniImg} alt={miniImg} />
@@ -18,16 +18,22 @@ const EVendorCard = ({ key, img, flag,flag1, miniImg , Flag_of_Canada }) => {
                             <AddToCartBtn>Add to Cart</AddToCartBtn>
                         </div>
                         <EVendorImg className='img-fluid' src={img} alt={img} />
-                    </EVendorImgContainer>                  
+                    </EVendorImgContainer>
                 </div>
             </Card>
             <div className='d-flex'>
-            <EVendorMiniImg className='img-fluid' src={flag} alt="flags" />
-            {
-                flag1&&
-                <EVendorMiniImg className='img-fluid  ms-2' src={flag1} alt="flags" />
-            }
-        
+                {console.log('number in flag', number)}
+                {
+                    number === 0 ||number===3?
+                        <>
+                            <EVendorMiniImg className='img-fluid' src={flag} alt="flags" />
+                            <EVendorMiniImg className='img-fluid  ms-2' src={flag1} alt="flags" />
+                        </>
+                        : number ===2|| number ===5 ? (<EVendorMiniImg className='img-fluid  ms-2' src={Flag_of_Canada} alt="flags" />
+                        ) :
+                           ( <EVendorMiniImg className='img-fluid' src={flag} alt="flags" />)
+                }
+
             </div>
 
 

@@ -9,7 +9,7 @@ function DesignServices() {
   <StyleDesignServices>
   <div className="bgcolor">
     <div className="container">
-        <div className="main-heading ">Designe Agency Services</div>
+        <div className="main-heading ">Design Agency Services</div>
         <Row>
         {CardData.map((v)=>
           <Col lg={4} md={6} >

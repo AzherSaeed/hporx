@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import followUs from '../../../assets/followUs.svg'
+import followUs from '../../../assets/followUs.png'
 
 export const MainContainerFollowUs = styled.div`
 background-image: url(${followUs}) ;
@@ -16,10 +16,9 @@ font-style: normal;
 font-weight: 500;
 line-height: 3.6rem;
 letter-spacing: 0em;
-color: #FFFFFF;
+color: #242424;
 padding-left: 2rem;
 padding-bottom: 1rem;
-
 }
 
 `
@@ -32,7 +31,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 1.2rem;
 letter-spacing: 0em;
-color: #FFFFFF;
+color: #242424;
 
 }
 

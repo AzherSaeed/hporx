@@ -58,7 +58,6 @@ const FollowUs = ({ imgs, head, imgs1, head1 }) => {
 
                       <FollowUsImg src={img} alt={img} />
                       <p>{title}</p>
-
                     </FollowUsImgContainer>
                   )
                 }
