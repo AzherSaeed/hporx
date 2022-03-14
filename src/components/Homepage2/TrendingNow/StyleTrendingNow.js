@@ -22,13 +22,7 @@ export const StyleTrending=styled.div`
         @media screen and (max-width:480px) {
         left:-4px !important;
     }
-/*   
-    @media screen and (max-width:1000px) {
-        margin-right:15px ;
-    }
-    @media screen and (max-width:500px) {
-        margin-right:20px ;
-    } */
+
         }
 } 
 .main-section{

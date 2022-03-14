@@ -6,6 +6,7 @@ import chillum1 from '../../../assets/chillum1.png'
 import chillum2 from '../../../assets/chillum2.jpg'
 import chillum3 from '../../../assets/chillum4.jpg'
 import ChillumCard from './ChillumCard';
+import { ChillumSlick } from './StyledChillums';
 
 const ChillumsSlick = () => {
 
@@ -50,7 +51,7 @@ const ChillumsSlick = () => {
     ]
   };
   return (
-    <div>
+    <ChillumSlick >
       <Slider {...settings} className='responsive-slick'>
         <ChillumCard img={chillum1} />
         <ChillumCard img={chillum2} />
@@ -59,7 +60,7 @@ const ChillumsSlick = () => {
         <ChillumCard img={chillum2} />
         <ChillumCard img={chillum3} />
       </Slider>
-    </div>
+    </ChillumSlick>
 
 
   )

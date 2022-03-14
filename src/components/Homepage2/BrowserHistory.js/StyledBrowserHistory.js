@@ -2,7 +2,12 @@ import styled from 'styled-components'
 export const BrowserHistoryMain = styled.div`
 margin-top: 4.8rem;
 
-
+.viewToday-slick{  
+  .slick-next{
+    right: -6px !important;
+    
+    }
+}
 .viewToday-slick{  
     
     @media screen and (max-width:768px) {

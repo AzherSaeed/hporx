@@ -5,7 +5,7 @@ export const ViewTodayStyle = styled.div`
     .viewToday-slick{
         margin-top: 3.3rem;
     .slick-next{
-    right: 0 !important;  
+    right: 6px !important;  
     @media screen and (max-width:480px) {
         right: 10px !important;
     } 

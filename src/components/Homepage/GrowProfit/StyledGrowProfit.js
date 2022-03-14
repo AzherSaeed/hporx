@@ -45,7 +45,7 @@ color: #828282;
 }
 }
 .grow-profit-slick  .slick-prev {
-  left: 50%;
+  left: 52%;
   transform: translate(-7rem,36rem);
   z-index: 1;
 

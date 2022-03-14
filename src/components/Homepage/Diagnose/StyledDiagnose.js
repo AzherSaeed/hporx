@@ -95,6 +95,16 @@ height:
 `
 export const StyledSlickContainer = styled.div`
 margin-top: 5.6rem;
+@media screen and (min-width:1024px) {
+  .responsive-slick .slick-next {
+      right: 21px !important;
+      z-index: 1;
+  }
+  .responsive-slick .slick-prev {
+      left: -27px !important;
+      z-index: 1;
+  }
+}
  
 h4{
 font-size: 2.8rem;

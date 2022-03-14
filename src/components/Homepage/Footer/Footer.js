@@ -18,7 +18,7 @@ const Footer = () => {
         ' Career Opportunities',
         'Investment Opportunities',
         'Teams']
-    const tradingAddress = ['European Union Administration Correos No 77 Plaça de la Font, 12 08880 Cubelles Barcelona']
+   
     const marketplace = ['Fabric',
         'Finished Goods',
         '  Manufactured Goods',
@@ -64,7 +64,7 @@ const Footer = () => {
 
         'Tax N° NL 862241133B01'
     ]
-    const callCenter = ['World Trade Center Barcelona Muelle de Barcelona Moll de Barcelona s/n, 08039 Barcelona Spain']
+    const callCenter = ['World Trade Center Barcelona','Muelle de Barcelona', 'Moll de Barcelona s/n', '08039 Barcelona Spain']
     const aToZ = ['Apparel',
         'Beauty',
         'Care',
@@ -118,32 +118,56 @@ const Footer = () => {
                     <Col md={2} sm={6} xs={12}>
                         <TradingAddressMain>
                             <div><h4>
-                            TRADING ADDRESS
+                                TRADING ADDRESS
                             </h4>
                                 <TradingAddressList>
                                     <ul>
                                         <p className='footer-link fs-5' href="#">
-                                            European Union Administration 
+                                            European Union Administration
                                         </p>
                                         <p className='footer-link'>
 
-                                         Correos No 77
+                                            Correos No 77
                                         </p>
 
                                         <p className='footer-link'>
 
-                                         Plaça de la Font, 12   
+                                            Plaça de la Font, 12
                                         </p>
                                         <p className='footer-link'>
 
-                                        08880 Cubelles Barcelona
+                                            08880 Cubelles Barcelona
                                         </p>
                                     </ul>
                                 </TradingAddressList>
 
                             </div>
                         </TradingAddressMain>
-                        <TradingAddress links={registeredAddress} heading={'REGISTERED ADDRESS'} />
+
+
+
+                        <TradingAddressMain>
+                            <div><h4 className='fs-3'>
+                                REGISTERED ADDRESS
+                            </h4>
+                                <TradingAddressList>
+                                    <ul>
+                                        {
+                                            registeredAddress.map((link, index) => (
+                                                <p key={index} className='footer-link' href="#">
+                                                    {link}
+                                                </p>
+                                            ))
+                                        }
+                                     
+
+                                    </ul>
+                                </TradingAddressList>
+
+                            </div>
+                        </TradingAddressMain>
+
+
                         <TradingAddress links={callCenter} heading={'CALL CENTER'} />
                         <ul class="list-unstyled footer-ul">
 

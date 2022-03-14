@@ -14,13 +14,19 @@ export const PortableMainContainer = styled.div`
     z-index: 1;
     
 }
+@media screen and (min-width: 1024px) { 
+.portable-slick .slick-next {
+    right: 8px !important;
+    z-index: 1;
+}
+}
 @media screen and (max-width: 480px) {
     .portable-slick  .slick-next {
     right:0rem;
     z-index: 1;
 }
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width:1023px) {
     .portable-slick  .slick-next {
     right:17px !important;
     z-index: 1;

@@ -3,10 +3,18 @@ import { PrimaryHeading, PrimarySubHeading, TertiaryHeading, ViewMoreBtn } from 
 
 export const VaporizeMainContainer = styled.div`
   padding: 5rem 0;
+  .responsive-slick {
+    @media screen and (min-width:1024px) {
+      .slick-prev {
+      left: -26px !important;
+      z-index: 1;
+    }
+}
+  }
 
 `
 
-export const VaporizeSubHeading=styled(TertiaryHeading)`
+export const VaporizeSubHeading = styled(TertiaryHeading)`
 margin-top: 3rem;
 `
 export const VaporizeImagesContainer = styled.div`

@@ -4,17 +4,17 @@ import { PrimarySubHeading, ShopBtnTransparent, TertiaryHeading } from "../../Gl
 export const ChillumMainContainer = styled.div`
 text-align: center;
 margin-top: 9rem;
-.chillum-slick{
-    margin-top: 5.6rem;
-}
-.chillum-slick  .slick-next {
+
+
+
+/* .chillum-slick  .slick-next {
     right: 0rem;
     z-index: 1;
 }
 .chillum-slick  .slick-prev {
     left: 0rem;
     z-index:1;
-}
+} */
 .chillum-slick .slick-prev:before, .chillum-slick .slick-next:before {
     font-size: 4rem !important; 
 }
@@ -99,3 +99,22 @@ export const ChillumBtn = styled(ShopBtnTransparent)`
 margin-top: 1.9rem;
 `
 
+export const ChillumSlick = styled.div`
+.responsive-slick{
+    margin-top: 5.6rem;
+    
+  @media screen and (min-width:1024px) {
+    .slick-prev{
+
+left: -25px !important;
+z-index: 1;
+} 
+  .slick-next {
+  right: 18px !important;
+  z-index: 1;
+}
+  }
+
+
+}
+`

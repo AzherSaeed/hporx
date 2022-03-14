@@ -48,50 +48,9 @@ function BrowserHistory({ imgs }) {
   return (
     <Container>
       <BrowserHistoryMain>
-        {/* <div className='main-heading'>Browsing History</div> */}
+       
         <BroswerSlick>
-          {/* <Swiper  className='swiper-react'
           
-            breakpoints={{
-              // when window width is >= 320px
-              300: {
-                slidesPerView: 1,
-                spaceBetween: 20
-              },
-              // when window width is >= 480px
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 30
-              },
-              // when window width is >= 640px
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 30
-              },
-              1200: {
-                slidesPerView: 5,
-                spaceBetween: 30
-              }
-            }}
-            spaceBetween={10}
-            pagination={false}
-            navigation={false}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
-            slidesPerView={5}
-            
-            onSlideChange={(swip) => setGetSwiper(swip.activeIndex)}
-            onSwiper={(swiper) => console.log('slide change')}
-          > {
-              imgs.map((img, index) => (  
-                <SwiperSlide key={index} ><BrowserHistoryImg src={img} alt='Everything today' /></SwiperSlide>
-              ))
-            }
-
-            {/* <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide> */}
-          {/* </Swiper> */} 
           <div className='container'>
                 <div className='main-heading'>Browsing History</div>
                 <Slider {...settings} className='viewToday-slick mt-3'>

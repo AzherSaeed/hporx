@@ -5,7 +5,7 @@ padding-top: 6.4rem;
 /* padding-bottom: 10.2rem; */
 .trendingNow-slick{
     .slick-next{
-        right: 15px !important;
+        right: 10px !important;
 }
 .d-inline-block{
     text-align: -webkit-center;

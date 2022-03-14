@@ -72,7 +72,7 @@ text-align: center;
 color: #242424;
 }
 p{
-font-size: 1.8rem;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: 2.7rem;

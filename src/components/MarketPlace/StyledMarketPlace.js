@@ -11,7 +11,7 @@ export const MarkInnerContainer = styled.div`
 export const MarketSlickContainer = styled.div`
   @media screen and (min-width:1140px) {
     .inhalate-slick .slick-prev {
-    left:-13px !important ;
+    left:-7px !important ;
     }
     .inhalate-slick .slick-next {
       right: 26px !important;
