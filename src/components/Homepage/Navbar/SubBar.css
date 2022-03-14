@@ -1,5 +1,11 @@
 
 
+
+@media screen and (max-width : 1130px) {
+  .nav-content {
+    display: none;
+  }
+}
   .nav {
     /* background: linear-gradient(0deg, transparent 120px, white 10px); */
     background: white;
@@ -63,9 +69,9 @@
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    overflow-x: auto;
+    /* overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
+    white-space: nowrap; */
    
   }
   .nav .nav-content::-webkit-scrollbar{
@@ -76,9 +82,9 @@
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    overflow-x: auto;
+    /* overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
+    white-space: nowrap; */
   }
   
   .nav-items{
@@ -143,8 +149,13 @@
 .nav-content  ul li ul{
   display: none;
   color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 1rem 0;
 }
 
 .show{
     display: block !important;
+    background: rgba(0, 0, 0, 0.73);
+    border-radius: 5px;
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ViewMoreBtn } from "../../Globals/Globals";
 
 export const LocateMainContainer = styled.div`
 text-align: center;
@@ -34,18 +35,16 @@ padding: 0 5rem;
 .map{
   width: 100%;
   height:62.5rem;
-  position: relative;
-    z-index: -1;
-    transform: translateY(-10%);
+ 
 }
 .location-icon{
   height: 2rem;
   width: 2rem; 
 }
 .location-info{
-  position: absolute;
+  /* position: absolute;
   top: 50px;
-  right: 50px;
+  right: 50px; */
   width: 400px;
   min-height:200px; 
   padding: 20px ;
@@ -71,6 +70,6 @@ text-align: start;
 
 }
 `
-export const LocateImg=styled.img`
-
+export const LocateUsButton=styled(ViewMoreBtn)`
+  margin-top: 15px;
 `

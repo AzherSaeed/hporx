@@ -4,7 +4,9 @@ import LocaterHeader from '../../../assets/LocaterHeader.svg';
 export const StyleHeader=styled.div`
 
 .select-option{
-       
+    transform: translateY(63px);
+    position: relative;
+    z-index: 1;
 }
 .btn{
     width: 100%;

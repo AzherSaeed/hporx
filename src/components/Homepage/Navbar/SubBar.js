@@ -22,22 +22,6 @@ const SubBar = ({ setShow }) => {
   });
 
 
-  const navTogglerHanler = (e)  => {
-    setToggle(!toggle)
-    // e.target.classList.add('firstClasss');
-    // e.target.classList.remove('nav');
-    // if(toggle){
-    //   console.log('click1')
-		//   e.target.classList.add('firstClasss');
-    //   e.target.classList.remove('nav');
-    // }
-    // else{
-    //   console.log('click2')
-    //   e.target.classList.add('nav');
-    //   e.target.classList.remove('firstClasss');
-    // }
-  }
-
   const changenavColor = () => {
     if (window.scrollY > 15) {
       setnavbarbackground(true);
@@ -133,6 +117,11 @@ const SubBar = ({ setShow }) => {
                 >
                   PORTABLES
                 </Link>
+                <ul>
+                  <li>one</li>
+                  <li>one</li>
+                  <li>one</li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link
@@ -182,19 +171,23 @@ const SubBar = ({ setShow }) => {
                   PRESCRIBE{" "}
                 </Link>
               </li>
-              <li className="nav-item "  >
+              <li className="nav-item ">
                 <Link
                   activeClass="active"
-                  to="PRODUCTS"
+                  // to="PRODUCTS"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  onClick={(e) => navTogglerHanler(e)}
-                 
+                  onClick={() => setToggle(!toggle)}
                 >
                   PRODUCTS
                 </Link>
+                <ul className={toggle ? 'show' : ''} >
+                  <li>one</li>
+                  <li>one</li>
+                  <li>one</li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link
