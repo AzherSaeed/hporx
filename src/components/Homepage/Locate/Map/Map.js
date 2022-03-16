@@ -14,12 +14,15 @@ const Map = ({allAddresses , doctorsData }) => {
 
   
   const [locationInfo, setLocationInfo] = useState(false);
-  const [marker, setMarker] = useState([]);
+  const [marker, setMarker] = useState([{
+    lat:40.4637,
+    lng:3.7492
+  }]);
   const [centerLocation , setCenterLoacation] = useState("");
   const [defaulcenterLocation , setDefaultCenterLoacation] = useState([]);
   const [selectedAddress, setselectedAddress] = useState({})
 
-console.log(locationFound,"Location...1");
+
   useEffect(() => {
     if(locationFound){
       setDefaultCenterLoacation(JSON.parse(locationFound));
@@ -36,6 +39,7 @@ console.log(locationFound,"Location...1");
         const lat=position.coords.latitude;
          const lng=position.coords.longitude;
          setDefaultCenterLoacation({lat,lng});
+         setMarker({lat,lng});
        });
     }
 
@@ -65,9 +69,9 @@ console.log(locationFound,"Location...1");
 
       const getlatlan = getData.map((item) => {
         return {
-          'address' : item.config.params.address,
-          'lat' : item.data.results[0].geometry.location.lat,
-          'lng' : item.data.results[0].geometry.location.lng
+           address : item.config.params.address,
+           lat : item.data.results[0].geometry.location.lat,
+           lng : item.data.results[0].geometry.location.lng
         }
       } )
       console.log(getlatlan , 'getlatlangetlatlangetlatlan')
@@ -93,13 +97,13 @@ console.log(locationFound,"Location...1");
         defaultZoom={5}
         center={centerLocation}
       >
-        {marker.map((v) => (
+        {marker.length>=0 ? marker.map((v) => (
           <LocationMarker
             lat={v.lat}
             lng={v.lng}
             onClick={(e) => findExactAddressHandler(v.address)}
           />
-        ))}
+        )):<></>}
       </GoogleMapReact>
       {locationInfo && <LocationInfoBox selectedAddress={selectedAddress} />}
       <LocateUsButton onClick={() => history.push('/locator')} >Locate Us</LocateUsButton>
