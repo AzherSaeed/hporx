@@ -91,6 +91,15 @@ h6{
     color: #242424;
     padding-bottom:1.2rem ;
 }
+.current-location-card{
+  position: absolute;
+    top: 9rem;
+    right: 5rem;
+    font-size: 1.4rem;
+    background-color: #FFFFFF;
+    color: black;
+    padding: 2rem;
+}
 `
 export const LocateUsButton=styled(ViewMoreBtn)`
   margin-top: 15px;

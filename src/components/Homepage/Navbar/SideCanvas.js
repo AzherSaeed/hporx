@@ -1,6 +1,7 @@
 import React from "react";
 import { Offcanvas } from "react-bootstrap";
 import logo from "../../../assets/logo.svg";
+import {Link} from 'react-router-dom';
 import "./SideNavCanvas.css";
 
 const SideCanvas = ({ show, handleClose }, props) => {
@@ -20,7 +21,7 @@ const SideCanvas = ({ show, handleClose }, props) => {
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <nav class="navbar">
+          <nav className="sidenavcanvas" >
             <ul>
               <li>
                 <a href="#">HOME</a>
@@ -51,6 +52,10 @@ const SideCanvas = ({ show, handleClose }, props) => {
               </li>
               <li>
                 PRODUCTS <i class="fas fa-angle-down"></i>
+                <ul>
+                  <li><Link to='/locator' >Locate Us</Link></li>
+                  <li><Link to='/agency' >Agency</Link></li>
+                </ul>
               </li>
               <li>
                 <a href="#">LOCATE</a>

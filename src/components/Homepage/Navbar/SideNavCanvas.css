@@ -71,3 +71,15 @@
     line-height: 2.4rem;
     color: whitesmoke;
 }
+
+.sidenavcanvas ul li ul{
+  list-style-type: none;
+  display: none;
+}
+.sidenavcanvas ul li:hover > ul {
+  display: block;
+}
+.sidenavcanvas ul li ul li:hover{
+  background: rgba(0, 0, 0, 0.73) !important;
+  border-radius: 2px;
+}

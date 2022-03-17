@@ -10,44 +10,32 @@ import {useHistory} from 'react-router-dom';
 
 const Map = ({allAddresses , doctorsData }) => {
   const history = useHistory()
-  const locationFound = localStorage.getItem('saveCurentLocation')
+  const locationFound = localStorage.getItem('saveCurentLocation');
 
   
   const [locationInfo, setLocationInfo] = useState(false);
-  const [marker, setMarker] = useState([{
-    lat:40.4637,
-    lng:3.7492
-  }]);
+  const [marker, setMarker] = useState([]);
   const [centerLocation , setCenterLoacation] = useState("");
-  const [defaulcenterLocation , setDefaultCenterLoacation] = useState([]);
+  const [defaulcenterLocation , setDefaultCenterLoacation] = useState("");
   const [selectedAddress, setselectedAddress] = useState({})
 
 
   useEffect(() => {
     if(locationFound){
       setDefaultCenterLoacation(JSON.parse(locationFound));
+      setMarker([JSON.parse(locationFound)]);
     }else{
       setDefaultCenterLoacation({lat:40.4637,lng:3.7492})
+      setMarker([{lat:40.4637,lng:3.7492}]);
     }
-    //  setMarker([JSON.parse(locationFound)]);
   },[locationFound])
 
 
-  useEffect(() => {
-    if(!locationFound){
-      navigator.geolocation.getCurrentPosition(function (position) {
-        const lat=position.coords.latitude;
-         const lng=position.coords.longitude;
-         setDefaultCenterLoacation({lat,lng});
-         setMarker({lat,lng});
-       });
-    }
-
-  }, []);
+ 
 
   useEffect( async () => {
     const arr = [];
-    if(allAddresses){
+    if(allAddresses.length){
       for (let i = 0; i < allAddresses.length; i++) {
         if(allAddresses[i]!==""){
         arr.push(
@@ -61,12 +49,9 @@ const Map = ({allAddresses , doctorsData }) => {
       }
       
       const res = await Promise.all(arr);
-     // console.log(res,"Data...................")
+   
       const getData = res.filter((item) => item.data.status == "OK");
-     
   
-      // const getlatlan = getData.map((item) => item.data.results[0].geometry.location);
-
       const getlatlan = getData.map((item) => {
         return {
            address : item.config.params.address,
@@ -88,22 +73,23 @@ const Map = ({allAddresses , doctorsData }) => {
     setselectedAddress(getMatchedAddress);
     setLocationInfo(true);
   } 
+  
 
   return (
     <div className="map">
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI" }}
         defaultCenter={defaulcenterLocation}
-        defaultZoom={5}
+        defaultZoom={6}
         center={centerLocation}
       >
-        {marker.length>=0 ? marker.map((v) => (
+        { marker.map((v) => (
           <LocationMarker
             lat={v.lat}
             lng={v.lng}
             onClick={(e) => findExactAddressHandler(v.address)}
           />
-        )):<></>}
+        ))}
       </GoogleMapReact>
       {locationInfo && <LocationInfoBox selectedAddress={selectedAddress} />}
       <LocateUsButton onClick={() => history.push('/locator')} >Locate Us</LocateUsButton>

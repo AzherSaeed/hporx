@@ -127,7 +127,7 @@ function Inputs() {
           </Formik>
         </div>
       </StyleHeader>
-      <Map allAddresses={allAddresses.length > 0 ? allAddresses : null} doctorsData={doctorsData} />
+      <Map allAddresses={allAddresses} doctorsData={doctorsData} />
     </>
   );
 }
