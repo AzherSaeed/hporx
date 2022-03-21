@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Button, Card , Spinner } from "react-bootstrap";
+import { Row, Col, Button, Card, Spinner } from "react-bootstrap";
 import { StyleHeader } from "./StyleHeader";
 import { Form, Formik, ErrorMessage } from "formik";
 import Select from "./Select";
@@ -60,11 +60,11 @@ function Inputs() {
               genericService
                 .post(`${API_URL}usersData`, data)
                 .then((msg) => {
-                  setsearchLoading(false)
+                  setsearchLoading(false);
                   setdoctorsData(msg.data);
                 })
                 .catch((error) => {
-                  setsearchLoading(false)
+                  setsearchLoading(false);
                   console.warn("warn", error);
                 });
             }}

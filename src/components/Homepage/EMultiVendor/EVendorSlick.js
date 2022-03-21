@@ -67,10 +67,10 @@ const EVendorSlick = () => {
         <Slider {...settings} className='EVendor-slick'>
           {
             eVendorData.map((data, index) => {
-              console.log('key',index)
+        
               const { img, flag,flag1,miniImg } = data
               return (
-                <EVendorCard number={index} img={img} flag={flag} flag1={flag1} Flag_of_Canada={Flag_of_Canada} miniImg={miniImg} />
+                <EVendorCard  number={index} img={img} flag={flag} flag1={flag1} Flag_of_Canada={Flag_of_Canada} miniImg={miniImg} />
               )
             })
           }

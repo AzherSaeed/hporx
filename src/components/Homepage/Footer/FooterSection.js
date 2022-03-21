@@ -9,8 +9,8 @@ const FooterSection = ({ links, heading }) => {
             <ul>
                 {
                     links.map((link, index) => (
-                        <li>
-                            <a key={index} className='footer-link' href="#">
+                        <li key={index} >
+                            <a  className='footer-link' href="#">
                                 {link}
                             </a>
                         </li>

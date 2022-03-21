@@ -21,6 +21,7 @@ const Map = ({allAddresses , doctorsData }) => {
 
 
   useEffect(() => {
+  console.log('locationFound')
     if(locationFound){
       setDefaultCenterLoacation(JSON.parse(locationFound));
       setMarker([JSON.parse(locationFound)]);
@@ -31,9 +32,13 @@ const Map = ({allAddresses , doctorsData }) => {
   },[locationFound])
 
 
+
+
+console.log('map called');
  
 
   useEffect( async () => {
+    console.log('alladdress');
     const arr = [];
     if(allAddresses.length){
       for (let i = 0; i < allAddresses.length; i++) {
@@ -59,7 +64,6 @@ const Map = ({allAddresses , doctorsData }) => {
            lng : item.data.results[0].geometry.location.lng
         }
       } )
-      console.log(getlatlan , 'getlatlangetlatlangetlatlan')
       setMarker(getlatlan);
       setCenterLoacation(getlatlan[0]);
     }
@@ -83,8 +87,9 @@ const Map = ({allAddresses , doctorsData }) => {
         defaultZoom={6}
         center={centerLocation}
       >
-        { marker.map((v) => (
+        { marker.map((v , i ) => (
           <LocationMarker
+            key={i}
             lat={v.lat}
             lng={v.lng}
             onClick={(e) => findExactAddressHandler(v.address)}

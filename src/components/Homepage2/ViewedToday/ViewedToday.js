@@ -94,8 +94,8 @@ function ViewedToday({heading}) {
                 <Slider {...settings} className='viewToday-slick'>
                 {
                     viewTodayImgs.map((img, index) => (
-                      <div className='view-today'>
-                       <div key={index} className="d-inline-block"> 
+                      <div key={index} className='view-today'>
+                       <div className="d-inline-block"> 
                         <div className='card'>
                             <div className='d-flex ' >
                                 <img src={ViewToday} alt='Everything today' />

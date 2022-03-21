@@ -49,9 +49,7 @@ function App() {
           <Route path="/agency">
             <MainPage />
           </Route>
-          <Route path="/locator">
-            <LocatehomePage />
-          </Route>
+          <Route path="/locator" component={LocatehomePage} />
         </Switch>
       </Router>
     </>

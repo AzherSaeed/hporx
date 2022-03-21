@@ -27,7 +27,7 @@ function TrendingNow(){
                <Row className="mt-5" >
                <Slider ref={sliderRef} slidesToShow={4}>
                {[...Array(7)].map((_,index)=>
-                   <Col className="d-inline-block">
+                   <Col key={index} className="d-inline-block">
                   
                       <div>
                        <h5 className="outside-card-text">Fairman Online</h5>

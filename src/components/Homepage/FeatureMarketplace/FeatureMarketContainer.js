@@ -5,7 +5,6 @@ import featureMark from '../../../assets/featureMarketplace.svg'
 import { FeatureHeading, FeatureMarketPlaceBtn, FeatureMarkImg, FeatureMarkMain, FeatureMarkTextContainer, FeatureSubHeading } from './StyledFeatureMark'
 
 const FeatureMarketContainer = ({order}) => {
-    console.log(order , 'order')
     return (
 
         <Container fluid className='p-0'>

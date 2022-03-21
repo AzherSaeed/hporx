@@ -38,7 +38,7 @@ const AgenciesFaq = () => {
         <Accordion  defaultActiveKey={[0]} alwaysOpen>
           {
             Array.from({length : 5}).map((no , i) => (
-              <Accordion.Item eventKey={i}>
+              <Accordion.Item key={i} eventKey={i}>
               <Accordion.Header onClick={() => faqAccordianHandler(i)} >
                   <div className="faq-header" >
                       {saveAccordianKey === i ? (

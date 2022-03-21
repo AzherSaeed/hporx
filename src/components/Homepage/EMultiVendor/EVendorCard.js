@@ -6,7 +6,7 @@ import { EVendorImg, EVendorImgContainer, EVendorMiniImg, MiniPharmImg, EVendorC
 
 
 const EVendorCard = ({ number, img, flag, flag1, miniImg, Flag_of_Canada }) => {
-    console.log('key in card', number);
+
     return (
         <EVendorCardMain>
             <Card number={number} >
@@ -22,7 +22,7 @@ const EVendorCard = ({ number, img, flag, flag1, miniImg, Flag_of_Canada }) => {
                 </div>
             </Card>
             <div className='d-flex'>
-                {console.log('number in flag', number)}
+         
                 {
                     number === 0 ||number===3?
                         <>

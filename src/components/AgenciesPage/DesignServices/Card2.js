@@ -7,8 +7,8 @@ function Card2(){
     <StyleCard2>
     <div className='container'>
         <Row className='rows'>
-        {CardData2.map((v)=>
-            <Col lg={4} md={6}> 
+        {CardData2.map((v , i )=>
+            <Col key={i} lg={4} md={6}> 
                 <Card className='cards'>
                     <div className='card-body text-center'>
                         <img src={v.bimg} alt="Service Image" className='icon-img'/>

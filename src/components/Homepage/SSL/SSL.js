@@ -58,7 +58,7 @@ const SSL = () => {
                         <Row>
                             {
                                 downAppImgs.map((img, index) => (
-                                    <Col xs={6}>
+                                    <Col key={index} xs={6}>
                                         <SSLImg src={img} alt={img} />
                                     </Col>
                                 ))
@@ -71,7 +71,7 @@ const SSL = () => {
                 
                   return (
                    
-                      <SSLImg key={index} key={index} src={img} alt={img} />
+                      <SSLImg key={index} src={img} alt={img} />
                      
                    
                   )

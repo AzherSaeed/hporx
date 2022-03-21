@@ -34,6 +34,12 @@ function Header() {
   const [doctorsData, setdoctorsData] = useState([]);
   const [cardsLoading, setcardsLoading] = useState(true);
 
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   useEffect(() => {
     genericService
       .get(`${API_URL}getAddresses`)
@@ -186,8 +192,8 @@ function Header() {
             ) : (
               <>
                 <Row>
-                  {currentPost.map((v) => (
-                    <Col lg={3} md={6} sm={6}>
+                  {currentPost.map((v , i) => (
+                    <Col key={i} lg={3} md={6} sm={6}>
                       <Card className="cards">
                         <div >
                           <img

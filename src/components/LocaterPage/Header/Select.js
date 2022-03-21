@@ -7,8 +7,8 @@ function Select({label, name, title , list}){
                 <option value="">
                    {title}   
                  </option>
-                { list.map((v)=>
-                  <option value={v}>{v}</option>
+                { list.map((v , i )=>
+                  <option key={i} value={v}>{v}</option>
                    )}
               </Field>
               {/* <select id="inputCountry" name={name}>

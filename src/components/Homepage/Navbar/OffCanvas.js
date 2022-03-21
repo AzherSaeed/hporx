@@ -11,12 +11,6 @@ const OffCanvas = ({ show, handleClose, setShow, value, country, state }) => {
     //    const [data,changeData]=useState();
     const handleVolume = useContext(VolumeContext);
 
-    console.log(value, 'value in offcamvas')
-
-
-    useEffect(() => {
-        console.log(value, 'value in pffcamvas')
-    }, [value]);
     return (
         <Offcanvas show={show} onHide={handleClose} placement="end">
             <Offcanvas.Header>
