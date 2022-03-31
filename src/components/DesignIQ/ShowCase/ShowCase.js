@@ -6,7 +6,7 @@ const ShowCase = () => {
     return (
         <Container fluid className='p-0'>
             <ShowCaseMain>
-                <ShowCaseImg src={showCase} src={showCase} />
+                <ShowCaseImg src={showCase} />
             </ShowCaseMain>
         </Container>
     )

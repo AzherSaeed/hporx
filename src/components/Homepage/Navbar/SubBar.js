@@ -174,11 +174,11 @@ const SubBar = ({ setShow }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="dropdown-product-link"
                 >
                   PRODUCTS<img src={downIcon} alt='downIcon' />
                 </Link>
-                <ul  >
+             
+                <ul  className="dropdown-product-link" >
                   <li>
                   <span style={{ color: "red", fontSize: "1.5rem" }}>Rx</span>PRODUCTS
                   </li>

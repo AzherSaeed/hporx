@@ -203,7 +203,7 @@
 }
 
 .main-designers .main-content .right-section .content img{
-	height: 100% !important;
+	height: unset !important;
 	width: 100%;
 	object-fit: fill;
 }

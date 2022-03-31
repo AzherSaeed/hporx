@@ -159,14 +159,14 @@
   display: block;
   background: rgba(0, 0, 0, 0.73);
   border-radius: 5px;
+  position: absolute;
+  top: 100%;
 }
 .dropdown-product-link{
-  color: white;
   border: none;
   text-decoration: none;
-  padding: 1.5rem 1rem;
-}
-.dropdown-product-link:hover{
   padding: 1rem;
-  color: white;
+}
+.dropdown-product-link > li{
+  padding: 0  1rem !important;
 }
