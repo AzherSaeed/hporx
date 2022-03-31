@@ -61,11 +61,10 @@
 	height: 42.7rem !important;
 }
 
-.modal-body .outer-div .beforeAfter > img {
-	height: auto !important;
 
+.modal-body .outer-div .beforeAfter img {
+	height: unset !important;
 }
-
 
 
 @media(max-width: 1200px){
