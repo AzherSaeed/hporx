@@ -59,8 +59,13 @@
 
 .modal-body .outer-div .beforeAfter > * {
 	height: 42.7rem !important;
+}
+
+.modal-body .outer-div .beforeAfter > img {
+	height: auto !important;
 
 }
+
 
 
 @media(max-width: 1200px){

@@ -67,7 +67,7 @@ const InhalateSlick = () => {
           <iframe
             width="100%"
             height="550px"
-            src="https://www.youtube.com/embed/oJaO4JdFWB8"
+            src="/Videos/hporx.mp4"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
