@@ -1,25 +1,61 @@
-import React from 'react'; 
+import React from "react";
 
 import Marquee from "react-fast-marquee";
-import './offCanvas.css'
-import marqee from '../../../assets/marqee-logo.png'
+import "./offCanvas.css";
+import marqee from "../../../assets/tickerlogo.png";
 
+const MarqueeView = () => {
+  return (
+    <div
+      style={{
+        background: "#0000003b",
+        height: "30px",
+        fontSize: "12px",
+        color: "white",
+      }}
+    >
+      <Marquee
+        style={{ paddingTop: "5px" }}
+        gradient={false}
+        pauseOnHover
+        direction="left"
+        speed="70"
+      >
+        <span style={{ display: "inline-block", margin: "0 1rem" }}>
+          <img
+            className="marq-logo"
+            style={{ verticalAlign: "bottom" }}
+            src={marqee}
+            alt={marqee}
+          />
+        </span>
+        Welcome to Hemp Products Online Therapeutic Pharmaceuticals FinSec Alpha
+        v8.1.7.22 React Development Release Candidate.
+        <span style={{ display: "inline-block", margin: "0 1rem" }}>
+          <img
+            className="marq-logo"
+            style={{ verticalAlign: "bottom" }}
+            src={marqee}
+            alt={marqee}
+          />
+        </span>
+        This Alpha v8.1.7.22 development candidate represents the successful
+        design phalloplasty we intoed to peruse in a module by module
+        development schedule beginning immediately.
+        <span style={{ display: "inline-block", margin: "0 1rem" }}>
+          <img
+            className="marq-logo"
+            style={{ verticalAlign: "bottom" }}
+            src={marqee}
+            alt={marqee}
+          />
+        </span>
+        You are welcome to check back, our design and development process is
+        iterative, it will be a pleasure to surprise you as the development is
+        completed during 2022.
+      </Marquee>
+    </div>
+  );
+};
 
-    const MarqueeView = () => {
-        return(
-        <div style={{background : '#0000003b' , height : '30px' , fontSize : '12px' , color  : 'white' }}>
-            <Marquee style={{paddingTop : '5px'}} gradient={false} pauseOnHover direction="left" speed="70">
-                <span style={{display:'inline-block',margin:'0 1rem'}}>
-                    <img className='marq-logo'  style={{verticalAlign:'bottom',}} src={marqee} alt={marqee} />
-                </span>
-                Welcome to Spannabis 2022, COVID-19 was a reality check for humanity, and it also demonstrated the power and genus of flowering plants in the family Cannabaceae. Team HPORx™, Banco de Sabadell, S.A  and The Financial Sector Advisory Center (FinSAC) and our Barcelona City Mayor, Ava Colau, CatSALUT and the Generalitat de Catalunya, welcome you to the Fairground in Cornellà de Llobregat,Av. de la Fama, 8407, 08940 Cornellà de Llobregat, Barcelona, Spain.  We wish you a successful event and a phenomenal year. We are certain that 2022 will be a year in which you may continue to grow profit and profit from your grow!
-Team HPORx March 11, 2020.</Marquee>
-        </div>
-        )
-    }
-
-
-    export default MarqueeView
-
-
-
+export default MarqueeView;

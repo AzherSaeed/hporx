@@ -174,13 +174,16 @@ const SubBar = ({ setShow }) => {
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  className="dropdown-product-link"
                 >
-                  <span style={{ color: "red", fontSize: "1.5rem" }}>Rx</span>
                   PRODUCTS<img src={downIcon} alt='downIcon' />
                 </Link>
-                <ul>
+                <ul  >
+                  <li>
+                  <span style={{ color: "red", fontSize: "1.5rem" }}>Rx</span>PRODUCTS
+                  </li>
                   <li className="sub-li" onClick={() => history.push('/locator')} >Locate Us</li>
-                  <li className="sub-li" onClick={() => history.push('/agency') } >Agency</li>
+                  <li className="sub-li" onClick={() => history.push('/agency') } >DAS</li>
                 </ul>
               </li>
               <li className="main-li">

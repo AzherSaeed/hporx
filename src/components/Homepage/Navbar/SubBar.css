@@ -153,11 +153,20 @@
   color: white;
   text-decoration: none;
   list-style-type: none;
-  padding: 1rem;
 }
 
 .nav-content  ul li:hover > ul {
   display: block;
   background: rgba(0, 0, 0, 0.73);
   border-radius: 5px;
+}
+.dropdown-product-link{
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 1.5rem 1rem;
+}
+.dropdown-product-link:hover{
+  padding: 1rem;
+  color: white;
 }

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Offcanvas } from "react-bootstrap";
 import LeftArrow from "../../../assets/right-slider-arrow.svg";
 import searchIcon from "../../../assets/searchIcon.svg";
+import person from "../../../assets/person.jpeg";
 import "./offCanvas.css";
 import { ViewMoreBtn } from '../../Globals/Globals'
 import { VolumeContext } from "../Homepage";
@@ -25,7 +26,7 @@ const OffCanvas = ({ show, handleClose, setShow, value, country, state }) => {
                             <h1>Johen Marks</h1>
                         </div>
                         <div className="offcanvas-header-profile-image" >
-                            <img src='https://hporx.com/wp-content/themes/astra-child/assets/images/profile-pic.png' alt="img" />
+                            <img src={person} alt="img" />
                         </div>
                     </div>
                 </div>
