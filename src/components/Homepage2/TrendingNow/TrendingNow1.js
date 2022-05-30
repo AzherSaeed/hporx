@@ -61,7 +61,6 @@ function TrendingNow1({ heading, imgs }) {
           {
             imgs.map((img, index) => (
                 <div key={index} className="d-inline-block">
-                <h5 className="outside-card-text">Fairman Online</h5>
                 <Card className="card">
                   <div className="card-body">
                     <div className="image-section">
@@ -69,18 +68,20 @@ function TrendingNow1({ heading, imgs }) {
                     </div>
                     <div className="content">
                       <div className="title">
-                        <h1>Hemp & argan nourishing facial oil</h1>
+                        <h1>Purple Cookies</h1>
                         <span>$60.00</span>
                       </div>
-                      <div className="stars">
-                        <img src={star}/>
-                        <img src={star}/>
-                        <img src={star}/>
-                        <img src={star}/>
-                        <img src={star}/>
-                        <span>(43 Reviews)</span>
+                      <div className="rating">
+                        <div className="stars">
+                          <img src={star}/>
+                          <img src={star}/>
+                          <img src={star}/>
+                          <img src={star}/>
+                          <img src={star}/>
+                        </div>
+                        <div className="review">(43 Reviews)</div>
                       </div>
-                      <button className="add-to-cart">Add to Cart</button>
+                      <button className="add-to-cart"><span className="cart"></span>Add to Cart</button>
                     </div>
                   </div>
                 </Card>

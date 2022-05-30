@@ -1,24 +1,26 @@
 import styled from "styled-components";
+import cartgreen from "../../../assets/icons/cart-icon-green.png";
+import cartwhite from "../../../assets/icons/cart-icon-white.png";
 
 export const StyleTrending=styled.div`
 padding-top: 6.4rem;
 /* padding-bottom: 10.2rem; */
 .trendingNow-slick{
     .slick-next{
-        right: 10px !important;
-}
+        right: 2.5%;
+    }
+
+    .slick-prev{
+        left: 1%;
+    }
+
 .d-inline-block{
     text-align: -webkit-center;
 }
-.slick-prev{
-    @media screen and (max-width:480px) {
-        left:-4px !important;
-    }
-    @media screen and (max-width:768px) {
-        left:-20px ;
-    }
- }
+
 } 
+
+
 .main-section{
     display:flex;
     height:6.9rem;
@@ -76,7 +78,7 @@ border: 2px solid #E2E2E2;
 }
 
 .slick-track{
-    padding-bottom: 15px;
+    padding: 15px 0;
 }
 
 .card{
@@ -105,6 +107,110 @@ border: 2px solid #E2E2E2;
     height: 100%;
     object-fit: contain;
 }
+
+
+.card .card-body .content{
+    height: 169px;
+    width: 100%;
+    padding: 14px;
+}
+
+.card .card-body .content .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .card-body .content .title h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #242424;
+    text-align: left;
+}
+
+.card .card-body .content .title span{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #242424;
+    }
+
+    .card .card-body .content .rating{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding-top: 33px;
+    }
+
+    .card .card-body .content .rating .stars{   
+        display: flex;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .card .card-body .content .rating img{
+        height: 9.89px;
+        width: 10.36px;
+    }
+
+    .card .card-body .content .rating .review{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9.46154px;
+        line-height: 11px;
+    color: #6C6C6C;
+    }
+    
+    .card .card-body .content .add-to-cart{
+        height: 45px;
+        width: 272px;
+        border-radius: 6px;
+        padding: 24px, 42px, 24px, 42px;
+        background: #FFFFFF;
+        border: 1px solid #1F7545;
+        box-sizing: border-box;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 10px;
+        /* or 75% */
+
+
+        /* HEMP 05 */
+
+        color: #1F7545;
+
+        margin-top: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+    .card .card-body .content .add-to-cart:hover{
+        background: #1F7545;
+        color: white;
+    }
+
+    .card .card-body .content .add-to-cart:hover > .cart{
+        background-image: url(${cartwhite});
+    }
+
+    .card .card-body .content .add-to-cart .cart{
+        height: 15.07px;
+        width: 14.71px;
+        background-image: url(${cartgreen});
+    }
 
 h2{
     font-size: 2rem;
