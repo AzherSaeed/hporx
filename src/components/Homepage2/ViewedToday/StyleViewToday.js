@@ -2,30 +2,7 @@ import styled from "styled-components"
 
 export const ViewTodayStyle = styled.div`
   
-    .viewToday-slick{
-        margin-top: 3.3rem;
-    .slick-next{
-    right: 6px !important;  
-    @media screen and (max-width:480px) {
-        right: 10px !important;
-    } 
-} 
-    .slick-prev{
-    @media screen and (max-width:768px) {
-    left: -13px;
-   }
-}
-    }
-    .view-today{
-        @media screen and (max-width:480px) {
-    text-align: center;
-   }
-    }
-    .d-inline-block{
-        @media screen and (max-width:480px) {
-            width: 90%;
-   }
-    }
+    
 .everythingviewproduct{
     background: #FFFFFF;
     border: 1px solid #E2E2E2;
@@ -45,18 +22,128 @@ export const ViewTodayStyle = styled.div`
 
 }
 }
+
+.viewToday-slick .view-today .card-inner{
+    
+    height: 251px;
+    width: 100%;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
 .card{
-    width:auto !important;
-    background: #FFFFFF;
-    border-radius: 0.3rem;
-    margin-right:1rem ;
-  
+    /* margin-right:3rem ; */
+    width: 94%;
+    border-radius: 6px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-img{
-    width: 9.5rem;
-    height: 13rem;
-    margin: 3rem 1.5rem;
+
+.card .image-section{
+    height: 211px;
+    width: 100%;
+    position: relative;
+    border-radius: 6px 6px 0 0;
 }
+
+.card .image-section .tag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px 0px 0px 0px;
+    height: 36px;
+    width: 38px;
+    background: #FF3F3F;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.card .image-section img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.card .advertise{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    height: 40px;
+    background: #D1E682;
+    border-radius: 0px 0px 6px 6px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    /* or 100% */
+
+
+    color: #000000;
+}
+
+
+.card .advertise span{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    /* or 97% */
+
+
+    color: #000000;
+}
+
+
+
+
+
+.card .advertise img{
+    height: 17px;
+    width: 23px;
+}
+.viewToday-slick .slick-prev {
+    left: 1%;
+}
+
+.viewToday-slick .slick-next {
+    right: 2.5%;
+}
+.viewToday-slick .slick-prev:before {
+    content: '' !important;
+    background-image: url(/static/media/left-slider-arrow.a0ebde13.svg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    top: bottom;
+    bottom: -26%;
+}
+
+
+
 .right-block{
     margin-top:2.5rem;
     margin-right: 1rem;

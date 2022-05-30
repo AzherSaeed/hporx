@@ -5,6 +5,9 @@ import HempHeadingIcon from '../../../assets/HempHeadingIcon.svg';
 import HempCardIcon from '../../../assets/HempCardIcon.svg';
 import Slider from "react-slick";
 import Banner from "./Banner";
+import slidenext from '../../../assets/icons/angle-right.png';
+import slideprev from '../../../assets/icons/angle-left.png';
+import cardimage from '../../../assets/card-img.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 function HempProduct() {
   const hempImgs = [HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon]
@@ -13,7 +16,7 @@ function HempProduct() {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 6,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -29,7 +32,7 @@ function HempProduct() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 1,
           initialSlide: 1,
         },
@@ -55,126 +58,38 @@ function HempProduct() {
   return (
     <StyleHemp>
       <div className="container p-5">
-        <h1 className="text-center"><span><img src={HempHeadingIcon} alt={HempHeadingIcon} className="imgHeading" /></span>HEMP PRODUCTS ONLINE</h1>
-        {/* <Swiper
-          breakpoints={{
-            // when window width is >= 320px
-            300: {
-              slidesPerView: 2,
-              spaceBetween: 1
-            },
-            // when window width is >= 480px
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 1
-            },
-            // when window width is >= 640px
-            768: {
-              slidesPerView: 4,
-              spaceBetween: 1
-            },
-            1000: {
-              slidesPerView: 7,
-              spaceBetween: 1
-            },
-            1200: {
-              slidesPerView: 7,
-              spaceBetween: 1
-            }
-          }}
-          spaceBetween={1}
-          slidesPerView={5}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-        > {
-            hempImgs.map((img, index) => (
-              <SwiperSlide key={index} >  <div key={index}>
-                <Card className="cards">
-                  <div className="text-center card-body">
-                    <img src={HempCardIcon} className="IconImage" alt="Iconimage" />
-                    <h2>Categories 1</h2>
-                  </div>
-                </Card>
-              </div></SwiperSlide>
-            ))
-          }
-
-          {/* <SwiperSlide>Slide 2</SwiperSlide>
-  <SwiperSlide>Slide 3</SwiperSlide>
-  <SwiperSlide>Slide 4</SwiperSlide> */}
-        {/* </Swiper> */} 
+        <div className="top-categories">
+          <h1>Top Categories</h1>
+          <div className="slick-btns">
+          <button type="button" className="prev-btn">
+            <img src={slideprev} alt="Pre icon" />
+          </button>
+          <button type="butotn" className="next-btn">
+            <img src={slidenext} alt="Next icon" />
+          </button>
+          </div>
+        </div>
+        
+        
+        
         <Slider {...settings} className='hemp-slick'>
               {hempImgs.map((img,index)=>(
                   <div key={index}>
                   <Card className="cards">
-                     <div className="text-center card-body">
-                         <img src={HempCardIcon} className="IconImage" alt="Iconimage"/>
-                         <h2>Categories 1</h2>
+                     <div className="card-body">
+                         <img src={cardimage} className="cardimage" alt="cardimage"/>
+                         <div className="overlay">
+                           <h1>Seed Oil</h1>
+                           <span>10k Products</span>
+                         </div>
                      </div>
                   </Card>
               </div>
               ))}
          
            </Slider>
-        <Slider {...settings} className='hemp-slick mt-4'>
-              {hempImgs.map((img,index)=>(
-                  <div key={index}>
-                  <Card className="cards">
-                     <div className="text-center card-body">
-                         <img src={HempCardIcon} className="IconImage" alt="Iconimage"/>
-                         <h2>Categories 1</h2>
-                     </div>
-                  </Card>
-              </div>
-              ))}
-           </Slider>
-        {/* <Swiper
-          breakpoints={{
-            // when window width is >= 320px
-            300: {
-              slidesPerView: 2,
-              spaceBetween: 1
-            },
-            // when window width is >= 480px
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 1
-            },
-            // when window width is >= 640px
-            768: {
-              slidesPerView: 4,
-              spaceBetween: 1
-            },
-            1000: {
-              slidesPerView: 7,
-              spaceBetween: 1
-            },
-            1200: {
-              slidesPerView: 7,
-              spaceBetween: 1
-            }
-          }}
-          spaceBetween={1}
-          slidesPerView={5}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-        > {
-            hempImgs.map((img, index) => (
-              <SwiperSlide key={index} >  <div key={index}>
-                <Card className="cards">
-                  <div className="text-center card-body">
-                    <img src={HempCardIcon} className="IconImage" alt="Iconimage" />
-                    <h2>Categories 1</h2>
-                  </div>
-                </Card>
-              </div></SwiperSlide>
-            ))
-          }
-
-          {/* <SwiperSlide>Slide 2</SwiperSlide>
-  <SwiperSlide>Slide 3</SwiperSlide>
-  <SwiperSlide>Slide 4</SwiperSlide> */}
-        {/* </Swiper> */} 
+   
+       
         <Banner />
 
       </div>

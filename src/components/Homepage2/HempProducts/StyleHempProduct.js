@@ -2,6 +2,120 @@ import styled from 'styled-components';
 
 export const StyleHemp = styled.div`
 margin-top: 6.2rem;
+
+.top-categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 0;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #DADADA;
+}
+
+.top-categories h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 30px;
+    color: #414141;
+}
+
+.top-categories .slick-btns{
+display: flex;
+align-items: center;
+gap:15.23px
+}
+
+.top-categories .slick-btns .next-btn,
+.top-categories .slick-btns .prev-btn{
+    height: 33px;
+    width: 33px;
+    background: #FFFFFF;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: fit-content;
+        height: auto;
+    }
+} 
+
+.hemp-slick .cards{
+    border-radius: 8px;
+    height: 176px;
+    position: relative;
+    border:none;
+}
+
+.hemp-slick .card-body{
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    border-radius: 8px;
+}
+
+.hemp-slick .card-body .cardimage{
+    height:100%;
+    width: 100%;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+}
+
+.hemp-slick .card-body .overlay{
+    top: 0;
+    left: 0;
+    padding: 22px 6px;
+    background: linear-gradient(180deg, rgba(251, 250, 250, 0) -18.18%, #042315 100%);
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.hemp-slick .card-body .overlay h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16px;
+    /* or 82% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* HEMP 06 */
+
+    color: #FFFFFF;
+}
+
+.hemp-slick .card-body .overlay span{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+
+    /* HEMP 06 */
+
+    color: #FFFFFF;
+}
+
+
 .viewToday-slick{
     margin-top: 3.3rem;
     .slick-next{

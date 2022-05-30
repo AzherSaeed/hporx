@@ -1,6 +1,7 @@
 import React from 'react';
 import { ViewTodaySlick, ViewTodayStyle } from './StyleViewToday'
-import ViewToday from '../../../assets/ViewToday.png';
+import ViewToday from '../../../assets/view-today.png';
+import usa from '../../../assets/usa.png';
 import { Card} from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Slider from 'react-slick';
@@ -36,7 +37,7 @@ function ViewedToday({heading}) {
             },
           },
           {
-            breakpoint: 480,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -49,64 +50,25 @@ function ViewedToday({heading}) {
             <div className='container'>
                 <div className='main-heading'>{heading}</div>
                 <ViewTodaySlick>
-{/* 
-                <Swiper
-            breakpoints={{
-              // when window width is >= 320px
-              300: {
-                slidesPerView: 1,
-                spaceBetween: 20
-              },
-              // when window width is >= 480px
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 30
-              },
-              // when window width is >= 640px
-              1000: {
-                slidesPerView: 3,
-                spaceBetween: 30
-              },
-             
-            }}
-            spaceBetween={10}
-            slidesPerView={5}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-          > {
-            viewTodayImgs.map((img, index) => (
-                <SwiperSlide key={index} >  <Card className='card'>
-                <div className='d-flex everythingviewproduct' >
-                    <img src={ViewToday} alt='Everything today' />
-                    <div className='right-block'>
-                        <h2>Fairman Online</h2>
-                        <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
-                        <h4>From $ 35</h4>
-                    </div>
-                </div>
-            </Card></SwiperSlide>
-              ))
-            }
 
-            
-          </Swiper> */}
           </ViewTodaySlick>
                 <Slider {...settings} className='viewToday-slick'>
                 {
                     viewTodayImgs.map((img, index) => (
                       <div key={index} className='view-today'>
-                       <div className="d-inline-block"> 
-                        <div className='card'>
-                            <div className='d-flex ' >
-                                <img src={ViewToday} alt='Everything today' />
-                                <div className='right-block'>
-                                    <h2>Fairman Online</h2>
-                                    <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
-                                    <h4>From $ 35</h4>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                        <div className='card-inner'>
+                          <div className='card'>
+                              <div className='image-section'>
+                                <img src={ViewToday} alt="card image"/>
+                                <span className='tag'>Ad</span>
+                              </div>
+                              <div className='advertise'>
+                                To advertise
+                                <img src={usa} alt="Usa Flag" /> 
+                                <span>+1 (213) 370 087 0873</span>
+                              </div>
+                          </div>
+                        </div> 
                       </div>
                     ))
                 }

@@ -60,8 +60,8 @@ padding-top: 6.4rem;
     /* background-color: red; */
 }
 .card{
-    width: auto !important;
-    margin-right:1rem;
+    /* width: auto !important; */
+    /* margin-right:3rem; */
     text-align: -webkit-center;
     @media screen and (max-width:480px) {
         width: 67% !important;
@@ -74,11 +74,38 @@ border: 2px solid #E2E2E2;
         width:95%;
     }
 }
-.main-img{
-    width: 19rem;
-    height: 18rem;
-    margin: 3.6rem 3rem;
+
+.slick-track{
+    padding-bottom: 15px;
 }
+
+.card{
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 94%;
+}
+
+
+.card .card-body{
+    padding: 0;
+}
+
+.card .card-body .image-section{
+    height: 253px;
+    border-bottom: 1px solid #E2E2E2;
+
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card .card-body .image-section .main-img{
+    height: 100%;
+    object-fit: contain;
+}
+
 h2{
     font-size: 2rem;
     line-height: 3.6rem;
