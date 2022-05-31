@@ -5,12 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "swiper/swiper-bundle.min.css";
 import { CookiesProvider } from "react-cookie";
+import {QueryClientProvider , QueryClient} from 'react-query'
+
+
+const queryClient = new QueryClient()
 
 ReactDOM.render(
   <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
     <CookiesProvider>
       <App />
     </CookiesProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -79,11 +79,11 @@ const Homepage2 = () => {
         <ViewedToday heading='Everything you viewed today' />
       </ViewTodayContainer>
       <TrendingNow1 heading='Trending Now' imgs={products} />
-      <FashionDiscount imgs={fashionDiscountImgs} />
-      <HempProductMIni className='Last Month Top Categories' />
+      {/* <FashionDiscount imgs={fashionDiscountImgs} /> */}
+      {/* <HempProductMIni className='Last Month Top Categories' /> */}
       <TrendingNow heading="Man's Product" imgs={mensProducts} />
       <TrendingNow heading="Ladies Product" imgs={mensProducts} />
-      <FashionDiscount imgs={fashionDiscountImgs} />
+      {/* <FashionDiscount imgs={fashionDiscountImgs} /> */}
       <BrowserHistory imgs={historyProducts} />
       <ViewedToday heading='Wishlist' />
       <div className='mt-3-2'>

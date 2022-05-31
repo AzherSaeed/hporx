@@ -63,6 +63,9 @@
       background-color: gray;
     }
     
+    .homeNav{
+      padding: 20px 0;
+    }
     
     .homeNav .nav-content {
       max-width: 1290px;

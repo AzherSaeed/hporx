@@ -1,11 +1,37 @@
 import React from "react";
-import { StyleTrending, TrendingNowSlick, TrendNowInner } from "./StyleTrendingNow";
+import { StyleTrending, TrendNowInner} from "./StyleTrendingNow";
 import { Card } from "react-bootstrap";
 import Slider from "react-slick";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {BASE_URL, GET_PRODUCTS , IMAGE_URL} from '../../../services/config';
+import axios from 'axios'
+import {useQuery} from 'react-query';
+
 
 
 function TrendingNow({ heading, imgs }) {
+
+  
+  const {
+    data: productData,
+    isSuccess: stateIsSuccess,
+    isLoading: stateIsLoading,
+    isFetching: stateIsFetching,
+    error: stateError,
+    isError: stateIsError,
+  } = useQuery(
+    "products",
+    () => {
+      return axios.get(BASE_URL + GET_PRODUCTS);
+    },
+    {
+      refetchInterval: false,
+      refetchOnWindowFocus: "false",
+      keepPreviousData: "false",
+      select: (data) =>
+        data.data.data.filter((item) => item.productType === "manProduct"),
+      enabled: true,
+    }
+  );
 
   var settings = {
     arrows: true,
@@ -25,7 +51,7 @@ function TrendingNow({ heading, imgs }) {
           dots: false,
         },
       },
-    
+
       {
         breakpoint: 750,
         settings: {
@@ -44,87 +70,38 @@ function TrendingNow({ heading, imgs }) {
     ],
   };
 
-  const style={
-    borderBottom:'1px solid #DADADA',
-    paddingBottom:'1rem',
-}
+  const style = {
+    borderBottom: "1px solid #DADADA",
+    paddingBottom: "1rem",
+  };
 
   return (
     <StyleTrending>
-        <TrendNowInner>
-      <div className="container">
-
-       
-        <h1 style={style} className='main-heading'>{heading}</h1>
-        {/* <TrendingNowSlick>
-          <Swiper
-            breakpoints={{
-              // when window width is >= 320px
-              200: {
-                slidesPerView: 1,
-                spaceBetween: 10
-              },
-              // when window width is >= 480px
-              500: {
-                slidesPerView: 2,
-                spaceBetween: 30
-              },
-              820: {
-                slidesPerView: 3,
-                spaceBetween: 30
-              },
-             
-             
-              1000: {
-                slidesPerView: 4,
-                spaceBetween: 30
-              }
-            }}
-            spaceBetween={30}
-            slidesPerView={5}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-          > {
-              imgs.map((img, index) => (
-
-                <SwiperSlide key={index} > <div key={index} className="d-inline-block">
-                  <h5 className="outside-card-text">Fairman Online</h5>
-                  <Card className="card">
-                    <div className="card-body">
-                      <img className="main-img" src={img} alt="Trending-Now" />
-                      <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
-                      <h4>From $ 35</h4>
-                    </div>
-                  </Card>
-                </div></SwiperSlide>
-              ))
-            }
-
-            {/* <SwiperSlide>Slide 2</SwiperSlide>
-  <SwiperSlide>Slide 3</SwiperSlide>
-  <SwiperSlide>Slide 4</SwiperSlide> */}
-          {/* </Swiper>
-        </TrendingNowSlick> */} 
-        <Slider {...settings} className='trendingNow-slick'>
-          {
-            imgs.map((img, index) => (
+      <TrendNowInner>
+        <div className="container">
+          <h1 style={style} className="main-heading">
+            {heading}
+          </h1>
+          {stateIsLoading && <h1>Loading...</h1>}
+          <Slider {...settings} className="trendingNow-slick">
+            {!stateIsLoading && productData.map((item, index) => (
               <div key={index} className="d-inline-block">
-                <h5 className="outside-card-text">Fairman Online</h5>
+                <h5 className="outside-card-text">{item.title}</h5>
                 <Card>
                   <div className="card-body">
-                    <div className='main-img'>
-                    <img   src={img} alt="Trending-Now" />
+                    <div className="main-img">
+                      <img src={IMAGE_URL+item.productImage} alt="Trending-Now" />
                     </div>
-                    <p>Hempz Pomegranate Herbal Body Moisturizer,</p>
-                    <h4>From $ 35</h4>
+                    <p>{item.description}</p>
+                    <h4>From $ {item.price}</h4>
                   </div>
                 </Card>
               </div>
-            ))
-          }
-        </Slider>
-      </div>
-        </TrendNowInner>
-    </StyleTrending>)
+            ))}
+          </Slider>
+        </div>
+      </TrendNowInner>
+    </StyleTrending>
+  );
 }
 export default TrendingNow;

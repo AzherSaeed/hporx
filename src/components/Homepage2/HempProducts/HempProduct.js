@@ -1,16 +1,49 @@
 import React from "react";
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { StyleHemp } from "./StyleHempProduct";
-import HempHeadingIcon from '../../../assets/HempHeadingIcon.svg';
 import HempCardIcon from '../../../assets/HempCardIcon.svg';
 import Slider from "react-slick";
 import Banner from "./Banner";
 import slidenext from '../../../assets/icons/angle-right.png';
 import slideprev from '../../../assets/icons/angle-left.png';
 import cardimage from '../../../assets/card-img.png';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {BASE_URL, GET_PRODUCTS , IMAGE_URL} from '../../../services/config';
+import axios from 'axios'
+import {useQuery} from 'react-query';
+
+
+
 function HempProduct() {
+
   const hempImgs = [HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon]
+ 
+
+
+  const {
+    data: productData,
+    isSuccess: stateIsSuccess,
+    isLoading: stateIsLoading,
+    isFetching: stateIsFetching,
+    error: stateError,
+    isError: stateIsError,
+  } = useQuery(
+    "products",
+    () => {
+      return axios.get(BASE_URL + GET_PRODUCTS);
+    },
+    {
+      refetchInterval: false,
+      refetchOnWindowFocus: "false",
+      keepPreviousData: "false",
+      select: (data)=> data.data.data.filter((item)=>item.productType === 'topCategory'),
+      enabled: true,
+    }
+  );
+
+
+ 
+
+ 
   var settings = {
     arrows: false,
     dots: false,
@@ -58,6 +91,7 @@ function HempProduct() {
   return (
     <StyleHemp>
       <div className="container p-5">
+        {stateIsLoading && <h1>Loading...</h1>}
         <div className="top-categories">
           <h1>Top Categories</h1>
           <div className="slick-btns">
@@ -73,14 +107,14 @@ function HempProduct() {
         
         
         <Slider {...settings} className='hemp-slick'>
-              {hempImgs.map((img,index)=>(
+              {!stateIsLoading && productData.map((item,index)=>(
                   <div key={index}>
                   <Card className="cards">
                      <div className="card-body">
-                         <img src={cardimage} className="cardimage" alt="cardimage"/>
+                         <img src={IMAGE_URL+item.productImage} className="cardimage" alt="cardimage"/>
                          <div className="overlay">
-                           <h1>Seed Oil</h1>
-                           <span>10k Products</span>
+                           <h1>{item.title}</h1>
+                           <span>{item.price}k Products</span>
                          </div>
                      </div>
                   </Card>
@@ -90,7 +124,7 @@ function HempProduct() {
            </Slider>
    
        
-        <Banner />
+        {/* <Banner /> */}
 
       </div>
     </StyleHemp>);
