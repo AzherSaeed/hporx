@@ -1,16 +1,12 @@
 import React from "react";
-import { StyleTrending, TrendNowInner} from "./StyleTrendingNow";
-import { Card } from "react-bootstrap";
+import { StyleTrending, TrendNowInner } from "./StyleTrendingNow";
 import Slider from "react-slick";
-import {BASE_URL, GET_PRODUCTS , IMAGE_URL} from '../../../services/config';
-import axios from 'axios'
-import {useQuery} from 'react-query';
-
-
+import { BASE_URL, GET_PRODUCTS } from "../../../services/config";
+import axios from "axios";
+import { useQuery } from "react-query";
+import CustomCard from "../../Globals/CustomCard";
 
 function TrendingNow({ heading, imgs }) {
-
-  
   const {
     data: productData,
     isSuccess: stateIsSuccess,
@@ -84,20 +80,17 @@ function TrendingNow({ heading, imgs }) {
           </h1>
           {stateIsLoading && <h1>Loading...</h1>}
           <Slider {...settings} className="trendingNow-slick">
-            {!stateIsLoading && productData.map((item, index) => (
-              <div key={index} className="d-inline-block">
-                <h5 className="outside-card-text">{item.title}</h5>
-                <Card>
-                  <div className="card-body">
-                    <div className="main-img">
-                      <img src={IMAGE_URL+item.productImage} alt="Trending-Now" />
-                    </div>
-                    <p>{item.description}</p>
-                    <h4>From $ {item.price}</h4>
-                  </div>
-                </Card>
-              </div>
-            ))}
+            {!stateIsLoading &&
+              productData.map((item, index) => (
+                <div key={index} className="d-inline-block">
+                  <h5 className="outside-card-text">{item.title}</h5>
+                  <CustomCard
+                    img={item.productImage}
+                    title={item.title}
+                    price={item.price}
+                  />
+                </div>
+              ))}
           </Slider>
         </div>
       </TrendNowInner>

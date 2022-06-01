@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
 export const StyleHemp = styled.div`
-margin-top: 6.2rem;
 
 .top-categories{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 26px 0;
-    margin-bottom: 22px;
-    border-bottom: 1px solid #DADADA;
+    padding-top: 26px;
+    margin-bottom: 15px;
+    /* border-bottom: 1px solid #DADADA; */
 }
 
 .top-categories h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 20px;
     line-height: 30px;
     color: #414141;
 }
@@ -91,15 +90,18 @@ gap:15.23px
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 16px;
-    /* or 82% */
-
+    line-height: 20px;
     text-align: center;
     text-transform: uppercase;
+    color: #FFFFFF;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     /* HEMP 06 */
 
-    color: #FFFFFF;
 }
 
 .hemp-slick .card-body .overlay span{

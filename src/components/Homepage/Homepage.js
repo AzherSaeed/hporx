@@ -64,6 +64,8 @@ import SSL from "./SSL/SSL";
 import Terms from "../Terms/Terms";
 import Testimonials from "./Testimonials/Testimonials";
 import Quote from "./Quote/Quote";
+import { ViewTodayContainer } from "../Homepage2/StyledHomepage2";
+import ViewedToday from "../Homepage2/ViewedToday/ViewedToday";
 
 export const VolumeContext = createContext();
 const styles = {
@@ -167,13 +169,18 @@ const Homepage = () => {
       <MedicineSmallSlick id="PRODUCTS" />
       <Marketplace id="MARKETPLACE" />
       <FeatureMarketPlace order="second" />
-      <FashionDiscount imgs={giftImgs} />
+      {/* <FashionDiscount imgs={giftImgs} /> */}
+      <ViewTodayContainer>
+        <ViewedToday  section='viewedToday' />
+      </ViewTodayContainer>
       <EMultiVendor />
       <Testimonials />
       <Locate id="LOCATE" />
       <Statistics />
       <SubscribeNewsletter />
-      <FashionDiscount imgs={fashionDiscountImgs} />
+      <ViewTodayContainer>
+        <ViewedToday  section='viewedToday' />
+      </ViewTodayContainer>
       <TrustedSuppliers
         imgs={trustedOrganizations}
         head="Trusted International Organizations"

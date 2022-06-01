@@ -1,23 +1,29 @@
-import React from "react";
-import { Card } from 'react-bootstrap';
+import React, { useRef } from "react";
+import { Card, Placeholder } from "react-bootstrap";
 import { StyleHemp } from "./StyleHempProduct";
-import HempCardIcon from '../../../assets/HempCardIcon.svg';
+import HempCardIcon from "../../../assets/HempCardIcon.svg";
 import Slider from "react-slick";
 import Banner from "./Banner";
-import slidenext from '../../../assets/icons/angle-right.png';
-import slideprev from '../../../assets/icons/angle-left.png';
-import cardimage from '../../../assets/card-img.png';
-import {BASE_URL, GET_PRODUCTS , IMAGE_URL} from '../../../services/config';
-import axios from 'axios'
-import {useQuery} from 'react-query';
-
-
+import slidenext from "../../../assets/icons/angle-right.png";
+import slideprev from "../../../assets/icons/angle-left.png";
+import cardimage from "../../../assets/card-img.png";
+import { BASE_URL, GET_PRODUCTS, IMAGE_URL } from "../../../services/config";
+import axios from "axios";
+import { useQuery } from "react-query";
 
 function HempProduct() {
-
-  const hempImgs = [HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon, HempCardIcon]
- 
-
+  const customeSlider = useRef();
+  const hempImgs = [
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+    HempCardIcon,
+  ];
 
   const {
     data: productData,
@@ -33,19 +39,16 @@ function HempProduct() {
     },
     {
       refetchInterval: false,
-      refetchOnWindowFocus: "false",
-      keepPreviousData: "false",
-      select: (data)=> data.data.data.filter((item)=>item.productType === 'topCategory'),
+      refetchOnWindowFocus: true,
+      keepPreviousData: true,
+      select: (data) =>
+        data.data.data.filter((item) => item.productType === "topCategory"),
       enabled: true,
     }
   );
 
-
- 
-
- 
   var settings = {
-    arrows: false,
+    arrows: true,
     dots: false,
     infinite: false,
     speed: 500,
@@ -87,47 +90,86 @@ function HempProduct() {
       },
     ],
   };
+  if (!productData) {
+    return (
+      <div className="container" >
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+          
+          </div>
+    )
+  }
 
+  const previous = () => {
+    customeSlider.current.slickNext();
+  };
+
+  const next = () => {
+    customeSlider.current.slickPrev();
+  };
   return (
     <StyleHemp>
-      <div className="container p-5">
-        {stateIsLoading && <h1>Loading...</h1>}
+      <div className="container">
+        {stateIsLoading && (
+          <div>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="wave" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="wave" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+          </div>
+        )}
         <div className="top-categories">
           <h1>Top Categories</h1>
-          <div className="slick-btns">
-          <button type="button" className="prev-btn">
-            <img src={slideprev} alt="Pre icon" />
-          </button>
-          <button type="butotn" className="next-btn">
-            <img src={slidenext} alt="Next icon" />
-          </button>
-          </div>
+          {/* <div className="slick-btns">
+            <button  onClick={next} type="button" className="prev-btn">
+              <img src={slideprev} alt="Pre icon" />
+            </button>
+            <button onClick={previous} type="butotn" className="next-btn">
+              <img src={slidenext} alt="Next icon" />
+            </button>
+          </div> */}
         </div>
-        
-        
-        
-        <Slider {...settings} className='hemp-slick'>
-              {!stateIsLoading && productData.map((item,index)=>(
-                  <div key={index}>
-                  <Card className="cards">
-                     <div className="card-body">
-                         <img src={IMAGE_URL+item.productImage} className="cardimage" alt="cardimage"/>
-                         <div className="overlay">
-                           <h1>{item.title}</h1>
-                           <span>{item.price}k Products</span>
-                         </div>
-                     </div>
-                  </Card>
-              </div>
-              ))}
-         
-           </Slider>
-   
-       
-        {/* <Banner /> */}
 
+        <Slider ref={customeSlider} {...settings} className="hemp-slick">
+          {!stateIsLoading &&
+            productData.map((item, index) => (
+              <div key={index}>
+                <Card className="cards">
+                  <div className="card-body">
+                    <img
+                      src={IMAGE_URL + item.productImage}
+                      className="cardimage"
+                      alt="cardimage"
+                    />
+                    <div className="overlay">
+                      <h1>{item.title}</h1>
+                      <span>{item.price}k Products</span>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            ))}
+        </Slider>
+
+        {/* <Banner /> */}
       </div>
-    </StyleHemp>);
+    </StyleHemp>
+  );
 }
 
 export default HempProduct;

@@ -1,17 +1,13 @@
 import React from "react";
 import { ViewTodayStyle } from "./StyleViewToday";
-import ViewToday from "../../../assets/view-today.png";
-import usa from "../../../assets/usa.png";
+import { Placeholder } from "react-bootstrap";
 import Slider from "react-slick";
-import {BASE_URL, GET_PRODUCTS , IMAGE_URL} from '../../../services/config';
-import axios from 'axios'
-import {useQuery} from 'react-query';
+import { BASE_URL, GET_PRODUCTS, IMAGE_URL } from "../../../services/config";
+import axios from "axios";
+import { useQuery } from "react-query";
+import AdCard from "../../Globals/AdCard";
 
-
-
-
-
-function ViewedToday({ heading }) {
+function ViewedToday({ heading , section }) {
   // const viewTodayImgs = [ViewToday, ViewToday, ViewToday, ViewToday, ViewToday, ViewToday]
 
   const {
@@ -31,7 +27,7 @@ function ViewedToday({ heading }) {
       refetchOnWindowFocus: "false",
       keepPreviousData: "false",
       select: (data) =>
-        data.data.data.filter((item) => item.productType === "viewedToday"),
+        data.data.data.filter((item) => item.productType === section),
       enabled: true,
     }
   );
@@ -74,28 +70,29 @@ function ViewedToday({ heading }) {
   return (
     <ViewTodayStyle>
       <div className="container">
-        <div className="main-heading">{heading}</div>
-        {stateIsLoading && <h1>Loading...</h1>}
+        {/* <div className="main-heading">{heading}</div> */}
+        {stateIsLoading && (
+          <div>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+      
+          </div>
+        )}
         {/* <ViewTodaySlick></ViewTodaySlick> */}
         <Slider {...settings} className="viewToday-slick">
-          
-          {!stateIsLoading && viewTodayImgs.map((item, index) => (
-            <div key={index} className="view-today">
-              <div className="card-inner">
-                <div className="card">
-                  <div className="image-section">
-                    <img src={IMAGE_URL+item.productImage} alt="card image" />
-                    <span className="tag">Ad</span>
-                  </div>
-                  <div className="advertise">
-                    To advertise
-                    <img src={usa} alt="Usa Flag" />
-                    <span>+1 (213) 370 087 0873</span>
-                  </div>
-                </div>
+          {!stateIsLoading &&
+            viewTodayImgs.map((item, index) => (
+              <div key={index} className="view-today">
+                <AdCard img={item.productImage} />
               </div>
-            </div>
-          ))}
+            ))}
         </Slider>
       </div>
     </ViewTodayStyle>

@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleTrending } from "./StyleTrendingNow1";
-import { Card } from "react-bootstrap";
+import { Placeholder } from "react-bootstrap";
 import Slider from "react-slick";
-import star from "../../../assets/icons/star.png";
 import { BASE_URL, GET_PRODUCTS, IMAGE_URL } from "../../../services/config";
 import axios from "axios";
 import { useQuery } from "react-query";
+import CustomCard from '../../Globals/CustomCard'
 
-function TrendingNow1({ heading, imgs }) {
+function TrendingNow1({ heading, description , section }) {
   const {
     data: productData,
     isSuccess: stateIsSuccess,
@@ -25,7 +25,7 @@ function TrendingNow1({ heading, imgs }) {
       refetchOnWindowFocus: "false",
       keepPreviousData: "false",
       select: (data) =>
-        data.data.data.filter((item) => item.productType === "trendingNow"),
+        data.data.data.filter((item) => item.productType === section),
       enabled: true,
     }
   );
@@ -67,50 +67,35 @@ function TrendingNow1({ heading, imgs }) {
     ],
   };
 
-  const style = {
-    borderBottom: "1px solid #DADADA",
-    paddingBottom: "1rem",
-  };
-
   return (
     <StyleTrending>
       <div className="container">
-        <h1 style={style} className="main-heading">
-          {heading}
-        </h1>
-        {stateIsLoading && <h1>Loading...</h1>}
-        <div className="mt-2-9">
+        <div className="tranding-heading">
+          <h1>{heading}</h1>
+          <p>{description}</p>
+        </div>
+        {stateIsLoading && (
+          <div>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+            <Placeholder as="p" animation="glow" size="lg">
+              <Placeholder xs={12} />
+            </Placeholder>
+      
+          </div>
+        )}
+        <div className="">
           <Slider {...settings} className="trendingNow-slick">
-            {!stateIsLoading && productData.map((item, index) => (
-              <div key={index} className="d-inline-block">
-                <Card className="card">
-                  <div className="card-body">
-                    <div className="image-section">
-                      <img className="main-img" src={IMAGE_URL+item.productImage} alt="Trending-Now" />
-                    </div>
-                    <div className="content">
-                      <div className="title">
-                        <h1>{item.title}</h1>
-                        <span>${item.price}</span>
-                      </div>
-                      <div className="rating">
-                        <div className="stars">
-                          <img src={star} />
-                          <img src={star} />
-                          <img src={star} />
-                          <img src={star} />
-                          <img src={star} />
-                        </div>
-                        <div className="review">(43 Reviews)</div>
-                      </div>
-                      <button className="add-to-cart">
-                        <span className="cart"></span>Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            ))}
+            {!stateIsLoading &&
+              productData.map((item, index) => (
+                <div key={index} className="d-inline-block">
+                  <CustomCard img={item.productImage} title={item.title} price={item.price} />
+                </div>
+              ))}
           </Slider>
         </div>
       </div>
