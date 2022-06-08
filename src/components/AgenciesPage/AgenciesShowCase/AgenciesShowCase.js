@@ -22,7 +22,7 @@ const AgenciesShowCase = () => {
 			<div class="left-section">
 				<div class="top-content">
 					<h1>Best <span>Website Designers</span></h1>
-					<p>The mission of great design is to increase your brand recognition & profits by sale volume. Our registry lists  the best designers in the world & bring them to your service & the design of your store showcasing your goods, products or services.</p>
+					<p>The mission of great design is to increase your brand recognition & profits by sale volume. Our registry lists the best designers in the world & brings them to your service & the design of your store showcasing your goods, products, or services.</p>
 				</div>
 				
 				<form method="" action="" enctype="multipart/form-data">

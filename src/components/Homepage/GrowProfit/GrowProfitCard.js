@@ -27,11 +27,7 @@ const GrowProfitCard = () => {
                 herbalist? A rural doctor?{" "}
               </p>
               <p>
-                Can you prescribe medical-grade extract or flower from
-                Cannabaceae family grown in a laboratory standard contained
-                environment agriculture? Alternatively, if you are a
-                self-starter, higher achiever and you are gifted with
-                entrepreneurial skills.{" "}
+              Can you prescribe medical-grade extract or flower from the Cannabaceae family grown in a laboratory standard contained environment agriculture? Alternatively, if you are a self-starter, a higher achiever, and gifted with entrepreneurial skills. {" "}
               </p>
               <h5>Turnkey from</h5>
               <GrowProfitPriceText>$35000</GrowProfitPriceText>

@@ -92,6 +92,8 @@ const GetInTouch = () => {
                           required
                           name="option"
                           title="How did you find us?"
+                          placeholder='Select Option'
+                          defaultOption='Select Option'
                         />
                       </Col>
                       <Row className="align-items-center ">

@@ -15,7 +15,7 @@ const Marketplace = ({id}) => {
             <PrimaryHeading>MARKETPLACE</PrimaryHeading>
             <TertiaryHeadingSmall>Curabitur cursus sagittis varius. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet. Quisque aliquet luctus elit, in hendrerit orci malesuada eu. Morbi feugiat et ligula maximus aliquet</TertiaryHeadingSmall>
             <MarketSubHead>HEALTH IS WEALTH</MarketSubHead>
-            <MarketReHeading >“Great health is great wealth!”</MarketReHeading>
+            <MarketReHeading >“Great health is a great wealth!”</MarketReHeading>
             <MarketTertiaryHeadMedium>Dr A. E De Mandeville</MarketTertiaryHeadMedium>
             <MarketViewMoreBtn>View More</MarketViewMoreBtn>
             </MarketContentContainer>

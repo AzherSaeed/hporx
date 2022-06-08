@@ -17,7 +17,7 @@ const FeatureMarketContainer = ({order}) => {
                         <Col lg={6} className={order === 'second' ? 'order-1' : 'order-0'}>
                             <FeatureMarkTextContainer>
                                 <FeatureHeading>Marketplace Vendors</FeatureHeading>
-                                <FeatureSubHeading>All products featured are available from select marketplace vendors, please search or select the product category you require</FeatureSubHeading>
+                                <FeatureSubHeading>All products featured are available from selected marketplace vendors, please search or select the product category you require</FeatureSubHeading>
                                 <FeatureMarketPlaceBtn>Start Buying</FeatureMarketPlaceBtn>
                             </FeatureMarkTextContainer>
                         </Col>

@@ -145,7 +145,7 @@ const Homepage2 = () => {
       <HempProduct />
       <TrendingNow1
         heading="Trending"
-        description="These are all our trending products across the platform which user buy most frequrently."
+        description="These are all our trending products that users buy most frequently across the platform."
         section='trending'
       />
       <ViewTodayContainer>
@@ -161,7 +161,7 @@ const Homepage2 = () => {
       </ViewTodayContainer>
       <TrendingNow1
         heading="Therapeautic"
-        description="These are all our therapeautic products across the platform which our customer recommeds to our everyone."
+        description="These are all our therapeutic products across the platform that our customer recommends to everyone."
         section="therapeautic"
       />
       <ViewTodayContainer>

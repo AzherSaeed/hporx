@@ -16,11 +16,7 @@ const TopNavBarContainer = styled.div`
     }
   }
 `;
-const HeaderTopBar = styled.div` 
-
-
-
-
+const HeaderTopBar = styled.div`
   .mr-auto.navbar-nav {
     gap: 2rem;
     align-items: baseline;
@@ -31,10 +27,9 @@ const HeaderTopBar = styled.div`
     }
   }
 
-
-  .topBar-Header{
+  .topBar-Header {
     background: rgba(0, 0, 0, 0.2);
-opacity: 0.9;
+    opacity: 0.9;
   }
 
   .header-topBar-logo {
@@ -42,33 +37,29 @@ opacity: 0.9;
     height: 51.35px;
   }
 
-  .reponsive-topbar-toggler{
-     margin: 0 1rem;
-    }
+  .reponsive-topbar-toggler {
+    margin: 0 1rem;
+  }
 
-  @media screen and (min-width : 1130px){
-    .reponsive-topbar-toggler{
+  @media screen and (min-width: 1130px) {
+    .reponsive-topbar-toggler {
       display: none;
     }
   }
 `;
 
 const SubBarContainer = styled.div`
-
-  .subnav-main{
+  .subnav-main {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
-    &> *{
+    & > * {
       font-size: 1.4rem;
       color: white;
       font-weight: 600;
     }
   }
-
 `;
 
-
-
-export { NavIcon, NavLogo, TopNavBarContainer, HeaderTopBar, SubBarContainer  };
+export { NavIcon, NavLogo, TopNavBarContainer, HeaderTopBar, SubBarContainer };

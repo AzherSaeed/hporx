@@ -21,7 +21,7 @@ const Statistics = () => {
         revenue: '67',
         mini: '',
         p1: 'AWARDED LICENSES IN ',
-        p2: 'FOURTENN STATUS',
+        p2: 'FOURTEEN STATES',
     }, {
         image: static2,
         revenue: '4,781',

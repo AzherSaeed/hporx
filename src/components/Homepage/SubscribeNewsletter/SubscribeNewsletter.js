@@ -94,7 +94,7 @@ const SubscribeNewsletter = () => {
                     <Col md={6}>
                       <InputField
                         name="firstName"
-                        placeholder="Enter first Name"
+                        placeholder="Enter First Name"
                         type="text"
                         label="First Name"
                       />
