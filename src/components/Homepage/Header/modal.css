@@ -5,6 +5,12 @@
 .homeModalageGater .modal-content{
   height: auto;
 }
+.home-page-main-nav-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 /* .sc-gSQFLo {
   height: 100%;
 } */

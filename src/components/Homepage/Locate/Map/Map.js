@@ -21,7 +21,6 @@ const Map = ({allAddresses , doctorsData }) => {
 
 
   useEffect(() => {
-  console.log('locationFound')
     if(locationFound){
       setDefaultCenterLoacation(JSON.parse(locationFound));
       setMarker([JSON.parse(locationFound)]);
@@ -30,16 +29,12 @@ const Map = ({allAddresses , doctorsData }) => {
       setMarker([{lat:40.4637,lng:3.7492}]);
     }
   },[locationFound])
-
-
-
-
-console.log('map called');
  
 
   useEffect( async () => {
     console.log('alladdress');
     const arr = [];
+    console.log(allAddresses , 'resresresresresres');
     if(allAddresses.length){
       for (let i = 0; i < allAddresses.length; i++) {
         if(allAddresses[i]!==""){
@@ -47,13 +42,16 @@ console.log('map called');
           axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
             params: {
               address: allAddresses[i],
-              key: "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI",
+              key: "AIzaSyDzGLDNYdjUJ5VuUU-8XvUaB2rj_RvldXw",
             },
           })
         );}
       }
       
       const res = await Promise.all(arr);
+
+
+     
    
       const getData = res.filter((item) => item.data.status == "OK");
   
@@ -82,7 +80,7 @@ console.log('map called');
   return (
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI" }}
+        bootstrapURLKeys={{ key: "AIzaSyDzGLDNYdjUJ5VuUU-8XvUaB2rj_RvldXw" }}
         defaultCenter={defaulcenterLocation}
         defaultZoom={6}
         center={centerLocation}

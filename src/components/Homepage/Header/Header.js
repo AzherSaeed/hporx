@@ -7,13 +7,12 @@ import {
   HeroPlayIcon,
   HomePlayButtonContainer,
 } from "./StyledHeader";
-import TopBar from "../Navbar/TopBar";
 import SubBar from "../Navbar/SubBar";
 import OffCanvas from "../Navbar/OffCanvas";
-import MyVerticallyCenteredModal from "./Modal";
 import Popup from "../Popup/Popup";
 import VideoModal from "../VideoModal/VideoModal";
-const apiKey = "AIzaSyCPaxhUQwzWzvTyFp_ao6vGMhUnu8qy4dI";
+import HeroSlider from './HeroSlider'
+const apiKey = "AIzaSyDZdA4DKTKNAm6ENnAQMnECsThGWUsUpWw";
 
 const Header = ({ id, value }) => {
   const data = localStorage.getItem("ageGateActive");
@@ -24,33 +23,14 @@ const Header = ({ id, value }) => {
   const [show, setShow] = useState(false);
   const [modalShow, setModalShow] = React.useState(false);
   const [offNavValue, setOffNavValue] = React.useState(false);
-  const [finalCountry, setfinalCountry] = useState('')
-  const [finalState, setfinalState] = useState('')
-
-
-
-  
-
-
+  const [finalCountry, setfinalCountry] = useState("");
+  const [finalState, setfinalState] = useState("");
 
   const handleClose = () => setShow(false);
 
   const getValue = (value) => {
     setOffNavValue(value);
   };
-
-  // useEffect(() => {
-  //   if(!locationFound){
-  //     navigator.geolocation.getCurrentPosition(function (position) {
-  //       const lat=position.coords.latitude;
-  //        const lng=position.coords.longitude;
-  //        localStorage.setItem('saveCurentLocation' , 'location')
-  //        setLat(lat)
-  //        setLng(lng)
-  //        console.log(lat , lng , 'lng' );
-  //      });
-  //   }
-  // }, []);
 
   useEffect(() => {
     if (getLocation) {
@@ -61,20 +41,18 @@ const Header = ({ id, value }) => {
       )
         .then((response) => response.json())
         .then((result) => {
-          const finalResult = result.results[0].formatted_address.split(',')
+          const finalResult = result.results[0].formatted_address.split(",");
           setfinalCountry(finalResult.pop());
           setfinalState(finalResult.at(-1).split(" ").at(1));
-        }) 
+        })
         .catch((error) => {
           console.error("Error:", error);
         });
     }
   }, [getLocation]);
 
-
-
   return (
-    <div>
+    <div  >
       <VideoModal
         show={modalShow}
         onHide={() => setModalShow(false)}
@@ -100,9 +78,8 @@ const Header = ({ id, value }) => {
         }
       />
       <StyledHero id={id}>
-        {/* <TopBar setShow={setShow} /> */}
         <OffCanvas
-           country={finalCountry}
+          country={finalCountry}
           handleClose={handleClose}
           show={show}
           setShow={setShow}
@@ -110,13 +87,14 @@ const Header = ({ id, value }) => {
           value={value}
         />
         <SubBar setShow={setShow} />
-        <video
+        {/* <video
           autoPlay
           muted
           loop
           className="hero-video"
           src="/Videos/hporx.mp4"
-        />
+        /> */}
+        <HeroSlider/>
         <div className="hero-text-container">
           <HomePlayButtonContainer onClick={() => setModalShow(true)}>
             <HeroPlayIcon src={playIcon} />

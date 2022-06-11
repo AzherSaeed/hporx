@@ -14,7 +14,6 @@ import SubscribeNewsletter from "./SubscribeNewsletter/SubscribeNewsletter";
 import TrustedSuppliers from "./TrustedSuppliers/TrustedSuppliers";
 import Vaporize from "./Vaporize/Vaporize";
 import Footer from "./Footer/Footer";
-import FashionDiscount from "./FashionDiscount/FashionDiscount";
 import Inhalate from "./Inhalate/Inhalate";
 import Marketplace from "../MarketPlace/Marketplace";
 import Diaganose from "./Diagnose/Diaganose";

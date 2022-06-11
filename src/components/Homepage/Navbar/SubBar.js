@@ -50,7 +50,7 @@ const SubBar = ({ setShow }) => {
   //   window.addEventListener("scroll", changeBackground)
   // })
   return (
-    <div>
+    <div className="home-page-main-nav-container">
       <Marquee />
       <TopBar setShow={setShow} />
 
