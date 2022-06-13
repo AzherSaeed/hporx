@@ -168,7 +168,9 @@ export const InhalatedImgContainer = styled.div`
   }
 `;
 
-export const InhalteImg = styled.img``;
+export const InhalteImg = styled.img`
+  height: 505px;
+`;
 export const InhalateContainer = styled.div`
   .inhalate-slick {
     margin-top: 7rem;

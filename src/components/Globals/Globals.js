@@ -181,6 +181,7 @@ export const CustomCardContainer = styled.div`
     border-bottom: 1px solid #dddddd;
     display: flex;
     justify-content: center;
+    cursor: pointer;
   }
 
   .customCard .customCard-body .image-section .main-img {
