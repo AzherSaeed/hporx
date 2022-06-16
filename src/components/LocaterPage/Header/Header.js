@@ -16,12 +16,13 @@ import emptyLocation from "../../../assets/emptyLocation.png";
 import GenerecService from "../../../services/GenericService";
 import { API_URL } from "../../../services/config";
 import * as Yup from "yup";
-import Pagination from "./Pagination";
+import ReactPaginate from "react-paginate";
+import Footer from "../../Homepage/Footer/Footer";
 
 const validate = Yup.object({
   country: Yup.string().required("Please select a country"),
-  city: Yup.string().required("Please select a city"),
-  service: Yup.string().required("Please Select a Service"),
+  // city: Yup.string().required("Please select a city"),
+  // service: Yup.string().required("Please Select a Service"),
 });
 function Header() {
   const genericService = new GenerecService();
@@ -34,11 +35,9 @@ function Header() {
   const [doctorsData, setdoctorsData] = useState([]);
   const [cardsLoading, setcardsLoading] = useState(true);
 
-
-
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     genericService
@@ -54,13 +53,15 @@ function Header() {
       });
   }, []);
 
+
+  console.log(countryList , 'countryList');
   useEffect(() => {
     genericService
       .post(`${API_URL}usersData`, {
         city: "",
-        country: "Spain",
+        country: "",
         service: "",
-        limit: 50,
+        // limit: 50,
       })
       .then((res) => {
         setdoctorsData(...doctorsData, res.data);
@@ -72,25 +73,22 @@ function Header() {
       });
   }, []);
 
-  const indexOfLastPost = currentPage * postPerPage;
-  const indexOfFirstPost = indexOfLastPost - postPerPage;
-  const currentPost = doctorsData.slice(indexOfFirstPost, indexOfLastPost);
+  const [currentItems, setCurrentItems] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
 
-  function paginate(pageNumber) {
-    setCurrentPage(pageNumber);
-  }
+  useEffect(() => {
+    const endOffset = itemOffset + 12;
+    setCurrentItems(doctorsData.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(doctorsData.length / 12));
+  }, [itemOffset , doctorsData]);
 
-  // const arr = []
-  //   for(i , i < lengh < 0++){
-  //     console.log(values);
-  //     arr.push(genericService
-  //       .post(`${API_URL}usersData`, values))
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * 12) % doctorsData.length;
+    setItemOffset(newOffset);
+  };
 
-  //   }
 
-  //   Promise.all(arr)
-
-  console.log(doctorsData, "doctorsData");
   return (
     <StyleHeader>
       <div className="header">
@@ -106,7 +104,7 @@ function Header() {
               city: "",
               service: "",
             }}
-            // validationSchema={validate}
+            validationSchema={validate}
             onSubmit={(values) => {
               setcardsLoading(true);
               const data = { ...values, limit: 50 };
@@ -170,7 +168,7 @@ function Header() {
         </div>
       </div>
       <div className="container">
-        {cardsLoading ? (
+        {doctorsData.length == 0 && cardsLoading ? (
           <>
             <Placeholder as="p" animation="glow" size="lg">
               <Placeholder xs={12} />
@@ -186,18 +184,18 @@ function Header() {
             </Placeholder>
           </>
         ) : (
-          <div>
-            {doctorsData.length == 0 ? (
+          <div className="loacateUsCard-container">
+            {!cardsLoading && doctorsData.length == 0 ? (
               <h1>No Data Found</h1>
             ) : (
               <>
                 <Row>
-                  {currentPost.map((v , i) => (
+                  {currentItems.map((v, i) => (
                     <Col key={i} lg={3} md={6} sm={6}>
                       <Card className="cards">
-                        <div >
+                        <div className="locator-person-image-container" >
                           <img
-                            src={emptyLocation}
+                            src={v.ImageURL ? v.ImageURL : emptyLocation}
                             className="img-section"
                             alt="img"
                           />{" "}
@@ -208,7 +206,7 @@ function Header() {
                           <div className="d-flex pt-1 text1">
                             <div>
                               <img src={Flag1} className="icon " alt="icon" />
-                              <span className="icon-text">
+                              <span className="country-name-text">
                                 {v.LocatorCountries}
                               </span>
                             </div>
@@ -234,17 +232,22 @@ function Header() {
                     </Col>
                   ))}
                 </Row>
-                <Pagination
-                  postPerPage={postPerPage}
-                  totalPosts={doctorsData.length}
-                  paginate={paginate}
-                  size="sm"
+                <ReactPaginate
+                  breakLabel="..."
+                  nextLabel="Next"
+                  onPageChange={handlePageClick}
+                  pageRangeDisplayed={2}
+                  pageCount={pageCount}
+                  previousLabel="Previous"
+                  renderOnZeroPageCount={null}
+                  className='locator-pagination'
                 />
               </>
             )}
           </div>
         )}
       </div>
+      <Footer />
     </StyleHeader>
   );
 }

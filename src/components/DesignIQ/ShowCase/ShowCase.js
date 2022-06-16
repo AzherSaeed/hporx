@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShowCaseImg, ShowCaseMain } from './StyledShowCase'
-import showCase from '../../../assets/showCase.svg';
+import showCase from '../../../assets/showCase.jpg';
 import { Container } from 'react-bootstrap';
 const ShowCase = () => {
     return (

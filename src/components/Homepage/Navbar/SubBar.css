@@ -106,6 +106,9 @@
     margin-right: 2.5rem;
  
   }
+  .nav-items > .main-li a{
+    padding: 1.5rem 0;
+  }
   .nav-items > .main-li .active {
     display: inline;
     cursor: pointer;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import TestimonialBackground from '../../../assets/TestimonialBackground.png';
 
 export const Testimonial = styled.div`
-margin-top: 16rem;
+margin-top: 6rem;
 .testimonial-slider{
     .slick-prev{
         left: -25px;

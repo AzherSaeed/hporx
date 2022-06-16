@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 
 const Index = () => {
   return (
-    <Carousel interval={null}>
+    <Carousel>
       <Carousel.Item>
         <video
           autoPlay
@@ -14,22 +14,15 @@ const Index = () => {
         />
       </Carousel.Item>
       <Carousel.Item>
-        <video
-          autoPlay
-          muted
-          loop
-          className="hero-video"
-          src="/Videos/hporx.mp4"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <video
-          autoPlay
-          muted
-          loop
-          className="hero-video"
-          src="/Videos/hporx.mp4"
-        />
+        <div className="heroslider-videoOver" >
+          <video
+            autoPlay
+            muted
+            loop
+            className="hero-video"
+            src="/Videos/heroSliderVideoTwo.mp4"
+          />
+        </div>
       </Carousel.Item>
     </Carousel>
   );

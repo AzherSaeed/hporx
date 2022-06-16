@@ -33,7 +33,7 @@ function TrendingNow1({ heading, description , section }) {
   var settings = {
     arrows: true,
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,

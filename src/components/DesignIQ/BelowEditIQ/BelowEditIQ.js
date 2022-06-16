@@ -9,7 +9,7 @@ const BelowEditIQ = () => {
         <BelowEditIQImgContainer>
           <BelowEditIQVideo>
             <video  controls >
-              <source src="/Videos/video1.mp4" type="video/mp4" />
+              <source src="/Videos/landingPageMonitor.mp4" type="video/mp4" />
             </video>
           </BelowEditIQVideo>
 

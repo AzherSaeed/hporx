@@ -34,7 +34,7 @@ const ProductModalDetail = ({desc, img, title, price }) => {
               <span className="cartIcon"></span>Add to Cart
             </button>
             <button className="productDetail-content-buttons-checkout">
-              <span className="cartIcon"></span>Add to Cart
+              <span className="cartIcon"></span>Checkout
             </button>
           </div>
         </div>

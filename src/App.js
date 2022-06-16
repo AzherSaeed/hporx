@@ -9,7 +9,6 @@ function App() {
   const locationFound = localStorage.getItem('saveCurentLocation')
 
 
-  console.log(locationFound)
 
 
     useEffect(() => {
