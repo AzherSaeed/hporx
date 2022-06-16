@@ -1,10 +1,10 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap';
-import agri1 from '../../../assets/agri1.svg';
-import agri2 from '../../../assets/agri2.svg';
-import agri3 from '../../../assets/agri3.svg';
-import agri4 from '../../../assets/agri4.svg';
-import agri5 from '../../../assets/agri5.svg';
+import agri1 from '../../../assets/agri1.jpg';
+import agri2 from '../../../assets/agri2.jpg';
+import agri3 from '../../../assets/agri3.jpg';
+import agri4 from '../../../assets/agri4.jpg';
+import agri5 from '../../../assets/agri5.jpg';
 import { AgriculteContainer, AgriculteContainer1, AgriculteImgsSection, AgricultureImg, AgricultureImg1, AgricultureImgContainer } from './StyledAgriculture';
 
 const AgricultureImgSection = () => {

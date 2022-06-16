@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import belowprofit from '../../../assets/belowGrowProfit.svg'
+import belowprofit from '../../../assets/belowGrowProfit.png'
 import { BelowGrowProfitMainContainer, BelowGrowProfitImg, BelowGrowProfitImgContainer } from './StyledBelowProfit'
 import playButton from "../../../assets/play-outline-button.svg";
 import BelowEditIQ from '../../DesignIQ/BelowEditIQ/BelowEditIQ';

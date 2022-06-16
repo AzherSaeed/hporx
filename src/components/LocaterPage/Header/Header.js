@@ -54,7 +54,7 @@ function Header() {
   }, []);
 
 
-  console.log(countryList , 'countryList');
+
   useEffect(() => {
     genericService
       .post(`${API_URL}usersData`, {
