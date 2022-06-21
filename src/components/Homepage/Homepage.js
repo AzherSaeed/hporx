@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext , Suspense} from "react";
 import Agriculture from "./Agriculture/Agriculture";
 import BelowGrowProfit from "./BelowGrowProfit/BelowGrowProfit";
 import Chillum from "./Chillums/Chillums";
@@ -14,7 +14,7 @@ import SubscribeNewsletter from "./SubscribeNewsletter/SubscribeNewsletter";
 import TrustedSuppliers from "./TrustedSuppliers/TrustedSuppliers";
 import Vaporize from "./Vaporize/Vaporize";
 import Footer from "./Footer/Footer";
-import Inhalate from "./Inhalate/Inhalate";
+// import Inhalate from "./Inhalate/Inhalate";
 import Marketplace from "../MarketPlace/Marketplace";
 import Diaganose from "./Diagnose/Diaganose";
 import EMultiVendor from "./EMultiVendor/EMultiVendor";
@@ -65,6 +65,7 @@ import Testimonials from "./Testimonials/Testimonials";
 import Quote from "./Quote/Quote";
 import { ViewTodayContainer } from "../Homepage2/StyledHomepage2";
 import ViewedToday from "../Homepage2/ViewedToday/ViewedToday";
+import SectionPlaceHolder from '../Globals/SectionPlaceHolder'
 
 export const VolumeContext = createContext();
 const styles = {
@@ -75,6 +76,9 @@ const styles = {
 };
 const Homepage = () => {
   const [volumeValue, setVolumeValue] = React.useState(false);
+
+
+  const Inhalate = React.lazy(() => import('./Inhalate/Inhalate'))
 
   const handleVolume = (value) => {
     setVolumeValue(value);
@@ -142,13 +146,12 @@ const Homepage = () => {
   return (
     <>
       <VolumeContext.Provider value={handleVolume}>
-        <Header
-          id="HOME"
-          value={volumeValue}
-        />
+        <Header id="HOME" value={volumeValue} />
       </VolumeContext.Provider>
 
-      <Inhalate id="INHALATE" />
+      <Suspense fallback={<SectionPlaceHolder/>}>
+        <Inhalate id="INHALATE" />
+      </Suspense>
       <Vaporize id="VAPORIZE" />
       <Portable id="PORTABLES" />
       <Chillum id="CHILLUMS" />
@@ -170,7 +173,7 @@ const Homepage = () => {
       <FeatureMarketPlace order="second" />
       {/* <FashionDiscount imgs={giftImgs} /> */}
       <ViewTodayContainer>
-        <ViewedToday  section='viewedToday' />
+        <ViewedToday section="viewedToday" />
       </ViewTodayContainer>
       <EMultiVendor />
       <Testimonials />
@@ -178,7 +181,7 @@ const Homepage = () => {
       <Statistics />
       <SubscribeNewsletter />
       <ViewTodayContainer>
-        <ViewedToday  section='viewedToday' />
+        <ViewedToday section="viewedToday" />
       </ViewTodayContainer>
       <TrustedSuppliers
         imgs={trustedOrganizations}
