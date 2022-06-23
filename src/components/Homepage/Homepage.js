@@ -143,6 +143,7 @@ const Homepage = () => {
     aboveCopyright7,
     aboveCopyright8,
   ];
+  console.log('ok');
   return (
     <>
       <VolumeContext.Provider value={handleVolume}>
